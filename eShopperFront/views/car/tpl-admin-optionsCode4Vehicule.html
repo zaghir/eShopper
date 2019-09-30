@@ -1,0 +1,113 @@
+<div   id="categorie" ng-controller="optionsCode4VehiculeController as opvCtrl">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2 class="section-heading">Acriss Car Code 4</h2>
+				<hr class="primary">
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4 col-sm-6 col-xs-12">
+		<div class="panel panel-info ">
+			<div class="panel-heading">Acriss Car Code 4</div>
+
+			<div class="panel-body">
+				<form >
+					<div class="form-group">
+						<label class="control-label">Code </label>
+						<input type="text" ng-model="opvCtrl.code4.element.code" class="form-control" />
+						<span ng-if="opvCtrl.code4.errors.code" class="label label-danger">{{opvCtrl.code4.errors.code}}</span>
+					</div>
+					<div class="form-group">
+						<label class="control-label">Air Condition </label>
+						<input type="text" ng-model="opvCtrl.code4.element.airCondition" class="form-control" />
+						<span ng-if="opvCtrl.code4.errors.airCondition" class="label label-danger">{{opvCtrl.code4.errors.airCondition}}</span>
+					</div>
+					<div class="form-group">
+						<label class="control-label">Fuel </label>
+						<input type="text" ng-model="opvCtrl.code4.element.fuel" class="form-control" />
+						<span ng-if="opvCtrl.code4.errors.fuel" class="label label-danger">{{opvCtrl.code4.errors.fuel}}</span>
+					</div>
+					<div>
+						<button ng-click="opvCtrl.code4.add()" class="btn btn-primary">Ajouter</button>
+
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-2 col-sm-4 col-xs-12"></div>
+
+	<div class="col-md-4 col-sm-4 col-xs-12">
+		<div class="panel panel-info">
+			<div class="panel panel-heading ">Info Acriss Car Code 4</div>
+			<div class="panel panel-body">
+				<form class="form-group" id="list">
+
+					<div class="form-group">
+						<label class="control-label">Code 4 </label>
+						<input type="text" class="input-group" ng-model="opvCtrl.code4.recherche" />
+						<button ng-click="opvCtrl.code4.viewAll()" class="btn btn-primary btn-sm">Afficher Tous</button> <br/>
+						<div ng-show="opvCtrl.code4.messageInfo" ><p class="bg-success">{{opvCtrl.code4.messageInfo}}</p></div>
+
+					</div>
+					<table class="table-responsive table table-striped table-bordered  table-hover table-condensed">
+						<thead>
+						<tr>
+							<th> Id </th>
+							<th class="text-center"> Air Condition</th>
+							<th class="text-center"> Fuel</th>
+							<th colspan="2" class="text-center"> action</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr ng-repeat="tp in opvCtrl.code4.data.page | orderBy: 'fuel' | filter: opvCtrl.code4.recherche " >
+
+							<td class="text-right">
+								<div >{{tp.element.code}}</div>
+							</td>
+							<td class="text-center">
+								<div ng-hide="opvCtrl.code4.editingData[tp.element.code]">{{tp.element.airCondition}}</div>
+								<div ng-show="opvCtrl.code4.editingData[tp.element.code]">
+									<input type="text" ng-model="tp.element.airCondition" />
+									<span ng-if="tp.element.errors.airCondition" class="label label-danger">{{tp.element.errors.airCondition}}</span>
+								</div>
+							</td>
+							<td class="text-center">
+								<div ng-hide="opvCtrl.code4.editingData[tp.element.code]">{{tp.element.fuel}}</div>
+								<div ng-show="opvCtrl.code4.editingData[tp.element.code]">
+									<input type="text" ng-model="tp.element.fuel" />
+									<span ng-if="tp.element.errors.fuel" class="label label-danger">{{tp.element.errors.fuel}}</span>
+								</div>
+							</td>
+
+							<td>
+								<button ng-click="opvCtrl.code4.remove(tp)"class="btn btn-sm btn-danger">
+									Suprimer</button>
+							</td>
+							<td>
+								<button ng-hide="opvCtrl.code4.editingData[tp.element.code]" ng-click="opvCtrl.code4.modify(tp)" class="btn btn-sm btn-warning">Modify</button>
+								<button ng-show="opvCtrl.code4.editingData[tp.element.code]" ng-click="opvCtrl.code4.update(tp)" class="btn btn-sm btn-success">Update</button>
+							</td>
+						</tr>
+						</tbody>
+
+					</table>
+				</form>
+				<div class ="panel">
+					<ul class="nav nav-pills">
+						<li class="clikabble" ng-class="{active:p==opvCtrl.code4.pageCourante}" ng-repeat="p in opvCtrl.code4.data.pageIndex  ">
+							<a ng-click="opvCtrl.code4.goToPage(p)" >{{p}}</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+</div>

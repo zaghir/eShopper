@@ -1,0 +1,31 @@
+<div class="col-md-4">
+
+    <div  class="panel panel-default">
+        <div class="panel-heading">
+            <h3>Recherche</h3>
+        </div>
+    </div>
+    <div class="panel-body row">
+        <form ng-submit="submit()">
+            
+            <datalist id="airports">
+                <option  data-ng-repeat="airport in airportResults" value="{{airport.label}}" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()"> 
+            </datalist>            
+            <input class="form-control" type="text" ng-model="departure_airport" placeholder="Départ de" list="airports"  /><br>
+            <input class="form-control" type="text" ng-model="destination_airport" placeholder="Départ de" list="airports"  /><br>
+            <input class="form-control" type="date" ng-model="departure_date" ng-bind="date | date:'yyyy - dd - MM'" placeholder="Date de départ au format : 2016-07-01"/><br>
+            <input class="form-control" type="date" ng-model="return_date"  ng-bind="date | date:'yyyy - dd - MM'" laceholder="Date de retour format : 2016-07-01"/><br>
+            <input class="form-control" type="text" ng-model="adults" placeholder="Nombre d'adultes"/><br>
+            <input class="form-control" type="text" ng-model="children" placeholder="Nombre d'enfants"/><br>
+            <input class="form-control" type="text" ng-model="infants" placeholder="Nombre de bébés"/><br>
+            <input class="form-control" type="text" ng-model="max_price" placeholder="prix Max"/><br>
+            <label>Critères d'handicape :</label>
+            Oui <input type="radio" name="mobilité" value="true" ng-model="mobility" />
+            Non  <input type="radio" name="mobilité" value="false" checked="checked" ng-model="mobility"/>
+            <div style="opacity: 0">.   </div>
+            <input class="btn btn-aqua" style="width:auto " type="submit">
+        </form>
+    </div>
+</div>
+<div class="col-md-8" ui-view></div>
+

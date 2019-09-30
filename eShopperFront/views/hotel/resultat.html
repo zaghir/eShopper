@@ -1,0 +1,52 @@
+<div class='panel panel-info'>
+<div class='panel panel-heading'><center><h4>RECAP</h4></center></div>
+
+<div class='panel-body'>
+<label class="control-label"><strong>Localisation</strong> </label>  : {{radius}}km autour de {{ville.split(',')[0]  | uppercase}}
+</div>
+<div class='panel-body'>
+<label class="control-label"><strong>Date d'arrivée </strong></label> : {{check_in | date:'dd-MM-yyyy'}}
+</div>
+<div class='panel-body'>
+<label class="control-label"><strong>Date de départ </strong></label> : {{check_out | date:'dd-MM-yyyy'}}
+</div>
+<div  class='panel-body' ng-show='piscine.affiche==true || parking.affiche==true || pets.affiche==true || restaurant.affiche==true'>
+
+<label class="control-label"><strong>Spécificités</strong></label> : 
+<ul>
+<li ng-show='piscine.affiche== true'>
+Piscine disponible
+</li>
+<li ng-show='pets.affiche==true' >
+Animaux autorisés
+</li>
+<li ng-show='restaurant.affiche== true'>
+Restaurant ouvert
+</li>
+<li ng-show='parking.affiche== true' >
+Parking disponible
+</li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+<div class="row" ng-repeat="w in results.data.results | startFrom: pagination.page * pagination.perPage | limitTo: pagination.perPage"> <!-- code pour $http -->
+ <div hotel-dir resultat='w' prixmin='prixmin' prixmax='prixmax' people='people' piscine ='piscine' restaurant='restaurant' parking='parking' pets='pets' compte-function='compte(v)'></div>
+</div>
+
+<div ng-show="results.data.results">
+   <ul class="pagination">
+      <li><a href="" ng-click="pagination.prevPage()">Precedent</a></li>
+      <li ng-repeat="n in []| range: pagination.numPages" ng-class="{active: n == pagination.page}">
+           <a href="" ng-click="pagination.toPageId(n)">{{n + 1}}</a>
+      </li>
+      <li><a href="" ng-click="pagination.nextPage()">Suivant</a></li>
+   </ul>
+</div>
+    
+     

@@ -1,0 +1,1 @@
+https://secure.ogone.com/Ncol/Test/teststd_UTF8.asp?PSPIDEMO=eshopperpay&CSRFKEY=88B3E76B5743E552798326F9E385D47827C2F2C8&CSRFTS=20160722181211&CSRFSP=%2fncol%2ftest%2fbackoffice%2ftechnicalinformationtestinfo.asp&MigrationMode=DOTNET&branding=OGONE&Lang=1

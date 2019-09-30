@@ -1,0 +1,555 @@
+{
+  "results": [
+    {
+      "provider": {
+        "company_code": "ZI",
+        "company_name": "AVIS"
+      },
+      "branch_id": "NCET01",
+      "location": {
+        "latitude": 43.66528,
+        "longitude": 7.215
+      },
+      "airport": "NCE",
+      "address": {
+        "line1": "NICE AEROPORT 06",
+        "city": "NICE",
+        "country": "FR"
+      },
+      "cars": [
+        {
+          "vehicle_info": {
+            "acriss_code": "MBMR",
+            "transmission": "Manual",
+            "fuel": "Unspecified",
+            "air_conditioning": true,
+            "category": "Mini",
+            "type": "2-3 Door"
+          },
+          "rates": [
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "1034.75",
+                "currency": "USD"
+              }
+            },
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "909.36",
+                "currency": "EUR"
+              }
+            }
+          ],
+          "images": [
+            {
+              "category": "VEHICLE",
+              "width": 90,
+              "height": 50,
+              "url": "https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZI&cnt=FR&vehcat=MBMR&item=0&stamp=VEHICLE_0__0__1456912335293&file=1.JPEG"
+            }
+          ],
+          "estimated_total": {
+            "amount": "1417.75",
+            "currency": "USD"
+          }
+        },
+        {
+          "vehicle_info": {
+            "acriss_code": "ECMR",
+            "transmission": "Manual",
+            "fuel": "Unspecified",
+            "air_conditioning": true,
+            "category": "Economy",
+            "type": "2/4 Door"
+          },
+          "rates": [
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "1143.85",
+                "currency": "USD"
+              }
+            },
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "1005.24",
+                "currency": "EUR"
+              }
+            }
+          ],
+          "images": [
+            {
+              "category": "VEHICLE",
+              "width": 90,
+              "height": 50,
+              "url": "https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZI&cnt=FR&vehcat=ECMR&item=0&stamp=VEHICLE_0__0__1456780738698&file=1.JPEG"
+            }
+          ],
+          "estimated_total": {
+            "amount": "1557.30",
+            "currency": "USD"
+          }
+        },
+        {
+          "vehicle_info": {
+            "acriss_code": "EXMR",
+            "transmission": "Manual",
+            "fuel": "Unspecified",
+            "air_conditioning": true,
+            "category": "Economy",
+            "type": "Special"
+          },
+          "rates": [
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "1165.67",
+                "currency": "USD"
+              }
+            },
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "1024.41",
+                "currency": "EUR"
+              }
+            }
+          ],
+          "images": [
+            {
+              "category": "VEHICLE",
+              "width": 90,
+              "height": 50,
+              "url": "https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZI&cnt=FR&vehcat=exmr&item=0&stamp=VEHICLE_0__0__1456948801595&file=1.JPEG"
+            }
+          ],
+          "estimated_total": {
+            "amount": "1585.27",
+            "currency": "USD"
+          }
+        },
+        {
+          "vehicle_info": {
+            "acriss_code": "CDMR",
+            "transmission": "Manual",
+            "fuel": "Unspecified",
+            "air_conditioning": true,
+            "category": "Compact",
+            "type": "4-5 Door"
+          },
+          "rates": [
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "1252.95",
+                "currency": "USD"
+              }
+            },
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "1101.12",
+                "currency": "EUR"
+              }
+            }
+          ],
+          "images": [
+            {
+              "category": "VEHICLE",
+              "width": 90,
+              "height": 50,
+              "url": "https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZI&cnt=FR&vehcat=CDMR&item=0&stamp=VEHICLE_0__0__1456780659324&file=1.JPEG"
+            }
+          ],
+          "estimated_total": {
+            "amount": "1696.81",
+            "currency": "USD"
+          }
+        },
+        {
+          "vehicle_info": {
+            "acriss_code": "CXMR",
+            "transmission": "Manual",
+            "fuel": "Unspecified",
+            "air_conditioning": true,
+            "category": "Compact",
+            "type": "Special"
+          },
+          "rates": [
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "1381.40",
+                "currency": "USD"
+              }
+            },
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "1214.00",
+                "currency": "EUR"
+              }
+            }
+          ],
+          "images": [
+            {
+              "category": "VEHICLE",
+              "width": 90,
+              "height": 50,
+              "url": "https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZI&cnt=FR&vehcat=CXMR&item=0&stamp=VEHICLE_0__0__1456780701829&file=1.JPEG"
+            }
+          ],
+          "estimated_total": {
+            "amount": "1862.99",
+            "currency": "USD"
+          }
+        },
+        {
+          "vehicle_info": {
+            "acriss_code": "SDMR",
+            "transmission": "Manual",
+            "fuel": "Unspecified",
+            "air_conditioning": true,
+            "category": "Standard",
+            "type": "4-5 Door"
+          },
+          "rates": [
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "1471.30",
+                "currency": "USD"
+              }
+            },
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "1293.01",
+                "currency": "EUR"
+              }
+            }
+          ],
+          "images": [
+            {
+              "category": "VEHICLE",
+              "width": 90,
+              "height": 50,
+              "url": "https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZI&cnt=FR&vehcat=SDMR&item=0&stamp=VEHICLE_0__0__1456781263049&file=1.JPEG"
+            }
+          ],
+          "estimated_total": {
+            "amount": "1975.95",
+            "currency": "USD"
+          }
+        },
+        {
+          "vehicle_info": {
+            "acriss_code": "IDMR",
+            "transmission": "Manual",
+            "fuel": "Unspecified",
+            "air_conditioning": true,
+            "category": "Intermediate",
+            "type": "4-5 Door"
+          },
+          "rates": [
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "1471.30",
+                "currency": "USD"
+              }
+            },
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "1293.01",
+                "currency": "EUR"
+              }
+            }
+          ],
+          "images": [
+            {
+              "category": "VEHICLE",
+              "width": 90,
+              "height": 50,
+              "url": "https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZI&cnt=FR&vehcat=IDMR&item=0&stamp=VEHICLE_0__0__1456780981662&file=1.JPEG"
+            }
+          ],
+          "estimated_total": {
+            "amount": "1975.95",
+            "currency": "USD"
+          }
+        },
+        {
+          "vehicle_info": {
+            "acriss_code": "ITMR",
+            "transmission": "Manual",
+            "fuel": "Unspecified",
+            "air_conditioning": true,
+            "category": "Intermediate",
+            "type": "Convertible"
+          },
+          "rates": [
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "1689.60",
+                "currency": "USD"
+              }
+            },
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "1484.85",
+                "currency": "EUR"
+              }
+            }
+          ],
+          "images": [
+            {
+              "category": "VEHICLE",
+              "width": 90,
+              "height": 50,
+              "url": "https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZI&cnt=FR&vehcat=ITMR&item=0&stamp=VEHICLE_0__0__1462264946309&file=1.JPEG"
+            }
+          ],
+          "estimated_total": {
+            "amount": "2255.16",
+            "currency": "USD"
+          }
+        },
+        {
+          "vehicle_info": {
+            "acriss_code": "IVMR",
+            "transmission": "Manual",
+            "fuel": "Unspecified",
+            "air_conditioning": true,
+            "category": "Intermediate",
+            "type": "Passenger van"
+          },
+          "rates": [
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "1689.62",
+                "currency": "USD"
+              }
+            },
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "1484.87",
+                "currency": "EUR"
+              }
+            }
+          ],
+          "images": [
+            {
+              "category": "VEHICLE",
+              "width": 90,
+              "height": 50,
+              "url": "https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZI&cnt=FR&vehcat=IVMR&item=0&stamp=VEHICLE_0__0__1456912211835&file=1.JPEG"
+            }
+          ],
+          "estimated_total": {
+            "amount": "2255.18",
+            "currency": "USD"
+          }
+        },
+        {
+          "vehicle_info": {
+            "acriss_code": "CDAR",
+            "transmission": "Automatic",
+            "fuel": "Unspecified",
+            "air_conditioning": true,
+            "category": "Compact",
+            "type": "4-5 Door"
+          },
+          "rates": [
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "1769.29",
+                "currency": "USD"
+              }
+            },
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "1554.89",
+                "currency": "EUR"
+              }
+            }
+          ],
+          "images": [
+            {
+              "category": "VEHICLE",
+              "width": 90,
+              "height": 50,
+              "url": "https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZI&cnt=FR&vehcat=CDAR&item=0&stamp=VEHICLE_0__0__1456780597450&file=1.JPEG"
+            }
+          ],
+          "estimated_total": {
+            "amount": "2369.01",
+            "currency": "USD"
+          }
+        },
+        {
+          "vehicle_info": {
+            "acriss_code": "IFMR",
+            "transmission": "Manual",
+            "fuel": "Unspecified",
+            "air_conditioning": true,
+            "category": "Intermediate",
+            "type": "SUV"
+          },
+          "rates": [
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "1853.32",
+                "currency": "USD"
+              }
+            },
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "1628.73",
+                "currency": "EUR"
+              }
+            }
+          ],
+          "images": [
+            {
+              "category": "VEHICLE",
+              "width": 90,
+              "height": 50,
+              "url": "https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZI&cnt=FR&vehcat=IFMR&item=0&stamp=VEHICLE_0__0__1456911466977&file=1.JPEG"
+            }
+          ],
+          "estimated_total": {
+            "amount": "2464.31",
+            "currency": "USD"
+          }
+        },
+        {
+          "vehicle_info": {
+            "acriss_code": "PDAR",
+            "transmission": "Automatic",
+            "fuel": "Unspecified",
+            "air_conditioning": true,
+            "category": "Premium",
+            "type": "4-5 Door"
+          },
+          "rates": [
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "2180.78",
+                "currency": "USD"
+              }
+            },
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "1916.51",
+                "currency": "EUR"
+              }
+            }
+          ],
+          "images": [
+            {
+              "category": "VEHICLE",
+              "width": 90,
+              "height": 50,
+              "url": "https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZI&cnt=FR&vehcat=PDAR&item=0&stamp=VEHICLE_0__0__1456913011163&file=1.JPEG"
+            }
+          ],
+          "estimated_total": {
+            "amount": "2883.03",
+            "currency": "USD"
+          }
+        },
+        {
+          "vehicle_info": {
+            "acriss_code": "SVMR",
+            "transmission": "Manual",
+            "fuel": "Unspecified",
+            "air_conditioning": true,
+            "category": "Standard",
+            "type": "Passenger van"
+          },
+          "rates": [
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "2399.05",
+                "currency": "USD"
+              }
+            },
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "2108.33",
+                "currency": "EUR"
+              }
+            }
+          ],
+          "images": [
+            {
+              "category": "VEHICLE",
+              "width": 90,
+              "height": 50,
+              "url": "https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZI&cnt=FR&vehcat=SVMR&item=0&stamp=VEHICLE_0__0__1457610411286&file=1.JPEG"
+            }
+          ],
+          "estimated_total": {
+            "amount": "3162.13",
+            "currency": "USD"
+          }
+        },
+        {
+          "vehicle_info": {
+            "acriss_code": "LDAR",
+            "transmission": "Automatic",
+            "fuel": "Unspecified",
+            "air_conditioning": true,
+            "category": "Luxury",
+            "type": "4-5 Door"
+          },
+          "rates": [
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "3326.88",
+                "currency": "USD"
+              }
+            },
+            {
+              "type": "WEEKLY",
+              "price": {
+                "amount": "2923.73",
+                "currency": "EUR"
+              }
+            }
+          ],
+          "images": [
+            {
+              "category": "VEHICLE",
+              "width": 90,
+              "height": 50,
+              "url": "https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=ZI&cnt=FR&vehcat=LDAR&item=0&stamp=VEHICLE_0__0__1456912286323&file=1.JPEG"
+            }
+          ],
+          "estimated_total": {
+            "amount": "4348.45",
+            "currency": "USD"
+          }
+        }
+      ]
+    }
+  ]
+}

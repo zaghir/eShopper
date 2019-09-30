@@ -1,0 +1,156 @@
+
+<style>
+	.ng-invalid { background-color: lightpink; }
+	.ng-valid { background-color: lightgreen; }
+	span.error { color: red; font-weight: bold; }
+</style>
+<div class="col-md-8">
+<h4>Veuillez remplir vos informations personnelles pour valider votre réservation!</h4>
+<form name="bookingForm" novalidate>
+	<div class="well">
+		<h3>Informations personnelles</h3>
+		<div class="form-group">
+			<label>Nom</label>
+		    <input type="text" pattern="[a-zA-Z]*$" name="firstname" class="form-control"
+			ng-model="data.booking.firstname" required />
+			<span class="error" ng-show="bookingForm.firstname.$error.required">
+				Entrez un nom 
+			</span>
+
+		</div>
+		<div class="form-group">
+			<label>Pr�nom</label>
+		    <input type="text" pattern="[a-zA-Z]*$" name="name" class="form-control"
+			ng-model="data.booking.name" required />
+			<span class="error" ng-show="bookingForm.name.$error.required">
+				Entrez un prenom 
+			</span>
+
+		</div>
+		<div class="form-group">
+			<label>E-mail</label>
+		    <input type ="email" name="email" class="form-control"
+			ng-model="data.booking.email" required />
+			<span class="error" ng-show="bookingForm.email.$error.required">
+				Entrez une adresse e-mail valide 
+			</span>
+
+		</div>
+		<div class="form-group">
+			<label>Téléphone</label>
+		    <input type="text" pattern="^0[1-68][0-9]{8}$" maxlength="10" name="phone" class="form-control"
+			ng-model="data.booking.phone" required />
+			<span class="error" ng-show="bookingForm.phone.$error.required">
+				Entrez un numéro de t�l�phone valide 
+			</span>
+
+		</div>
+		<h3>Adresse</h3>
+		<div class="form-group">
+			<label>Rue</label>
+			
+			<input name="street" class="form-control"
+			ng-model="data.booking.street" required />
+			<span class="error" ng-show="bookingForm.street.$error.required">
+				Entrez un nom de rue
+			</span>
+		</div>
+		<div class="form-group">
+			<label>Ville</label>
+			<input type="text" name="city" pattern="[a-zA-Z]*$" class="form-control"
+			ng-model="data.booking.city" required />
+			<span class="error" ng-show="bookingForm.city.$error.required">
+				Entrez une ville
+			</span>
+		</div>
+	    <div class="form-group">
+			<label>Code postal</label>
+			<input type="number" max="99999" name="zip" class="form-control"
+			ng-model="data.booking.zip" required />
+			<span class="error" ng-show="bookingForm.zip.$error.required">
+				Entrez un code postal
+			</span>
+		</div>
+		<div class="form-group">
+			<label>Pays</label>
+			<input type="text" pattern="[a-zA-Z]*$" name="country" class="form-control"
+			ng-model="data.booking.country" required />
+			<span class="error" ng-show="bookingForm.country.$error.required">
+				Entrez un pays
+			</span>
+		</div>
+		<h3>Options</h3>
+		<div class="checkbox">
+			<label>
+				<input name="insurance" type="checkbox"
+				ng-model="data.booking.insurance" />
+				Prendre une assurance
+			</label>
+		</div>
+		<!--I can get information about
+the overall state of the form as well. The shippingForm.$invalid property will be set to true when one or more of the
+input elements is invalid, and I can combine this with the ng-disabled directive to manage the state of the button
+element.-->
+		<div class="text-center">
+			<button ng-disabled="bookingForm.$invalid"
+			        ng-click="sendBooking(data.booking)"
+			class="btn btn-primary">Valider et payer</button>
+		</div>
+	</div>
+
+</form>
+</div>
+<div class="col-md-4">
+<div ng-repeat="p in receivedDataA.prices">
+		
+
+								<div class="panel panel-primary">
+									<div class="panel-heading"><p>{{receivedDataA.departure_station.station_name}} &nbsp <span class="glyphicon glyphicon-arrow-right"></span> &nbsp {{receivedDataA.arrival_station.station_name}}</p><span align="right">{{p.total_price.amount}}{{p.total_price.currency}} &nbsp <span style="padding-left:6px"><span ng-switch=receivedData.marketing_company>
+										<img ng-switch-when="SNCF" src="./images/sncf.png" style="float: right; width: 80px; margin-right: 10px;">
+										<img ng-switch-when="THA" src="./images/thalys.png" style="float: right; width: 80px; margin-right: 10px;">
+										<img ng-switch-when="ERS" src="./images/eurostar.jpg" style="float: right; width: 80px; margin-right: 10px;">
+										<img ng-switch-default   src="">
+									</span>
+							        </div>
+								    <div class="panel-body">
+									
+									date de départ : {{displayDay(receivedDataA.departs_at.slice(0,10))}}</br>
+									heure de départ : {{receivedDataA.departs_at | limitTo : 5 : 11}} </br>
+								
+									date d'arrivée : {{displayDay(receivedDataA.arrives_at.slice(0,10))}}</br>
+									heure d'arrivée : {{receivedDataA.arrives_at | limitTo : 5 : 11}}</br>
+									<p align="right"> {{displayClass(p.service_class)}} &nbsp {{receivedDataA.train_type}} &nbsp </br>Train No : {{receivedDataA.train_number}}  &nbsp {{receivedDataA.marketing_company}}</p></br>
+									<p ng-style="customStyle.style">{{displayRestrictions(p.rate.restrictions)}}</p>
+									<button  class="btn btn-danger" ng-click="" >Supprimer</button>
+								    </div>
+							    </div>
+						    </div>
+			<div ng-repeat="p in receivedDataR.prices">
+		
+
+								<div class="panel panel-primary">
+									<div class="panel-heading"><p>{{receivedDataR.departure_station.station_name}} &nbsp <span class="glyphicon glyphicon-arrow-right"></span> &nbsp {{receivedDataR.arrival_station.station_name}}</p><span align="right">{{p.total_price.amount}}{{p.total_price.currency}} &nbsp <span style="padding-left:6px"><span ng-switch=receivedData.marketing_company>
+										<img ng-switch-when="SNCF" src="./images/sncf.png" style="float: right; width: 80px; margin-right: 10px;">
+										<img ng-switch-when="THA" src="./images/thalys.png" style="float: right; width: 80px; margin-right: 10px;">
+										<img ng-switch-when="ERS" src="./images/eurostar.jpg" style="float: right; width: 80px; margin-right: 10px;">
+										<img ng-switch-default   src="">
+									</span>
+							        </div>
+								    <div class="panel-body">
+									
+									date de départ : {{displayDay(receivedDataR.departs_at.slice(0,10))}}</br>
+									heure de départ : {{receivedDataR.departs_at | limitTo : 5 : 11}} </br>
+								
+									date d'arrivée : {{displayDay(receivedDataR.arrives_at.slice(0,10))}}</br>
+									heure d'arrivée : {{receivedDataR.arrives_at | limitTo : 5 : 11}}</br>
+									<p align="right"> {{displayClass(p.service_class)}} &nbsp {{receivedDataR.train_type}} &nbsp </br>Train No : {{receivedDataR.train_number}}  &nbsp {{receivedDataR.marketing_company}}</p></br>
+									<p ng-style="customStyle.style">{{displayRestrictions(p.rate.restrictions)}}</p>
+									<button  class="btn btn-danger" ng-click="" >Supprimer</button>
+								    </div>
+							    </div>
+						    </div>
+			
+            </div>
+</div>
+
+  <div ui-view></div>

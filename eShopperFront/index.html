@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<html> 
+    <head>
+        <!-- Title -->
+        <title>E-Shopper</title>
+        <!-- Meta -->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="E-Shopper" />
+        <meta name="author" content="LBT" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!--         Favicon
+        <link rel="shortcut icon" type="image/x-icon" href="" />-->
+
+        <!-- build:css(.) styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:css(.tmp) -->
+        <link rel="stylesheet" href="styles/animate.css" />
+        <link rel="stylesheet" href="styles/font-awesome.css" />
+        <link rel="stylesheet" href="styles/nexus.css" />
+        <link rel="stylesheet" href="styles/responsive.css" />
+        <link rel="stylesheet" href="styles/custom.css" />
+        <link rel="stylesheet" href="styles/fonts-googleapis1.css">
+        <link rel="stylesheet" href="styles/fonts-googleapis2.css">
+        <link rel="stylesheet" href="styles/toggle_button.css">
+        <!-- endbuild -->
+    </head>
+    <body ng-app="eShopperApp">
+        <!-- === HEADER =====================================================================-->
+        <div id="pre_header" class="visible-lg"></div>
+        <div id="header" class="container">
+            <div class="row">
+                <!-- Logo -->
+                <div class="logo">
+                    <a ui-sref="accueil" title="">
+                        <img src="images/logo.png" height="75" alt="Logo" />
+                    </a>
+                </div>
+                <!-- End Logo -->
+                <!-- Top Menu -->
+                <div class="col-md-12  margin-top-30">
+                    <div id="hornav" class="pull-right visible-lg">
+                        <ul class="nav navbar-nav" ng-controller="loginCtrl">
+                            <li><a ui-sref="accueil">ACCUEIL</a></li>
+                            <li><a ui-sref="avion">AVION</a></li>
+                            <li><a ui-sref="train">TRAIN</a></li>
+                            <li><a ui-sref="hotel">HOTEL</a></li>
+                            <li><a ui-sref="payments">PAYMENTS</a></li>
+                            <li class="parent"><span>VEHICULE</span>
+                                <ul>
+                                    <li><a ui-sref="rechercheVehicule">VEHICULE</a></li></li>
+                            <li><a ui-sref="reportReservationVehicule">Infomation</a></li>
+                        </ul>
+
+
+
+
+                        <li ng-show="connectionAdmin == 'deconnected' && connectionClient == 'deconnected'"><span>CONNEXION</span>
+                            <ul>
+                                <li><a ui-sref="connexion">S"IDENTIFIER</a></li>
+                                <li><a ui-sref="inscription">S"INSCRIRE</a></li>
+                                <li class="parent"><span>VEHICULE ADMIN</span>
+                                    <ul>
+                                        <li><a ui-sref="agenceAuto">Agence Auto</a></li>
+                                        <li><a ui-sref="compagnieVehicule">Compagnie Véhicule</a></li>
+                                        <li><a ui-sref="vehicule">Vehicule</a></li>
+                                        <li><a ui-sref="optionsCode1Vehicule">Options Véhicule Code 1</a></li>
+                                        <li><a ui-sref="optionsCode2Vehicule">Options Véhicule Code 2</a></li>
+                                        <li><a ui-sref="optionsCode3Vehicule">Options Véhicule Code 3</a></li>
+                                        <li><a ui-sref="optionsCode4Vehicule">Options Véhicule Code 4</a></li>
+                                        <li><a ui-sref="reservationVehicule">Reservation Vehicule</a></li>
+                                        <li><a ui-sref="rechercheVehicule">Recherche Vehicule</a></li>
+                                        <li><a ui-sref="devis">Devis</a></li>
+                                        <li><a ui-sref="tarifsVehicule">Tarifs Véhicule</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li ng-show="connectionAdmin == 'connected'"><span>GESTION</span>
+                            <ul>
+                                <li><a href="#">FRAIS</a></li>
+                                <li><a href="#">PNR</a></li>
+                                <li><a href="#">REPORTING</a></li>
+                                <li><a href="#">VOYAGEURS</a></li>
+                                <li><a href="#">RESERVATIONS</a></li>
+                                <li><a href="#">SOCIETES</a></li>
+                                <li><a href="#">PAIEMENT</a></li>
+                            </ul>
+                            <ul>
+                                <li><span>VEHICULE</span></li>
+                            </ul>
+
+                        </li>
+
+                        <li ng-show="connectionClient == 'connected'"><span>MON COMPTE</span>
+                            <ul>
+                                <li><a href="#/reservation">MES RESERVATIONS</a></li>
+                                <li><a href="#/profil">MON PROFIL</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a ui-sref="contact">CONTACT</a></li>
+                        <li><form ng-show="connectionClient == 'connected'" action="#"><input type="submit" value="Déconnexion" class="btn btn-aqua"/></form></li>
+                        <li><form ng-show="connectionAdmin == 'connected'" action="#"><input type="submit" value="Déconnexion" class="btn btn-aqua"/></form></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <!-- End Top Menu -->
+            </div>
+        </div>
+        <!-- === END HEADER ================================================================= -->
+
+        <!-- === BEGIN CONTENT =============================================================== -->
+        <div id="content" class="container">
+            <div class="row margin-top-30">
+                <div class="col-md-12 text-center">
+                    <a ui-sref="accueil">
+                        <img src="images/eshopper.png"  alt="Logo" />
+                    </a><br>
+                    <p class="text-center"></p>
+                </div>
+            </div>
+            <div class="row margin-top-10"></div>
+            <div class="row margin-vert-30">
+
+                <!-- Menu de gauche -->
+                <!--<div class="col-md-4">
+
+</div>              -->
+                <!-- End Menu de gauche -->
+
+                <!-- Main body -->
+                <!--<div class="col-md-8">
+    <div ui-view></div>
+</div>           -->
+                <div ui-view></div>
+                <!-- End Main body -->
+
+            </div>
+            <div class="row"></div>
+            <div class="row"></div>
+        </div>
+        <!-- === END CONTENT ============================================================== -->
+
+
+
+        <!-- Footer Menu ================================================================= -->
+        <div id="footer" class=" footer navbar-fixed-bottom hidden-sm hidden-md hidden-xs">
+            <div class="container">
+                <div class="row">
+                    <div id="copyright" class="col-md-6">
+                        <p>(C) 2016 Tous droits réservés E-SHOPPER ( Dev par equipe B&D Java )</p>
+                    </div>
+                    <div id="footermenu" class="col-md-6">
+                        <ul class="list-unstyled list-inline pull-right">
+                            <li><a href="#/accueil" target="_blank">Accueil</a></li>
+                            <li><a href="#/societe" target="_blank">Société</a></li>
+                            <li><a href="#/cgv" target="_blank">CGV</a></li>
+                            <li><a href="#/contact" target="_blank">Contact</a></li>
+                            <li><a href="#/faq" target="_blank">FAQ</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer Menu ============================================================== -->
+
+        <!-- JS =========================================================================== -->
+        <!-- Google Analytics: change UA-XXXXX-X to be your site"s ID -->
+        <script>
+            !function (A, n, g, u, l, a, r) {
+                A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
+                    (A[l].q = A[l].q || []).push(arguments)
+                }, A[l].l = +new Date, a = n.createElement(g),
+                        r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+            }(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga");
+
+            ga("create", "UA-XXXXX-X");
+            ga("send", "pageview");
+        </script>
+
+        <!-- build:js(.) scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="bower_components/angular-touch/angular-touch.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/angular-locale_fr-fr/angular-locale_fr-fr.js"></script>
+        <script src="bower_components/jspdf/dist/jspdf.min.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/others/ui-bootstrap-tpls.js"></script>
+        <script src="scripts/others/ng-simplePagination.js"></script>
+        <script src="scripts/others/scripts.js"></script>
+        <script src="scripts/others/jquery.isotope.js"></script>
+        <script src="scripts/others/jquery.slicknav.js"></script>
+        <script src="scripts/others/jquery.visible.js"></script>
+        <script src="scripts/others/slimbox2.js"></script>
+        <script src="scripts/others/modernizr.custom.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/admin/contact.js"></script>
+        <script src="scripts/controllers/admin/inscription.js"></script>
+        <script src="scripts/controllers/admin/login.js"></script>
+
+        <script src="scripts/controllers/admin/errorCtrl.js"></script>
+        <script src="scripts/services/admin/errorFactory.js"></script>
+
+
+        <script src="scripts/controllers/hotel/rechercheCtrl.js"></script>
+        <script src="scripts/controllers/hotel/resultatCtrl.js"></script>
+        <script src="scripts/controllers/hotel/detailsCtrl.js"></script>
+        <script src="scripts/directives/hotel/detailsDir.js"></script>
+        <script src="scripts/directives/hotel/directive.js"></script>
+        <script src="scripts/services/hotel/hotelFactory2.js"></script>
+        <script src="scripts/services/hotel/coordFactory.js"></script>
+
+
+        <script src="scripts/controllers/air/resultatVolsCtrl.js"></script>
+        <script src="scripts/controllers/air/rechercheVolsCtrl.js"></script>
+        <script src="scripts/controllers/air/reservationVolCtrl.js"></script>
+        <script src="scripts/services/air/ApiAeroportFactory.js"></script>
+        <script src="scripts/services/air/ApiReservationVolFactory.js"></script>
+        <script src="scripts/services/air/ApiVolsFactory.js"></script>
+        <script src="scripts/services/air/aeroportFactory.js"></script>
+        <script src="scripts/services/air/clientFactory.js"></script>
+        <script src="scripts/services/air/compagnieAerienneFactory.js"></script>
+        <script src="scripts/services/air/factureFactory.js"></script>
+        <script src="scripts/services/air/reservationVolFactory.js"></script>
+        <script src="scripts/services/air/tarifFactory.js"></script>
+        <script src="scripts/services/air/terminalAeroFactory.js"></script>
+        <script src="scripts/services/air/volFactory.js"></script>
+        <script src="scripts/services/air/voyageurFactory.js"></script>
+        <script src="scripts/services/air/apisConfigFactory.js"></script>
+
+        <script src="scripts/controllers/rail/travelCtrl.js"></script>
+        <script src="scripts/controllers/rail/journeyCtrl.js"></script>
+        <script src="scripts/services/rail/travelFactory.js"></script>
+        <script src="scripts/services/rail/travelService.js"></script>
+        <script src="scripts/services/rail/durationService.js"></script>
+        <script src="scripts/services/rail/comparatorService.js"></script>
+        <script src="scripts/services/rail/hourFactory.js"></script>
+        <script src="scripts/services/rail/priceFactory.js"></script>
+        <script src="scripts/services/rail/bookingFactory.js"></script>
+
+
+        <!----  JS VEHICULE -->
+        <script src="scripts/controllers/car/agenceAutoController.js"></script>
+        <script src="scripts/controllers/car/compagnieVehiculeController.js"></script>
+        <script src="scripts/controllers/car/reservationVehiculeContoller.js"></script>
+        <script src="scripts/controllers/car/optionsCode1VehiculeController.js"></script>
+        <script src="scripts/controllers/car/optionsCode2VehiculeController.js"></script>
+        <script src="scripts/controllers/car/optionsCode3VehiculeController.js"></script>
+        <script src="scripts/controllers/car/optionsCode4VehiculeController.js"></script>
+        <script src="scripts/controllers/car/compagnieVehiculeController.js"></script>
+        <script src="scripts/controllers/car/agenceAutoController.js"></script>
+        <script src="scripts/controllers/car/devisController.js"></script>
+        <script src="scripts/controllers/car/vehiculeController.js"></script>
+        <script src="scripts/controllers/car/tarifsVehiculeController.js"></script>
+        <script src="scripts/controllers/car/rechercheVehiculeController.js"></script>
+        <script src="scripts/controllers/car/reservationVehiculeContoller.js"></script>
+        <script src="scripts/controllers/car/reportReservationVehiculeController.js"></script>
+
+        <script src="scripts/services/car/acrissCarCode1Service.js"></script>
+        <script src="scripts/services/car/acrissCarCode2Service.js"></script>
+        <script src="scripts/services/car/acrissCarCode3Service.js"></script>
+        <script src="scripts/services/car/acrissCarCode4Service.js"></script>
+        <script src="scripts/services/car/paginationService.js"></script>
+        <script src="scripts/services/car/compagnieVehiculeService.js"></script>
+        <script src="scripts/services/car/agenceAutoService.js"></script>
+        <script src="scripts/services/car/devisService.js"></script>
+        <script src="scripts/services/car/vehiculeService.js"></script>
+        <script src="scripts/services/car/tarifsVehiculeService.js"></script>
+        <script src="scripts/services/car/factoryZyCalendar.js"></script>
+        <script src="scripts/services/car/reservationVehiculeService.js"></script>
+        <script src="scripts/services/car/reportReservationVehiculeService.js"></script>
+
+        <script src="scripts/services/car/CConfigCar.js"></script>
+
+        <script src="scripts/filters/car/comboFilter.js"></script>
+
+		<!--  END JS VEHICULE -->
+
+        <!--------------------- JS PAYMENTS ------------------->
+		
+		<script src="scripts/controllers/payments/payController.js"></script> 
+
+		<script src="scripts/others/sha1.js"></script>
+
+ 		<script src="scripts/services/payments/paiementService.js"></script>
+ 		
+        <!-- END JS PAYMENTS -->
+
+        <!-- endbuild -->
+
+        <!-- End JS ======================================================================= -->
+    </body>
+</html>

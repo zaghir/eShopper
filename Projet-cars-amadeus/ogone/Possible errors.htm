@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<!--[if IE 7]>    <html class="no-js ie7 ie" lang="nl"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 ie" lang="nl"> <![endif]-->
+<!--[if IE 9 ]>   <html class="no-js ie9 ie" lang="nl"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html style="" class=" js canvas no-touch history rgba multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients csstransforms csstransforms3d csstransitions fontface generatedcontent video audio svg inlinesvg svgclippaths" lang="nl"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8"><link rel="canonical" href="http://payment-services.ingenico.com/int/en/ogone/support/guides/integration%20guides/possible-errors"><meta name="author"><meta name="viewport" content="width=device-width"><title>
+	Possible errors
+</title><link rel="shortcut icon"><link href="Possible%20errors_fichiers/css.css" rel="stylesheet" type="text/css"><link href="Possible%20errors_fichiers/css_002.css" rel="stylesheet" type="text/css"><link rel="stylesheet" type="text/css" href="Possible%20errors_fichiers/main.css">        
+        <link rel="alternate" hreflang="fr" href="http://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/possible-errors">
+            
+        <link rel="alternate" hreflang="nl" href="http://payment-services.ingenico.com/nl/nl/ogone/support/guides/integration%20guides/possible-errors">
+            
+        <link rel="alternate" hreflang="de" href="http://payment-services.ingenico.com/de/de/ogone/support/guides/integration%20guides/possible-errors">
+            
+        <link rel="alternate" hreflang="it" href="http://payment-services.ingenico.com/it/it/ogone/support/guides/integration%20guides/possible-errors">
+            
+        <link rel="alternate" hreflang="es" href="http://payment-services.ingenico.com/es/es/ogone/support/guides/integration%20guides/possible-errors">
+    
+
+    <style type="text/css">@font-face{ font-family: 'ClanWebPro-Bold';	src: url('/css/KDB/fonts/ClanWebPro-Bold.eot'), url('/css/KDB/fonts/ClanWebPro-Bold.woff') format('woff');}
+@font-face{ font-family: 'ClanWebPro-Book';	src: url('/css/KDB/fonts/ClanWebPro-Book.eot'), url('/css/KDB/fonts/ClanWebPro-Book.woff') format('woff');}
+html { font-size: 62.5%; -webkit-overflow-scrolling: touch; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body, button, input, select option, textarea { font-family: 'ClanWebPro-Book', arial, sans-serif; color: #444444; font-weight: 300; font-size: 14px;}
+h1,h2{ font-family: 'ClanWebPro-Book', arial, sans-serif; font-weight: 900; }
+h3,h4,h5,h6,.btn,button,.brand-nav,.acd-toggler,.left-navigation { font-family: 'ClanWebPro-Book', arial, sans-serif; font-weight: 700; }
+.main-header .bar nav a.lvl1{ font-size: 13px;}
+.main-header .sub-menu{ font-family: 'ClanWebPro-Book', arial, sans-serif; }
+/* correction ingenico logo with one language */
+IMG#ctl12_WhiteLabelLogo { margin-bottom: 5px; }
+/* text header */
+h1{ color:#1cc0dc; }
+h1 strong { font-size: 125%; }
+h2{ color:#1cc0dc!important; }
+h3{ color:#1cc0dc; }
+h4{ color:#404A53!important; }
+h5{ color:#1cc0dc; }
+strong { color:#404A53!important; }
+/* correction h3 login screen*/
+div.col-1-1 h3{ color:#404A53; }
+/* correction on contact page */
+.MyFontSize {
+font-size: 18px;
+line-height: 28px;
+}
+/* correction font product page */
+h3#application_0_Body {
+font-weight: 300!important;
+font-size: 16px;
+}
+.contentblock.contactUs {
+padding-top: 0px;
+padding-bottom: 0px;
+}
+.pci_color { color:#e31c18!important; }
+/* text and link */
+a.guide-map { color:#fff!important; background-color:#404A53!important; border-radius: 5px!important; padding: 10px!important; text-decoration:none!important; -webkit-transition: all .25s ease-out; -moz-transition: all .25s ease-out; -ms-transition: all .25s ease-out; -o-transition: all .25s ease-out; transition: all .25s ease-out;}
+a.guide-map:hover { background-color:#1cc0dc!important; text-decoration:none!important; }
+/* header */
+header.main-header { background-color:#FFFFFF!important; }
+/* header - menu */
+div.bar.col-10-12 { padding-left: 20px!important;}
+header.main-header .bar nav a.lvl1 { color:#404A53!important; }
+header.main-header .bar nav a.lvl1:hover { color:#1cc0dc!important; text-decoration:underline; }
+header.main-header .bar nav a.lvl2:hover { color:#1cc0dc!important; text-decoration:underline;}
+header.main-header .bar nav .sub-menu a.active { color:#404A53!important; }
+header.main-header .bar nav .sub-menu a.active:hover { color:#1cc0dc!important; }
+/* header - search field */
+header.main-header input { background-color:#FFFFFF!important; }
+header.main-header .search input { color:#404A53!important; }
+header.main-header .search .btn-submit:before { color:#404A53!important; }
+div.wrapper header.main-header .search input.placeholder { color:#888888!important; }
+/* header - breadcrumb */
+div.black-bar { background-color:#404A53!important; }
+div.black-bar a { color:#FFFFFF!important; }
+div.black-bar li.last { color:#FFFFFF!important; }
+div.black-bar ul li:before { color:#FFFFFF!important; }
+/* header - language selector */
+div.language-nav { background-color:#404A53!important; }
+div.language-nav a.language-item:hover { color:#1cc0dc!important; text-decoration:underline; }
+/* guide - first level text header */
+div.dark-box { background-color:#404A53!important; }
+div.dark-box h2 { color:#FFFFFF!important; font-size: 130%;}
+/* guide - table of content */
+div.group { background-color:#f9f9f9!important; }
+div.group h4 { color:#1cc0dc!important; }
+div.group a { font-weight:normal; }
+div.group a:link { color:#444444!important; }
+div.group a:visited { color:#888888!important; }
+div.group a:hover { color:#1cc0dc!important; }
+/* bullet */
+ul li:before { color:#1cc0dc!important; }
+.acd-content .text ul li { list-style:disc!important; }
+.acd-content .text ul li:before { color:#1cc0dc!important; }
+/* accordion */
+.accordion .acd-content { background-color:#F5F5F5!important; padding-top: 20px; }
+.accordion .text { color:#404A53!important; }
+.accordion span { color:#404A53!important; }
+.accordion p { color:#404A53!important; }
+.accordion ul li { color:#404A53!important; }
+.accordion a { color:#404A53!important; }
+.accordion .label:hover { color:#1cc0dc!important; }
+.accordion .label.active { color:#1cc0dc!important;font-weight:bold; }
+/* accordion - left control */
+.accordion .label:before { color:#404A53!important; }
+.accordion .label:hover:before { color:#1cc0dc!important; }
+.accordion .label.active:before { color:#1cc0dc!important; }
+/* accordion - top control */
+.accordion .acd-toggler{ background-color: #ededed!important; }
+.accordion .acd-toggler a { color: #404A53; } 
+.accordion .acd-toggler a:after{ color: #1cc0dc !important; }
+.accordion .acd-toggler.active { background-color:#1cc0dc!important; }
+.accordion .acd-toggler.active a,
+.accordion .acd-toggler.active a:after { color:#fff!important; }
+.accordion .acd-toggler.active + .acd-content{ border: 1px solid #1cc0dc; background-color: #fff!important; }
+/* tables */
+/* table{ border: 1px solid #404A53!important; } */
+table tr td, table tr th { color:#404A53!important; }
+/* button - download */
+.btnDownloadComplete { background-color:#404A53!important; }
+.btnDownloadComplete:hover { background-color:#1cc0dc!important; }
+/* button - login */
+.cta-box h3{ color: #404A53!important; }
+.btnCta { background-color:#1cc0dc!important; -webkit-transition: all .25s ease-out; -moz-transition: all .25s ease-out; -ms-transition: all .25s ease-out; -o-transition: all .25s ease-out; transition: all .25s ease-out;}
+.btnCta:after{ -webkit-transform: scale(.9); -moz-transform: scale(.9); -ms-transform: scale(.9); -o-transform: scale(.9); transform: scale(.9); -webkit-transition: all .25s ease-out; -moz-transition: all .25s ease-out; -ms-transition: all .25s ease-out; -o-transition: all .25s ease-out; transition: all .25s ease-out;} 
+.btnCta:hover { background-color:#14d0f0!important; box-shadow: #14d0f0 0 0 0 2px !important; }
+.btnCta:hover:after{ -webkit-transform: scale(1); -moz-transform: scale(1); -ms-transform: scale(1); -o-transform: scale(1); transform: scale(1);}
+/* button - form - yes no */
+.btnYes { background-color:#404A53!important; }
+.btnYes:hover { background-color:#1cc0dc!important; }
+.btnNo { background-color:#404A53!important; }
+.btnNo:hover { background-color:#1cc0dc!important; }
+/* button - form - send */
+.feedback-box .fields-box input { background-color:#404A53!important; }
+.feedback-box .fields-box input:hover { background-color:#1cc0dc!important; }
+/* button - back to top */
+#BackToTop:hover { background-color:#1cc0dc!important; }
+/* button - chapter navigator */
+#application_0_ChapterControl_PreviousHyperLink { background-color:#404A53!important; color:#fff!important; }
+#application_0_ChapterControl_NextHyperLink { background-color:#404A53!important; color:#fff!important; }
+#application_0_ChapterControl_PreviousHyperLink:hover { background-color:#1cc0dc!important; }
+#application_0_ChapterControl_NextHyperLink:hover { background-color:#1cc0dc!important; }
+/* search result */
+.search-amount .highlight { color:#1cc0dc!important; }
+.pagination .active { background-color:#1cc0dc!important; }
+/* text color on product and contact pages */
+h3#application_0_Body { color:#404A53; }
+h3#application_0_Body strong { color:#1cc0dc!important; }
+/* cookie settings */
+#cookiecontainer .col02 ul li { font-size: 98%; }
+#cookiecontainer .col02 ul { list-style-type: disc; }
+#cookiecontainer .col02 ul li:before { content:none; }
+/* text footer */
+.main-footer a:hover { color:#1cc0dc!important; }
+div.content-end-spacer { padding-top:30px!important; }
+
+
+</style>
+    <script id="undefined" src="Possible%20errors_fichiers/inpage_linkid.js" async="" type="text/javascript"></script><script src="Possible%20errors_fichiers/ga.js" async="" type="text/javascript"></script><script src="Possible%20errors_fichiers/gtm.js" async=""></script><script src="Possible%20errors_fichiers/modernizr.js"></script>
+<meta name="robots" content="index, follow, noydir, noodp"></head>
+    
+<body class="content-tmpl"><a class="show" style="top: 0px; opacity: 1;" href="#body" id="BackToTop"><span></span></a>
+    <div id="ctl01_GoogleTagsDatalayerPanel">
+	
+    <script>
+        dataLayer = [{'remarketing':false}];
+    </script>
+
+</div>
+
+<div id="ctl01_GoogleTagsInitializationScript">
+	
+    <!-- Google Tag Manager -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WW67R8"
+            height="0" width="0" style="display: none; visibility: hidden"></iframe>
+    </noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WW67R8');</script>
+    <!-- End Google Tag Manager -->
+
+</div>
+
+
+    <form name="ctl02" method="post" action="/int/en/ogone/support/guides/integration guides/possible-errors" id="ctl02">
+<div>
+<input name="__EVENTTARGET" id="__EVENTTARGET" value="" type="hidden">
+<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" type="hidden">
+
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['ctl02'];
+if (!theForm) {
+    theForm = document.ctl02;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="Possible%20errors_fichiers/WebResource.js" type="text/javascript"></script>
+
+
+<script src="Possible%20errors_fichiers/MicrosoftAjax.js" type="text/javascript"></script>
+<script src="Possible%20errors_fichiers/MicrosoftAjaxWebForms.js" type="text/javascript"></script>
+<div>
+
+	<input name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2DBA29A3" type="hidden">
+	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAeAG2zzB8br9zoYPNjRfvgvtbIdVHbYdShAyORf9P0Rgi5Hi+rlhyK83ozZjS5mx+6wyF7NBmk7ZNsXZm3M3adG6jaPuhpg+HzSh8MT5M49i3TASydXK0xs98hvAO1pKogdNHIzbxBxc8HFPuJRcg48a8+6R977FwVieYye0xFatDTUAYyftm6HOuB4iTF6KEk=" type="hidden">
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'ctl02', [], [], [], 90, '');
+//]]>
+</script>
+
+        
+        <div class="wrapper">
+            
+<header class="main-header">
+    <div class="grid grid-pad brand-nav">
+        <div class="brand col-2-12">
+            <a id="ctl12_LogoLink" href="http://payment-services.ingenico.com/int/en/"><img id="ctl12_WhiteLabelLogo" src="Possible%20errors_fichiers/logo_ingenico_ps.png" alt="Ingenico Payment Services" style="height:59px;width:157px;border-width:0px;"></a>
+        </div>
+        <div class="bar col-10-12">
+            
+<nav role="navigation">
+
+    
+            <ul>
+        
+            <li><a href="https://payment-services.ingenico.com/int/en/ogone/support" class="lvl1 execute_link">Home</a>
+                
+            </li>
+        
+            <li><a href="https://payment-services.ingenico.com/int/en/ogone/support/products/onboarding" class="lvl1 execute_link">Get Started</a>
+                
+            </li>
+        
+            <li><a href="" class="lvl1">Payment channels</a>
+                
+                        <ul class="sub-menu">
+                    
+                        <li><a href="https://payment-services.ingenico.com/int/en/ogone/support/products/online-payments" class="lvl2">Online and mobile</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/int/en/ogone/support/products/batch" class="lvl2">Batch</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/int/en/ogone/support/products/phone-mail" class="lvl2">Manual input</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/int/en/ogone/support/products/cross-channel" class="lvl2">Cross-Channel</a></li>
+                    </ul>
+            </li>
+        
+            <li><a href="" class="lvl1">Solutions</a>
+                
+                        <ul style="display: none;" class="sub-menu">
+                    
+                        <li><a href="https://payment-services.ingenico.com/int/en/ogone/support/products/account-management" class="lvl2">Account Management</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/int/en/ogone/support/products/transaction-management" class="lvl2">Transaction Management</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/int/en/ogone/support/products/recurring" class="lvl2">Recurring Payments</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/int/en/ogone/support/products/shopping-carts" class="lvl2">Shopping Carts</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/int/en/ogone/support/products/fraud" class="lvl2">Fraud Prevention</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/int/en/ogone/support/products/collect" class="lvl2">Ingenico Collect</a></li>
+                    </ul>
+            </li>
+        
+            <li><a href="https://payment-services.ingenico.com/int/en/ogone/support/products/payment-methods" class="lvl1 execute_link">Payment methods</a>
+                
+            </li>
+        
+            <li><a href="https://payment-services.ingenico.com/int/en/ogone/support/login" class="lvl1 execute_link">Login</a>
+                
+            </li>
+        </ul>
+</nav>
+
+            
+
+<div class="language-nav">
+    <a class="current" href="#">
+        en
+    </a>
+
+    
+            <ul>
+        
+            <li>
+                <a id="ctl12_LanguageNavigation1_LanguagesList_ctl01_LanguageLink" class="language-item" href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/possible-errors">fr</a>
+            </li>
+        
+            <li>
+                <a id="ctl12_LanguageNavigation1_LanguagesList_ctl02_LanguageLink" class="language-item" href="https://payment-services.ingenico.com/nl/nl/ogone/support/guides/integration%20guides/possible-errors">nl</a>
+            </li>
+        
+            <li>
+                <a id="ctl12_LanguageNavigation1_LanguagesList_ctl03_LanguageLink" class="language-item" href="https://payment-services.ingenico.com/de/de/ogone/support/guides/integration%20guides/possible-errors">de</a>
+            </li>
+        
+            <li>
+                <a id="ctl12_LanguageNavigation1_LanguagesList_ctl04_LanguageLink" class="language-item" href="https://payment-services.ingenico.com/it/it/ogone/support/guides/integration%20guides/possible-errors">it</a>
+            </li>
+        
+            <li>
+                <a id="ctl12_LanguageNavigation1_LanguagesList_ctl05_LanguageLink" class="language-item" href="https://payment-services.ingenico.com/es/es/ogone/support/guides/integration%20guides/possible-errors">es</a>
+            </li>
+        
+            </ul>
+        
+</div>
+
+ 
+        </div>        
+    </div>  
+
+    <div class="black-bar">
+        <div class="grid grid-pad">
+            <div class="col-3-4 breadcrumb">                
+               
+<div class="grid grid-pad">
+    <ul>
+        
+                <li class="">
+                    <a href="https://payment-services.ingenico.com/int/en/ogone/support">Home</a>
+                    
+                </li>
+            
+                <li class="last">
+                    
+                    Possible errors
+                </li>
+            
+    </ul>
+</div>
+
+            </div>
+            <div class="col-1-4">
+                <div id="ctl12_Panel1" class="search" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl12_SearchButton')">
+	
+                    <input value="Search" class="placeholder" name="ctl12$SearchTextBox" id="ctl12_SearchTextBox" placeholder="Search" type="text">
+                    <input name="ctl12$SearchButton" value="" id="ctl12_SearchButton" type="submit">
+                    <a id="ctl12_SearchLinkButton" class="btn-submit icon-search" href="javascript:__doPostBack('ctl12$SearchLinkButton','')"></a>
+                
+</div>
+            </div>
+        </div>
+    </div>
+    
+</header>
+
+            <article class="all-content">
+                
+<div class="grid grid-pad">
+    <div id="ctl13_pnlUpdateDate" class="col-1-1">
+	
+        <span class="lastUpdate floatR">
+            Last update
+            <strong>
+                8/03/2016
+            </strong>
+        </span>
+    
+</div>
+</div>
+
+                
+
+<div class="grid grid-pad page-header">
+    <div class="col-1-1">
+        <div class="col-3-4">
+            <h1>Possible errors</h1>
+        </div>
+        <div class="col-1-4">
+            <a id="application_0_DownloadHyperLink" class="btnDownloadComplete floatR" href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/pdf/ogone/en/d075fe0b-969b-4b05-9564-16fbb632c616/possible-errors.ashx">Download guide</a>
+        </div>
+    </div>
+</div>
+<div class="grid grid-pad">
+    <div class="col-1-3 left-nav-wrapper">
+        
+
+<div class="left-navigation">
+    <div class="group">
+        <h4>
+            Contents
+        </h4>
+        
+                <ul>
+            
+                <li class=""><a href="https://payment-services.ingenico.com/int/en/ogone/support/guides/integration%20guides/possible-errors/pre-payment-check-errors">1. Pre-payment check errors</a></li>
+                
+                        <ul>
+                    </ul>
+            
+                <li class=""><a href="https://payment-services.ingenico.com/int/en/ogone/support/guides/integration%20guides/possible-errors/transaction-error-codes">2. Transaction error codes</a></li>
+                
+                        <ul>
+                    </ul>
+            </ul>
+    </div>
+
+    
+</div>
+
+
+    </div>
+    <div class="col-2-3">
+        
+                
+<div class="dark-box">
+    <h2>1. Pre-payment check errors</h2>
+</div>
+<p style="margin-bottom: 9.75pt; text-align: justify;">The following errors may occur before a transaction takes places, in order to block it, preventing unauthorised payments.</p>
+<ul>
+    <li><strong><em>unknown order/1/s/</em></strong><br>
+    You will receive this error message if the SHASIGN field sent in the
+ transaction request doesn't match the SHASIGN calculated on our end, 
+using the details of the order combined with the passphrase entered in 
+the "SHA-IN passphrase" field (in your Ogone account &gt; Configuration 
+&gt; &nbsp;Technical information &gt; “Data and origin verification” 
+tab), either for e-Commerce or DirectLink.<br>
+    <br>
+    Please ensure that the integration has been performed exactly as per
+ the documented instructions, ensuring all parameters are sent with your
+ request. It is also imperative that the SHASIGN string for encryption 
+is created in alphabetical order.<br>
+    <br>
+    Typical reasons for this error are:</li>
+</ul>
+<blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;">
+<ul>
+    <li>The SHA-IN passphrase value configured in the Ogone&nbsp;back 
+office does not match the value you used to encrypt the transaction data
+ used to create the SHASIGN parameter (please also ensure you are 
+sending transactions to the correct Ogone&nbsp;environment – TEST or 
+PRODUCTION)</li>
+    <li>You have not arranged the parameters in alphabetical order when calculating the SHASIGN in your server-side code</li>
+    <li>You have not correctly declared some of the parameters – all 
+parameters and values are case sensitive (all parameter names must be 
+upper case)</li>
+    <li>You have set a hash algorthm value that is different to the SHA 
+method used in your server-side script (for example, you have configured
+ SHA-256 in the Technical information page of your&nbsp;Ogone account 
+while using SHA-1 in your encryption process).</li>
+    <li>You have passed additional parameter/value pairs in the HTML form that have not been included in the SHA-IN calculation</li>
+    <li>You have not included the SHA-IN passphrase after every name value pair, including the last parameter + value pair.</li>
+</ul>
+</blockquote>
+<ul>
+    <li><strong><em>unknown order/0/s/</em></strong><br>
+    You will receive this error message if the SHASIGN field sent in the
+ transaction request is empty while a passphrase is entered in the 
+"SHA-IN passphrase" field in the “Data and origin verification” tab of 
+the Technical Information page of your Ogone account, indicating you 
+want to use a SHA signature with each transaction.
+    </li>
+    <li><strong><em>unknown order/1/r/&nbsp;</em></strong><em><em>(only Ogone e-Commerce)</em></em><strong><em></em></strong><br>
+    You will receive this error message if the referrer we detected is 
+not a URL that is entered in the URL field in the “Checks for 
+e-Commerce” section (Ogone account &gt; Configuration &gt; Technical 
+information &gt; Data and origin verification). You're sending us the 
+form with the hidden fields from a different page than the one(s) 
+entered in the URL field in the “Checks for e-Commerce” section.
+    </li>
+    <li><strong><em>unknown order/0/r/&nbsp;</em></strong><em><em>(only Ogone e-Commerce)</em></em><br>
+    You will receive this error message if our server has not detected a
+ referrer in the request we received. You're sending us order details, 
+but we don't know where they originated from. Please ensure that no 
+methods are being used that block the referrer information (payment page
+ in pop-up, special web server configuration, customer’s browser 
+configuration, etc.).<br>
+    If the customer’s browser does not send the referrer information, we
+ can bypass the referrer check if a SHASIGN is present and correct (see <a href="https://payment-services.ingenico.com/int/en/ogone/support/guides/integration%20guides/e-commerce/security-pre-payment-check#SC_5_1">SHA-IN Signature</a>). </li>
+    <li><strong><em>unknown order/1/i/&nbsp;</em></strong><em>(only Ogone DirectLink)</em><strong><em></em></strong><br>
+    You will receive this error message if the IP address from which a 
+request was sent is not an IP address that's entered in the IP address 
+field of the "Data and origin verification" tab, checks for DirectLink 
+section of your Technical Information page. You're sending us a request 
+from a server that's different from the one(s) entered in the IP address
+ field of the "Data and origin verification" tab, "Checks for Ogone 
+DirectLink"section.
+    </li>
+    <li><strong><em>Connection to API feature not allowed for this user </em></strong><em>(only Ogone DirectLink)</em><strong><em></em></strong><br>
+    You will receive this error message if you have sent us a request 
+with only the PSPID/password or PSPID/administrative user/password as 
+login details. You need to create an API user to send requests to our 
+server.<br>
+    An API (Application programming interface)-user is a user 
+specifically designed so that an application can send automatic requests
+ to the payment platform.</li>
+    <li><strong><em>PSPID not found or not active</em></strong><br>
+    You will receive this error message if the value you have entered in
+ the PSPID field does not exist in the respective environment (test or 
+production), or the account has not yet been activated.
+    </li>
+    <li><strong><em>no &lt;parameter&gt; (for instance: no PSPID)</em></strong><br>
+    You will receive this error message if the value you sent for the obligatory &lt;parameter&gt; field is empty.
+    </li>
+    <li><strong><em>&lt;parameter&gt; too long (for instance: currency too long)</em></strong><br>
+    You will receive this error message if the value in your &lt;parameter&gt; field exceeds the maximum length.
+    </li>
+    <li><strong><em>amount too long or not numeric: … OR Amount not a number</em></strong><br>
+    You will receive this error message if the amount you sent in the 
+hidden fields either exceeds the maximum length, or contains invalid 
+characters such as ‘.’ or ‘,’.
+    </li>
+    <li><strong><em>not a valid currency : …</em></strong><br>
+    You will receive this error message if you've sent a transaction with a currency code which is incorrect or doesn't exist.
+    </li>
+    <li><strong><em>The currency is not accepted by the merchant</em></strong><br>
+    You will receive this error message if you've sent a transaction in a
+ currency that has not been registered in your account details.
+    </li>
+    <li><strong><em>ERROR, PAYMENT METHOD NOT FOUND FOR: …</em></strong><br>
+    You will receive this error message if the value of the PM field 
+you've sent in the hidden fields doesn't match any of the payment 
+methods that are selected in your account, or that the payment method 
+has not yet been activated in your Payment methods page.</li>
+</ul>
+
+
+<div class="chapter-navigator">
+    
+       
+</div>
+            
+                
+<div class="dark-box">
+    <h2>2. Transaction error codes</h2>
+</div>
+<p>You can find more information on transaction errors and statuses <a href="https://payment-services.ingenico.com/int/en/ogone/support/guides/user%20guides/statuses-and-errors">here</a>.</p>
+<p>If you log on to your Ogone account, you'll find all possible errors 
+and statuses in the User guides section of the Support menu.</p>
+
+
+<div class="chapter-navigator">
+    
+       
+</div>
+            
+    </div>
+</div>
+
+
+<div id="application_0_bodybottom_0_FeedBackBox">
+
+    <a id="application_0_bodybottom_0_feedbackanchor" name="possible-errors"></a>
+    <div class="feedback-box">
+        <div class="grid grid-pad">
+            <div class="col-1-1 start-msg">
+                <span class="h4-title">
+                    Send us your feedback. Did you find this information helpful?
+                </span>
+                <a href="#" class="btnYes action" onclick="javascript:dataLayer.push({'': ''});">
+                    Yes
+                </a>
+                <a href="#" class="btnNo action" onclick="javascript:dataLayer.push({'': ''});">
+                    No
+                </a>
+            </div>
+
+            <div class="col-1-1 thanks-msg">
+                <span class="h4-title">
+                    Thanks for your feedback!
+                </span>
+            </div>
+        
+            <div class="col-1-1 fields-box">
+                <span class="h4-title">
+                    Your feedback:
+                </span>
+                <textarea name="application_0$bodybottom_0$YourFeedBackTextBox" rows="5" cols="50" id="application_0_bodybottom_0_YourFeedBackTextBox"></textarea>
+                <textarea name="application_0$bodybottom_0$YourBadFeedBackTextBox" rows="5" cols="50" id="application_0_bodybottom_0_YourBadFeedBackTextBox" class="hidden"></textarea>
+                <input name="application_0$bodybottom_0$SendButton" value="Send" id="application_0_bodybottom_0_SendButton" type="submit">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+                <div class="content-end-spacer"></div>
+            </article>
+            
+
+    <footer class="main-footer">
+        <div class="grid grid-pad">
+            <div class="footCol">
+                <div class="logos">
+                    <ul>
+                        <li>
+                            <a href="http://www.ingenico.com/" target="_blank">
+                                <img src="Possible%20errors_fichiers/lgo_ingenico_group.png" alt="Ingenico Group" height="35" width="95">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="generalText">
+                    Ingenico ePayments is the online and mobile commerce
+ division of Ingenico Group. We connect merchants and consumers, 
+enabling businesses everywhere to go further beyond today’s boundaries 
+and creating the future of global commerce. As industry leaders since 
+1994, our innovative spirit drives us forward across all channels. We 
+are the trusted partner of over 65,000 small and large merchants who 
+rely on us to make payments easy and secure for their customers. With 
+advanced data analytics, fraud management solutions and cross-border 
+commerce expertise, we help merchants optimize their business and grow 
+into new markets around the world.
+                </div>
+                <div class="socialMedia">
+                    <ul>
+    <li><a href="https://www.linkedin.com/company/24781" target="_blank"><img alt="" src="Possible%20errors_fichiers/ico_linkedin.png" height="32" width="32"></a>&nbsp;</li>
+    <li><a href="https://twitter.com/ingenico_epymts" target="_blank"><img alt="" src="Possible%20errors_fichiers/ico_twitter.png" height="32" width="32"></a>&nbsp;</li>
+    <li><a href="https://www.youtube.com/ingenico-group" target="_blank"><img alt="" src="Possible%20errors_fichiers/ico_youtube.png" height="32" width="32"></a>&nbsp;</li>
+</ul>
+                </div>
+            </div>
+
+            <div class="doormatNav">
+                <ul>
+    <li>
+    <h3><a href="https://payment-services.ingenico.com/int/en/about-ingenico-epayments">About Us</a></h3>
+    <ul>
+        <li><a href="https://payment-services.ingenico.com/int/en/news">Newsroom</a></li>
+        <li><a href="https://payment-services.ingenico.com/int/en/events">Events</a></li>
+        <li><a href="https://payment-services.ingenico.com/int/en/locations">Office locations</a></li>
+        <li><a href="http://ingenico.catsone.nl/careers/">Careers</a> </li>
+        <li><a href="https://payment-services.ingenico.com/int/en/download">Document center</a></li>
+    </ul>
+    </li>
+    <li>
+    <h3>Learn more</h3>
+    <ul>
+        <li><a href="https://payment-services.ingenico.com/int/en/online-payment-services-solutions/multi-channel-payments">Payment channels</a> </li>
+        <li><a href="https://payment-services.ingenico.com/int/en/online-payment-services-solutions/international-payment-gateway">Payment methods</a> </li>
+        <li><a href="https://payment-services.ingenico.com/int/en/online-payment-services-solutions/online-fraud-prevention">Fraud prevention</a></li>
+        <li><a href="https://payment-services.ingenico.com/int/en/online-payment-services-solutions/e-commerce/online-payments">Online Payments</a></li>
+        <li><a href="https://payment-services.ingenico.com/int/en/online-payment-services-solutions/e-commerce/mobile-payments">Mobile Payments</a> </li>
+    </ul>
+    </li>
+</ul>
+            </div>
+
+            <div class="footerLinks">
+                <a href="https://payment-services.ingenico.com/int/en/locations">Legal entities</a> | 
+<a href="https://payment-services.ingenico.com/int/en/cookie-policy">Privacy policy</a> | 
+<a class="changebtn" href="#cookiecontainer">Cookie settings</a> | 
+Site by <a href="http://www.reference.be/en/">The Reference</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="CookieWarningDiv" class="cookieWarning">
+    <div class="main">
+        <div class="cookieColumn">
+            <p>This website uses cookies to be able to give you the best
+ user experience. If you don't want to accept these cookies, we allow 
+you to change the cookie settings. Click 'Accept' to allow all cookies 
+from this website. </p>
+        </div>
+
+        <div class="moreInfo changeBtn">
+            <a href="#cookiecontainer" class="btnConfirm" id="changebtn">
+                Change settings
+            </a>
+        </div>
+        <div class="moreInfo">
+            <a href="https://payment-services.ingenico.com/Controls/KDB/#" id="accept" class="btnConfirm" data-default-cookie="2">
+                Accept
+            </a>
+        </div>
+        <a href="#" class="close">
+            
+        </a>
+    </div>
+</div>
+    
+
+<div style="display: none;" class="container" id="cookiecontainer">
+    <div class="txt">
+        <h2>
+            Cookie settings
+        </h2>
+        <p class="intro">
+            Introduction
+        </p>
+
+        <div class="col01">
+            
+                    <div id="ctl15_CookieSettings_CookieSettingsRepeater_ctl00_settingDiv" class="subBlock subBlock01 " data-level="1">
+                        <div class="circle"></div>
+                        <div class="content">
+                            <h3>
+                                Functional
+                            </h3>
+
+                            <div class="txt">
+                                Functional cookies are required for the 
+website to operate correctly. These cookies cannot be disabled.
+                            </div>
+                            <div class="messageLabel">
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div id="ctl15_CookieSettings_CookieSettingsRepeater_ctl01_settingDiv" class="subBlock subBlock02 active original" data-level="2">
+                        <div class="circle"></div>
+                        <div class="content">
+                            <h3>
+                                Optimized
+                            </h3>
+
+                            <div class="txt">
+                                Optimization cookies allow us to analyze site usage so we can measure and improve our website.
+                            </div>
+                            <div class="messageLabel">
+                                This is the default level.
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div id="ctl15_CookieSettings_CookieSettingsRepeater_ctl02_settingDiv" class="subBlock subBlock03 non-active" data-level="3">
+                        <div class="circle"></div>
+                        <div class="content">
+                            <h3>
+                                Personalized
+                            </h3>
+
+                            <div class="txt">
+                                <p>Personalization cookies are used for 
+social media and advanced personalization. They allow us to show you 
+information related to your company.</p>
+                            </div>
+                            <div class="messageLabel">
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+
+            <div class="buttonRow">
+
+                <a href="#" class="button btnCancel">
+                    Cancel
+                </a>
+                <a href="#" class="button btnConfirm">
+                    Accept
+                </a>
+
+            </div>
+
+            <p>
+                <br>
+                
+            </p>
+
+        </div>
+
+        <div class="col02">
+            
+                    <div id="ctl15_CookieSettings_ExampleRepeater_ctl00_exampleDiv" class="contentBlock contentBlock01">
+                        <div class="subBlock">
+<h3>Example functionality allowed</h3>
+<ul>
+    <li>Store country preference</li>
+    <li>Store language preference</li>
+</ul>
+<h3>Example functionality not allowed</h3>
+<ul>
+    <li>Saving personal data</li>
+    <li>Anonymous tracking via Google Analytics</li>
+    <li>Tracking for remarketing purposes</li>
+</ul>
+</div>
+                    </div>
+                
+                    <div id="ctl15_CookieSettings_ExampleRepeater_ctl01_exampleDiv" class="contentBlock contentBlock02" style="display:block;">
+                        <div class="subBlock">
+<h3>Example functionality allowed</h3>
+<ul>
+    <li>Store country preference</li>
+    <li>Store language preference</li>
+    <li>Anonymous tracking via Google Analytics</li>
+</ul>
+<h3>Example functionality not allowed</h3>
+<ul>
+    <li>Saving personal data</li>
+    <li>Tracking for remarketing purposes</li>
+</ul>
+</div>
+                    </div>
+                
+                    <div id="ctl15_CookieSettings_ExampleRepeater_ctl02_exampleDiv" class="contentBlock contentBlock03">
+                        <div class="subBlock">
+<h3>Example functionality allowed</h3>
+<ul>
+    <li>Store country preference</li>
+    <li>Store language preference</li>
+    <li>Anonymous tracking via Google Analytics</li>
+    <li>Serve content relevant to your interests</li>
+    <li>Serve ads relevant to your interests </li>
+    <li>Tracking for remarketing purposes</li>
+</ul>
+<h3>Example functionality not allowed</h3>
+<ul>
+    <li>Saving personal data</li>
+</ul>
+</div>
+                    </div>
+                
+        </div>
+    </div>
+</div>
+
+        </div>
+        
+<script src="Possible%20errors_fichiers/base" type="text/javascript"></script>
+
+    
+<!--BeginNoIndex-->
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMjA1MTI3ODk0M2Rkf4+7O21xmIoJA4Y82PL6hTUtAPfPqjo9kQflbL3ZUjA=" type="hidden">
+<!--EndNoIndex-->
+</form><script id="" type="text/javascript">console.log("GTM is active");</script><script id="" type="text/javascript">console.log("Remarketing is disabled");</script>
+
+
+
+</body></html>

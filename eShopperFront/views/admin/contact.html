@@ -1,0 +1,59 @@
+<div>
+    <div class="headline"><h2>Formulaire de contact</h2></div>
+    <div ng-if="mode.value == 'form'">
+        <form ng-submit="saveMessage()">
+            <div class="col-md-6 col-md-offset-0">			         	
+                <label for="nom">Nom du contact <span class="requis">*</span></label>
+                <input type="text" ng-model="message.nom" class="form-control" id="nom" required size="20" maxlength="60" />
+            </div>
+            <div class="col-md-6 col-md-offset-0">			         	
+                <label for="tel">Téléphone <span class="requis">*</span></label>
+                <input type="tel" ng-model="message.tel" class="form-control" id="tel"  required size="20" maxlength="20" />
+            </div>
+            <div class="col-md-6 col-md-offset-0">			         	
+                <label for="email">Adresse mail <span class="requis">*</span></label>
+                <input type="email" ng-model="message.email" class="form-control" id="email" required size="20" maxlength="20" />
+            </div>
+            <div class="col-md-6 col-md-offset-0">			         	
+                <label for="société">Société (facultatif)<span class="requis"></span></label>
+                <input type="text" ng-model="message.societe" class="form-control" id="societe" size="20" maxlength="20" />
+            </div>
+            <div class="col-md-6 col-md-offset-0">			         	
+                <label for="objet">Objet du message<span class="requis">*</span></label>
+                <input type="text" ng-model="message.objet" class="form-control" id="objet"  required size="20" maxlength="20" />
+            </div>
+            <div class="col-md-12 col-md-offset-0">			         	
+                <label for="msgContenu">Votre message<span class="requis">*</span></label>
+                <textarea ng-model="message.msgContenu" class="form-control" id="msgContenu"   size="20" maxlength="20" ></textarea>
+                <div style="opacity: 0">.   </div>
+            </div>
+            <div class="col-md-12 col-md-offset-0">			         	
+                <input type="submit" value="Envoyer" class="btn btn-aqua"/>
+            </div>
+            
+        </form>
+    </div>
+    <div ng-if="mode.value == 'confirm'">
+        <div class="panel-heading">Confirmation : <br> Votre message a était bien reçu, nous prenderons contact avec vous dès que possible</div>
+        <div class="form-group">
+            <label class="control-label">numéro du message :</label> 
+            <label class="control-label">{{message.id}}</label><br>
+            <label class="control-label">Nom du contact :</label> 
+            <label class="control-label">{{message.nom}}</label><br> 
+            <label class="control-label">Téléphone :</label> 
+            <label class="control-label">{{message.tel}}</label><br>           
+            <label class="control-label">Adresse mail :</label> 
+            <label class="control-label">{{message.mail}}</label>
+            <label class="control-label">Société :</label> 
+            <label class="control-label">{{message.societe}}</label><br> 
+            <label class="control-label">Objet de la demande :</label> 
+            <label class="control-label">{{message.objet}}</label><br> 
+            <label class="control-label">La demande client :</label> 
+            <label class="control-label">{{message.msgContenu}}</label><br>             
+        </div>
+    </div>
+    <div ng-if="exception.message">
+        <p class="alert"><br> {{exception.message}}</p>
+    </div>
+
+</div>

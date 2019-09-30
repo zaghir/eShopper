@@ -1,0 +1,73 @@
+<div ng-show='(prixmax=="" || resultat.rooms[0].total_amount.amount <= prixmax) && resultat.rooms[0].total_amount.amount >= prixmin'>
+<div ng-show='(resultat.places >= people) ||	resultat.rooms[0].room_type_info.number_of_beds.length==0'>
+
+<div class='panel panel-info'>
+<div class='panel panel-heading'>
+<center>
+<h3>
+{{resultat.property_name}}
+</h3>
+</h3>
+</div>
+
+<div class='panel panel-body'>
+<strong class='control-label'>Adresse</strong> : {{resultat.address.line1}}
+</div>
+<div class='panel panel-body'>
+<strong class='control-label'>Ville</strong> : {{resultat.address.city}}
+</div>
+
+
+
+<div class='panel panel-body'>
+<strong class='control-label'>Nombre de places</strong> : {{resultat.places}}
+</div>
+
+
+<div class='panel panel-body'>
+<strong class='control-label'>prix à la journée</strong> : {{resultat.rooms[0].rates[0].price}} {{resultat.rooms[0].rates[1].price}} {{resultat.rooms[0].total_amount.currency}}
+</div>
+
+<div class='panel panel-body'>
+<strong class='control-label'>prix total</strong> : {{resultat.rooms[0].total_amount.amount}} {{resultat.rooms[0].total_amount.currency}}
+</div>
+
+<div class='panel panel-body'>
+<strong class='control-label'>telephone</strong> : {{resultat.contacts[0].detail}}
+</div>
+
+<div class='panel panel-body'>
+<strong class='control-label'>Fax</strong> : {{resultat.contacts[1].detail}}
+</div>
+
+<div ng-show='piscine.affiche==true || parking.affiche==true || pets.affiche==true || restaurant.affiche==true' class='panel panel-body'><strong class='control-label'>Spécificités</strong>
+<ul>
+<li ng-show='piscine.affiche==true'>
+	Piscine disponible
+</li>
+<li ng-show='parking.affiche==true'>
+	Parking disponible
+</li>
+<li ng-show='pets.affiche==true'>
+	Animaux autorisés
+</li>
+<li ng-show='restaurant.affiche==true'>
+	Restaurant ouvert
+</li>
+</ul>
+</div>
+
+
+<div>
+<a style='margin-left:20px' ui-sref='details' ng-click='compteFunction({ v : resultat }) '>Plus de détails</a>
+</div>
+<div>
+<a style='margin-left:20px' ui-sref='details' target='_blank' ng-click='compteFunction({ v : resultat }) '>Plus de détails (nouvel onglet)</a>
+</div>
+<div>
+<a style='margin-left:20px' target='_blank' href='http://google.fr/maps/place/{{resultat.address.line1}} {{resultat.address.city}}'>Map</a>
+</div>
+</div>
+</div>
+</div>
+</div>

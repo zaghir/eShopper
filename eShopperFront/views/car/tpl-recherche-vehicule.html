@@ -1,0 +1,307 @@
+<div id="categorie" ng-controller="rechercheVehiculeController as ctrl">
+  <div class="panel panel-default col-md-4 col-sm-6 col-xs-12">
+    <div class="panel-body">
+
+      <div class="panel panel-default">
+        <div class="panel-heading">Cherchez votre véhicule</div>
+
+        <div class="list-group">
+
+          <a  class="list-group-item" ng-click="ctrl.categorie.afficheCategorie()">
+            <div class="row center-block lead">
+              <div class="text-info ">Categorie :</div>
+              <div class="text-warning col-md-8">
+                {{ctrl.categorie.categorieSelected.categorie}}
+                <p ng-show="ctrl.messageError.categorieSelected" class="text-danger glyphicon  glyphicon-question-sign"></p>
+              </div>
+            </div>
+          </a>
+
+          <a  class="list-group-item" ng-click="ctrl.type.afficheType()">
+            <div class="row center-block lead">
+              <div class="text-info ">Type :</div>
+              <div class="text-warning col-md-8">
+                {{ctrl.type.typeSelected.typeVehicule}}
+                <p ng-show="ctrl.messageError.typeSelected" class="text-danger glyphicon  glyphicon-question-sign"></p>
+              </div>
+            </div>
+          </a>
+
+          <a  class="list-group-item" ng-click="ctrl.transmissionDrive.afficheTransmissionDrive()">
+            <div class="row center-block lead">
+              <div class="text-info ">Drive / Transmission :</div>
+              <div class="col-md-8">
+                <div class="row">
+                  <p class="text-warning" ><strong>Transmission : </strong> </p>
+                  <p class="text-success"><strong>
+                    {{ctrl.transmissionDrive.transmissionDriveSelected.transmission}}
+                  </strong>
+                  </p>
+                </div>
+                <div class="row">
+                  <div class="text-warning"> Drive : </div>
+                  <div class="text-success">
+                    {{ctrl.transmissionDrive.transmissionDriveSelected.drive}}
+                  </div>
+                </div>
+                <p ng-show="ctrl.messageError.transmissionDriveSelected" class="text-danger glyphicon  glyphicon-question-sign"></p>
+              </div>
+            </div>
+          </a>
+
+          <a  class="list-group-item" ng-click="ctrl.afficherCalendier('pret')">
+            <div class="text-info lead "> Date Pret <p class="glyphicon glyphicon-time"></p> :</div>
+            <div class="row center-block lead">
+              <div class="text-warning col-md-6">
+                {{ctrl.zyDate.datePret.value}}
+                <p ng-show="ctrl.messageError.datePret" class="text-danger glyphicon  glyphicon-question-sign"></p>
+              </div>
+              <div class="text-success col-md-6" ng-show="ctrl.zyDate.heurePret">
+                à partir
+                {{ctrl.zyDate.heurePret.value}}
+                <p ng-show="ctrl.messageError.heurePret" class="text-danger glyphicon  glyphicon-question-sign"></p>
+              </div>
+            </div>
+          </a>
+
+          <a  class="list-group-item" ng-click="ctrl.afficherCalendier('retour')">
+            <div class="text-info lead">Date Retour: <p class="glyphicon glyphicon-time"></p> </div>
+            <div class="row center-block lead">
+              <div class="text-warning col-md-6">
+                {{ctrl.zyDate.dateRetour.value}}
+                <p ng-show="ctrl.messageError.dateRetour" class="text-danger glyphicon  glyphicon-question-sign"></p>
+              </div>
+              <div class="text-success col-md-6" ng-show="ctrl.zyDate.heureRetour" >
+                à partir {{ctrl.zyDate.heureRetour.value}}
+                <p ng-show="ctrl.messageError.heureRetour" class="text-danger glyphicon  glyphicon-question-sign"></p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="progress">
+              {{ctrl.recherche.pourcentage}}
+              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{ctrl.recherche.pourcentage}}%">
+                <span class="sr-only">{{ctrl.recherche.pourcentage}}Complete (success)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <button class="btn btn-success" ng-click="ctrl.recherche.find()">
+              Recherche <p class="glyphicon glyphicon-search"></p>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div  class="  col-md-1 col-sm-1">
+
+  </div>
+
+  <div  class="panel panel-default  col-md-4 col-sm-6 col-xs-12 " ng-show="ctrl.zyDate.viewCalendrier">
+
+    <div class="panel-heading">Select</div>
+
+    <div class="panel-body ">
+      <div class="row center-block">
+        <div class="col-xs-2">
+          <button ng-click="ctrl.zyDate.moinsMois()" value="-" class=" btn btn-warning glyphicon glyphicon-step-backward"></button>
+        </div>
+        <div class="col-xs-6">
+          <div class="text-muted lead "> {{ctrl.zyDate.moisNom+'  '+ctrl.zyDate.annee}}</div>
+        </div>
+        <div class="col-xs-2">
+          <button ng-click="ctrl.zyDate.plusMois()" value="+" class=" btn btn-warning glyphicon glyphicon-step-forward"></button>
+        </div>
+
+      </div>
+
+      <div class ="panel">
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+            <th>Lu</th>
+            <th>Ma</th>
+            <th>Me</th>
+            <th>Je</th>
+            <th>Ve</th>
+            <th>Sa</th>
+            <th>Di</th>
+            </thead>
+            <tbody>
+            <tr ng-repeat=" ligne in ctrl.zyDate.jours">
+              <td  ng-repeat=" jour in ligne " ng-click="ctrl.zyDate.getJourForm(jour)">
+                <ul class="nav nav-pills">
+                  <li class="clikabble " ng-class="jour.activedCss"><a >{{jour.id}}</a></li>
+                </ul>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div class ="panel">
+        <div class="table-responsive">
+          <table class="table">
+            <tr>
+              <td  ng-repeat=" heure in ctrl.zyDate.heures " ng-click="ctrl.zyDate.getHeureForm(heure)" >
+                <ul class="nav nav-pills" >
+                  <li class="clikabble " ng-class="heure.activedCss"><a  >{{heure.value}}</a></li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div  class="panel panel-default  col-md-4 col-sm-6 col-xs-12 " ng-show="ctrl.categorie.viewCategorie">
+    <div class="panel-heading">Categorie</div>
+    <div class="panel-body ">
+      <div class="list-group">
+        <a class="list-group-item" ng-class="c.activedCss" ng-click="ctrl.categorie.choixCategorie(c)" ng-repeat="c in ctrl.categorie.listCategories ">
+          {{c.categorie}}
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div  class="panel panel-default  col-md-4 col-sm-6 col-xs-12 " ng-show="ctrl.type.viewType">
+    <div class="panel-heading">Type</div>
+    <div class="panel-body ">
+      <div class="list-group">
+        <a class="list-group-item" ng-class="c.activedCss" ng-click="ctrl.type.choixType(c)" ng-repeat="c in ctrl.type.listTypes ">
+          {{c.typeVehicule}}
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div  class="panel panel-default  col-md-4 col-sm-6 col-xs-12 " ng-show="ctrl.transmissionDrive.viewTransmissionDrive">
+    <div class="panel-heading">Type</div>
+    <div class="panel-body ">
+      <div class="list-group">
+        <a class="list-group-item" ng-class="c.activedCss" ng-click="ctrl.transmissionDrive.choixTransmissionDrive(c)" ng-repeat="c in ctrl.transmissionDrive.listTransmissionDrives ">
+          <div><span class="text-danger"><strong>Transmission :</strong></span> <span class="text-success"><strong>{{c.transmission}}</strong></span></div>
+          <div><span class="text-danger"><strong>Drive : </strong></span><span class="text-success"><strong>{{c.drive}}</strong></span></div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel panel-default col-md-5 col-sm-5 " ng-show="ctrl.recherche.viewResultat">
+    <div class="panel panel-default" ng-repeat="c in ctrl.vehicule.listVehicule.listdata">
+      <div class="panel-heading ">
+        <h3><strong>{{c.nom}}</strong></h3>
+      </div>
+      <div class="panel-body row">
+        <div class="col-md-4">
+          <strong class="text-warning">Compagnie :</strong>
+          <strong>{{c.agence.compagnie.nom}}</strong>
+        </div>
+        <div class="col-md-4">
+          <strong class="text-warning">Agence:</strong>
+          <strong>{{c.agence.nom}}</strong>
+        </div>
+        <div class="col-md-4">
+          <strong class="text-warning">Adresse :</strong>
+          <strong>{{c.agence.adresse + "  " +c.agence.ville +"  "+c.agence.pays}}</strong>
+        </div>
+
+        <hr>
+        <details>
+          <summary class="btn btn-link">Voir le détail du Véhicule</summary>
+          <p>&nbsp;</p>
+
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-8">
+              <strong class="text-info">Véhicule :</strong>
+              <strong>{{c.nom}}</strong>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <p class="text-left"><strong class="text-info">Categorie : </strong><strong>{{c.acrissCarCode1.categorie}}</strong></p>
+            </div>
+            <div class="col-md-4">
+              <p class="text-left"><strong class="text-info">Type : </strong><strong>{{c.acrissCarCode2.typeVehicule}}</strong> </p>
+            </div>
+            <div class="col-md-4">
+              <p class="text-left"><strong class="text-info">Trans. : </strong><strong>{{c.acrissCarCode3.transmission }}</strong> </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <p class="text-left"><strong class="text-info">Drive : </strong><strong>{{c.acrissCarCode3.drive}}</strong> </p>
+            </div>
+            <div class="col-md-4">
+              <p class="text-left"><strong class="text-info">Moteur : </strong><strong>{{c.acrissCarCode4.fuel}}</strong> </p>
+            </div>
+            <div class="col-md-4">
+              <p class="text-left"><strong class="text-info">Clima. : </strong><strong>{{c.acrissCarCode4.airCondition}}</strong> </p>
+            </div>
+
+          </div>
+
+          <hr>
+
+          <div class="col-md-6">
+            <p class="text-left"><strong class="text-success">Pret le : </strong>
+              <strong>{{ctrl.zyDate.datePret.value}}</strong>
+              A <strong>{{ctrl.zyDate.heurePret.value}}</strong>
+            </p>
+          </div>
+          <div class="col-md-6">
+            <p class="text-left"><strong class="text-success">Retout le : </strong>
+              <strong>{{ctrl.zyDate.dateRetour.value}}</strong>
+              A <strong>{{ctrl.zyDate.heureRetour.value}}</strong>
+            </p>
+          </div>
+
+          <hr>
+
+          <div class="row">
+            <div class="col-md-2">
+              <p class="text-left"><strong class="text-danger">Prix : </strong>
+            </div>
+            <div class="col-md-9">
+              <div class="list-group">
+                <div ng-repeat="p in c.prixVehicule">
+                  <a  class="list-group-item" ng-click="ctrl.recherche.calulerPrix(c , p )">
+                    <strong>{{ p.montant+' '+p.devis.code+' '+p.tarifsVehicule.type }}</strong>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+
+          <hr>
+
+		  <div ng-show="ctrl.error.email" ><p class="bg-success">{{ctrl.error.email}}</p></div>
+          <div class="col-md-4">
+            <button ng-click="ctrl.reserver(c)" class="btn btn-success btn-lg">Reserver</button>
+          </div>
+          <div class="col-md-3"></div>
+          <div class="col-md-5">
+            <div><strong class="text-danger">Nb Jour : {{c.totalPrix.nombreJours}}</strong></div>
+            <div><strong class="text-danger">Prix Jour : {{c.totalPrix.prixVehicule.montant +' '+c.totalPrix.prixVehicule.devis.code}}</strong></div>
+            <div>  <strong class="text-danger">total : {{+c.totalPrix.montantTotal+' '+c.totalPrix.prixVehicule.devis.code}} </strong></div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+
+</div>

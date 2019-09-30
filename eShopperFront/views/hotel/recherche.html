@@ -1,0 +1,103 @@
+<div class='col-md-4 col-sm-4 col-xs-6'>
+<div class='panel panel-info'>
+<div class='panel-heading'><center><h4> Recherche</h4> </center></div>
+<div class="panel-body">
+	<form ng-submit='search()'>
+		<fieldset class="form-group">
+		<label class="control-label">Ville </label>
+			<image data-toggle="tooltip" data-placement="top" data-animation='true' title='Format : Rome,it' width=15 src='http://fotomelia.com/wp-content/uploads/edd/2015/07/point-d-interrogation-1560x1561.png' style='cursor:pointer'/> 
+			<input required class="form-control" type='text' placeholder ='ville,pays' ng-model='ville' pattern="([A-Za-z]{2,}),([A-Za-z]{2})"/> 
+
+		
+	
+		</fieldset>
+		<fieldset class="form-group">
+			<label class="control-label">Rayon </label>
+		
+			<input required class="form-control" type='text' ng-model='radius'/>
+		</fieldset>
+		<fieldset class="form-group">
+			<label class="control-label"> Date d'arrivée </label>
+			<input required class="form-control" type='date' ng-bind="date | date:'dd/MM/yyyy'" ng-model='check_in'/>
+		</fieldset>
+		<fieldset class="form-group">
+			<label class="control-label"> Date de départ </label>
+			<input required class="form-control" type='date' ng-bind="date | date:'dd/MM/yyyy'" ng-model='check_out'/>
+		</fieldset>
+
+		<fieldset class="form-group">
+			<label class="control-label"> Nombre de personnes </label>
+			<select class='form-control' ng-model='people'>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select>
+		</fieldset>
+<div>
+		<a ng-click='moreChamps()' style='cursor: pointer'>Montrer/Masquer les options</a>
+	
+</div>
+</br>
+		<div ng-show='champs==true'>
+	<fieldset class="form-group">
+			<label class="control-label"> Prix min </label>
+			<input class="form-control" type='text' ng-model='prixmin'/>
+		</fieldset>
+
+			<fieldset class="form-group">
+			<label class="control-label"> Prix max </label>
+			<input class="form-control" type='text' ng-model='prixmax'/>
+		</fieldset>
+
+				<fieldset class="form-group">
+			<label class="control-label"> Piscine </label>
+			<select class='form-control' ng-model='piscine.choix'>
+				<option>oui</option>
+				<option>non</option>
+			</select>
+		</fieldset>
+			<fieldset class="form-group">
+			<label class="control-label"> Parking </label>
+			<select class='form-control' ng-model='parking.choix'>
+				<option>oui</option>
+				<option>non</option>
+			</select>
+		</fieldset>
+			<fieldset class="form-group">
+			<label class="control-label"> Animaux de compagnie </label>
+			<select class='form-control' ng-model='pets.choix'>
+				<option>oui</option>
+				<option>non</option>
+			</select>
+		</fieldset>
+			<fieldset class="form-group">
+			<label class="control-label"> Restaurant </label>
+			<select class='form-control' ng-model='restaurant.choix'>
+				<option>oui</option>
+				<option>non</option>
+			</select>
+		</fieldset>
+
+			<fieldset class="form-group">
+			<label class="control-label"> Monnaie </label>
+			<select class='form-control' ng-model='currency'>
+				<option>eur</option>
+				<option>usd</option>
+			</select>
+		</fieldset>
+		</div>
+
+		<button type="submit" class='btn btn-primary'>Rechercher</button>
+	</form>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<div class='col-md-8 col-sm-10 cols-xs-10' ui-view>
+</div>

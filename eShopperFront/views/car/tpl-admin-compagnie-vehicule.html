@@ -1,0 +1,95 @@
+<div   id="categorie" ng-controller="compagnieVehiculeController as opvCtrl">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Compagnie</h2>
+                <hr class="primary">
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="panel panel-info ">
+            <div class="panel-heading">Compagnie</div>
+
+            <div class="panel-body">
+                <form >
+                    <div class="form-group">
+                        <label class="control-label">Nom </label>
+                        <input type="text" ng-model="opvCtrl.compagnie.element.nom" class="form-control" />
+                        <span ng-if="opvCtrl.compagnie.errors.nom" class="label label-danger">{{opvCtrl.compagnie.errors.nom}}</span>
+                    </div>
+                    <div>
+                        <button ng-click="opvCtrl.compagnie.add()" class="btn btn-primary">Ajouter</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-12"></div>
+
+    <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="panel panel-info">
+            <div class="panel panel-heading ">Info Compagnie</div>
+            <div class="panel panel-body">
+                <form class="form-group" id="listCategorie">
+
+                    <div class="form-group">
+                        <label class="control-label">Compagnie </label>
+                        <input type="text" class="input-group" ng-model="opvCtrl.compagnie.recherche" />
+                        <button ng-click="opvCtrl.compagnie.viewAll()" class="btn btn-primary btn-sm">Afficher Tous</button> <br/>
+                        <div ng-show="opvCtrl.compagnie.messageInfo" ><p class="bg-success">{{opvCtrl.compagnie.messageInfo}}</p></div>
+
+                    </div>
+                    <table class="table-responsive table table-striped table-bordered  table-hover table-condensed">
+                        <thead>
+                        <tr>
+                            <th> Id </th>
+                            <th class="text-center"> Nom</th>
+                            <th colspan="2" class="text-center"> action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="tp in opvCtrl.compagnie.data.page | orderBy: 'nom' | filter: opvCtrl.compagnie.recherche " >
+
+                            <td class="text-right">
+                                <div >{{tp.element.id}}</div>
+                            </td>
+                            <td class="text-center">
+                                <div ng-hide="opvCtrl.compagnie.editingData[tp.element.id]">{{tp.element.nom}}</div>
+                                <div ng-show="opvCtrl.compagnie.editingData[tp.element.id]">
+                                    <input type="text" ng-model="tp.element.nom" />
+                                    <span ng-if="tp.element.errors.nom" class="label label-danger">{{tp.element.errors.nom}}</span>
+                                </div>
+                            </td>
+
+                            <td>
+                                <button ng-click="opvCtrl.compagnie.remove(tp)"class="btn btn-sm btn-danger">
+                                    Suprimer</button>
+                            </td>
+                            <td>
+                                <button ng-hide="opvCtrl.compagnie.editingData[tp.element.id]" ng-click="opvCtrl.compagnie.modify(tp)" class="btn btn-sm btn-warning">Modify</button>
+                                <button ng-show="opvCtrl.compagnie.editingData[tp.element.id]" ng-click="opvCtrl.compagnie.update(tp)" class="btn btn-sm btn-success">Update</button>
+                            </td>
+                        </tr>
+                        </tbody>
+
+                    </table>
+                </form>
+                <div class ="panel">
+                    <ul class="nav nav-pills">
+                        <li class="clikabble" ng-class="{active:p==opvCtrl.compagnie.pageCourante}" ng-repeat="p in opvCtrl.compagnie.data.pageIndex  ">
+                            <a ng-click="opvCtrl.compagnie.goToPage(p)" >{{p}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>

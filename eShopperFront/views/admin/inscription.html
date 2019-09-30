@@ -1,0 +1,97 @@
+<div ng-controller="inscriptionCtrl">
+    <div class="headline"><h2>Inscription</h2></div>
+    <div ng-if="mode.value == 'form'">
+        <!--<form ng-submit="saveClient()" >	-->			
+        <form name="my_form" >
+            <div class="col-md-6 col-md-offset-0">			         	
+                <label for="nom">Votre nom<span class="requis">*</span></label>
+                <input type="text" ng-model="client.nom" class="form-control" id="nom" placeholder="Votre nom" required size="20" maxlength="20" />
+            </div>
+            <div class="col-md-6 col-md-offset-0">			         	
+                <label for="prenom">Votre pénom<span class="requis">*</span></label>
+                <input type="text" ng-model="client.prenom" class="form-control" id="prenom" placeholder="Votre pénom" required size="20" maxlength="20" />
+            </div>
+            <div class="col-md-6 col-md-offset-0">			         	
+                <label for="adresse">Adresse <span class="requis">*</span></label>
+                <input type="text" ng-model="client.adresse" class="form-control" id="adresse" placeholder="Votre adresse" required size="20" maxlength="20" />
+            </div>
+            
+            <div class="col-md-6 col-md-offset-0">			         	
+                <label for="Ville">Ville <span class="requis">*</span></label>
+                <input type="text" ng-model="client.ville" class="form-control" id="Ville" placeholder="La ville" required size="20" maxlength="20" />
+            </div>
+             <div class="col-md-6 col-md-offset-0">			         	
+                <label for="cp">Code postal <span class="requis">*</span></label>
+                <input type="text" ng-model="client.codePostal" class="form-control" id="cp" placeholder="Votre code postal" required size="2" maxlength="6" />
+            </div>
+            
+            <div class="col-md-6 col-md-offset-0">			         	
+                <label for="pays">Pays <span class="requis">*</span></label>
+                <input type="text" ng-model="client.pays" class="form-control" id="pays" placeholder="Votre pays" required size="3" maxlength="20" />
+            </div>
+            
+            <div class="col-md-6 col-md-offset-0">			         	
+                <label for="tel">Numéro de téléphone<span class="requis">*</span></label>
+                <input type="tel" ng-model="client.telephone" class="form-control" id="tel"  placeholder="Votre téléphone" required size="20" maxlength="20" />
+            </div> 
+           
+            
+            <div class="col-md-6 col-md-offset-0">			         	
+                <label for="email">Email <span class="requis">*</span></label>
+                <input type="email" ng-model="client.user.username" class="form-control" id="email"  placeholder="Enter your email" required size="20" maxlength="50" />
+            </div>
+            
+            <div class="col-md-6 col-md-offset-0">			         	
+                <label for="dateN">Date de Naissance <span class="requis">*</span></label>
+                <input type="date" ng-model="client.dateNaissance" class="form-control" id="dateN" placeholder="Date de naissance" required size="20" maxlength="20" />
+            </div>
+           
+
+            <div class="col-md-7 col-md-offset-0">	 		         	
+                <label for="password">Choisir un mot de passe <span class="requis">*</span></label>
+                <input type="password" ng-model="client.user.password"  id="password" class="form-control" placeholder="Mot de passe" required size="20" maxlength="20" />
+            </div>
+            
+            <div class="col-md-7 col-md-offset-0">	 		         	
+                <label for="mdp">Choisir un mot de passe <span class="requis">*</span></label>
+                <input type="password" ng-model="client.user.password2" id="confirm_password" class="form-control" placeholder="Confirmer le mot de passe " required size="20" maxlength="20" />
+            </div>
+            
+            
+            <div style="opacity: 0d7d4cd">.   </div>
+            <div class="col-md-12 col-md-offset-0">			         	
+                <!-- <button   ng-show="client.mdp != client.mdp2" disabled="" class="btn btn-aqua">Inscription</button>  -->
+                
+                <button  ng-click="saveClient()"  ng-disabled="!my_form.$valid || client.user.password != client.user.password2" class="btn btn-aqua">Inscription</button>
+                <!--<button   ng-disabled="my-form.$invalid" ng-show="client.mdp == client.mdp2" class="btn btn-primary">Inscription</button> -->
+                
+            </div>
+        </form> 
+    </div>
+    <div ng-if="mode.value == 'confirm'">
+        <div class="panel-heading">Confirmation : le compte a été bien enregistré pour la société {{}}</div>
+        <div class="form-group">
+            <label class="control-label">Identifiant :</label> 
+            <label class="control-label">{{client.id}}</label><br>
+            <label class="control-label">Date de création du compte :</label> 
+            <label class="control-label">{{client.dateCreationFiche|	date:'yyyy-MM-dd'}}</label>
+            <label class="control-label">Nom :</label> 
+            <label class="control-label">{{client.nom}}</label><br> 
+            <label class="control-label">prénom :</label> 
+            <label class="control-label">{{client.prenom}}</label><br> 
+            <label class="control-label">adresse :</label> 
+            <label class="control-label">{{client.adresse}}</label><br> 
+
+            <label class="control-label">Date de naissance :</label> 
+            <label class="control-label">{{client.dateNaissance | date:'yyyy-MM-dd'}}</label><br> 
+            <label class="control-label">Numéro de téléphone:</label> 
+            <label class="control-label">{{client.telephone}}</label><br> 
+            <label class="control-label">Adresse mail :</label> 
+            <label class="control-label">{{client.user.username}}</label><br>
+        </div>
+    </div>
+    <div>
+        <p class="alert" ng-if="exception.message"><br> {{exception.message}}</p>
+        <p class="alert" ng-show="client.user.password != client.user.password2 && client.user.password2 != null"><br> Les deux mots de passe ne sont pas identiques </p>
+    </div>
+</div>

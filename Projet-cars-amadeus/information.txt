@@ -1,0 +1,22 @@
+https://www.captaintrain.com/fr?gclid=CJyH5LPNuM0CFe4y0wodKJsDHA
+
+--------------------------------------------------------------------------------------
+Amadeus
+https://sandbox.amadeus.com
+EMAIL : redal_7@yahoo.fr
+APK :kAWrZ7vtGYSvoUwe2T9BxkX30OrYGNJL 
+https://api.sandbox.amadeus.com/v1.2/cars/search-airport?apikey=kAWrZ7vtGYSvoUwe2T9BxkX30OrYGNJL&location=NCE&pick_up=2016-06-30&drop_off=2016-07-19
+https://api.sandbox.amadeus.com/v1.2/cars/search-airport?apikey=kAWrZ7vtGYSvoUwe2T9BxkX30OrYGNJL&location=NCE&pick_up=2016-06-29&drop_off=2016-07-15
+--------------------------------------------------------------------------------------
+Currency
+Step 1: Your API Access Key
+https://currencylayer.com/documentation
+apk : 855091f68574be76cc90d881cde39c30
+http://www.apilayer.net/api/live?access_key=855091f68574be76cc90d881cde39c30
+http://apilayer.net/api/live
+    ? access_key = YOUR_ACCESS_KEY
+    & source = GBP
+    & currencies = USD,AUD,CAD,PLN,MXN
+    & format = 1
+
+http://api.fixer.io/latest?symbols=USD,GBP,JPY,MAD,NOK

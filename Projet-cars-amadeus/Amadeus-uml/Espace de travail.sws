@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?PowerDesigner signature="Workspace" version="15.1.0.2850"?>
+<!-- Veuillez ne pas modifier ce fichier -->
+
+<Workspace>
+	<Local Expanded="Yes">
+		<Model Expanded="Yes" ID="{4F157C78-8A7B-4E1B-8C53-3B487292AA4A}" Loaded="No" Name="Amadeus" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="Amadeus.prj"/>
+		<Model Expanded="Yes" ID="{4F157C78-8A7B-4E1B-8C53-3B487292AA4A}" Name="Amadeus" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="Amadeus.prj"/>
+	</Local>
+	<BrowserModule Name="Référentiel"/>
+</Workspace>

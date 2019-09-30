@@ -1,0 +1,238 @@
+<!-- <p>
+	<a href="#/">Back to Search</a>
+</p>
+
+   
+
+<hr/> **-->
+
+<div class="col-md-4">
+	<div class="panel panel-primary">
+		<div class="panel-heading">Recherche
+		<img  src="./images/train.png" style="float: right; width: 80px; margin-right: 10px;">
+										
+		</div>
+		<div class="panel-body">
+			<div class="form-group">
+				<form>
+					<input id="Aller simple" type="radio"  name="type_trip" ng-model="type_trip" value="Aller simple" checked="checked"> Aller simple
+					<input id="Aller-retour" type="radio"  name="type_trip" ng-model="type_trip" value="Aller-retour"> Aller-retour
+				</form> 
+				<br>
+				<datalist id="cities">
+					<option  data-ng-repeat="v in trainResult" value="{{v.label}}" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()"> 
+					</datalist>
+					<form>
+						<div>
+							<label>Ville de départ  :</label>
+							<input style="width: 150px;margin-left: 10px;" type="text" data-ng-model="city_d" ng-keyup="submit_departure()" list="cities">
+						</div>
+					</form>
+					<br/>
+					<datalist id="cities">
+						<option  data-ng-repeat="v in trainResult" value="{{v.label}}" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()"> 
+						</datalist>
+						<form>
+							<div>
+								<label>Ville d'arrivée :</label>
+								<input style="width: 150px;margin-left: 10px;" type="text" data-ng-model="city_a" ng-keyup="submit_arrival()"  list="cities">
+							</div>
+
+						</form>
+					</div>
+					<form>
+					<div>
+						<label>Date de départ :</label>
+						<input style="width: 130px;margin-left: 10px;" type="date" 
+						ng-model="date_d" 
+						/>
+						<!-- {{ date }} -->
+					</div>
+                    </form>
+					<!-- <div>Operator is: {{filterCondition.operator}}</div> -->
+					<br/>
+					<form>
+					<label>Heure de départ :</label>
+					<select ng-model="hourCondition.operator_a"  width="300" style="width: 100px">
+						<option ng-selected="{{operator.value == hourCondition.operator_a}}" ng-repeat="operator in operators" value="{{operator.value}}" >{{operator.displayName}} </option>
+					</select>
+					
+					</form>
+					<!-- <div>Operator is: {{priceCondition.operator_price}}</div>  -->
+					<form>
+					<br/>
+					<label>Prix maximum :</label>
+					<select ng-model="priceCondition.operator_price" width="300" style="width: 100px">
+						<option ng-selected="{{price.value == priceCondition.operator_price}}" ng-repeat="price in prices" value="{{price.value}}" >{{price.displayName}} </option>
+					</select>
+					<br/>
+					</form>
+					<div ng-show="type_trip=='Aller-retour'" >
+                        <form>
+						<label>Date de retour :</label>
+						<input style="width: 130px;margin-left: 10px;" type="date" 
+						ng-model="date_r"/>
+
+
+						<br/>
+						</form>
+						<form>
+						<label>Heure de départ :</label>
+						<select ng-model="hourCondition.operator_r"   width="300" style="width: 100px">
+							<option ng-selected="{{operator.value == hourCondition.operator_r}}" ng-repeat="operator in operators" value="{{operator.value}}" >{{operator.displayName}} </option>
+						</select>
+                        </form>
+					</div>
+					<button  class="btn btn-primary" ng-click="extensiveSubmit()" >Afficher</button>
+				</div>
+
+			</div>
+			<div class="panel panel-success">
+				<div class="panel-heading">Validation du/des trajet(s)
+				</div>
+				<div class="panel-body">
+					<button  class="btn btn-success" ng-click="validate_journey()" >Valider</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+      
+	    
+
+		<!-- <weather-report weather-day="w" convert-to-standard="convertToCelsius(daytimeTemp)" convert-to-date="convertToDate(dt)" date-format="MMMM d,y"></weather-report> -->
+       <div class="col-md-4">
+		<div class="panel panel-default">
+		    <div class="panel-body">
+		        <div ng-repeat="v in extensiveTrainResult_a.errors ">
+		            <div class="alert alert-danger" ng-show="v.status==9819">
+                           <p>Aucun résultat pour la recherche demandée !</p>
+                    </div>
+		        </div>
+		        <div >
+		         <div class="panel panel-info" ng-show="show_me || !v.status==9819">
+		                <div class="panel-heading">Meilleure offre de la journée pour le trajet aller:
+		                <p>{{ville_origin}} &nbsp <span class="glyphicon glyphicon-arrow-right"></span> </br> {{ville_destination}}</p>
+		                </div>
+                        <div class="panel-body"><h1>{{min}}&nbsp€</h1></br>
+                        <h3>heure de départ : {{heure_origin.slice(11,16)}}</h3></br>
+                        <h3>heure d'arrivée : {{heure_destination.slice(11,16)}}</h3>
+                        </div>
+                 </div>
+		        </div>
+		    </div>
+			<div ng-repeat="v in extensiveTrainResult_a.results ">
+				<div class="panel-body">
+                    <div ng-repeat="it in v.itineraries | startFrom: pagination_a.page * pagination_a.perPage | limitTo: pagination_a.perPage">
+
+						<div ng-repeat="t in it.trains" ng-init="counter=$index">
+							<div ng-repeat="p in t.prices">
+							
+								<div class="panel panel-primary" ng-hide=" (ComparingPrices(p.total_price.amount,priceCondition.operator_price)) || (ComparingTwoNumbers(hourCondition.operator_a,t.departs_at.slice(11,16)))">
+									<div class="panel-heading"><p>{{v.origin.station_name}} &nbsp <span class="glyphicon glyphicon-arrow-right"></span> &nbsp {{v.destination.station_name}}</p><span align="right">{{p.total_price.amount}}{{p.total_price.currency}} &nbsp {{calculateDuration(t.departs_at.substr(-5),t.arrives_at.substr(-5))}}<span style="padding-left:6px"><span class="glyphicon glyphicon-time"></span><span ng-switch=t.marketing_company>
+										<img ng-switch-when="SNCF" src="./images/sncf.png" style="float: right; width: 80px; margin-right: 10px;">
+										<img ng-switch-when="THA" src="./images/thalys.png" style="float: right; width: 80px; margin-right: 10px;">
+										<img ng-switch-when="ERS" src="./images/eurostar.jpg" style="float: right; width: 80px; margin-right: 10px;">
+										<img ng-switch-default   src="">
+									</span>
+							        </div>
+								    <div class="panel-body">
+									<!-- date de départ : {{t.departs_at | limitTo:10}} -->
+									date de départ : {{displayDay(t.departs_at.slice(0,10))}}</br>
+									heure de départ : {{t.departs_at | limitTo : 5 : 11}} </br>
+									<!-- date d'arrivée : {{t.arrives_at | limitTo:10}} -->
+									date d'arrivée : {{displayDay(t.arrives_at.slice(0,10))}}</br>
+									heure d'arrivée : {{t.arrives_at | limitTo : 5 : 11}}</br>
+									<p align="right"> {{displayClass(p.service_class)}} &nbsp {{t.train_type}} &nbsp </br>Train No : {{t.train_number}}  &nbsp {{t.marketing_company}}</p></br>
+									<p ng-style="customStyle.style">{{displayRestrictions(p.rate.restrictions)}}</p>
+									<button id="{{t.train_number}}" ng-class="{on:b[counter].state}" ng-click=" select_journey_one_way(counter,t)" >{{b[counter].text}}</button>
+								    </div>
+							    </div>
+						    </div>
+					    </div> 
+                    </div>
+			    </div>
+	 				<div ng-if="extensiveTrainResult_a.results[0].itineraries && priceCondition.operator_price==300 
+	 				 && hourCondition.operator_a=='00:00'">
+        				<ul class="pagination" style="padding-left:30px">
+           			    <!-- <li><a href="" ng-click="pagination_a.prevPage()" style=" width: 80px;">Précedent</a></li> -->
+            			<li ng-repeat="n in []| range: pagination_a.numPages" ng-class="{active: n == pagination_a.page}">
+                		<a href="" ng-click="pagination_a.toPageId(n)">{{n + 1}}</a>
+           			    </li>
+                        <!-- <li><a href="" ng-click="pagination_a.nextPage()" style=" width: 80px;">Suivant</a></li> -->
+                        </ul>
+                   </div>
+			</div>
+		</div>
+	  </div>
+	  <div class="col-md-4">	
+		<div class="panel panel-default">
+		   <div class="panel-body">
+		    <div ng-repeat="v in extensiveTrainResult_r.errors">
+		         <div class="alert alert-danger" ng-show="v.status==9819">
+                           <p>Aucun résultat pour la recherche demandée !</p>
+                 </div>
+		    </div>
+		       <div >
+		         <div class="panel panel-info" ng-show="show_me_r || !v.status==9819">
+		                <div class="panel-heading">Meilleure offre de la journée pour le trajet retour:
+		                <p>{{ville_origin_r}} &nbsp <span class="glyphicon glyphicon-arrow-right"></span> </br> {{ville_destination_r}}</p>
+		                </div>
+                        <div class="panel-body"><h1>{{min_r}}&nbsp€</h1></br>
+                        <h3>heure de départ : {{heure_origin_r.slice(11,16)}}</h3></br>
+                        <h3>heure d'arrivée : {{heure_destination_r.slice(11,16)}}</h3>
+                        </div>
+                 </div>
+		        </div>
+		   </div>
+			<div ng-show="type_trip=='Aller-retour'" ng-repeat="v in extensiveTrainResult_r.results">
+				<div class="panel-body">
+					
+						<div ng-repeat="it in v.itineraries | startFrom: pagination_r.page * pagination_r.perPage | limitTo: pagination_r.perPage">
+							<div ng-repeat="t in it.trains">
+								<div ng-repeat="p in t.prices">
+									<div class="panel panel-primary" ng-hide="(ComparingPrices(p.total_price.amount,priceCondition.operator_price)) || (ComparingTwoNumbers(hourCondition.operator_r,t.departs_at.slice(11,16)))">
+										<div class="panel-heading"><p>{{v.origin.station_name}} &nbsp <span class="glyphicon glyphicon-arrow-right"></span> &nbsp {{v.destination.station_name}}</p><span align="right">{{p.total_price.amount}}{{p.total_price.currency}} &nbsp {{calculateDuration(t.departs_at.substr(-5),t.arrives_at.substr(-5))}}<span style="padding-left:6px"><span class="glyphicon glyphicon-time"></span><span ng-switch=t.marketing_company>
+											<img ng-switch-when="SNCF" src="./images/sncf.png" style="float: right; width: 80px; margin-right: 10px;">
+											<img ng-switch-when="THA" src="./images/thalys.png" style="float: right; width: 80px; margin-right: 10px;">
+											<img ng-switch-when="ERS" src="./images/eurostar.jpg" style="float: right; width: 80px; margin-right: 10px;">
+											<img ng-switch-default   src="">
+										</span>
+									    </div>
+									    <div class="panel-body">
+										<!-- date de départ : {{t.departs_at | limitTo:10}} -->
+										date de départ : {{displayDay(t.departs_at.slice(0,10))}}</br>
+										heure de départ : {{t.departs_at | limitTo : 5 : 11}} </br>
+										<!-- date d'arrivée : {{t.arrives_at | limitTo:10}} -->
+										date d'arrivée : {{displayDay(t.arrives_at.slice(0,10))}}</br>
+										heure d'arrivée : {{t.arrives_at | limitTo : 5 : 11}}</br>
+										<p align="right"> {{displayClass(p.service_class)}} &nbsp {{t.train_type}} &nbsp </br>Train No : {{t.train_number}}  &nbsp {{t.marketing_company}}</p></br>
+										<p ng-style="customStyle.style">{{displayRestrictions(p.rate.restrictions)}}</p>
+										 <button  class="btn btn-danger" ng-click="select_journey_return(t)" >Sélectionner</button> 
+                                         
+									    </div>
+								    </div>
+							    </div>
+						    </div> 
+					    </div>
+				    
+			    </div>
+			    <div ng-if="extensiveTrainResult_r.results[0].itineraries && priceCondition.operator_price==300 
+	 				 && hourCondition.operator_r=='00:00'">
+        				<ul class="pagination" style="padding-left:30px">
+           			   <!--  <li><a href="" ng-click="pagination_r.prevPage()" style=" width: 80px;">Précedent</a></li> -->
+            			<li ng-repeat="n in []| range: pagination_r.numPages" ng-class="{active: n == pagination_r.page}">
+                		<a href="" ng-click="pagination_r.toPageId(n)">{{n + 1}}</a>
+           			    </li>
+                        <!-- <li><a href="" ng-click="pagination_r.nextPage()" style=" width: 80px;">Suivant</a></li> -->
+                        </ul>
+                </div>
+		    </div>
+	    </div>
+	    
+	  </div>
+    <div class="col-md-8" ui-view></div>
+
+
+

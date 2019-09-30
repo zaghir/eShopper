@@ -1,0 +1,3450 @@
+<!DOCTYPE html>
+<!--[if IE 7]>    <html class="no-js ie7 ie" lang="nl"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 ie" lang="nl"> <![endif]-->
+<!--[if IE 9 ]>   <html class="no-js ie9 ie" lang="nl"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html style="" class=" js canvas no-touch history rgba multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients csstransforms csstransforms3d csstransitions fontface generatedcontent video audio svg inlinesvg svgclippaths" lang="nl"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8"><link rel="canonical" href="http://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce"><meta name="author"><meta name="viewport" content="width=device-width"><title>
+	Intégration avec Ogone e-Commerce
+</title><link rel="shortcut icon"><link href="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/css_002.css" rel="stylesheet" type="text/css"><link href="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/css.css" rel="stylesheet" type="text/css"><link rel="stylesheet" type="text/css" href="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/main.css">        
+        <link rel="alternate" hreflang="en" href="http://payment-services.ingenico.com/int/en/ogone/support/guides/integration%20guides/e-commerce">
+            
+        <link rel="alternate" hreflang="nl" href="http://payment-services.ingenico.com/nl/nl/ogone/support/guides/integration%20guides/e-commerce">
+            
+        <link rel="alternate" hreflang="de" href="http://payment-services.ingenico.com/de/de/ogone/support/guides/integration%20guides/e-commerce">
+            
+        <link rel="alternate" hreflang="it" href="http://payment-services.ingenico.com/it/it/ogone/support/guides/integration%20guides/e-commerce">
+            
+        <link rel="alternate" hreflang="es" href="http://payment-services.ingenico.com/es/es/ogone/support/guides/integration%20guides/e-commerce">
+    
+
+    <style type="text/css">@font-face{ font-family: 'ClanWebPro-Bold';	src: url('/css/KDB/fonts/ClanWebPro-Bold.eot'), url('/css/KDB/fonts/ClanWebPro-Bold.woff') format('woff');}
+@font-face{ font-family: 'ClanWebPro-Book';	src: url('/css/KDB/fonts/ClanWebPro-Book.eot'), url('/css/KDB/fonts/ClanWebPro-Book.woff') format('woff');}
+html { font-size: 62.5%; -webkit-overflow-scrolling: touch; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body, button, input, select option, textarea { font-family: 'ClanWebPro-Book', arial, sans-serif; color: #444444; font-weight: 300; font-size: 14px;}
+h1,h2{ font-family: 'ClanWebPro-Book', arial, sans-serif; font-weight: 900; }
+h3,h4,h5,h6,.btn,button,.brand-nav,.acd-toggler,.left-navigation { font-family: 'ClanWebPro-Book', arial, sans-serif; font-weight: 700; }
+.main-header .bar nav a.lvl1{ font-size: 13px;}
+.main-header .sub-menu{ font-family: 'ClanWebPro-Book', arial, sans-serif; }
+/* correction ingenico logo with one language */
+IMG#ctl12_WhiteLabelLogo { margin-bottom: 5px; }
+/* text header */
+h1{ color:#1cc0dc; }
+h1 strong { font-size: 125%; }
+h2{ color:#1cc0dc!important; }
+h3{ color:#1cc0dc; }
+h4{ color:#404A53!important; }
+h5{ color:#1cc0dc; }
+strong { color:#404A53!important; }
+/* correction h3 login screen*/
+div.col-1-1 h3{ color:#404A53; }
+/* correction on contact page */
+.MyFontSize {
+font-size: 18px;
+line-height: 28px;
+}
+/* correction font product page */
+h3#application_0_Body {
+font-weight: 300!important;
+font-size: 16px;
+}
+.contentblock.contactUs {
+padding-top: 0px;
+padding-bottom: 0px;
+}
+.pci_color { color:#e31c18!important; }
+/* text and link */
+a.guide-map { color:#fff!important; background-color:#404A53!important; border-radius: 5px!important; padding: 10px!important; text-decoration:none!important; -webkit-transition: all .25s ease-out; -moz-transition: all .25s ease-out; -ms-transition: all .25s ease-out; -o-transition: all .25s ease-out; transition: all .25s ease-out;}
+a.guide-map:hover { background-color:#1cc0dc!important; text-decoration:none!important; }
+/* header */
+header.main-header { background-color:#FFFFFF!important; }
+/* header - menu */
+div.bar.col-10-12 { padding-left: 20px!important;}
+header.main-header .bar nav a.lvl1 { color:#404A53!important; }
+header.main-header .bar nav a.lvl1:hover { color:#1cc0dc!important; text-decoration:underline; }
+header.main-header .bar nav a.lvl2:hover { color:#1cc0dc!important; text-decoration:underline;}
+header.main-header .bar nav .sub-menu a.active { color:#404A53!important; }
+header.main-header .bar nav .sub-menu a.active:hover { color:#1cc0dc!important; }
+/* header - search field */
+header.main-header input { background-color:#FFFFFF!important; }
+header.main-header .search input { color:#404A53!important; }
+header.main-header .search .btn-submit:before { color:#404A53!important; }
+div.wrapper header.main-header .search input.placeholder { color:#888888!important; }
+/* header - breadcrumb */
+div.black-bar { background-color:#404A53!important; }
+div.black-bar a { color:#FFFFFF!important; }
+div.black-bar li.last { color:#FFFFFF!important; }
+div.black-bar ul li:before { color:#FFFFFF!important; }
+/* header - language selector */
+div.language-nav { background-color:#404A53!important; }
+div.language-nav a.language-item:hover { color:#1cc0dc!important; text-decoration:underline; }
+/* guide - first level text header */
+div.dark-box { background-color:#404A53!important; }
+div.dark-box h2 { color:#FFFFFF!important; font-size: 130%;}
+/* guide - table of content */
+div.group { background-color:#f9f9f9!important; }
+div.group h4 { color:#1cc0dc!important; }
+div.group a { font-weight:normal; }
+div.group a:link { color:#444444!important; }
+div.group a:visited { color:#888888!important; }
+div.group a:hover { color:#1cc0dc!important; }
+/* bullet */
+ul li:before { color:#1cc0dc!important; }
+.acd-content .text ul li { list-style:disc!important; }
+.acd-content .text ul li:before { color:#1cc0dc!important; }
+/* accordion */
+.accordion .acd-content { background-color:#F5F5F5!important; padding-top: 20px; }
+.accordion .text { color:#404A53!important; }
+.accordion span { color:#404A53!important; }
+.accordion p { color:#404A53!important; }
+.accordion ul li { color:#404A53!important; }
+.accordion a { color:#404A53!important; }
+.accordion .label:hover { color:#1cc0dc!important; }
+.accordion .label.active { color:#1cc0dc!important;font-weight:bold; }
+/* accordion - left control */
+.accordion .label:before { color:#404A53!important; }
+.accordion .label:hover:before { color:#1cc0dc!important; }
+.accordion .label.active:before { color:#1cc0dc!important; }
+/* accordion - top control */
+.accordion .acd-toggler{ background-color: #ededed!important; }
+.accordion .acd-toggler a { color: #404A53; } 
+.accordion .acd-toggler a:after{ color: #1cc0dc !important; }
+.accordion .acd-toggler.active { background-color:#1cc0dc!important; }
+.accordion .acd-toggler.active a,
+.accordion .acd-toggler.active a:after { color:#fff!important; }
+.accordion .acd-toggler.active + .acd-content{ border: 1px solid #1cc0dc; background-color: #fff!important; }
+/* tables */
+/* table{ border: 1px solid #404A53!important; } */
+table tr td, table tr th { color:#404A53!important; }
+/* button - download */
+.btnDownloadComplete { background-color:#404A53!important; }
+.btnDownloadComplete:hover { background-color:#1cc0dc!important; }
+/* button - login */
+.cta-box h3{ color: #404A53!important; }
+.btnCta { background-color:#1cc0dc!important; -webkit-transition: all .25s ease-out; -moz-transition: all .25s ease-out; -ms-transition: all .25s ease-out; -o-transition: all .25s ease-out; transition: all .25s ease-out;}
+.btnCta:after{ -webkit-transform: scale(.9); -moz-transform: scale(.9); -ms-transform: scale(.9); -o-transform: scale(.9); transform: scale(.9); -webkit-transition: all .25s ease-out; -moz-transition: all .25s ease-out; -ms-transition: all .25s ease-out; -o-transition: all .25s ease-out; transition: all .25s ease-out;} 
+.btnCta:hover { background-color:#14d0f0!important; box-shadow: #14d0f0 0 0 0 2px !important; }
+.btnCta:hover:after{ -webkit-transform: scale(1); -moz-transform: scale(1); -ms-transform: scale(1); -o-transform: scale(1); transform: scale(1);}
+/* button - form - yes no */
+.btnYes { background-color:#404A53!important; }
+.btnYes:hover { background-color:#1cc0dc!important; }
+.btnNo { background-color:#404A53!important; }
+.btnNo:hover { background-color:#1cc0dc!important; }
+/* button - form - send */
+.feedback-box .fields-box input { background-color:#404A53!important; }
+.feedback-box .fields-box input:hover { background-color:#1cc0dc!important; }
+/* button - back to top */
+#BackToTop:hover { background-color:#1cc0dc!important; }
+/* button - chapter navigator */
+#application_0_ChapterControl_PreviousHyperLink { background-color:#404A53!important; color:#fff!important; }
+#application_0_ChapterControl_NextHyperLink { background-color:#404A53!important; color:#fff!important; }
+#application_0_ChapterControl_PreviousHyperLink:hover { background-color:#1cc0dc!important; }
+#application_0_ChapterControl_NextHyperLink:hover { background-color:#1cc0dc!important; }
+/* search result */
+.search-amount .highlight { color:#1cc0dc!important; }
+.pagination .active { background-color:#1cc0dc!important; }
+/* text color on product and contact pages */
+h3#application_0_Body { color:#404A53; }
+h3#application_0_Body strong { color:#1cc0dc!important; }
+/* cookie settings */
+#cookiecontainer .col02 ul li { font-size: 98%; }
+#cookiecontainer .col02 ul { list-style-type: disc; }
+#cookiecontainer .col02 ul li:before { content:none; }
+/* text footer */
+.main-footer a:hover { color:#1cc0dc!important; }
+div.content-end-spacer { padding-top:30px!important; }
+
+
+</style>
+    <script id="undefined" src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/inpage_linkid.js" async="" type="text/javascript"></script><script src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/ga.js" async="" type="text/javascript"></script><script src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/gtm.js" async=""></script><script src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/modernizr.js"></script>
+<meta name="robots" content="index, follow, noydir, noodp"></head>
+    
+<body class="content-tmpl"><a class="show" style="top: 0px; opacity: 1;" href="#body" id="BackToTop"><span></span></a>
+    <div id="ctl01_GoogleTagsDatalayerPanel">
+	
+    <script>
+        dataLayer = [{'remarketing':false}];
+    </script>
+
+</div>
+
+<div id="ctl01_GoogleTagsInitializationScript">
+	
+    <!-- Google Tag Manager -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WW67R8"
+            height="0" width="0" style="display: none; visibility: hidden"></iframe>
+    </noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WW67R8');</script>
+    <!-- End Google Tag Manager -->
+
+</div>
+
+
+    <form name="ctl02" method="post" action="/fr/fr/ogone/support/guides/integration guides/e-commerce" id="ctl02">
+<div>
+<input name="__EVENTTARGET" id="__EVENTTARGET" value="" type="hidden">
+<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" type="hidden">
+
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['ctl02'];
+if (!theForm) {
+    theForm = document.ctl02;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/WebResource.js" type="text/javascript"></script>
+
+
+<script src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/MicrosoftAjax.js" type="text/javascript"></script>
+<script src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/MicrosoftAjaxWebForms.js" type="text/javascript"></script>
+<div>
+
+	<input name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2DBA29A3" type="hidden">
+	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAeAG2zzB8br9zoYPNjRfvgvtbIdVHbYdShAyORf9P0Rgi5Hi+rlhyK83ozZjS5mx+6wyF7NBmk7ZNsXZm3M3adG6jaPuhpg+HzSh8MT5M49i3TASydXK0xs98hvAO1pKogdNHIzbxBxc8HFPuJRcg48a8+6R977FwVieYye0xFatDTUAYyftm6HOuB4iTF6KEk=" type="hidden">
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'ctl02', [], [], [], 90, '');
+//]]>
+</script>
+
+        
+        <div class="wrapper">
+            
+<header class="main-header">
+    <div class="grid grid-pad brand-nav">
+        <div class="brand col-2-12">
+            <a id="ctl12_LogoLink" href="http://payment-services.ingenico.com/fr/fr/"><img id="ctl12_WhiteLabelLogo" src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/logo_ingenico_ps.png" style="height:59px;width:157px;border-width:0px;"></a>
+        </div>
+        <div class="bar col-10-12">
+            
+<nav role="navigation">
+
+    
+            <ul>
+        
+            <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support" class="lvl1 execute_link">Home</a>
+                
+            </li>
+        
+            <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/products/onboarding" class="lvl1 execute_link">Démarrer</a>
+                
+            </li>
+        
+            <li><a href="" class="lvl1">Canaux de paiement</a>
+                
+                        <ul class="sub-menu">
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/products/online-payments" class="lvl2">En ligne et mobile</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/products/batch" class="lvl2">Batch</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/products/phone-mail" class="lvl2">Saisie manuelle</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/products/cross-channel" class="lvl2">Cross-Channel</a></li>
+                    </ul>
+            </li>
+        
+            <li><a href="" class="lvl1">Solutions</a>
+                
+                        <ul class="sub-menu">
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/products/account-management" class="lvl2">Gestion de compte</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/products/transaction-management" class="lvl2">Gestion des transactions</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/products/recurring" class="lvl2">Paiements récurrents</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/products/shopping-carts" class="lvl2">Shopping Carts</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/products/fraud" class="lvl2">Prévention de la fraude</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/products/collect" class="lvl2">Ingenico Collect</a></li>
+                    </ul>
+            </li>
+        
+            <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/products/payment-methods" class="lvl1 execute_link">Modes de paiement</a>
+                
+            </li>
+        
+            <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/login" class="lvl1 execute_link">Login</a>
+                
+            </li>
+        </ul>
+</nav>
+
+            
+
+<div class="language-nav">
+    <a class="current" href="#">
+        fr
+    </a>
+
+    
+            <ul style="display: none;">
+        
+            <li>
+                <a id="ctl12_LanguageNavigation1_LanguagesList_ctl01_LanguageLink" class="language-item" href="https://payment-services.ingenico.com/int/en/ogone/support/guides/integration%20guides/e-commerce">en</a>
+            </li>
+        
+            <li>
+                <a id="ctl12_LanguageNavigation1_LanguagesList_ctl02_LanguageLink" class="language-item" href="https://payment-services.ingenico.com/nl/nl/ogone/support/guides/integration%20guides/e-commerce">nl</a>
+            </li>
+        
+            <li>
+                <a id="ctl12_LanguageNavigation1_LanguagesList_ctl03_LanguageLink" class="language-item" href="https://payment-services.ingenico.com/de/de/ogone/support/guides/integration%20guides/e-commerce">de</a>
+            </li>
+        
+            <li>
+                <a id="ctl12_LanguageNavigation1_LanguagesList_ctl04_LanguageLink" class="language-item" href="https://payment-services.ingenico.com/it/it/ogone/support/guides/integration%20guides/e-commerce">it</a>
+            </li>
+        
+            <li>
+                <a id="ctl12_LanguageNavigation1_LanguagesList_ctl05_LanguageLink" class="language-item" href="https://payment-services.ingenico.com/es/es/ogone/support/guides/integration%20guides/e-commerce">es</a>
+            </li>
+        
+            </ul>
+        
+</div>
+
+ 
+        </div>        
+    </div>  
+
+    <div class="black-bar">
+        <div class="grid grid-pad">
+            <div class="col-3-4 breadcrumb">                
+               
+<div class="grid grid-pad">
+    <ul>
+        
+                <li class="">
+                    <a href="https://payment-services.ingenico.com/fr/fr/ogone/support">Home</a>
+                    
+                </li>
+            
+                <li class="last">
+                    
+                    Intégration avec Ogone e-Commerce
+                </li>
+            
+    </ul>
+</div>
+
+            </div>
+            <div class="col-1-4">
+                <div id="ctl12_Panel1" class="search" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl12_SearchButton')">
+	
+                    <input value="Rechercher" class="placeholder" name="ctl12$SearchTextBox" id="ctl12_SearchTextBox" placeholder="Rechercher" type="text">
+                    <input name="ctl12$SearchButton" value="" id="ctl12_SearchButton" type="submit">
+                    <a id="ctl12_SearchLinkButton" class="btn-submit icon-search" href="javascript:__doPostBack('ctl12$SearchLinkButton','')"></a>
+                
+</div>
+            </div>
+        </div>
+    </div>
+    
+</header>
+
+            <article class="all-content">
+                
+<div class="grid grid-pad">
+    <div id="ctl13_pnlUpdateDate" class="col-1-1">
+	
+        <span class="lastUpdate floatR">
+            Dernière mise à jour
+            <strong>
+                2/05/2014
+            </strong>
+        </span>
+    
+</div>
+</div>
+
+                
+
+<div class="grid grid-pad page-header">
+    <div class="col-1-1">
+        <div class="col-3-4">
+            <h1>Intégration avec Ogone e-Commerce</h1>
+        </div>
+        <div class="col-1-4">
+            <a id="application_0_DownloadHyperLink" class="btnDownloadComplete floatR" href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/pdf/ogone/fr/123ae0b9-2864-48d4-9b06-7ed2d70db029/e-commerce.ashx">Télécharger guide</a>
+        </div>
+    </div>
+</div>
+<div class="grid grid-pad">
+    <div class="col-1-3 left-nav-wrapper">
+        
+
+<div class="left-navigation">
+    <div class="group">
+        <h4>
+            Contenu
+        </h4>
+        
+                <ul>
+            
+                <li class=""><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/introduction">1. Introduction</a></li>
+                
+                        <ul>
+                    </ul>
+            
+                <li class=""><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/technical-information">2. Page Information technique</a></li>
+                
+                        <ul>
+                    </ul>
+            
+                <li class=""><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/sale-process">3. Processus de vente</a></li>
+                
+                        <ul>
+                    </ul>
+            
+                <li class=""><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/link-your-website-to-the-payment-page">4. Lien entre le site internet du marchand et notre page de paiement</a></li>
+                
+                        <ul>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/link-your-website-to-the-payment-page#where-to-configure">4.1 Où configurer?</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/link-your-website-to-the-payment-page#formparameters">4.2 Paramètres de formulaire</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/link-your-website-to-the-payment-page#formaction">4.3 L’action du formulaire</a></li>
+                    </ul>
+            
+                <li class=""><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/security-pre-payment-check">5. Sécurité : vérification avant le paiement</a></li>
+                
+                        <ul>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/security-pre-payment-check#shainsignature">5.1 Signature SHA-IN</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/security-pre-payment-check#referrer">5.2 Referrer (Référant)</a></li>
+                    </ul>
+            
+                <li class=""><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/payment-page-look-and-feel">6. Aspect de la page de paiement</a></li>
+                
+                        <ul>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/payment-page-look-and-feel#paymentpagelayout">6.1 Présentation de la page de paiement (modèle statique)</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/payment-page-look-and-feel#statictemplate">6.2 Modèle hébergé par Ogone (modèle statique)</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/payment-page-look-and-feel#dynamictemplate">6.3 Mise en page basée sur le modèle (modèle dynamique)</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/payment-page-look-and-feel#mobiletemplatewithcss">6.4 Modèle pour mobile</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/payment-page-look-and-feel#templatefilemanager">6.5 Gestionnaire de fichiers modèles</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/payment-page-look-and-feel#templatesecuritycontrol">6.6 Contrôle de la sécurité des modèles</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/payment-page-look-and-feel#secureenvironmentpadlock">6.7 Cadenas de l’environnement sécurisé</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/payment-page-look-and-feel#useofpaymentpageiniframe">6.8 Page de paiement dans un iframe</a></li>
+                    </ul>
+            
+                <li class=""><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/transaction-feedback">7. Retour d'information sur la transaction</a></li>
+                
+                        <ul>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/transaction-feedback#defaultreaction">7.1 Réaction par défaut</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/transaction-feedback#basicredirection">7.2 Redirection en fonction du résultat du paiement</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/transaction-feedback#redirectionwithdatabaseupdate">7.3 Option mise à jour de la base de données</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/transaction-feedback#servertoserver-feedback">7.4 Requête de réponse directes (après paiement)</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/transaction-feedback#feedbackparameters">7.5 Paramètres du retour d'information</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/transaction-feedback#feedbackreinitialization">7.6 Réinitialisation du retour d'information</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/transaction-feedback#confirmationemails">7.7 E-mails de confirmation</a></li>
+                    </ul>
+            
+                <li class=""><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/payment-link-via-e-mail">8. e-Commerce via e-mail</a></li>
+                
+                        <ul>
+                    </ul>
+            
+                <li class=""><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/payment-method-selection-options">9. Moyen de paiement et caractéristiques de la page de paiement</a></li>
+                
+                        <ul>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/payment-method-selection-options#pmselectiononmerchantsite">9.1 Choix du moyen de paiement du côté du marchand</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/payment-method-selection-options#showalistofpaymentmethods">9.2 Afficher une liste déterminée de moyens de paiement</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/payment-method-selection-options#excludespecificpaymentmethods">9.3 Exclure une liste déterminée de moyens de paiement</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/payment-method-selection-options#layoutofthepaymentmethods">9.4 Présentation des moyens de paiement</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/payment-method-selection-options#3dsecure">9.5 Fenêtre pour 3-D Secure</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/payment-method-selection-options#splitcreditdebitcards">9.6 Subdivision en cartes de crédit/débit</a></li>
+                    </ul>
+            
+                <li class=""><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/other-optional-fields">10. Autres champs masqués facultatifs</a></li>
+                
+                        <ul>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/other-optional-fields#operation">10.1 Code Opération</a></li>
+                    
+                        <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/other-optional-fields#userfield">10.2 Champ Utilisateur</a></li>
+                    </ul>
+            </ul>
+    </div>
+
+    
+
+<div class="group">
+    <h4>
+        Sujets liés
+    </h4>
+    <ul>
+        
+                <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/possible-errors">Erreurs possibles</a></li>
+            
+                <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/additional-data/delivery-and-invoicing-data">Informations de livraison et de facturation</a></li>
+            
+                <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/additional-data/order-data">Détails de la commande (paramètres "ITEM")</a></li>
+            
+                <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/additional-data/travel-data">Format spécial "Travel" (voyage)</a></li>
+            
+                <li><a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/user%20guides/statuses-and-errors">Transactions: statuts et codes d'erreur</a></li>
+            
+    </ul>
+</div>
+
+</div>
+
+
+    </div>
+    <div class="col-2-3">
+        
+                
+<div class="dark-box">
+    <h2>1. Introduction</h2>
+</div>
+<p>La documentation e-Commerce détaille l’intégration d’e-Commerce sur votre site Web.</p>
+
+
+<div class="chapter-navigator">
+    
+       
+</div>
+            
+                
+<div class="dark-box">
+    <h2>2. Page Information technique</h2>
+</div>
+<p>Dans votre compte Ogone, vous trouverez la page d'Information technique via "Configuration" dans le menu supérieur.</p>
+<p>A la page d' information technique, vous trouverez le "i" icône pour expliquer le contexte particulier.</p>
+<p>&nbsp;</p>
+
+
+<div class="chapter-navigator">
+    
+       
+</div>
+            
+                
+<div class="dark-box">
+    <h2>3. Processus de vente</h2>
+</div>
+<p>Les captures d’écran suivantes représentent la procédure de vente 
+après l’intégration de base de votre site Internet avec notre système.</p>
+<p><a class="showInOverlay" href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/integration%20guides/e-commerce/basic_ecommerce-chapter-3pic1.ashx?la=fr"><img alt="Sale process summary page" src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/basic_ecommerce-chapter-3pic1.png"></a></p>
+<p>Sur votre site Internet, le client peut consulter un récapitulatif de
+ sa commande. On lui demande de confirmer cette information avant de 
+procéder à la page de paiement sécurisé.</p>
+<p>Le bouton de confirmation est en fait la partie visible du 
+«&nbsp;formulaire HTML&nbsp;» qui contient les champs cachés avec les 
+données de paiement, ainsi que la redirection automatique du client en 
+mode sécurisé vers la page paiement de notre serveur. Les champs cachés 
+sont décrits au Chapitre <a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/link-your-website-to-the-payment-page">Lien entre le site internet du marchand et notre page de paiement</a>&nbsp;de ce document.</p>
+<p><a class="showInOverlay" href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/integration%20guides/e-commerce/basic_ecommerce-chapter-3pic2.ashx?la=fr"><img alt="Payment page" src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/basic_ecommerce-chapter-3pic2.png"></a></p>
+<p>Sur notre page de paiement sécurisé, le client peut choisir n’importe
+ laquelle des méthodes de paiement que vous avez sélectionnées. </p>
+<p>Si c’est un paiement par carte de crédit, on demandera au client 
+d’entrer son numéro de carte, etc. Le client peut confirmer ou annuler 
+la demande de paiement.</p>
+<p><a class="showInOverlay" href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/integration%20guides/e-commerce/basic_ecommerce-chapter-3pic3.ashx?la=fr"><img alt="Payment confirmation page" src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/basic_ecommerce-chapter-3pic3.png"></a>&nbsp;</p>
+<p>Après avoir demandé le paiement à l’institution financière 
+pertinente, nous présentons au client une page avec le résultat de son 
+paiement. </p>
+<p>Si le paiement a été refusé, une erreur est affichée et le client a 
+la possibilité d’essayer à nouveau&nbsp;: il peut choisir une autre 
+méthode de paiement ou changer les renseignements qu’il a introduit. </p>
+<p>Une page spécifique sur votre site Internet peut aussi être affichée 
+au client, dépendant du résultat de la transaction. Pour plus 
+d’information, veuillez vous référer au Chapitre <a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/transaction-feedback#SC_7_2">Feedback au client sur la transaction</a> de ce document.</p>
+
+
+<div class="chapter-navigator">
+    
+       
+</div>
+            
+                
+<div class="dark-box">
+    <h2>4. Lien entre le site internet du marchand et notre page de paiement</h2>
+</div>
+
+
+        <h3 id="where-to-configure">4.1 Où configurer?</h3>
+        <p>Le lien entre votre site Internet et notre page de paiement 
+de e-Commerce doit être établi sur la dernière page du panier d’achat 
+sur votre site Internet&nbsp;: c’est-à-dire la dernière page de votre 
+site présentée à l’acheteur.</p>
+<p>Un formulaire avec des champs html cachés contenant les données de la
+ commande doit être intégré dans la dernière page. Le bloc de code que 
+vous devrez coller dans la dernière page de votre panier d’achat est le 
+suivant&nbsp;:</p>
+<table style="width: 100%;">
+    <tbody>
+        <tr>
+            <td>&lt;form method="post" 
+action="https://secure.ogone.com/ncol/test/orderstandard.asp / 
+orderstandard_utf8.asp" id=form1 name=form1&gt;<br>
+            <br>
+            &lt;!-- paramètres généraux : voir <a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/link-your-website-to-the-payment-page#SC_4_2">Paramètres de formulaire</a> --&gt;<br>
+            &lt;input type="hidden" name="PSPID" value=""&gt;<br>
+            &lt;input type="hidden" name="ORDERID" value=""&gt;<br>
+            &lt;input type="hidden" name="AMOUNT" value=""&gt;<br>
+            &lt;input type="hidden" name="CURRENCY" value=""&gt;<br>
+            &lt;input type="hidden" name="LANGUAGE" value=""&gt;<br>
+            &lt;input type="hidden" name="CN" value=""&gt;<br>
+            &lt;input type="hidden" name="EMAIL" value=""&gt;<br>
+            &lt;input type="hidden" name="OWNERZIP" value=""&gt;<br>
+            &lt;input type="hidden" name="OWNERADDRESS" value=""&gt;<br>
+            &lt;input type="hidden" name="OWNERCTY" value=""&gt;<br>
+            &lt;input type="hidden" name="OWNERTOWN" value=""&gt;<br>
+            &lt;input type="hidden" name="OWNERTELNO" value=""&gt;<br>
+            <br>
+            &lt;!-- vérification avant le paiement : voir <a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/security-pre-payment-check">Sécurité : vérification avant le paiement</a> --&gt;<br>
+            &lt;input type="hidden" name="SHASIGN" value=""&gt;<br>
+            <br>
+            &lt;!-- apparence et impression: voir <a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/payment-page-look-and-feel">Apparence de la page de paiement</a> --&gt;<br>
+            &lt;input type="hidden" name="TITLE" value=""&gt;<br>
+            &lt;input type="hidden" name="BGCOLOR" value=""&gt;<br>
+            &lt;input type="hidden" name="TXTCOLOR" value=""&gt;<br>
+            &lt;input type="hidden" name="TBLBGCOLOR" value=""&gt;<br>
+            &lt;input type="hidden" name="TBLTXTCOLOR" value=""&gt;<br>
+            &lt;input type="hidden" name="BUTTONBGCOLOR" value=""&gt;<br>
+            &lt;input type="hidden" name="BUTTONTXTCOLOR" value=""&gt;<br>
+            &lt;input type="hidden" name="LOGO" value=""&gt;<br>
+            &lt;input type="hidden" name="FONTTYPE" value=""&gt;<br>
+            <br>
+            &lt;!-- redirection après la transaction : voir <a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/transaction-feedback">Feedback au client sur la transaction</a> --&gt;<br>
+            &lt;input type="hidden" name="ACCEPTURL" value=""&gt;<br>
+            &lt;input type="hidden" name="DECLINEURL" value=""&gt;<br>
+            &lt;input type="hidden" name="EXCEPTIONURL" value=""&gt;<br>
+            &lt;input type="hidden" name="CANCELURL" value=""&gt;<br>
+            <br>
+            &lt;input type="submit" value="" id=submit2 name=submit2&gt;<br>
+            &lt;/form&gt;&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+        
+    
+        <h3 id="formparameters">4.2 Paramètres de formulaire</h3>
+        <p>Bien que les paramètres obligatoires soient le PSPID, 
+ORDERID, AMOUNT, CURRENCY et LANGUAGE, nous recommandons fortement 
+néanmoins de nous envoyer le nom du client, l’adresse électronique du 
+client, l’adresse, la ville, le code postal, le pays, et le numéro de 
+téléphone puisque ce sont des outils utiles pour <a href="https://payment-services.ingenico.com/fr/fr/ogone/support/products/fraud">lutter contre les fraudes</a>. </p>
+<p>Vous trouverez ci-dessous un aperçu des champs cachés utilisés pour 
+transmettre les « paramètres généraux » à notre système (les autres 
+champs sont décrits dans les chapitres suivants)&nbsp;:</p>
+<table style="width: 100%;">
+    <thead>
+        <tr>
+            <th>
+            <p style="text-align: left;">Champ </p>
+            </th>
+            <th>
+            <p style="text-align: left;">Usage</p>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    <tbody>
+        <tr>
+            <td>PSPID</td>
+            <td>Votre nom d’affiliation dans notre système</td>
+        </tr>
+        <tr>
+            <td>ORDERID</td>
+            <td>
+            <p>Votre numéro de commande (référence du marchand). Le 
+système vérifie que le paiement n’a pas été demandé deux fois pour la 
+même commande.<strong></strong></p>
+            <p>L’ORDERID doit être assigné dynamiquement.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>AMOUNT</td>
+            <td>
+            <p>Montant à payer MULTIPLIÉ PAR 100 puisque le format du montant ne doit pas contenir de décimales ou autres séparateurs.<strong></strong></p>
+            <p>Le montant doit être assigné dynamiquement.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>CURRENCY</td>
+            <td>Devise pour la commande en code ISO alpha. Par exemple&nbsp;: EUR, USD, GBP, … <br>
+            </td>
+        </tr>
+        <tr>
+            <td>LANGUAGE </td>
+            <td>Langue du client. Par exemple&nbsp;: en_US, nl_NL, fr_FR, … </td>
+        </tr>
+        <tr>
+            <td>CN</td>
+            <td>
+            <p>Le nom du client.</p>
+            <p>Sera pré-initialisé (mais toujours éditable) dans le champ Nom du Client des renseignements de la carte de crédit.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>EMAIL </td>
+            <td>L’adresse électronique du client<br>
+            </td>
+        </tr>
+        <tr>
+            <td>OWNERADDRESS </td>
+            <td>L’adresse du client</td>
+        </tr>
+        <tr>
+            <td>OWNERZIP </td>
+            <td>Le code postal du client</td>
+        </tr>
+        <tr>
+            <td>OWNERTOWN </td>
+            <td>Nom de la ville du client</td>
+        </tr>
+        <tr>
+            <td>OWNERCTY </td>
+            <td>Le pays du client</td>
+        </tr>
+        <tr>
+            <td>OWNERTELNO </td>
+            <td>Le numéro de téléphone du client</td>
+        </tr>
+    </tbody>
+</table>
+        
+    
+        <h3 id="formaction">4.3 L’action du formulaire</h3>
+        <p style="margin-bottom: 9.75pt;">&lt;form method="post" 
+action="https://secure.ogone.com/ncol/test/orderstandard.asp / 
+orderstandard_utf8.asp" id=form1 name=form1&gt;</p>
+<p>L’action du formulaire sera la page de traitement de notre système de e-Commerce. </p>
+<ul>
+    <li>Dans l’environnement de TEST, l’URL pour l’action sera&nbsp;: 
+https://secure.ogone.com/ncol/test/orderstandard.asp / 
+orderstandard_utf8.asp</li>
+    <li>Dans l’environnement de PRODUCTION, l’URL pour l’action 
+sera&nbsp;: https://secure.ogone.com/ncol/prod/orderstandard.asp / 
+orderstandard_utf8.asp</li>
+</ul>
+<table width="100%">
+    <tbody>
+        <tr>
+            <td>
+            <p><strong>Changez "test" à "prod"</strong> </p>
+            <p>Lorsque vous passez au compte de PRODUCTION, vous devez impérativement remplacer le « test » par « prod ».</p>
+            <p>Un oubli aura pour conséquence d’envoyer vos transactions
+ en environnement de test où elles ne seront pas envoyées aux acquéreurs
+ et aux banques.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+        
+    
+
+<div class="chapter-navigator">
+    
+       
+</div>
+            
+                
+<div class="dark-box">
+    <h2>5. Sécurité : vérification avant le paiement</h2>
+</div>
+
+
+        <h3 id="shainsignature">5.1 Signature SHA-IN</h3>
+        <p>Cette technique se fonde sur le principe suivant&nbsp;: le 
+serveur du marchand crée une chaîne de caractères unique, hachée par 
+l’algorithme SHA, pour chaque commande. Le résultat de ce hachage nous 
+est ensuite envoyé dans les champs masqués de la page de commande du 
+marchand. Notre système reconstruit cette signature pour vérifier 
+l’intégrité des informations de commande qui nous sont envoyées dans les
+ champs masqués.</p>
+<p>Nous proposons SHA-1, SHA-256 et SHA-512 comme méthodes de 
+vérification des données. Pour chaque commande, votre serveur génère une
+ chaîne de caractères unique (appelée un condensé), hachée avec 
+l’algorithme SHA de votre choix.</p>
+        
+                <h4 id="shainsignature_creatingthestring">5.1.1 Création de la chaîne</h4>
+                <p>La chaîne est créée en concaténant les valeurs des 
+champs envoyés avec la commande (triés par ordre alphabétique, dans le 
+format ‘PARAMETRE=valeur’), séparés par une clé. Cette clé est définie 
+dans les Informations Techniques du commerçant, sous l’onglet “Contrôle 
+de données et d’Origine”, section “Contrôles pour e-Commerce”<a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/%7E/media/957a034817d1448b9bfceb386d10e982.ashx"></a>.</p>
+<p>Veuillez observer que ces valeurs sont sensibles à la case lors de leur compilation pour former la chaîne avant le hachage !</p>
+<table>
+    <tbody>
+        <tr>
+            <td>
+            <p><strong>Important</strong></p>
+            <ul>
+                <li>Tous les paramètres que vous envoyez (et qui apparaissent dans la liste <a href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/integration%20guides/sha-in_params.ashx?la=fr">SHA-IN params</a>), seront inclus dans la chaîne.</li>
+                <li>Tous les noms de paramètres doivent être en MAJUSCULES (pour éviter toute confusion)</li>
+                <li>Tous les paramètres doivent être classés dans l'ordre alphabétique</li>
+                <li>Les paramètres qui n'ont pas de valeur ne doivent PAS être inclus dans la chaîne</li>
+                <li>Notez que certains algorithmes de tri placent les 
+caractères spéciaux devant la première lettre de l’alphabet, d’autres à 
+la fin. En cas de doute, veuillez respecter l’ordre tel qu’indiqué dans 
+la liste SHA.</li>
+                <li>Lorsque vous souhaitez transférer votre compte de 
+Test vers l’environnement de production en utilisant le lien disponible 
+dans le back-office, une signature SHA-IN aléatoire sera automatiquement
+ configurée dans votre compte de production</li>
+                <li>Pour plus de sécurité, nous vous demandons 
+d'utiliser des mots de passe SHA différents pour TEST et PROD. Remarquez
+ que s'ils sont identiques, votre mot de passe TEST sera modifié par 
+notre système (vous en serez évidemment averti)</li>
+            </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>Lorsque vous hachez la chaîne compilée avec l’algorithme SHA, le 
+système générera un condensé hexadécimal. La longueur de ce condensé SHA
+ est de 40 caractères pour le SHA-1, de 64 pour le SHA-256 et de 128 
+pour le SHA-512. Ce résultat devrait être envoyé à notre système dans 
+votre commande, en utilisant le champ «&nbsp;SHASIGN&nbsp;». </p>
+<p>Notre système recomposera la chaîne SHA en fonction des paramètres 
+reçus et comparera le condensé du commerçant avec le condensé que nous 
+aurons généré. Si le résultat n’est pas identique, la commande sera 
+refusée. Cette vérification garantit l’exactitude et l’intégrité des 
+données de la commande.</p>
+<p>Vous pouvez tester votre SHASign <a href="https://secure.ogone.com/ncol/test/testsha.asp" target="_blank">ici</a>.</p>
+<table style="width: 100%;">
+    <tbody>
+        <tr>
+            <td>
+            <p><strong>Exemple d'un calcul SHA-1-IN élémentaire</strong></p>
+            <p>Paramètres (dans l’ordre alphabétique) :</p>
+            <p>AMOUNT=1500 (15.00 x100)<br>
+            CURRENCY=EUR<br>
+            LANGUAGE=en_US<br>
+            ORDERID=1234<br>
+            PSPID=MyPSPID</p>
+            <p>Clé SHA :<br>
+            Mysecretsig1875!?</p>
+            <p>Chaîne à hacher :<br>
+            AMOUNT=1500Mysecretsig1875!?CURRENCY=EURMysecretsig1875!?LANGUAGE=en_USMysecretsig1875!?<br>
+            ORDERID=1234Mysecretsig1875!?PSPID=MyPSPIDMysecretsig1875!?</p>
+            <p>Condensé obtenu (SHA-1) :<br>
+            F4CC376CD7A834D997B91598FA747825A238BE0A </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>Si le SHASign envoyé dans les champs cachés HTML de la transaction ne
+ correspond pas au SHASIGN assemblé de notre côté avec les détails de la
+ commande et la chaîne supplémentaire (mot de passe/phrase secrète) 
+entrée dans le champ „Signature SHA-1-IN“ dans la section „Contrôles 
+pour e-Commerce“ de l’onglet „Contrôle des données et d'origine“ de la 
+page Information Technique, vous recevrez le message d’erreur « unknown 
+order/1/s». </p>
+<p>Si rien n’est envoyé dans le champ « SHASIGN » des champs cachés 
+HTML, même si une chaîne supplémentaire (mot de passe/phrase secrète) a 
+été entrée dans le champ „Signature SHA-IN“ dans la section „Contrôles 
+pour e-Commerce“ de l’onglet „Contrôle des données et d'origine“ de la 
+page Information Technique – indiquant que vous voulez utiliser une 
+signature SHA avec chaque transaction – vous recevrez un message 
+d’erreur « unknown order/0/s».</p>
+<p>Ce qui suit est le champ caché utilisé pour transmettre la signature SHA à notre système&nbsp;:</p>
+<table style="text-align: left; width: 100%;">
+    <thead>
+        <tr>
+            <th>Champ</th>
+            <th>Usage</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>SHASIGN</td>
+            <td>Chaîne de caractères unique pour la validation des données de la commande. </td>
+        </tr>
+    </tbody>
+</table>
+            
+    
+        <h3 id="referrer">5.2 Referrer (Référant)</h3>
+        <p>Notre système vérifie l’origine de la demande de paiement, 
+c.-à-d. l’URL d’où provient la commande. On appelle cet URL le 
+«&nbsp;référant&nbsp;».&nbsp;</p>
+<p>Le marchand indique le référant/l’URL de la page contenant le 
+formulaire de commande avec les champs masqués dans le champ URL sous 
+l’onglet «&nbsp;Contrôle de données et d’origine&nbsp;», dans la 
+rubrique «&nbsp;Contrôles pour e-Commerce&nbsp;» de la page 
+d’information technique de son compte.</p>
+<table>
+    <tbody>
+        <tr>
+            <td>
+            <p><strong>Important</strong></p>
+            <ul>
+                <li>Le/les URL(s) doi(ven)t toujours commencer par http:// ou https://</li>
+                <li>Vous pouvez saisir l’URL entier ou simplement le nom
+ de domaine&nbsp;; dans ce second cas, l’ensemble des sous-répertoires 
+et des pages de ce domaine seront acceptés</li>
+                <li>Le marchand peut saisir plusieurs URL s’il dispose 
+de plusieurs domaines, par ex. 
+«&nbsp;http://www.mysite.com;http://www.mysite.net;http://www.secure.mysite.com&nbsp;»
+ Les URL doivent être séparés par un point-virgule (sans espaces avant 
+ou après le point-virgule)</li>
+                <li>Lorsque vous effectuez une transaction test à partir
+ de votre page test, veillez à saisir l’URL de notre site en guise de 
+référant sans quoi un message d’erreur apparaîtra.</li>
+            </ul>
+            Although the referrer allows our system to identify the 
+origin of an order, it does not guarantee the integrity of the data. 
+Therefore, our system requires the use of an SHA signature.
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+</p>
+<p>Des erreurs liées au référant sont possibles, par ex., «&nbsp;unknown
+ order/1/r&nbsp;» et «&nbsp;unknown order/0/r&nbsp;». Veuillez vous 
+reporter à <a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/possible-errors">Erreurs possibles</a>&nbsp;pour de plus amples informations sur ces erreurs.</p>
+        
+    
+
+<div class="chapter-navigator">
+    
+       
+</div>
+            
+                
+<div class="dark-box">
+    <h2>6. Aspect de la page de paiement</h2>
+</div>
+<p>On distingue deux types d'informations sur la page de paiement hébergée :</p>
+<ul>
+    <li>Informations statiques (par ex. votre logo)</li>
+    <li>Informations de paiement (par ex. référence de la commande, 
+champs dans lesquels le client saisit les informations de sa carte, 
+etc.).</li>
+</ul>
+<p>Les informations statiques proviennent de la présentation commune de 
+notre système ou d'une page de modèle d'un commerçant spécifique. Notre 
+système ajoute les informations de paiement de manière dynamique pour 
+chaque transaction. Le commerçant a toutefois la possibilité d'adapter 
+l'aspect de ces informations de paiement au moyen de styles HTML.</p>
+<p>Pour conserver réellement l'aspect de votre site web pendant le 
+processus de paiement, vous pouvez personnaliser la conception de la 
+page de paiement en appliquant un modèle statique ou une page de modèle 
+dynamique :</p>
+<ul>
+    <li>Dans le cas d'un modèle statique, vos fichiers de modèles sont 
+hébergés en toute sécurité sur notre environnement certifié PCI-DSS.Vous
+ pouvez facilement gérer vos fichiers de modèles en utilisant le 
+gestionnaire de fichiers de modèles dans votre compte Ogone.</li>
+    <li>Si vous souhaitez héberger votre modèle de votre côté, pour vous
+ accorder plus de flexibilité et un comportement "dynamique", vous devez
+ utiliser un modèle dynamique.</li>
+</ul>
+
+        <h3 id="paymentpagelayout">6.1 Présentation de la page de paiement (modèle statique)</h3>
+        <p>Vous pouvez modifier l'aspect de certains éléments de la page
+ de paiement et ajouter votre logo, simplement en insérant quelques 
+champs cachés dans le formulaire que vous nous envoyez.</p>
+<p>Les champs masqués utilisés pour transmettre les caractéristiques visuelles à notre système sont les suivants&nbsp;:</p>
+&lt;input type="hidden" name="TITLE" value=""&gt;<br>
+&lt;input type="hidden" name="BGCOLOR" value=""&gt;<br>
+&lt;input type="hidden" name="TXTCOLOR" value=""&gt;<br>
+&lt;input type="hidden" name="TBLBGCOLOR" value=""&gt;<br>
+&lt;input type="hidden" name="TBLTXTCOLOR" value=""&gt;<br>
+&lt;input type="hidden" name="BUTTONBGCOLOR" value=""&gt;<br>
+&lt;input type="hidden" name="BUTTONTXTCOLOR" value=""&gt;<br>
+&lt;input type="hidden" name="LOGO" value=""&gt;<br>
+&lt;input type="hidden" name="FONTTYPE" value=""&gt;<br>
+<p> </p>
+<table style="text-align: left; width: 100%;">
+    <thead>
+        <tr>
+            <th>Champ<br>
+            </th>
+            <th>Objet<br>
+            </th>
+            <th>Valeur par défaut<br>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>TITLE </td>
+            <td>Titre et en-tête de la page</td>
+            <td>- </td>
+        </tr>
+        <tr>
+            <td>BGCOLOR</td>
+            <td>Couleur de fond</td>
+            <td>white </td>
+        </tr>
+        <tr>
+            <td>TXTCOLOR </td>
+            <td>Couleur du texte</td>
+            <td>black </td>
+        </tr>
+        <tr>
+            <td>TBLBGCOLOR</td>
+            <td>Couleur de fond du tableau</td>
+            <td>white </td>
+        </tr>
+        <tr>
+            <td>TBLTXTCOLOR</td>
+            <td>Couleur du texte du tableau</td>
+            <td>black </td>
+        </tr>
+        <tr>
+            <td>BUTTONBGCOLOR</td>
+            <td>Couleur de fond du bouton</td>
+            <td>- </td>
+        </tr>
+        <tr>
+            <td>BUTTONTXTCOLOR</td>
+            <td>Couleur du texte du bouton</td>
+            <td>black </td>
+        </tr>
+        <tr>
+            <td>FONTTYPE</td>
+            <td>Famille de police</td>
+            <td>Verdana </td>
+        </tr>
+        <tr>
+            <td>LOGO </td>
+            <td>URL/Nom de fichier du logo que vous voulez afficher en 
+haut de la page de paiement à côté du titre. L’URL doit être absolu 
+(contient le chemin complet), il ne peut pas être relatif.<br>
+            <p>
+            Si vous ne possédez pas un environnement sécurisé pour 
+enregistrer votre image, vous pouvez envoyer un fichier JPG, PNG ou GIF 
+(et votre PSPID) à support.ecom@ingenico.com (uniquement pour les 
+comptes de production puisque c’est une option payante&nbsp;! Activez 
+l’option «&nbsp;Logo Hosting&nbsp;» avant de nous envoyer votre logo).  </p>
+            Si le logo est enregistré sur nos serveurs, l'URL sera https://secure.ogone.com/images/merchant/[PSPID]/[image]</td>
+            <td>- </td>
+        </tr>
+    </tbody>
+</table>
+<p>Vous pouvez définir les couleurs par leur code hexadécimal (#FFFFFF) 
+ou par leur nom («&nbsp;white&nbsp;»). Vérifiez d’abord l’apparence des 
+couleurs que vous souhaitez utiliser dans différents navigateurs.</p>
+        
+                <h4 id="paymentpagelayout_logohosting">6.1.1 Hébergement de logo</h4>
+                <p>Afin de vous conformer aux PCI-DSS (2015) le plus 
+récent, vous êtes tenu d’héberger vos images (et tout autre support 
+utilisé sur la page de paiement) dans un environnement avec la 
+certification PCI la plus élevée.&nbsp;</p>
+<p>Ogone ayant exactement ce type d’environnement sécurisé, nous vous recommandons d’héberger vos fichiers chez nous à l’aide de <a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/payment-page-look-and-feel#templatefilemanager">File Manager</a>&nbsp;
+ (Gestionnaire de fichiers) sur votre compte Ogone. File Manager 
+(Gestionnaire de fichiers) est une fonctionnalité (gratuite)&nbsp;qui 
+vous permet de télécharger et de gérer facilement et efficacement vos 
+fichiers modèles.</p>
+<p>Pour renvoyer vers le logo téléchargé, il vous suffit de saisir le 
+nom du fichier dans le champ «&nbsp;LOGO&nbsp;» de votre formulaire de 
+commande.</p>
+<p>Vous pouvez également envoyer votre logo (fichier&nbsp;.jpg, .png ou 
+.gif) avec votre PSPID à support.ecom@ingenico.com. Toutefois, cette 
+option étant payante (!), cela n’est possible que pour les comptes de 
+production. Avant de nous envoyer votre logo, veuillez activer l’option 
+«&nbsp;“Logo Hosting”&nbsp;» (Hébergement de logo) sur votre 
+compte&nbsp;: «&nbsp;Configuration&nbsp;» &gt; «&nbsp;Compte&nbsp;» &gt;
+ «&nbsp;Vos options&nbsp;».</p>
+<p>Pour renvoyer vers le fichier téléchargé, vous devez saisir l’URL 
+absolue dans le champ «&nbsp;LOGO&nbsp;» sur votre formulaire de 
+commande en suivant la structure suivante&nbsp;: 
+&nbsp;https://secure.ogone.com/images/merchant/[PSPID]/[image]&nbsp;</p>
+<table>
+    <tbody>
+        <tr>
+            <td>
+            <p><strong>Important</strong></p>
+            <p>
+            Il n’est pas possible d’utiliser des fichiers précédemment 
+téléchargés par Ogone en même temps que des fichiers téléchargés avec 
+«&nbsp;File Manager&nbsp;» dans votre intégration. Par conséquent, si 
+vous avez des fichiers qui ont été précédemment téléchargés par Ogone, 
+veuillez vous assurer de télécharger une nouvelle fois ces fichiers 
+vous-même à l’aide de «&nbsp;File Manager&nbsp;».</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+            
+    
+        <h3 id="statictemplate">6.2 Modèle hébergé par Ogone (modèle statique)</h3>
+        <p>En utilisant un modèle sur la page de paiement hébergée, vous
+ pouvez personnaliser sa conception de façon beaucoup plus évoluée que 
+si vous utilisez simplement vos champs de logo, de titre et de couleur.</p>
+<p>Vous concevez totalement votre propre page de modèle, en y laissant 
+simplement une section destinée à être complétée par notre système.</p>
+<p>Vous hébergez votre page et vos fichiers de modèle sur notre 
+environnement sécurisé, sous la forme de ce que nous appelons un "modèle
+ statique".</p>
+        
+                <h4 id="statictemplate_hiddenfields">6.2.1 Champs cachés</h4>
+                <p>Le champ masqué utilisé pour transmettre l’URL de votre modèle de page est le suivant&nbsp;:</p>
+<p>&lt;input type="hidden" name="TP" value=""&gt;</p>
+<table style="width: 100%; text-align: left;">
+    <thead>
+        <tr>
+            <th>Champ<br>
+            </th>
+            <th>Objet</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="width: 100px;">TP</td>
+            <td>Nom de fichier du modèle hébergé par Ogone.</td>
+        </tr>
+    </tbody>
+</table>
+<p>Exemple:</p>
+<p>&lt;input type="hidden" name="TP" value="mytemplatefile.html"&gt;</p>
+            
+                <h4 id="statictemplate_paymentzone">6.2.2 Zone de paiement (Payment zone)</h4>
+                <p>Vous pouvez concevoir l’ensemble du modèle de page 
+selon vos préférences. La seule condition à observer est qu’il doit 
+contenir la chaîne «&nbsp;$$$PAYMENT ZONE$$$&nbsp;», qui indique 
+l’endroit où notre module e-Commerce peut ajouter ses champs de manière 
+dynamique. Il doit par conséquent contenir au moins les champs 
+suivants&nbsp;:</p>
+<p>&lt;html&gt;<br>
+$$$PAYMENT ZONE$$$<br>
+&lt;/html&gt;</p>
+<div>
+<div>
+<table style="width: 100%;">
+    <tbody>
+        <tr>
+            <td>
+            <p><strong>Important</strong></p>
+            <p>N’utilisez pas de balises BASE, de cadres ou de balises FORM pour encapsuler la chaîne $$$PAYMENT ZONE$$$.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+            
+                <h4 id="statictemplate_stylesheets">6.2.3 Feuille de style</h4>
+                <p>Vous pouvez personnaliser l’aspect de vos pages de paiement en ajoutant des feuilles de style à votre modèle de page.</p>
+<p>Nous avons défini une catégorie pour les différents types de tableaux
+ et de cellules contenues dans nos tableaux, ainsi qu’une catégorie pour
+ les boutons d’envoi. Ajoutez les blocs de codage suivants entre les 
+balises &lt;head&gt;&lt;/head&gt; et modifiez les propriétés de ces 
+catégories pour les adapter à l’aspect de votre site (voir l’exemple du 
+modèle de page mentionné plus haut)&nbsp;:</p>
+<table style="width: 100%;">
+    <tbody>
+        <tr>
+            <td>&lt;style type="text/css"&gt;<br>
+            &lt;!--<br>
+            td.ncolh1 {background-color : #006600; color : yellow; font-family : verdana}<br>
+            td.ncoltxtl {background-color : #ffffcc; color : black; text-align : right; font-weight : bold}<br>
+            td.ncoltxtl2 {background-color : #ffffcc; color : black; text-align : right; font-weight : bold}<br>
+            td.ncoltxtr {background-color : #ffffcc; color : black; text-align : left; font-weight : bold}<br>
+            td.ncoltxtc {background-color : #ffffcc; color : black; text-align : center; font-weight : bold}<br>
+            td.ncolinput {background-color : #ffffcc; color : black}<br>
+            td.ncolline1 {background-color : #ffffff; color : black}<br>
+            td.ncolline2 {background-color : #ffffcc; color : black}<br>
+            input.ncol {background-color : #006600; color : white}<br>
+            td.ncollogoc {background-color : #ffffcc; color : black; text-align : center; font-weight : bold}<br>
+            table.ncoltable1 { background-color: #ffffcc;&nbsp;&nbsp; }<br>
+            table.ncoltable2 { background-color: #ffffcc;&nbsp; border-width : medium; border-color : green; }<br>
+            table.ncoltable3 { background-color: #ffffcc;&nbsp;&nbsp; }<br>
+            --&gt;<br>
+            &lt;/style&gt;<br>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+</p>
+<p>
+Lors de la saisie de vos instructions de mise en page, vous devez 
+respecter la syntaxe de la feuille de style en cascade. Nous vous 
+conseillons vivement de tester votre présentation dans différents 
+navigateurs. La façon dont ils traitent les styles peut en effet 
+énormément varier.</p>
+<p><a class="showInOverlay" href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/integration%20guides/e-commerce/e-com-adv_css_01.ashx?la=fr"><img alt="" src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/e-com-adv_css_01.jpg"></a></p>
+<p><a class="showInOverlay" href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/integration%20guides/e-commerce/e-com-adv_css_02.ashx?la=fr"><img alt="" src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/e-com-adv_css_02.jpg"></a></p>
+<p><a class="showInOverlay" href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/integration%20guides/e-commerce/e-com-adv_css_03.ashx?la=fr"><img alt="" src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/e-com-adv_css_03.jpg"></a></p>
+            
+    
+        <h3 id="dynamictemplate">6.3 Mise en page basée sur le modèle (modèle dynamique)</h3>
+        <p>La page de modèle dynamique vous permet de personnaliser la 
+conception des pages de paiement de façon plus évoluée qu'avec le modèle
+ statique.</p>
+<p>Lorsque vous utilisez une page de modèle dynamique, vous concevez 
+totalement votre propre page de modèle, en y laissant simplement une 
+section destinée à être complétée par notre système. L'adresse URL de 
+votre page de modèle doit nous être envoyée dans les champs cachés pour 
+chaque transaction.</p>
+<p>Veuillez garder à l'esprit que le fait d'utiliser une page de modèle 
+dynamique implique une demande supplémentaire auprès de notre système 
+pour consulter votre page de modèle. Ceci accroît le temps nécessaire au
+ processus de paiement.</p>
+<p> </p>
+<table width="100%">
+    <tbody>
+        <tr>
+            <td>
+            <p><strong>Important</strong></p>
+            <p>
+            Pour rester en conformité avec la dernière version de 
+PCI-DSS, vous devez héberger votre modèle (et les fichiers associés) 
+dans un environnement ayant la plus haute certification PCI. Si cela 
+n'est pas à votre portée, nous vous conseillons vivement d'héberger vos 
+fichiers de modèles avec Ogone, en utilisant un <a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/payment-page-look-and-feel#statictemplate">modèle statique</a> et notre&nbsp;<a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/payment-page-look-and-feel#templatefilemanager">gestionnaire de fichiers</a>&nbsp;(Template File Manager). N'oubliez pas toutefois que dans ce cas, votre modèle peut perdre une partie de son  <a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/payment-page-look-and-feel#dynamictemplate_dynamicbehaviour">comportement dynamique</a> (en fonction de votre intégration).</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+        
+                <h4 id="dynamictemplate_hiddenfields">6.3.1 Champs masqués</h4>
+                <p>Le champ masqué utilisé pour transmettre l’URL de votre modèle de page est le suivant&nbsp;:</p>
+<p>&lt;input type="hidden" name="TP" value=""&gt;</p>
+<table style="width: 100%; text-align: left;">
+    <thead>
+        <tr>
+            <th>Champ<br>
+            </th>
+            <th>Objet</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="width: 100px;">TP</td>
+            <td>URL du modèle de page dynamique du marchand (la page 
+doit être hébergée du côté du marchand). L’URL doit être absolu (il doit
+ contenir le chemin complet), et non relatif. Ne précisez aucun port 
+dans votre URL&nbsp;: nous n’acceptons que les ports 443 et 80. Toute 
+composante incluse dans le modèle de page tout aussi avoir un URL 
+absolu.</td>
+        </tr>
+    </tbody>
+</table>
+<p> </p>
+            
+                <h4 id="dynamictemplate_paymentzone">6.3.2 Zone de paiement (Payment zone)</h4>
+                <p>Vous pouvez concevoir l’ensemble du modèle de page 
+dynamique selon vos préférences. La seule condition à observer est qu’il
+ doit contenir la chaîne «&nbsp;$$$PAYMENT ZONE$$$&nbsp;», qui indique 
+l’endroit où notre module e-Commerce&nbsp; peut ajouter ses champs de 
+manière dynamique. Il doit par conséquent contenir au moins les champs 
+suivants&nbsp;:</p>
+&lt;html&gt;<br>
+<p>
+$$$PAYMENT ZONE$$$</p>
+<p>&lt;/html&gt;
+</p>
+<table style="width: 100%;">
+    <tbody>
+        <tr>
+            <td>
+            <p><strong>Important</strong></p>
+            <p>N’utilisez pas de balises BASE, de cadres ou de balises FORM pour encapsuler la chaîne $$$PAYMENT ZONE$$$.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+</p>
+<p>Vous trouverez un exemple de modèle de page dynamique à l’adresse 
+suivante&nbsp;: https://secure.ogone.com/ncol/template_standard.htm 
+&nbsp;</p>
+            
+                <h4 id="dynamictemplate_dynamicbehaviour">6.3.3 Comportement dynamique</h4>
+                <p>Le marchand peut opter pour un même modèle de page 
+pour toutes les commandes ou pour un modèle produit de manière dynamique
+ par son application en fonction des paramètres de la commande. </p>
+<p>Pour produire le modèle de page de façon dynamique, le marchand a 
+deux possibilités&nbsp;: créer une page propre à la commande, dont l’URL
+ est transmis dans les champs masqués, ou utiliser un URL fixe mais 
+produisant un résultat découlant du numéro de commande. Pour cela, notre
+ système ajoute les principales données de paiement (y compris le numéro
+ de référence de la commande du marchand) (cf. Traitement après 
+paiement) lorsqu’il récupère le modèle de page&nbsp;:</p>
+<p>HTTP request = url_page_template&nbsp;?ORDERID=...&amp;AMOUNT=...&amp;CURRENCY=…</p>
+            
+                <h4 id="dynamictemplate_stylesheets">6.3.4 Feuille de style</h4>
+                <p>Vous pouvez personnaliser l’aspect de vos pages de paiement en ajoutant des feuilles de style à votre modèle de page.</p>
+<p>Nous avons défini une catégorie pour les différents types de tableaux
+ et de cellules contenues dans nos tableaux, ainsi qu’une catégorie pour
+ les boutons d’envoi. Ajoutez les blocs de codage suivants entre les 
+balises &lt;head&gt;&lt;/head&gt; et modifiez les propriétés de ces 
+catégories pour les adapter à l’aspect de votre site (voir l’exemple du 
+modèle de page mentionné plus haut)&nbsp;:</p>
+<table style="width: 100%;">
+    <tbody>
+        <tr>
+            <td>&lt;style type="text/css"&gt;<br>
+            &lt;!--<br>
+            td.ncolh1 {background-color : #006600; color : yellow; font-family : verdana}<br>
+            td.ncoltxtl {background-color : #ffffcc; color : black; text-align : right; font-weight : bold}<br>
+            td.ncoltxtl2 {background-color : #ffffcc; color : black; text-align : right; font-weight : bold}<br>
+            td.ncoltxtr {background-color : #ffffcc; color : black; text-align : left; font-weight : bold}<br>
+            td.ncoltxtc {background-color : #ffffcc; color : black; text-align : center; font-weight : bold}<br>
+            td.ncolinput {background-color : #ffffcc; color : black}<br>
+            td.ncolline1 {background-color : #ffffff; color : black}<br>
+            td.ncolline2 {background-color : #ffffcc; color : black}<br>
+            input.ncol {background-color : #006600; color : white}<br>
+            td.ncollogoc {background-color : #ffffcc; color : black; text-align : center; font-weight : bold}<br>
+            table.ncoltable1 { background-color: #ffffcc;&nbsp;&nbsp; }<br>
+            table.ncoltable2 { background-color: #ffffcc;&nbsp; border-width : medium; border-color : green; }<br>
+            table.ncoltable3 { background-color: #ffffcc;&nbsp;&nbsp; }<br>
+            --&gt;<br>
+            &lt;/style&gt;<br>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+</p>
+<p>
+Lors de la saisie de vos instructions de mise en page, vous devez 
+respecter la syntaxe de la feuille de style en cascade. Nous vous 
+conseillons vivement de tester votre présentation dans différents 
+navigateurs. La façon dont ils traitent les styles peut en effet 
+énormément varier.</p>
+<p><a class="showInOverlay" href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/integration%20guides/e-commerce/e-com-adv_css_01.ashx?la=fr"><img alt="" src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/e-com-adv_css_01.jpg"></a></p>
+<p><a class="showInOverlay" href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/integration%20guides/e-commerce/e-com-adv_css_02.ashx?la=fr"><img alt="" src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/e-com-adv_css_02.jpg"></a></p>
+<p><a class="showInOverlay" href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/integration%20guides/e-commerce/e-com-adv_css_03.ashx?la=fr"><img alt="" src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/e-com-adv_css_03.jpg"></a></p>
+            
+                <h4 id="dynamictemplate_performance">6.3.5 Performance</h4>
+                <p>La configuration de notre système prévoit un délai de
+ 5 secondes pour la demande de récupération de la page correspondant au 
+modèle dynamique du marchand. </p>
+<p>Nous nous ferons un plaisir de modifier cette temporisation 
+(HTTPTimeOut) de notre côté sur demande du marchand (via un ticket 
+d’assistance).</p>
+<p></p>
+<p>Si ce délai est dépassé, notre système utilise le modèle statique du marchand.</p>
+<p>Si aucun modèle statique n'est configuré, notre système utilise en dernier ressort le modèle statique de Ogone.</p>
+<table style="width: 100%;">
+    <tbody>
+        <tr>
+            <td>
+            Ce champ HTTPTimeOut a une incidence non seulement sur les 
+demandes de modèle dynamique, mais aussi sur les demandes d’informations
+ après paiement (voir <a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/transaction-feedback#SC_7_4" target="_self">Requête de réponse directes (après paiement)</a>).
+ En conséquence, si le marchand décide de le modifier pour le faire 
+passer à 15&nbsp;secondes, par exemple, la temporisation pour la demande
+ d’informations passera elle aussi à 15&nbsp;secondes.<br>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+</p>
+<p>
+</p>
+<p>Pour chaque commande, notre système effectue une demande de 
+récupération de votre modèle de page dynamique. Si vos volumes de 
+transaction sont importants ou si votre modèle de page est lourd (par 
+ex., s’il contient un grand nombre d’images), ces demandes http peuvent 
+être longues. Contactez notre équipe commerciale pour trouver une 
+solution si vos volumes de transaction sont importants.</p>
+            
+    
+        <h3 id="mobiletemplatewithcss">6.4 Modèle pour mobile</h3>
+        <p>Vous pouvez optimiser&nbsp;l'affichage de la&nbsp;page 
+paiement sur les appareils mobiles (smartphones, tablettes, etc.) en 
+appliquant une&nbsp;page de modèle, assortie de feuilles de style, comme
+ expliqué dans les chapitres suivants.</p>
+        
+                <h4 id="mobiletemplatewithcss_layoutparameters">6.4.1 Paramètres de présentation</h4>
+                <p>Les champs ci-dessous peuvent être personnalisés en indiquant certaines informations dans la requête&nbsp;:</p>
+<p>&lt;input type="hidden" name="TITLE" value=""&gt;<br>
+&lt;input type="hidden" name="BGCOLOR" value=""&gt;<br>
+&lt;input type="hidden" name="TXTCOLOR" value=""&gt;<br>
+&lt;input type="hidden" name="TBLBGCOLOR" value=""&gt;<br>
+&lt;input type="hidden" name="TBLTXTCOLOR" value=""&gt;<br>
+&lt;input type="hidden" name="BUTTONBGCOLOR" value=""&gt;<br>
+&lt;input type="hidden" name="BUTTONTXTCOLOR" value=""&gt;<br>
+&lt;input type="hidden" name="LOGO" value=""&gt;<br>
+&lt;input type="hidden" name="FONTTYPE" value=""&gt;</p>
+<table style="width: 100%;">
+    <tbody>
+        <tr>
+            <th>
+            <p style="text-align: left;">Champ</p>
+            </th>
+            <th>
+            <p style="text-align: left;">Description</p>
+            </th>
+            <th>
+            <p style="text-align: left;">Valeur par défaut</p>
+            </th>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td>TITLE</td>
+            <td>Titre de la page</td>
+            <td>Title</td>
+        </tr>
+        <tr>
+            <td>BGCOLOR</td>
+            <td>Couleur de fond</td>
+            <td>white</td>
+        </tr>
+        <tr>
+            <td>TXTCOLOR</td>
+            <td>Couleur de texte</td>
+            <td>black</td>
+        </tr>
+        <tr>
+            <td>TBLBGCOLOR</td>
+            <td>Couleur d'arrière-plan des colonnes de droite</td>
+            <td>white</td>
+        </tr>
+        <tr>
+            <td>TBLTXTCOLOR</td>
+            <td>Couleur du texte des colonnes de droite</td>
+            <td>black</td>
+        </tr>
+        <tr>
+            <td>BUTTONBGCOLOR</td>
+            <td>Couleur de fond des boutons</td>
+            <td>s.o.</td>
+        </tr>
+        <tr>
+            <td>BUTTONTXTCOLOR</td>
+            <td>Couleur du texte des boutons</td>
+            <td>black</td>
+        </tr>
+        <tr>
+            <td>LOGO</td>
+            <td>
+            <p>URL/nom de fichier du logo que vous souhaitez afficher sur la page de paiement</p>
+            <p>https://secure.ogone.com/images/merchant/[PSPID]/[image]</p>
+            <p>Important&nbsp;: La nouvelle norme PCI-DSS de 2015 
+indique que vos logos et autres images figurant sur la page de paiement 
+doivent être hébergés sur Ogone.</p>
+            </td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>FONTTYPE</td>
+            <td>
+            <p style="text-align: justify;">Famille de la police</p>
+            </td>
+            <td>Verdana</td>
+        </tr>
+    </tbody>
+</table>
+            
+                <h4 id="mobiletemplatewithcss_template">6.4.2 Modèle</h4>
+                <p>Le champ masqué suivant est utilisé pour transmettre l'URL de votre page de modèle&nbsp;:</p>
+<p>&lt;input type="hidden" name="TP" value=""&gt;</p>
+<table style="width: 100%; text-align: left;">
+    <thead>
+        <tr>
+            <th>Champ
+            </th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="width: 100px;">TP</td>
+            <td>
+            <p>URL de la page de modèle dynamique. L'URL doit être 
+absolue (contenir le chemin complet), elle ne peut pas être relative. 
+Tout élément inclus dans la page de modèle doit également avoir une URL 
+absolue.</p>
+            <p><strong>Important&nbsp;</strong>: Conformément aux 
+exigences PCI-DSS (2015) les plus récentes, vous devez héberger les 
+éléments de modèle utilisés sur la page de paiement dans un 
+environnement avec la certification PCI la plus élevée. Par conséquent, 
+nous vous recommandons d'héberger vos fichiers avec Ogone, en utilisant <a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/payment-page-look-and-feel#templatefilemanager">File Manager</a>.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p><strong>Zone de paiement</strong></p>
+<p>La page de modèle peut être personnalisée entièrement. Seule 
+obligation&nbsp;: elle doit comporter la chaîne «&nbsp;$$$PAYMENT 
+ZONE$$$&nbsp;», qui indique l'emplacement où notre&nbsp;e-Commerce 
+module peut ajouter son champ dynamiquement. Elle doit donc au moins 
+contenir les éléments suivants&nbsp;:</p>
+<p>&lt;html&gt;<br>
+$$$PAYMENT ZONE$$$<br>
+&lt;/html&gt;</p>
+<table width="100%">
+    <tbody>
+        <tr>
+            <td>Accédez aux&nbsp;<a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/payment-page-look-and-feel#mobiletemplatewithcss_exampletemplates">exemples de modèles</a> et utilisez les modèles que nous avons créés, ou inspirez-vous de nos modèles pour créer le vôtre.
+            </td>
+        </tr>
+    </tbody>
+</table>
+            
+                <h4 id="mobiletemplatewithcss_stylesheets">6.4.3 Feuilles de style (CSS)</h4>
+                <p>Pour mieux gérer et comprendre le CSS, nous avons divisé le CSS du modèle en&nbsp;quatre parties principales&nbsp;:</p>
+<ul>
+    <li><a href="#Header">En-tête</a></li>
+    <li><a href="#Payment%20detail">Informations de paiement</a></li>
+    <li><a href="#Footer">Pied de page</a></li>
+    <li><a href="#Payment%20status">Section du statut de paiement</a></li>
+</ul>
+<table width="100%">
+    <tbody>
+        <tr>
+            <td><strong>Remarque&nbsp;</strong>: Bien que les exemples 
+d'images ci-dessous reflètent les éléments qui seront affectés par le 
+CSS, le style (couleurs, images, etc.) utilisé peut différer de ce qui 
+est indiqué dans les exemples de codes associés.</td>
+        </tr>
+    </tbody>
+</table>
+<p><br>
+</p>
+<p><strong><a name="Header"><strong>En-tête</strong></a></strong></p>
+<p>Ce style vous permet de modifier l'en-tête de la page de paiement comme&nbsp;indiqué&nbsp;ci-dessous&nbsp;:</p>
+<p><a class="showInOverlay" href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/integration%20guides/e-commerce/ecom_mobtp_01.ashx?la=en&amp;h=188&amp;w=515"><img alt="" src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/ecom_mobtp_01.png" style="height: 188px; width: 515px;"></a></p>
+<table width="100%">
+    <tbody>
+        <tr>
+            <td rowspan="1" colspan="1">Élément(s) <br>
+            <br>
+            - Partie verrouillée <br>
+            <br>
+            .securedBG <br>
+            { <br>
+            background: #797979; <br>
+            } <br>
+            .secured <br>
+            { <br>
+            padding: 8px 20px 0px 40px; <br>
+            color: #ffffff; <br>
+            width: 235px; <br>
+            margin: 0 auto; <br>
+            background: url("lock.png") 5px no-repeat #797979; <br>
+            height: 30px; <br>
+            } <br>
+            <br>
+            - Récapitulatif de la commande <br>
+            <br>
+            table.ncoltable1 <br>
+            { <br>
+            width: 100%; <br>
+            margin: 0 auto; <br>
+            min-width: 300px !important; <br>
+            } <br>
+            td.ncoltxtl <br>
+            { <br>
+            font-family: open-sans ,Verdana,sans-serif; <br>
+            font-size: 14px; <br>
+            background-color:#ffffff; <br>
+            text-align : left !important; <br>
+            font-weight : bold !important; <br>
+            vertical-align:bottom; <br>
+            } <br>
+            td.ncoltxtr <br>
+            { <br>
+            text-align: left; <br>
+            font-weight: normal; <br>
+            font-family: open-sans ,Verdana,sans-serif; <br>
+            font-size: 14px; <br>
+            background-color:#ffffff; <br>
+            }</td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong><a><strong>Informations de paiement</strong></a></strong></p>
+<p>Ce style vous permet de personnaliser la section des informations de paiement comme&nbsp;indiqué&nbsp;ci-dessous&nbsp;:</p>
+<p><a class="showInOverlay" href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/integration%20guides/e-commerce/ecom_mobtp_02.ashx?la=en"><img alt="" _languageinserted="true" src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/ecom_mobtp_02.png"></a></p>
+<table width="100%">
+    <tbody>
+        <tr>
+            <td rowspan="1" colspan="1">td.ncolinput <br>
+            { <br>
+            text-align: left; <br>
+            font-weight: normal; <br>
+            font-size: 14px; <br>
+            font-family: open-sans ,Verdana,sans-serif; <br>
+            display: block; <br>
+            box-shadow: none !important; <br>
+            } <br>
+            input.ncol <br>
+            { <br>
+            background-color: #ffffff; <br>
+            height: 40px; <br>
+            font-size: 14px; <br>
+            text-align: center; <br>
+            padding: 0px; <br>
+            font-family: open-sans ,Verdana,sans-serif; <br>
+            margin: 0 35px 20px; <br>
+            border-bottom: 1px solid #999999; <br>
+            border-radius: 0px; <br>
+            -webkit-appearance: none !important; <br>
+            -webkit-border-radius: 0 !important; <br>
+            } <br>
+            td.ncoltxtl2 <br>
+            { <br>
+            text-align: left; <br>
+            font-family: open-sans ,Verdana,sans-serif; <br>
+            white-space: nowrap; <br>
+            display: block; <br>
+            font-size: 14px; <br>
+            background-color:#ffffff; <br>
+            }</td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<p><a name="Footer"><strong>Pied de page</strong></a></p>
+<p>Ce style vous permet de modifier le pied de page de la page de paiement&nbsp;:</p>
+<p><a class="showInOverlay" href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/integration%20guides/e-commerce/ecom_mobtp_03.ashx?la=en"><img alt="" _languageinserted="true" src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/ecom_mobtp_03.png"></a></p>
+<table width="100%">
+    <tbody>
+        <tr>
+            <td rowspan="1" colspan="1">Élément(s) <br>
+            <br>
+            td.ncollogoc <br>
+            { <br>
+            text-align: center; <br>
+            font-weight: normal; <br>
+            font-size: 14px; <br>
+            padding: 2px; <br>
+            vertical-align: top !important; <br>
+            } <br>
+            td.ncollogoc IMG <br>
+            { <br>
+            width: 90px; <br>
+            height: 55px; <br>
+            margin-right: 4px; <br>
+            } <br>
+            .ncollogoc td .ncol <br>
+            { <br>
+            width: auto; <br>
+            padding-right: 10px; <br>
+            padding-left: 10px; <br>
+            cursor:pointer; <br>
+            } <br>
+            .ncollogoc input.ncol <br>
+            { <br>
+            margin-top:10px !important; <br>
+            -webkit-appearance: none !important; <br>
+            -webkit-border-radius: 0 !important; <br>
+            }</td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong><a><strong>Section du statut de paiement</strong></a></strong></p>
+<p>Cette section vous permet de personnaliser la présentation de la page du statut de paiement) comme indiqué ici&nbsp;:</p>
+<p><a class="showInOverlay" href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/integration%20guides/e-commerce/ecom_mobtp_04.ashx?la=en&amp;h=104&amp;w=463"><img alt="" _languageinserted="true" src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/ecom_mobtp_04.png" style="height: 104px; width: 463px;"></a></p>
+<table width="100%">
+    <tbody>
+        <tr>
+            <td rowspan="1" colspan="1">Élément(s) <br>
+            <br>
+            td.ncoltxtc <br>
+            { <br>
+            background-color:#ffffff; <br>
+            color:#999999; <br>
+            padding: 0px; <br>
+            text-align: left; <br>
+            font-weight: normal; <br>
+            font-size: 14px; <br>
+            border-top: 0px solid #ffffff; <br>
+            font-family: open-sans ,Verdana,sans-serif; <br>
+            } <br>
+            td.ncoltxtc h3 <br>
+            { <br>
+            text-align: center; <br>
+            font-weight: normal !important; <br>
+            padding: 5px; <br>
+            font-family: open-sans ,Verdana,sans-serif; <br>
+            } <br>
+            td.ncoltxtmessage <br>
+            { <br>
+            background-color: #ffffff; <br>
+            color: #999999; <br>
+            text-align: left; <br>
+            font-weight: normal; <br>
+            }</td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<p>Voici ce à quoi la page&nbsp;doit&nbsp;ressembler&nbsp;:</p>
+<p><a class="showInOverlay" href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/integration%20guides/e-commerce/ecom_mobtp_05.ashx?la=en&amp;h=983&amp;w=478"><img alt="" _languageinserted="true" src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/ecom_mobtp_05.png" style="height: 983px; width: 478px;"></a></p>
+            
+                <h4 id="mobiletemplatewithcss_exampletemplates">6.4.4 Exemples de pages</h4>
+                <p>Pour vous aider à démarrer, nous avons créé ceux pages.</p>
+<p>La première est une version de marque que vous pouvez utiliser comme exemple :</p>
+<p><a href="https://secure.ogone.com/ncol/StandardMobileTemplate.htm">https://secure.ogone.com/ncol/StandardMobileTemplate.htm</a></p>
+<p>Vous pouvez aussi utiliser la version «&nbsp;dénudée&nbsp;» ci-après comme base&nbsp;pour créer votre propre modèle :</p>
+<p><a href="https://secure.ogone.com/ncol/StandardMobileTemplate_generic.htm">https://secure.ogone.com/ncol/StandardMobileTemplate_generic.htm</a></p>
+<p>Ces deux modèles ainsi que d'autres fichiers (polices, images) sont disponibles au format compressé&nbsp;<a href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/integration%20guides/e-commerce/mobile_template.ashx?la=fr">ici</a></p>
+            
+    
+        <h3 id="templatefilemanager">6.5 Gestionnaire de fichiers modèles</h3>
+        <p>Avec le «&nbsp;Gestionnaire de fichiers modèles&nbsp;», vous 
+pouvez facilement gérer vos modèles et les différents fichiers connexes.</p>
+<p>Pour commencer à utiliser le «&nbsp;Gestionnaire de fichiers&nbsp;», 
+connectez-vous à votre compte Ogone et allez dans 
+«&nbsp;Configuration&nbsp;» &gt; «&nbsp;Modèle&nbsp;» &gt; 
+«&nbsp;Gestionnaire de fichiers&nbsp;».</p>
+<table width="100%">
+    <tbody>
+        <tr>
+            <td><strong>Important<br>
+            </strong>Il n’est pas possible d’utiliser des fichiers 
+précédemment téléchargés par Ogone en même temps que des fichiers 
+téléchargés avec le «&nbsp;Gestionnaire de fichiers&nbsp;» dans votre 
+intégration.<br>
+            Par conséquent, si vous avez des fichiers qui ont été 
+précédemment téléchargés par Ogone, veuillez vous assurer de télécharger
+ une nouvelle fois ces fichiers vous-même à l’aide de 
+«&nbsp;Gestionnaire de fichiers&nbsp;».<br>
+            </td>
+        </tr>
+    </tbody>
+</table>
+        
+                <h4 id="templatefilemanager_uploadtemplatefiles">6.5.1 Télécharger des fichiers modèles</h4>
+                <p>
+<a class="showInOverlay" href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/integration%20guides/e-commerce/tpmgr_upload-template-files.ashx?la=en"><img alt="" src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/tpmgr_upload-template-files.png"></a>
+</p>
+<p>Dans «&nbsp;Télécharger des fichiers modèles&nbsp;», sélectionnez le 
+bouton «&nbsp;Fichiers...&nbsp;» pour parcourir les fichiers que vous 
+voulez télécharger. Vous pouvez télécharger des Javascripts, des 
+fichiers html et css et des images (.css, .jpg, .jpeg, .gif, .png, 
+.html, .js), avec un maximum de 7&nbsp;Mb par fichier, et 10&nbsp;Mb au 
+total.</p>
+<p>Faites votre sélection puis confirmez.</p>
+            
+                <h4 id="templatefilemanager_uploadedfiles">6.5.2 Contrôler et gérer les fichiers téléchargés</h4>
+                <p>Une fois le téléchargement terminé, vous verrez vos 
+fichiers téléchargés sur la même page dans la partie «&nbsp;Fichiers 
+téléchargés&nbsp;».</p>
+<p>Le statut des fichiers sera d’abord «&nbsp;En cours de 
+validation&nbsp;». Pendant ce temps, plusieurs contrôles de 
+sécurité/virus sont réalisés.</p>
+<p>Vous pouvez utiliser les fichiers lorsque leur statut est «&nbsp;Validé&nbsp;».</p>
+<p>Cliquez sur le bouton «&nbsp;Actualiser&nbsp;» <a class="showInOverlay" href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/integration%20guides/e-commerce/fhs_refresh.ashx?la=fr"><img alt="" src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/fhs_refresh.png"></a>&nbsp;pour vérifier le statut de vos fichiers / Cliquez sur le bouton «&nbsp;Supprimer&nbsp;»&nbsp;<a class="showInOverlay" href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/integration%20guides/e-commerce/bo_delete-button.ashx?la=en"><img alt="" src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/bo_delete-button.png"></a>&nbsp;pour supprimer définitivement le fichier.</p>
+<p><a class="showInOverlay" href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/integration%20guides/e-commerce/ecom_fhs_uploaded-files.ashx?la=fr"><img alt="" src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/ecom_fhs_uploaded-files.png"></a></p>
+<p>Un fichier aura le statut «&nbsp;Refusé&nbsp;» s’il ne passe pas le 
+contrôle de sécurité. Cela peut être dû à la présence d’un virus ou à 
+une extension de fichier erronée, par exemple.&nbsp;</p>
+<p>
+</p>
+            
+                <h4 id="templatefilemanager_integration">6.5.3 Intégration</h4>
+                
+		<p>Dans vos modèles, vous renvoyez vers vos fichiers téléchargés avec 
+un code en respectant la structure suivante&nbsp;: $$$TP RESOURCES 
+URL$$$/[nom de votre fichier].</p>
+<p>Exemple&nbsp;:</p>
+<p><a class="showInOverlay" href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/integration%20guides/e-commerce/ecom_fhs_example.ashx?la=fr"><img alt="" src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/ecom_fhs_example.png"></a></p>
+<p>Pour renvoyer vers le modèle que vous avez téléchargé dans votre 
+intégration e-Commerce, vous envoyez le nom du fichier modèle avec le 
+paramètre «&nbsp;TP&nbsp;».</p>
+<p>Exemple&nbsp;: TP=mytemplatefile.html</p>
+<p>Lorsque vous avez une intégration de base e-Commerce&nbsp;au moyen 
+d’un logo en haut de la page, vous devez renvoyer vers le logo 
+téléchargé en envoyant le nom du fichier avec le paramètre 
+«&nbsp;LOGO&nbsp;» (LOGO).</p>
+<p>Exemple&nbsp;: LOGO=mycompanylogo.png</p>
+            
+    
+        <h3 id="templatesecuritycontrol">6.6 Contrôle de la sécurité des modèles</h3>
+        <p>Pour protéger les clients du commerçant des activités 
+frauduleuses telles que la manipulation des données sensibles de la 
+carte (numéro de carte, code de vérification CVC), différents contrôles 
+de sécurité ont été mis à disposition pour le modèle du commerçant.</p>
+<p>Sur la page Information technique du commerçant, onglet "Paramètres 
+globaux de sécurité", section "Modéle", vous pouvez configurer les 
+paramètres suivants&nbsp;:</p>
+<ul>
+    <li><strong></strong>Contrôle JavaScript sur le modèle<br>
+    Le commerçant peut activer cette fonction pour détecter 
+l'utilisation de Javascript sur la page du modèle.Si Javascript est 
+détecté, le modèle est bloqué et c'est le modèle par défaut qui est 
+utilisé.</li>
+</ul>
+<ul>
+    <li><strong></strong>l'Utilisation d'un modèle statique<br>
+    Le commerçant peut sélectionner quels types de modèles sont 
+autorisés pour lancer une transaction sur notre plate-forme&nbsp;:les 
+types statique et dynamique peuvent tous deux être configurés.</li>
+</ul>
+<p>Si le commerçant a activé l'option Autoriser l'utilisation d'un 
+modèle statique, il est obligatoire de définir le nom du modèle statique
+ de confiance. Cette liste sera utilisée comme entrée lors d'un contrôle
+ qui consistera à la comparer aux informations reçues par Ogone au cours
+ du processus de paiement. Vous pouvez entrer ici une ou plusieurs 
+valeurs, séparées par un point-virgule.</p>
+<ul>
+</ul>
+<p>Si le commerçant a activé l'option Autoriser l'utilisation d'un 
+modèle dynamique, il est obligatoire de définir le nom d'hôte du site 
+web de confiance qui héberge ce modèle dynamique. Ce champ peut contenir
+ plusieurs noms d'hôte, séparés par un point-virgule, mais ils doivent 
+tous contenir l'adresse URL complète, p.&nbsp;ex. 
+http://www.website.com/. Les sous-répertoires peuvent être omis, de 
+telle sorte que si le modèle dynamique est 
+http://www.website.com/templates/nl/template1.htm, il suffit de définir 
+http://www.website.com comme nom d'hôte du site web de confiance.</p>
+<p>En outre, le commerçant peut également définir, s'il le souhaite, une
+ ou plusieurs adresses URL de modèle dynamique totalement fiables, 
+séparées par un point-virgule.&nbsp;</p>
+<p>Si un modèle dynamique est soumis lors d'une transaction, mais que 
+les modèles dynamiques ne sont pas autorisés, le modèle sera bloqué et 
+notre système utilisera à sa place le modèle statique.</p>
+<p>Si aucun modèle statique n'a été défini ou si le modèle statique est 
+également interdit d'utilisation, c'est le modèle Ogone par défaut qui 
+sera utilisé.</p>
+<table>
+    <tbody>
+        <tr>
+            <td>
+            <p>Si un modèle statique ou dynamique par défaut est 
+configuré dans le compte du commerçant (cela ayant fait l'objet d'une 
+demande préalable à notre service clientèle), il convient d'activer une 
+des 2 options (Autoriser l'utilisation d'un modèle statique / Autoriser 
+l'utilisation d'un modèle dynamique). L'URL du modèle doit également 
+être définie comme modèle de confiance. Si le champ d'entrée URL du 
+modèle statique/dynamique de confiance reste vide, tous les modèles sont
+ considérés comme fiables par défaut.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+</p>
+<p>
+</p>
+<p>Par défaut, les options Contrôle JavaScript sur le modèle et 
+l'Utilisation d'un modèle statique sont activées pour les commerçants. 
+Le champ Nom du modèle statique de confiance est prédéfini selon le nom 
+d'hôte du site web du commerçant.</p>
+        
+    
+        <h3 id="secureenvironmentpadlock">6.7 Cadenas de l’environnement sécurisé</h3>
+        <p>L’URL utilisé pour connecter le client à notre plateforme 
+utilise un protocole sécurisé (https). L’ensemble des communications 
+entre notre plateforme e-Commerce et le client sont chiffrées de façon 
+sécurisée. </p>
+<p>Il arrive cependant que le cadenas du navigateur (qui signale au 
+client que le site est sécurisé) n’apparaisse pas lorsque certains 
+éléments (comme des images) contenus sur le modèle de page ne sont pas 
+hébergés sur un serveur sécurisé ou lorsque certains frame sur l’écran 
+présentent des pages qui ne proviennent pas de sites sécurisés.</p>
+<p>Même si la communication liée au traitement des paiements est 
+chiffrée, la plupart des navigateurs ne reconnaissent les connexions 
+sécurisées que si tous les éléments apparaissant à l’écran (images, 
+sons, etc.) proviennent de sites sécurisés.</p>
+<p>Pour les marchands qui ne disposent pas d’un site sécurisé, souvenez-vous des règles suivantes&nbsp;:</p>
+<ol>
+    <li>N’utilisez pas de frames pour les pages de paiement&nbsp;: vous 
+pouvez actualiser l’ensemble de l’écran avec un modèle de page qui donne
+ l’impression que vous utilisez des cadres ou faire en sorte que le 
+paiement puisse être traité dans une nouvelle fenêtre.</li>
+    <li>Ne liez pas de fichiers au modèle de page (balise &lt;link&gt;) 
+que vous utilisez pour la page de paiement. Utilisez plutôt les balises 
+&lt;style&gt; et &lt;script&gt; pour intégrer des styles et des scripts 
+sur le modèle de page.</li>
+    <li>Assurez-vous que les images de votre modèle sont hébergées sur 
+un serveur sécurisé (le modèle de page peut être hébergé sur un serveur 
+non sécurisé, mais pas les images). Nous pouvons nous héberger ces 
+éléments (consultez les options d’hébergement des images dans votre 
+compte).</li>
+</ol>
+<ol>
+</ol>
+        
+    
+        <h3 id="useofpaymentpageiniframe">6.8 Page de paiement dans un iframe</h3>
+        <p>l'Utilisation d'iframes devient de plus en plus populaire. 
+ils permettent aux marchands d'intégrer une page externe (tel que la 
+page de paiement) dans leur interface, tout en maintenant leur propre 
+URL dans la barre d'adresse du navigateur.</p>
+<p>Cependant, dans le contexte actuel, les iframes ont désavanatages:</p>
+<ul>
+    <li>Comme l'URL est celle du marchand, elle peut être http (au lieu 
+d'https) sans afficher l'icône du cadenas dans la navigateur. Cela peut 
+provoquer un sentiment de doute chez le porteur de carte quand à la 
+sécurité de sa transaction;</li>
+    <li>Certaines méthodes de paiement (comme Giropay, 
+Sofortüberweisung, Bancontact/Mister Cash, PayPal...) utilisent des 
+redirections vers des sistes externes, ce qui peut provoquer des gros 
+soucis de mise en page et de navigation </li>
+</ul>
+<p>Pour ces raisons, Ogone déconseille formellement l'utilisation des 
+iframes, et leur utilisation est aux risques et périls du marchand. Nous
+ conseillons l'utilisation de Modèles Dynamiques comme alternative.</p>
+<p>Si vous souhaitez rtout de même utiliser un iframe, veuillez noter les recommandations suivantes:</p>
+<ul>
+    <li>Utilisez des iframes uniquement pour la page de paiement et au-dela</li>
+    <li>Quand vous en avez la possibilité, utilisez des pop-ups dès que 
+possible, afin d'assurer la visibilité des applications de tierces 
+parties.</li>
+</ul>
+        
+    
+
+<div class="chapter-navigator">
+    
+       
+</div>
+            
+                
+<div class="dark-box">
+    <h2>7. Retour d'information sur la transaction</h2>
+</div>
+
+		<p>Les informations transmises au marchand et à son client (lorsque le
+ paiement est accepté, que le client a annulé le paiement ou que 
+l’acquéreur a refusé le paiement plus que le nombre de fois autorisé) 
+varient selon les paramètres définis par le marchand.</p>
+<table width="100%">
+    <tbody>
+        <tr>
+            <td rowspan="1" colspan="1">
+            <p><strong>Meilleure pratique</strong></p>
+            <p>Redirection avec paramètres sur accept-/exception-/cancel-/declineurl (voir <a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/transaction-feedback#SC_7_3">Option mise à jour de la base de données</a>) avec une demande d’informations après-paiement différée pour plus de sécurité (voir <a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/transaction-feedback#SC_7_4">Requête de réponse directes (après paiement)</a>).</p>
+            <p>Dans votre compte Ogone, naviguez vers "Configuration" 
+&gt; "Information technique" &gt; "Retour d'information sur la 
+transaction". Veuillez configurer les paramètres comme décrit 
+ci-dessous. :&nbsp;</p>
+            <p>Redirection HTTP dans le navigateur : </p>
+            <p><a class="showInOverlay" href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/integration%20guides/e-commerce/ecom_feedback_redirection.ashx?la=fr"><img alt="Feedback on the redirection URLs" src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/ecom_feedback_redirection.png" style="border: 1px solid #000000; width: 491px; height: 26px;"></a></p>
+            <p>("Je veux recevoir les paramètres de transaction en retour dans les URL lors de la redirection.") </p>
+            <p>Requête directe HTTP serveur-à-serveur : </p>
+            <p><a class="showInOverlay" href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/integration%20guides/e-commerce/ecom_feedback_deferred-postsale.ashx?la=fr"><img alt="Deferred post-payment feedback" src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/ecom_feedback_deferred-postsale.png" style="border: 1px solid #000000; width: 696px; height: 154px;"></a> </p>
+            <p>("<label for="rb_Deferred" id="lbl_HttpServerRequest" title="HttpServerRequest">Toujours en background/différé (pas tout de suite après le paiement).</label>") </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+        <h3 id="defaultreaction">7.1 Réaction par défaut</h3>
+        <p>Lorsque le marchand n’a défini aucune réaction particulière, 
+notre système affiche le message standard pour le client&nbsp;: 
+«&nbsp;Your payment is authorised&nbsp;» (Votre paiement est 
+autorisé)&nbsp; ou «&nbsp;The transaction has been denied&nbsp;» (La 
+transaction a été refusée). Ce message est intégré dans le modèle de 
+page.</p>
+<p><a class="showInOverlay" href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/integration%20guides/e-commerce/confirm_authorised.ashx?la=fr"><img alt="" src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/confirm_authorised.png"></a></p>
+<p>Sur cette page, nous ajoutons également un lien vers le site du 
+marchand et/ou le catalogue du marchand grâce aux URL (HOMEURL et 
+CATALOGURL) envoyés dans les champs masqués du formulaire de commande. 
+Lorsque ces URL ne sont pas précisés dans les champs masqués, notre 
+système utilise l’URL indiqué dans le module de gestion de votre 
+compte.&nbsp;</p>
+<p>Les champs masqués utilisés pour transmettre les URL sont les suivants&nbsp;:</p>
+<p>&lt;input type="hidden" name="CATALOGURL" value=""&gt;<br>
+&lt;input type="hidden" name="HOMEURL" value=""&gt;</p>
+<table style="text-align: left; width: 100%;">
+    <thead>
+        <tr>
+            <th>Champ<br>
+            </th>
+            <th>Objet<br>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>CATALOGURL</td>
+            <td>URL (absolu) de votre catalogue. Une fois la transaction
+ traitée, votre client est invité à revenir à cet URL en cliquant sur un
+ bouton.</td>
+        </tr>
+        <tr>
+            <td>HOMEURL</td>
+            <td>
+            <p>URL (absolu) de votre page d’accueil. Une fois la 
+transaction traitée, votre client est invité à revenir à cet URL en 
+cliquant sur un bouton.</p>
+            <p>Lorsque vous envoyez la valeur «&nbsp;NONE» (néant), le bouton ramenant le client au site du marchand est masqué.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+        
+    
+        <h3 id="basicredirection">7.2 Redirection en fonction du résultat du paiement</h3>
+        <p>Dans les champs masqués de son formulaire de commande, le 
+marchand peut envoyer 4&nbsp;URL (ACCEPTURL, EXCEPTIONURL, CANCELURL et 
+DECLINEURL) vers lesquels notre système redirige le client au terme du 
+processus de paiement.</p>
+<p>Le marchand peut aussi configurer ces URL sous l’onglet «&nbsp;Retour
+ d’information sur la transaction&nbsp;», dans la rubrique 
+«&nbsp;redirection HTTP dans le navigateur » de la page d’information 
+technique. </p>
+<p>Les champs masqués utilisés pour transmettre les URL sont les suivants&nbsp;:</p>
+&lt;input type="hidden" name="ACCEPTURL" value=""&gt;<br>
+&lt;input type="hidden" name="DECLINEURL" value=""&gt;<br>
+&lt;input type="hidden" name="EXCEPTIONURL" value=""&gt;<br>
+&lt;input type="hidden" name="CANCELURL" value=""&gt;<br>
+<br>
+<table style="text-align: left;">
+    <thead>
+        <tr>
+            <th>Champ</th>
+            <th>Objet<br>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>ACCEPTURL </td>
+            <td>URL de la page Web à présenter au client une fois le 
+paiement autorisé&nbsp; (statut 5), enregistré (statut 4), accepté 
+(statut 9) ou en attente d’une acceptation (en attente, statut 41, 51 ou
+ 91).</td>
+        </tr>
+        <tr>
+            <td>DECLINEURL </td>
+            <td>URL de la page Web à présenter au client lorsque 
+l’acquéreur refuse l’autorisation (statut 2 ou 93) plus que le nombre de
+ fois maximum autorisé.</td>
+        </tr>
+        <tr>
+            <td>EXCEPTIONURL </td>
+            <td>URL de la page Web à présenter au client lorsque le résultat du paiement est incertain (statut 52 ou 92).<br>
+            Si ce champ est vide, l’accepturl sera présenté au client en lieu et place.</td>
+        </tr>
+        <tr>
+            <td style="text-align: left;">CANCELURL </td>
+            <td style="text-align: left;">URL de la page Web à présenter au client lorsqu’il annule le paiement (statut&nbsp;1).<br>
+            Si ce champ est vide, le declineurl sera présenté au client en lieu et place.</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<table>
+    <tbody>
+        <tr>
+            <td>
+            <p><strong>Alerte navigateur<br>
+            </strong></p>
+            <p>Lorsqu’un client quitte nos pages de paiement sécurisé 
+pour revenir sur le site du marchand, il est possible que son navigateur
+ l’avertisse qu’il va pénétrer dans un environnement non sécurisé (étant
+ donné qu’il passé d’un environnement https://&nbsp; à un environnement 
+http://).</p>
+            <p>Lorsque nous détectons une redirection vers le site du 
+marchand, nous pouvons afficher un message pour signaler au client qu’il
+ est possible qu’un avertissement apparaisse (voir la première capture 
+d’écran au chapitre <a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/transaction-feedback#SC_7_3">Redirection en fonction du résultat du paiement</a>),
+ afin de lui éviter de s’inquiéter inutilement lorsque l’alerte 
+apparaîtra dans son navigateur. Le marchand peut activer cette option 
+sous l’onglet «&nbsp;Retour d’information sur la transaction&nbsp;», 
+dans la rubrique «&nbsp;Redirection HTTP dans le navigateur&nbsp;» de la
+ page d’information technique («&nbsp;Je veux que Ogone affiche, sur la 
+page de paiement, un message court à l’attention du client lorsqu'une 
+redirection vers votre site est détectée juste après le processus de 
+paiement.») </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+        
+    
+        <h3 id="redirectionwithdatabaseupdate">7.3 Option mise à jour de la base de données</h3>
+        <p>Le marchand peut utiliser cette redirection sur 
+ACCEPT-/EXCEPTION-/CANCEL-/DECLINEURL pour déclencher des tâches 
+administratives automatiques, comme des mises à jours de bases de 
+données. Lorsqu’un paiement est exécuté, nous pouvons envoyer les 
+paramètres de la transaction sur les ACCEPT-, EXCEPTION-, CANCEL- or 
+DECLINEURL du marchand.</p>
+<p>Le marchand peut activer cette option sous l’onglet «&nbsp;Retour 
+d’information sur la transaction&nbsp;», dans la rubrique 
+«&nbsp;Redirection HTTP dans le navigateur&nbsp;» sur la Page 
+d’information technique:</p>
+<ul>
+    <li>«&nbsp;Je veux recevoir les paramètres de transaction en retour dans les URL lors de la redirection.»</li>
+</ul>
+<p></p>
+<ul>
+</ul>
+        
+                <h4 id="redirectionwithdatabaseupdate_shaout">7.3.1 SHA-OUT</h4>
+                <p>Vous devez utiliser une signature SHA-OUT pour 
+vérifier le contenu de la demande lorsque vous utilisez cette option 
+pour empêcher que les clients falsifient les renseignements dans le 
+champ URL et causent une mise à jour incorrecte de la base de données.
+</p>
+<p>Si vous ne configurez pas de signature SHA-OUT dans votre compte, la 
+liste de paramètres ne sera pas transmise dans nos requêtes sur vos URL.</p>
+<p>La chaîne est créée en concaténant les valeurs des champs envoyés 
+avec la commande (triés par ordre alphabétique, dans le format 
+‘paramètre=valeur’), séparés par une clé. Cette clé est définie dans les
+ Informations techniques du marchand, sous l’onglet “Retour 
+d’Information sur la transaction”, section “Tous les modes de soumission
+ des transactions.”</p>
+<p>Pour obtenir la liste complète des paramètres à inclure dans le condensé SHA, veuillez vous reporter à la <a href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/integration%20guides/sha-out_params.ashx?la=fr">Paramètres à inclure dans le calcul SHA-OUT</a>. </p>
+<p>Veuillez noter que ces valeurs sont toutes sensibles à la casse.&nbsp;</p>
+<table>
+    <tbody>
+        <tr>
+            <td>
+            <p><strong>Important</strong></p>
+            <ul>
+                <li>Tous les paramètres envoyés (et qui apparaissent dans la liste <a href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/integration%20guides/sha-out_params.ashx?la=fr">Paramètres à inclure dans le calcul SHA</a>), seront inclus dans la chaîne.</li>
+                <li>Tous les paramètres doivent être classés en ordre alphabétique</li>
+                <li>Les paramètres qui n'ont pas de valeur ne doivent PAS être inclus dans la chaîne</li>
+                <li>Lorsque vous souhaitez transférer votre compte de 
+Test vers l’environnement de production en utilisant le lien disponible 
+dans le back-office, une signature SHA-OUT aléatoire sera 
+automatiquement configurée dans votre compte de production</li>
+                <li>Même si certains paramètres sont (partiellement) 
+envoyés en minuscules par notre système, lors du calcul du SHA-OUT tous 
+les paramètres doivent être mis en majuscules.</li>
+                <li>Pour plus de sécurité, nous vous demandons 
+d'utiliser des mots de passe SHA différents pour TEST et PROD. Remarquez
+ que s'ils sont identiques, votre mot de passe TEST sera modifié par 
+notre système (vous en serez évidemment averti)</li>
+            </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+</p>
+<p>Tout comme nous récréons le condensé pour valider l’input de la 
+transaction avec le SHA-IN, vous devez reconstruire le hachage, en 
+utilisant cette fois la phrase passe SHA-OUT et les paramètres obtenus 
+de notre système.</p>
+<p>Si le résultat n’est pas identique, il se pourrait que les paramètres
+ de la demande aient été modifiés. Cette vérification permet de 
+d’assurer de l’exactitude et de l’intégrité des valeurs de paramètre 
+envoyées dans la requête.</p>
+<table style="width: 100%;">
+    <tbody>
+        <tr>
+            <td><strong>Exemple d'un calcul SHA-1-OUT élémentaire</strong><br>
+            <br>
+            Paramètres :<br>
+            ACCEPTANCE: 1234<br>
+            amount: 15<br>
+            BRAND: VISA<br>
+            CARDNO: XXXXXXXXXXXX1111<br>
+            currency: EUR<br>
+            NCERROR: 0<br>
+            orderID: 12<br>
+            PAYID: 32100123<br>
+            PM: CreditCard<br>
+            STATUS: 9<br>
+            <br>
+            Clé SHA-OUT :<br>
+            Mysecretsig1875!?<br>
+            <br>
+            Chaîne entière à hacher&nbsp;:<br>
+            ACCEPTANCE=1234Mysecretsig1875!?AMOUNT=15Mysecretsig1875!?BRAND=VISAMysecretsig1875!?<br>
+            CARDNO=XXXXXXXXXXXX1111Mysecretsig1875!?CURRENCY=EURMysecretsig1875!?NCERROR=0<br>
+            Mysecretsig1875!?ORDERID=12Mysecretsig1875!?PAYID=32100123Mysecretsig1875!?PM=CreditCard<br>
+            Mysecretsig1875!?STATUS=9Mysecretsig1875!?<br>
+            <br>
+            Condensé obtenu (SHA-1) :<br>
+            209113288F93A9AB8E474EA78D899AFDBB874355 </td>
+        </tr>
+    </tbody>
+</table>
+<p></p>
+<table>
+    <tbody>
+        <tr>
+            <td><strong>Encodage des caractères pour les méthodes de paiement PostFinance</strong><br>
+            Si vous utilisez l’encodage par caractères UTF-8 pour 
+l’intégration de PostFinance Card et/ou de PostFinance E-finance, la 
+réponse de la transaction sera envoyée selon l’encodage par caractères 
+ISO-8859-1.</td>
+        </tr>
+    </tbody>
+</table>
+<p></p>
+            
+    
+        <h3 id="servertoserver-feedback">7.4 Requête de réponse directes (après paiement)</h3>
+        <p>Après le paiement, notre système peut envoyer une demande 
+http à un URL défini par le marchand et transmettre les données de 
+transaction.</p>
+<p>Ce processus permet au marchand de mettre à jour sa base de données 
+en y intégrant le statut de la commande, etc. et de déclencher un 
+processus de «&nbsp;fin de commande&nbsp;» (si cela n’a pas encore été 
+fait après une redirection). C’est aussi une autre façon de générer une 
+réponse personnelle pour le client en cas de besoins particuliers (si 
+cela n’a pas encore été fait par le biais d’une redirection).</p>
+Notre demande http envoyée vers votre URL d’après paiement contiendra 
+les mêmes paramètres d’informations que ceux décrits au chapitre <a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/transaction-feedback#SC_7_5">Paramètres du retour d'information</a>.
+        
+                <h4 id="servertoserver-feedback_postpaymenturls">7.4.1 URL d’après-paiement</h4>
+                <p>Si vous souhaitez automatiser vos tâches 
+administratives, vous pouvez définir les URL de deux pages exécutables 
+sur votre site sous l’onglet «&nbsp;Retour d’information sur la 
+transaction&nbsp;», dans la rubrique «&nbsp;Requête directe http 
+serveur-à-serveur » (champs URL) de la page d’information technique:</p>
+<ul>
+    <li>Vous pouvez par exemple indiquer l’URL sur lequel vous recevez 
+les paramètres dans une demande lorsque le statut du paiement est 
+accepté, en attente ou incertain.</li>
+    <li>L’autre URL sera par exemple celui sur lequel vous souhaitez 
+recevoir les paramètres dans une demande lorsque la transaction a été 
+annulée par le client ou refusée trop de fois par l’acquéreur (c.-à-d. 
+plus que le nombre de tentatives de paiement autorisé, tel que défini 
+sous l’onglet «&nbsp;Paramètres de transaction globaux&nbsp;», dans la 
+rubrique «&nbsp;Tentatives de paiement multiples&nbsp;» de la page 
+d’information technique).</li>
+</ul>
+<p>Ces deux URL peuvent être différents, mais ils peuvent aussi être 
+identiques. Vous pouvez aussi saisir un URL pour le premier cas et aucun
+ pour le second.</p>
+<p>N’indiquez aucun port dans votre URL&nbsp;; nous n’acceptons que les ports 443 et 80.</p>
+<table width="100%">
+    <tbody>
+        <tr>
+            <td>
+            <p><strong>URL d’après-paiement variables pour plusieurs shops <br>
+            </strong></p>
+            <p>Si vous avez configuré une page d’après-paiement sur la 
+page d’information technique de votre compte, mais que vous disposez de 
+plusieurs boutiques qui sont chacune connectée à un répertoire déterminé
+ pour recevoir les informations d’après-paiement, vous pouvez rendre une
+ partie de votre URL d’après-paiement variable.</p>
+            <p>Cette partie variable peut aussi servir, par exemple, à 
+«&nbsp;adapter&nbsp;» la demande d’informations pour inclure des 
+informations sur la session, en les faisant passer comme une partie de 
+l’URL plutôt que comme un paramètre supplémentaire. C’est le cas pour 
+les plateformes Intershop ou les systèmes Servlets.</p>
+            <p>Le champ masqué à utiliser est le suivant&nbsp;:</p>
+            <p>&lt;input type="hidden" name="PARAMVAR" value=""&gt;</p>
+            Exemple:<blockquote>
+            <p> URL d’après paiement sur la page d’information technique du marchand&nbsp;:<br>
+            https://www.yourwebsite.com/&lt;PARAMVAR&gt;/yourpage.asp</p>
+            <p>Le champ masqué supplémentaire envoyé par le marchand est le suivant&nbsp;:<br>
+            &lt;input type="hidden" name="PARAMVAR" value="shop1"&gt;</p>
+            <p>Ce qui donne l’URL d’après paiement suivant pour la transaction&nbsp;:<br>
+            https://www.yourwebsite.com/shop1/yourpage.asp</p>
+            </blockquote>
+            <p>Important: Ne pas utiliser de caractères spéciaux dans le
+ champ de PARAMVAR, car ils seront codées URL, ce qui pourrait créer des
+ liens non valides..</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+            
+                <h4 id="servertoserver-feedback_timingoftherequest">7.4.2 Plannification de la requête d'informations</h4>
+                <p>Sous l’onglet «&nbsp;Retour d’information sur la 
+transaction&nbsp;», dans la rubrique «&nbsp;Requête directe HTTP 
+serveur-à-serveur&nbsp;» de la page d’information technique de votre 
+compte, vous pouvez définir le moment où la requête contenant les 
+informations doit être envoyée&nbsp;:</p>
+<ul>
+    <li>Aucune :<br>
+    <br>
+    Dans ce cas, notre système n’enverra pas de requête. Cette option 
+vous permet de désactiver vos URL d’après-paiement en cas de maintenance
+ ou de problèmes sur votre serveur. </li>
+</ul>
+<ul>
+    <li>Toujours différée (pas immédiatement après le paiement) :<br>
+    <br>
+    La requête contenant les informations est envoyée peu de temps après
+ la fin du processus de paiement. Elle est alors une tâche de fond et ne
+ peut pas servir à envoyer des informations personnalisées au client sur
+ le site du marchand. <br>
+    <br>
+    Lorsque le marchand n’utilise pas sa page d’après-paiement pour 
+définir une réponse personnalisée à envoyer à son client, il peut 
+recevoir la requête contenant les informations en arrière plan et de 
+façon différée.</li>
+</ul>
+<ul>
+    <li>Toujours en ligne (immédiatement après le paiement pour pouvoir personnaliser la réponse affichée pour le client) :<br>
+    <br>
+    La requête contenant les informations est envoyée «&nbsp;en 
+ligne&nbsp;» entre le moment où notre système reçoit la réponse de 
+l’acquéreur et le moment où il informe le client du résultat du 
+paiement.<br>
+    <br>
+    Dans ce cas, le processus de paiement est plus long pour le client, 
+mais le marchand peut envoyer une réponse personnalisée au client. <br>
+    <br>
+    L’inconvénient du processus d’information en ligne après paiement 
+est que le système du marchand risque d’être compromis en cas de 
+demandes trop nombreuses envoyées à sa page d’après-paiement (par ex., 
+un volume de transactions par minute important) – cela peut entraîner 
+des temps de réponse longs avant que le client ne reçoive les 
+informations à l’écran.</li>
+</ul>
+<ul>
+    <li>En ligne mais passage par intervalles à une demande différée en cas d’échec des demandes en ligne&nbsp;:<br>
+    <br>
+    Cette option permet aux marchands qui ont besoin d’informations 
+d’après-paiement en ligne (afin de personnaliser la réponse affichée au 
+client) de disposer d’une option de repli en cas d’échec de la demande 
+en ligne sur leur page d’après-paiement. Dans ce cas, nous effectuons un
+ nouvel essai de demande d’informations toutes les dix minutes (maximum 
+quatre fois) (différé). Cela permet au marchand d’éviter de passer à 
+côté des informations de transaction en cas d’échec de la demande en 
+ligne d’informations après-paiement en raison, par ex., de problèmes de 
+serveur temporaires de son côté. Notre système affichera des 
+informations standard sur la transaction pour le client (voir <a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/transaction-feedback#SC_7_1">Réaction par défaut</a>).</li>
+</ul>
+            
+                <h4 id="servertoserver-feedback_responsetothecustomer">7.4.3 Réponse envoyée au client</h4>
+                <p>Nous utilisons l’éventuelle réponse contenue sur 
+votre page d’après-paiement pour afficher les informations (à la fin de 
+la page de transaction) pour votre client.</p>
+<p>Si votre page d’après-paiement répond au moyen&nbsp;: d’une page HTML
+ (contenant une balise &lt;html&gt;) ou d’une redirection (HTTP 302 
+Object Moved), notre système envoie cette page HTML «&nbsp;telle 
+quelle&nbsp;» au navigateur du client ou effectue la redirection, plutôt
+ que de rediriger votre client au terme de votre processus 
+d’informations après-paiement vers l’un des quatre URL que vous aurez 
+éventuellement envoyés dans les champs masqués (ACCEPTURL, EXCEPTIONURL,
+ CANCELURL et DECLINEURL, tels que décrits au chapitre <a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/transaction-feedback#SC_7_2">Redirection depending on transaction result</a>).</p>
+<p>Vous pouvez aussi, si vous n’utilisez aucune des options mentionnées 
+plus haut pour communiquer les informations à votre client, programmer 
+votre page d’après-paiement pour répondre par quelques lignes de texte 
+(pas de balise &lt;html&gt;) que nous intégrerons dans notre réponse 
+standard, ou notre système se contentera d’afficher la réponse standard 
+(comme indiqué au chapitre <a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/transaction-feedback#SC_7_1">Réaction par défaut</a>) </p>
+<p>
+Le diagramme présenté ci-dessous illustre le processus qui intervient au
+ terme d’une transaction en cas d’autorisation ou d’acceptation du 
+paiement dans le cadre d’une demande d’informations après paiement en 
+ligne. (Lorsque le paiement est annulé, refusé ou incertain, le 
+processus est similaire mais le système utilise alors les « CANCELURL » /
+ « DECLINEURL » / « EXCEPTIONURL » et les pages 
+«&nbsp;cancellation/rejection&nbsp;»).</p>
+<p>&nbsp;</p>
+<p><a class="showInOverlay" href="https://payment-services.ingenico.com/ogone/support/%7E/media/kdb/integration%20guides/e-commerce/ecom_transaction_process.ashx?la=fr"><img alt="" src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/ecom_transaction_process.jpg"></a></p>
+            
+                <h4 id="servertoserver-feedback_statuschanges">7.4.4 Requête http pour les changements de statut</h4>
+                <p>Si vous souhaitez aussi recevoir une demande http 
+différée en cas de changement de statut d’une transaction, vous pouvez 
+indiquer un URL supplémentaire dans le champ sous l’onglet «&nbsp;Retour
+ d’information sur la transaction&nbsp;», dans la rubrique 
+«&nbsp;requête http les pour changements de statut&nbsp;» de la page 
+d’information technique (et sélectionner une planification pour la 
+demande).</p>
+<p>Ce processus est similaire aux URL d’après-paiement, à la différence qu’il convient pour les processus d’arrière-plan éventuels.</p>
+<p>Vous pouvez utiliser le même URL ici que celui défini dans la 
+rubrique «&nbsp;Requête directe HTTP serveur-à-serveur&nbsp;&nbsp;»<strong>, </strong>mais rappelez-vous qu’il est vain de l’utiliser pour générer une réponse personnelle pour le client dans ce cas (arrière-plan). </p>
+            
+    
+        <h3 id="feedbackparameters">7.5 Paramètres du retour d'information</h3>
+        <p>Lorsqu’un paiement est exécuté, nous pouvons envoyer la liste de paramètres suivants:</p>
+<table style="text-align: left; width: 100%;">
+    <thead>
+        <tr>
+            <th id="table_heading_0">Paramètre</th>
+            <th id="table_heading_1">Valeur<br>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td headers="table_heading_0">ACCEPTANCE</td>
+            <td headers="table_heading_1">Code d’acceptation produit par l’acquéreur<br>
+            </td>
+        </tr>
+        <tr>
+            <td headers="table_heading_0">amount<br>
+            </td>
+            <td headers="table_heading_1">Montant de la commande (pas multiplié par 100)</td>
+        </tr>
+        <tr>
+            <td headers="table_heading_0">BRAND<br>
+            </td>
+            <td headers="table_heading_1">Marque de la carte (notre système se base pour cela sur le numéro de carte)</td>
+        </tr>
+        <tr>
+            <td headers="table_heading_0">CARDNO<br>
+            </td>
+            <td headers="table_heading_1">Numéro masqué de la carte</td>
+        </tr>
+        <tr>
+            <td headers="table_heading_0">CN<br>
+            </td>
+            <td headers="table_heading_1">Nom du titulaire de la carte/client</td>
+        </tr>
+        <tr>
+            <td headers="table_heading_0">currency<br>
+            </td>
+            <td headers="table_heading_1">Devise de la commande <br>
+            </td>
+        </tr>
+        <tr>
+            <td headers="table_heading_0">ED<br>
+            </td>
+            <td headers="table_heading_1">Date d’expiration</td>
+        </tr>
+        <tr>
+            <td headers="table_heading_0">NCERROR<br>
+            </td>
+            <td headers="table_heading_1">Code d’erreur</td>
+        </tr>
+        <tr>
+            <td headers="table_heading_0">orderID<br>
+            </td>
+            <td headers="table_heading_1">Votre référence de commande</td>
+        </tr>
+        <tr>
+            <td headers="table_heading_0">PAYID<br>
+            </td>
+            <td headers="table_heading_1">Référence du paiement dans notre système</td>
+        </tr>
+        <tr>
+            <td headers="table_heading_0">PM<br>
+            </td>
+            <td headers="table_heading_1">Moyen de paiement</td>
+        </tr>
+        <tr>
+            <td headers="table_heading_0">SHASIGN<br>
+            </td>
+            <td headers="table_heading_1">Signature SHA calculée par notre système (si configuré sur <a href="https://payment-services.ingenico.com/sitecore/shell/Controls/SHA-OUT">SHA-OUT</a>) </td>
+        </tr>
+        <tr>
+            <td headers="table_heading_0">STATUS<br>
+            </td>
+            <td headers="table_heading_1">Statut de la transaction</td>
+        </tr>
+        <tr>
+            <td headers="table_heading_0">TRXDATE<br>
+            </td>
+            <td headers="table_heading_1">Date de la transaction</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<strong>Ex</strong>e<strong>mple (GET request):<br>
+</strong>
+<p>https://www.yourwebsite.com/acceptpage.asp?orderID=ref12345&amp;currency=EUR&amp;amount=25&amp;PM=CreditCard&amp;ACCEPTANCE=test123&amp;STATUS=5&amp;CARDNO=XXXXXXXXXXXX1111&amp;PAYID=1136745&amp;NCERROR=0&amp;BRAND=VISA&amp;ED=0514&amp;TRXDATE=12/25/08&amp;CN=John
+ Doe</p>
+<table>
+    <tbody>
+        <tr>
+            <td>La liste des paramètres des informations peut être plus 
+longue pour les marchands qui ont activé certaines options dans leurs 
+comptes, comme le module de détection de fraude. Veuillez vous reporter à
+ la documentation sur l’option concernée pour de plus amples 
+informations sur les autres paramètres des informations liés à l’option.<br>
+            </td>
+        </tr>
+    </tbody>
+</table>
+        
+                <h4 id="feedbackparameters_dynamicfeedbackparameters">7.5.1 Paramètres du retour d'information dynamiques</h4>
+                <p>Vous pouvez également choisir quels paramètres sont 
+envoyés avec la requête post-paiement. Pour faire ceci, rendez-vous dans
+ l'onglet "Retour d'information sur la transaction" de votre information
+ technique. Il y a là une liste de paramètres "Disponible" et 
+"Sélectionné".</p>
+<p>Utilisez tout simplement les flèches entre les deux listes pour faire basculer les paramètres d'une liste à l'autre.</p>
+<table>
+    <tbody>
+        <tr>
+            <td>N'oubliez pas de mettre à jour votre signature SHA-OUT 
+afin de tenir compte des paramètres indiqués ici. Les paramètres qui ne 
+sont pas sélectionnés ne figureront PAS dans le calcul SHA.</td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+            
+                <h4 id="feedbackparameters_variablefeedbackparameters">7.5.2 Paramètres du retour d'information</h4>
+                <p>Le marchand peut nous envoyer deux paramètres 
+supplémentaires dans les champs masqués du formulaire de commande afin 
+de les récupérer en tant que paramètres des informations au terme du 
+paiement. Les champs masqués suivants sont proposés&nbsp;:</p>
+<p>&lt;input type="hidden" name="COMPLUS" value=""&gt;<br>
+&lt;input type="hidden" name="PARAMPLUS" value=""&gt;</p>
+<table style="text-align: left; width: 100%;">
+    <thead>
+        <tr>
+            <th>Champ<br>
+            </th>
+            <th>Objet</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>COMPLUS<br>
+            </td>
+            <td>Champ servant à soumettre une valeur que vous aimeriez récupérer dans la demande d’informations. <br>
+            </td>
+        </tr>
+        <tr>
+            <td>PARAMPLUS<br>
+            </td>
+            <td>
+            <p>Champ servant à soumettre certains paramètres et leurs valeurs que vous aimeriez récupérer dans la demande d’informations. </p>
+            <p>Le champ paramplus n’est&nbsp; pas inclus dans les 
+paramètres des informations proprement dits&nbsp;; les 
+paramètres/valeurs que vous soumettez dans ce champ seront en revanche 
+analysés et les paramètres ainsi obtenus, ajoutés à la demande http. </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<table style="width: 100%;">
+    <tbody>
+        <tr>
+            <td>
+            <p><strong>Exemple</strong></p>
+            <p>Les champs masqués supplémentaires envoyés par le marchand sont les suivants&nbsp;:<strong><br>
+            </strong></p>
+            <p>&lt;input type="hidden" name="COMPLUS" value="123456789123456789123456789"&gt;<br>
+            &lt;input type="hidden" name="PARAMPLUS" value="SessionID=126548354&amp;ShopperID=73541312"&gt;</p>
+            <p>Entraîne une redirection avec paramètres des informations&nbsp;:</p>
+            <p>https://www.yourwebsite.com/acceptpage.asp?[…standard.parameters…]<br>
+            &amp;COMPLUS=123456789123456789123456789&amp;SessionID=126548354&amp;ShopperID=73541312&nbsp;</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+            
+    
+        <h3 id="feedbackreinitialization">7.6 Réinitialisation du retour d'information</h3>
+        <p>Si la demande de redirection/retour d'information n'a pas été
+ exécutée, du fait d'une action du client entraînant le blocage de nos 
+pages de paiement sécurisé (par ex. si le client a cliqué sur le bouton «
+ retour » de son navigateur), nous pouvons réinitialiser la demande de 
+post-paiement et/ou la redirection. Ainsi, votre client sera redirigé 
+vers la page que vous souhaitez afficher et vos bases de données 
+pourront être mises à jour.</p>
+<p>Pour activer cette fonction dans votre compte, allez dans 
+Configuration &gt; Information technique &gt; Retour d'information sur 
+l... &gt; Général et cochez la case "Je veux que Ogone relance le 
+processus de fin de transaction (requête/redirection post paiement) si 
+nécessaire."</p>
+<p>Il est possible que vous receviez plusieurs demandes de post-paiement
+ pour le même identifiant de commande. En effet, la demande de 
+redirection/retour d'information sera renvoyée si le client revient aux 
+pages de paiement sécurisé à l'aide du bouton « retour » après avoir été
+ redirigé vers votre site web.</p>
+<p>Veillez à configurer votre script « Post URL » de façon à traiter ces
+ « exceptions ». Par exemple, vous pouvez configurer votre script « Post
+ URL » de manière à créer une ligne dans votre base de données pour 
+chaque état de transaction renvoyé et/ou générer un e-mail pour informer
+ le marchand d'une « exception » par rapport aux étapes prévues dans le 
+processus de transaction.</p>
+<p>Nous vous recommandons de ne pas écraser le premier message d'état de
+ transaction que vous recevez par un autre message reçu par la suite 
+pour le même identifiant de commande. Idéalement, il est conseillé de 
+conserver toutes les réponses pour chaque commande, et d'appeler un 
+processus permettant de les analyser et de les traiter comme il se doit.</p>
+<p>Si vous ne cochez pas la case, le client qui clique sur le bouton « 
+retour » pour revenir aux pages de paiement sécurisé verra s'afficher un
+ message indiquant que le paiement a déjà été traité.</p>
+        
+    
+        <h3 id="confirmationemails">7.7 E-mails de confirmation</h3>
+        
+        
+                <h4 id="confirmationemails_emailtothemerchant">7.7.1 E-mails envoyés au marchand</h4>
+                <p>Notre système peut vous envoyer un e-mail de 
+confirmation de paiement pour chaque transaction (une option à 
+configurer sous l’onglet «&nbsp;E-mails de transaction&nbsp;», dans la 
+rubrique «&nbsp;E-mails pour le marchand&nbsp;» sur la page 
+d’information technique). </p>
+<p>Vous pouvez aussi recevoir des e-mails vous informant des changements de statut des transactions.</p>
+            
+                <h4 id="confirmationemails_emailtothecustomer">7.7.2 E-mails envoyés au client</h4>
+                <p>Notre système peut envoyer un courrier électronique 
+automatique à votre client pour l’informer de l’enregistrement de la 
+transaction. Il s’agit d’un message standard et vous ne pouvez pas en 
+changer le contenu.</p>
+<p>Vous pouvez activer cette option dans la section „E-mails pour le 
+client“ de l’onglet „E-mails de transaction“ de la page Information 
+Technique. </p>
+Vous pouvez également choisir d’envoyer au client un courriel lorsqu’une
+ transaction est confirmée (capture de données) et remboursée en cochant
+ les cases correspondantes. En tant qu’expéditeur (« From ») de ces 
+courriels, vous pouvez configurer l’adresse électronique à utiliser dans
+ les courrriels relatifs à la transaction (Adresse e-mail de support à 
+insérer dans les e-mails relatifs aux transactions). Si vous n’indiquez 
+pas d’adresse électronique ici, nous utiliserons la première adresse 
+saisie sous "Adresse(s) e-mail pour les e-mails relatifs aux 
+transactions" à la section "E-mails pour le marchand".
+<p>Pour pouvoir envoyer des courriels de confirmation à votre client, 
+vous devez indiquer son adresse électronique dans le champ masqué :</p>
+<p>&lt;input type="hidden" name="EMAIL" value=""&gt;</p>
+<table style="text-align: left; width: 100%;">
+    <thead>
+        <tr>
+            <th>Champ<br>
+            </th>
+            <th>Description<br>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>EMAIL </td>
+            <td>Adresse e-mail du client</td>
+        </tr>
+    </tbody>
+</table>
+            
+    
+
+<div class="chapter-navigator">
+    
+       
+</div>
+            
+                
+<div class="dark-box">
+    <h2>8. e-Commerce via e-mail</h2>
+</div>
+<p style="margin-bottom: 9.75pt; text-align: justify;">Vous pouvez 
+envoyer à vos clients une demande de paiement par e-mail pour rediriger 
+le client vers notre page de paiement sécurisé via un bouton ou un lien 
+dans l’e-mail.</p>
+<span style="color: #000000;"> </span>
+<p style="margin-bottom: 9.75pt; text-align: justify;">Lorsque l’e-mail 
+est au format HTML, vous pouvez utiliser un formulaire contenant des 
+champs HTML masqués pour nous envoyer les paramètres nécessaires au 
+format POST. </p>
+<span style="color: #000000;"> </span>
+<p style="margin-bottom: 9.75pt;">Lorsque l’e-mail est au format texte 
+brut, vous pouvez ajouter les paramètres nécessaires à l’URL au format 
+GET. (par ex., https://secure.ogone.com/ncol/test/orderstandard.asp / 
+orderstandard_utf8.asp?PSPID=TESTSTD&amp;orderID=order123&amp;amount=12500&amp;currency=EUR&amp;SHASIGN=8DDF4795640EB9FE9B367315C48E47338129A4F5&amp;
+ …)</p>
+<span style="color: #000000;"> </span>
+<p style="margin-bottom: 9.75pt; text-align: justify;"><span style="color: #000000;">Veuillez vous reporter au chapitre <a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/link-your-website-to-the-payment-page">Lien entre le site Web du marchand et notre page de paiement</a> pour de plus amples informations.<br>
+</span></p>
+<table>
+    <tbody>
+        <tr>
+            <td>
+            <p>Pour que e-Commerce par e-mail fonctionne, soyez attentif aux aspects suivants liés à la vérification avant le paiement&nbsp;:</p>
+            <ul>
+                <li>Le champ référant/URL doit rester vide dans le champ
+ URL «&nbsp;Contrôle de données et d’origine&nbsp;», dans la rubrique 
+«&nbsp;Contrôles pour e-Commerce&nbsp;» de la page d’information 
+technique de votre compte afin d’éviter les erreurs <a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/possible-errors/pre-payment-check-errors">unknown order/1/r/</a>.</li>
+                <li>Vous devez utiliser une signature SHA en guise de 
+méthode de vérification de données pour les informations sur la 
+commande. Pour de plus amples informations sur la signature SHA-1-IN, 
+veuillez vous reporter au chapitre <a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/security-pre-payment-check#SC_5_1">SHA-IN Signature</a>.</li>
+            </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<div class="chapter-navigator">
+    
+       
+</div>
+            
+                
+<div class="dark-box">
+    <h2>9. Moyen de paiement et caractéristiques de la page de paiement</h2>
+</div>
+<p></p>
+
+        <h3 id="pmselectiononmerchantsite">9.1 Choix du moyen de paiement du côté du marchand</h3>
+        
+        
+                <h4 id="pmselectiononmerchantsite_showaspecificpaymentmethod">9.1.1 Afficher un moyen de paiement déterminé</h4>
+                <p>Lorsque notre page de paiement sécurisé s’affiche 
+chez le client, on lui présente les moyens de paiement possibles que le 
+marchand a activés sur son compte.</p>
+<p>Lorsque le client doit choisir son moyen de paiement sur le site du 
+marchand et non sur notre page de paiement, celui-ci peut nous envoyer 
+le nom du moyen de paiement et sa marque (uniquement lorsque le moyen de
+ paiement est «&nbsp;CreditCard&nbsp;») dans les champs masqués pour que
+ nous n’affichions que ce moyen de paiement sur notre page de paiement 
+et que nous n’acceptions que les paiements effectués par ce&nbsp; biais.</p>
+<p>Ces champs masqués sont les suivants&nbsp;:</p>
+<p>&lt;input type="hidden" name="PM" value=""&gt;<br>
+&lt;input type="hidden" name="BRAND" value=""&gt;</p>
+<table style="text-align: left; width: 100%;">
+    <thead>
+        <tr>
+            <th>Champ<br>
+            </th>
+            <th>Objet<br>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>PM<br>
+            </td>
+            <td>Moyen de paiement (par ex. CreditCard)<br>
+            </td>
+        </tr>
+        <tr>
+            <td>BRAND<br>
+            </td>
+            <td>Marque de la carte de crédit (par ex. VISA)<br>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<table style="width: 100%;">
+    <tbody>
+        <tr>
+            <td>
+            <p><strong>Exemples</strong></p>
+            <ul>
+                <li>Champs masqués dans l’hypothèse où votre client opte pour VISA sur votre site&nbsp;:</li>
+            </ul>
+            <p>&lt;input type="hidden" name="PM" value="CreditCard "&gt;<br>
+            &lt;input type="hidden" name="BRAND" value="VISA"&gt;</p>
+            <ul>
+                <li>Champ masqués dans l’hypothèse où le seul moyen de 
+paiement que vous acceptez dans ce cas est la carte de crédit (par 
+exemple, si vous avez aussi d’autres moyens de paiement que vous ne 
+souhaitez pas afficher)&nbsp;:</li>
+            </ul>
+            <p>&lt;input type="hidden" name="PM" value="CreditCard "&gt;<br>
+            &lt;input type="hidden" name="BRAND" value=""&gt;</p>
+            <ul>
+                <li>Champs masqués dans l’hypothèse où votre client opte pour iDEAL sur votre site&nbsp;:</li>
+            </ul>
+            <p>&lt;input type="hidden" name="PM" value="iDEAL"&gt;<br>
+            &lt;input type="hidden" name="BRAND" value=""&gt;</p>
+            <p>OU</p>
+            <p>&lt;input type="hidden" name="PM" value=""&gt;<br>
+            &lt;input type="hidden" name="BRAND" value="iDEAL"&gt; </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p> </p>
+            
+                <h4 id="pmselectiononmerchantsite_backurl">9.1.2 Permettre au client de choisir un autre moyen de paiement : BACKURL</h4>
+                <p>Lorsque le client choisit son moyen de paiement sur 
+le site du marchand, nous n’affichons que le moyen de paiement 
+sélectionné sur notre page de paiement.</p>
+<p>Lorsque le paiement échoue avec ce moyen de paiement et que le client
+ souhaite tenter de régler avec un autre moyen de paiement, la liste des
+ moyens de paiement du marchand ne s’affiche pas sur nos pages de 
+paiement sécurisé étant donné que le choix du moyen de paiement a été 
+opéré sur le site du marchand et non sur nos ages de paiement sécurisé. </p>
+Dans ce cas, le marchand peut utiliser le «&nbsp;backurl&nbsp;» pour 
+rediriger le client vers un URL sur le site du marchand, où il va 
+pouvoir choisir un autre moyen de paiement. Lorsque le client clique sur
+ le bouton «&nbsp;Back&nbsp;» sur notre page de paiement sécurisé à la 
+suite d’une autorisation refusée, ou après avoir annulé l’opération à 
+partir d’un site tiers ou du site d’une banque, nous le redirigeons vers
+ l’URL que le marchand a défini comme « BACKURL ».
+<p>Remarque<strong>: </strong>Le bouton «&nbsp;back&nbsp;» dont nous 
+parlons dans la présente section est le bouton «&nbsp;back&nbsp;» situé 
+sur nos pages de paiement sécurisé, et NON le bouton «&nbsp;back&nbsp;» 
+de votre navigateur. </p>
+<p>Vous pouvez saisir le «&nbsp;backurl&nbsp;» sous l’onglet 
+«&nbsp;Affichage de la page de paiement » sur la page d’information 
+technique de votre compte, mais vous pouvez aussi nous envoyer un 
+«&nbsp;backurl&nbsp;» bien précis dans les champs masqués pour une 
+transaction si vous préférez éviter d’utiliser le même «&nbsp;BACKURL » 
+que celui saisi sous l’onglet «&nbsp;Affichage de la page de paiement » 
+de la page d’informations techniques de votre compte. <br>
+<br>
+Le «&nbsp;backurl&nbsp;» envoyé dans les champs masqués l’emporte sur le
+ «&nbsp;BACKURL » saisi sous l’onglet «&nbsp;Affichage de la page de 
+paiement » de la page d’information technique de votre compte. Vous 
+pouvez envoyer le «&nbsp;backurl&nbsp;» dans le champ masqué 
+suivant&nbsp;:</p>
+<p>&lt;input type="hidden" name="BACKURL" value=""&gt;</p>
+<table style="text-align: left; width: 100%;">
+    <thead>
+        <tr>
+            <th>Champ<br>
+            </th>
+            <th>Objet<br>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>BACKURL<br>
+            </td>
+            <td>URL de la page Web à afficher chez le client lorsqu’il 
+clique sur&nbsp; le bouton «&nbsp;back&nbsp;» de notre page de paiement 
+sécurisé.<br>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+</p>
+<p>Lorsque le client choisit son moyen de paiement sur nos pages de 
+paiement sécurisé et non sur le site du marchand, le « BACKURL » n’est 
+pas pris en considération. Lorsque le client clique sur le bouton 
+«&nbsp;back&nbsp;» sur notre page de paiement sécurisé, il est 
+simplement redirigé vers notre page de sélection du moyen de paiement 
+sécurisé, qui contient la liste des moyens de paiement acceptés par le 
+marchand.</p>
+            
+    
+        <h3 id="showalistofpaymentmethods">9.2 Afficher une liste déterminée de moyens de paiement</h3>
+        <p>Lorsque le client doit choisir son moyen de paiement à partir
+ d’une liste de moyens de paiement sur notre page de paiement, le 
+marchand peut nous envoyer cette liste dans les champs masqués pour que 
+nous n’affichions que ces moyens de paiement sur notre page de paiement.</p>
+<p>Ce champ masqué est le suivant&nbsp;:</p>
+<p>&lt;input type="hidden" name="PMLIST" value=""&gt;</p>
+<table style="text-align: left; width: 100%;">
+    <thead>
+        <tr>
+            <th>Champ<br>
+            </th>
+            <th>Objet<br>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>PMLIST<br>
+            </td>
+            <td>Liste des moyens de paiement et/ou des marques de cartes
+ de crédit sélectionnés. Éléments séparés par un «&nbsp;;&nbsp;» 
+(point-virgule).<br>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+</p>
+<p><strong>Ex</strong>e<strong>mple</strong> </p>
+<p>Champ masqué dans l’hypothèse où vous voulez que votre client 
+choisisse entre VISA et iDEAL sur notre page de paiement (par ex., si 
+vous proposez aussi d’autres moyens de paiement que vous ne souhaitez 
+pas afficher)&nbsp;:<br>
+<br>
+&lt;input type="hidden" name="PMLIST" value="VISA;iDEAL"&gt; </p>
+        
+    
+        <h3 id="excludespecificpaymentmethods">9.3 Exclure une liste déterminée de moyens de paiement</h3>
+        <p>Si le marchand ne souhaite pas présenter certaines marques spécifiques, cela peut être déterminé par un champ masqué.</p>
+<p>Ceci est particulièrement pratique pour les Sub-Brands, quand un 
+marchand veut accepter une marque (ex: MasterCard) mais pas la 
+sous-marque (ex: Maestro)</p>
+<p>Le champ masqué est le suivant:</p>
+<p>&lt;input type="hidden" name="EXCLPMLIST" value=""&gt;</p>
+<table style="text-align: left; width: 100%;">
+    <thead>
+        <tr>
+            <th>Champ<br>
+            </th>
+            <th>Objet<br>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>EXCLPMLIST<br>
+            </td>
+            <td>Liste des moyens de paiement et/ou des marques de cartes
+ de crédit à exclure. Éléments séparés par un «&nbsp;;&nbsp;» 
+(point-virgule).<br>
+            </td>
+        </tr>
+    </tbody>
+</table>
+        
+    
+        <h3 id="layoutofthepaymentmethods">9.4 Présentation des moyens de paiement</h3>
+        Vous pouvez définir la présentation/liste des moyens de paiement
+ sur notre page de paiement au moyen du champ masqué suivant&nbsp;:
+<p>&lt;input type="hidden" name="PMLISTTYPE" value=""&gt;</p>
+<table style="text-align: left; width: 100%;">
+    <thead>
+        <tr>
+            <th>Champ<br>
+            </th>
+            <th>Valeurs possibles<br>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>PMLISTTYPE<br>
+            </td>
+            <td>Les valeurs possibles sont 0, 1 et 2. <br>
+            <ul>
+                <li>0&nbsp;: Logos regroupés horizontalement avec le nom du groupe sur la gauche (valeur par défaut)</li>
+                <li>1&nbsp;: Logos regroupés horizontalement sans les noms des groupes</li>
+                <li>2&nbsp;: Liste verticale de logos avec moyen de paiement et nom de la marque</li>
+            </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+        
+    
+        <h3 id="3dsecure">9.5 Fenêtre pour 3-D Secure</h3>
+        <p>Si vous travaillez avec 3-D Secure, vous pouvez définir la 
+façon dont vous souhaitez que la page d’identification s’affiche chez le
+ client en nous envoyant un paramètre supplémentaire dans les champs 
+masqués.</p>
+<p>Ce champ masqué est le suivant&nbsp;:</p>
+<p>&lt;input type="hidden" name="WIN3DS" value=""&gt;</p>
+<table style="text-align: left; width: 100%;">
+    <thead>
+        <tr>
+            <th>Champ<br>
+            </th>
+            <th>Valeurs possibles<br>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>WIN3DS </td>
+            <td>
+            <ul>
+                <li>«&nbsp;MAINW&nbsp;»&nbsp;: pour afficher la page d’identification dans la fenêtre principale (valeur par défaut)</li>
+                <li>«&nbsp;POPUP&nbsp;»&nbsp;: pour afficher la page 
+d’identification dans une fenêtre contextuelle (pop-up) et revenir à la 
+fenêtre principale à la fin</li>
+            </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<table>
+    <tbody>
+        <tr>
+            <td>
+            <p><strong>Important</strong></p>
+            <p>Veuillez noter que pour certaines méthodes de paiement 
+(Visa, MasterCard, JCB, …) , la valeur ‘POPUP’ n'est pas autorisée et 
+sera convertie en ‘MAINW’ par le système. Nous vous conseillons de 
+tester le comportement de ce paramètre pour chaque méthode de paiement.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+        
+    
+        <h3 id="splitcreditdebitcards">9.6 Subdivision en cartes de crédit/débit</h3>
+        <p>La fonctionnalité consistant à subdiviser VISA et MasterCard 
+en méthodes de paiement par débit et par crédit vous permet de les 
+offrir à vos clients sous deux formes (p. ex. VISA Debit et VISA 
+Credit), mais vous pouvez aussi décider de n'accepter qu'une seule de 
+ces deux formes de paiement.&nbsp;</p>
+<p>Pour pouvoir utiliser cette fonctionnalité de subdivision en cartes 
+de crédit et de débit via e-Commerce, vous devez inclure le paramètre 
+CREDITDEBIT dans les champs masqués que vous envoyez à la page de 
+paiement (et les inclure également, par conséquent, dans le calcul 
+SHA-IN !).&nbsp;</p>
+<table style="text-align: left;" width="100%">
+    <thead>
+        <tr>
+            <th>Champ </th>
+            <th>Format </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>CREDITDEBIT </td>
+            <td>"C": credit card (carte de crédit)<br>
+            "D": debit card (carte de débit)</td>
+        </tr>
+    </tbody>
+</table>
+<p>Erreur liée : Si l'acheteur sélectionne la méthode par carte de 
+débit, mais entre ensuite un numéro de carte de crédit, un code d'erreur
+ est renvoyé : « Marque/mode de paiement incorrect ».</p>
+<p>Si le paiement est traité avec succès avec le paramètre CREDITDEBIT, 
+ce même paramètre est également renvoyé dans le retour d'information 
+post-vente. Cependant, si les valeurs soumises sont C ou D, les valeurs 
+de retour sont « CREDIT » ou « DEBIT ».</p>
+<p>Vous trouverez également ces valeurs de retour dans la vue d'ensemble
+ de la transaction via « View transactions » et « Financial history », 
+ainsi que dans les rapports que vous pouvez télécharger ensuite.</p>
+<table width="100%">
+    <tbody>
+        <tr>
+            <td>
+            <p><strong>Configuration au sein de votre compte</strong></p>
+            <p>La fonctionnalité de subdivision peut également être 
+activée et configurée par méthode de paiement dans votre compte Ogone. 
+Accédez à <a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/split-credit-debit-cards">Subdivision en cartes de crédit/débit</a> pour plus d'informations.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+        
+    
+
+<div class="chapter-navigator">
+    
+       
+</div>
+            
+                
+<div class="dark-box">
+    <h2>10. Autres champs masqués facultatifs</h2>
+</div>
+
+
+        <h3 id="operation">10.1 Code Opération</h3>
+        <table>
+    <tbody>
+        <tr>
+            <td>
+            <p><strong>Important</strong></p>
+            <p>La possibilité de travailler en deux étapes (autorisation
+ + saisie de données) varie selon les moyens de paiement que vous 
+souhaitez utiliser. (Voir l’aperçu en ligne Payment Methods 
+Processing/Procedure)</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>Vous pouvez nous envoyer un code d’opération déterminé pour une 
+transaction si vous préférez utiliser un code d’opération autre que 
+celui sélectionné sous l’onglet «&nbsp;Paramètres de transaction 
+globaux&nbsp;», dans la rubrique «&nbsp;Code d’opération par 
+défaut&nbsp;» de la page d’information technique de votre compte pour 
+cette transaction. </p>
+<p>Le code d’opération que vous nous envoyez dans les champs masqués 
+l’emporte sur le code d’opération général sélectionné sous l’onglet 
+«&nbsp;Paramètres de transaction globaux&nbsp;», dans la rubrique 
+«&nbsp;Code d’opération par défaut&nbsp;» de la page d’information 
+technique de votre compte. Vous pouvez envoyer le code d’opération dans 
+le champ masqué suivant&nbsp;:</p>
+<p>&lt;input type="hidden" name="OPERATION" value=""&gt;&nbsp;&nbsp;&nbsp; </p>
+<table style="text-align: left; width: 100%;">
+    <thead>
+        <tr>
+            <th>Champ<br>
+            </th>
+            <th>Objet<br>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>OPERATION<br>
+            </td>
+            <td>
+            <p>Code d’opération pour la transaction.</p>
+            <p>Valeurs possibles pour les nouvelles commandes&nbsp;:</p>
+            <ul>
+                <li>RES&nbsp;: demande d’autorisation </li>
+                <li>SAL&nbsp;: demande de vente (paiement) </li>
+            </ul>
+            <p>Optionnel:</p>
+            <ul>
+                <li>PAU: demande de pré-autorisation: <br>
+                &nbsp; En accord avec votre acquéreur vous pouvez 
+utiliser ce code d’opération pour réserver temporairement des fonds sur 
+la carte d’un client. Ceci est une pratique courante dans les industries
+ liées au voyage et à la location. <br>
+                &nbsp; Le code PAU/pré-autorisation ne peut actuellement
+ être utilisé que pour les transactions MasterCard et n’est supporté que
+ par quelques acquéreurs. Ce code d’opération ne peut pas être défini 
+comme valeur par défaut dans votre compte Ogone. <br>
+                &nbsp; Si vous deviez utiliser le code PAU pour des 
+transactions avec des acquéreurs ou des types de carte qui ne supportent
+ pas la pré-autorisation, ces transactions ne seraient pas bloquées, 
+mais traitées comme des autorisations classiques (RES).</li>
+            </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<table style="width: 100%;">
+    <tbody>
+        <tr>
+            <td>
+            <p>Afin que ce parametre soit pris en compte par notre 
+système, n'oubliez pas de l'inclure dans la signature SHA pour la 
+transaction. Pour plus d'infos sur SHA, veuillez vous reporter au 
+chapitre <a href="https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/security-pre-payment-check">Signature SHA-IN</a>. </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+        
+    
+        <h3 id="userfield">10.2 Champ Utilisateur</h3>
+        <p>Si vous avez plusieurs utilisateurs dans votre compte et que 
+vous souhaitez enregistrer les transactions liées à un utilisateur 
+particulier (par ex., pour les agents de centres d’appels qui 
+enregistrent des transactions via e-Commerce), vous pouvez envoyer 
+l’UserID dans le champ masqué suivant&nbsp;:</p>
+<p>&lt;input type="hidden" name="USERID" value=""&gt;</p>
+<table style="width: 100%; text-align: left;">
+    <thead>
+        <tr>
+            <th>Champ</th>
+            <th>Objet<br>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> USERID<br>
+            </td>
+            <td>Le nom d’utilisateur défini sur la page de gestion de l’utilisateur du compte<br>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>Ce champ n’est qu’informatif, puisqu’il sert à ajouter un UserID pour
+ une transaction déterminée. Nous n’effectuons aucune vérification de 
+notre côté pour établir, par ex., s’il y a eu des erreurs de mot de 
+passe pour cet utilisateur. La seule vérification que nous effectuons 
+concerne la validité de l’UserID. Si l’UserID n’existe pas, nous le 
+remplaçons par l’UserID par défaut du compte (PSPID).</p>
+        
+    
+
+<div class="chapter-navigator">
+    
+       
+</div>
+            
+    </div>
+</div>
+
+
+<div id="application_0_bodybottom_0_FeedBackBox">
+
+    <a id="application_0_bodybottom_0_feedbackanchor" name="int&amp;#233;gration-avec-ogone-ecommerce"></a>
+    <div class="feedback-box">
+        <div class="grid grid-pad">
+            <div class="col-1-1 start-msg">
+                <span class="h4-title">
+                    Envoyez-nous vos commentaires. Avez-vous trouvé cette information utile?
+                </span>
+                <a href="#" class="btnYes action" onclick="javascript:dataLayer.push({'': ''});">
+                    Oui
+                </a>
+                <a href="#" class="btnNo action" onclick="javascript:dataLayer.push({'': ''});">
+                    Non
+                </a>
+            </div>
+
+            <div class="col-1-1 thanks-msg">
+                <span class="h4-title">
+                    Merci pour vos commentaires!
+                </span>
+            </div>
+        
+            <div class="col-1-1 fields-box">
+                <span class="h4-title">
+                    Vos commentaires :
+                </span>
+                <textarea name="application_0$bodybottom_0$YourFeedBackTextBox" rows="5" cols="50" id="application_0_bodybottom_0_YourFeedBackTextBox"></textarea>
+                <textarea name="application_0$bodybottom_0$YourBadFeedBackTextBox" rows="5" cols="50" id="application_0_bodybottom_0_YourBadFeedBackTextBox" class="hidden"></textarea>
+                <input name="application_0$bodybottom_0$SendButton" value="Envoyer" id="application_0_bodybottom_0_SendButton" type="submit">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+                <div class="content-end-spacer"></div>
+            </article>
+            
+
+    <footer class="main-footer">
+        <div class="grid grid-pad">
+            <div class="footCol">
+                <div class="logos">
+                    <ul>
+                        <li>
+                            <a href="http://www.ingenico.com/" target="_blank">
+                                <img src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/lgo_ingenico_group.png" alt="" height="35" width="95">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="generalText">
+                    Ingenico ePayments est la division de commerce 
+mobile et en ligne du groupe Ingenico. Nous connectons les commerçants 
+avec les consommateurs, permettant à toutes les entreprises, où qu’elles
+ soient, de franchir les frontières existantes, et créant ainsi l’avenir
+ du commerce mondial. En tant que leader du secteur depuis 1994, notre 
+esprit d’innovation nous propulse en avant sur l’ensemble des canaux de 
+vente. Nous sommes le partenaire de confiance de plus de 65 000 
+commerçants de toutes tailles qui comptent sur nous pour faciliter et 
+sécuriser les paiements de leurs clients. Grâce à notre système avancé 
+d’analyse de données, nos solutions de gestion des fraudes et notre 
+expertise commerciale internationale, nous aidons les commerçants à 
+optimiser leurs activités et à se développer sur de nouveaux marchés 
+dans le monde entier.
+                </div>
+                <div class="socialMedia">
+                    <ul>
+    <li><a href="https://www.linkedin.com/company/24781" target="_blank"><img alt="" src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/ico_linkedin.png" height="32" width="32"></a>&nbsp;</li>
+    <li><a href="https://twitter.com/ingenico_epymts" target="_blank"><img alt="" src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/ico_twitter.png" height="32" width="32"></a>&nbsp;</li>
+    <li><a href="https://www.youtube.com/ingenico-group" target="_blank"><img alt="" src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/ico_youtube.png" height="32" width="32"></a>&nbsp;</li>
+</ul>
+                </div>
+            </div>
+
+            <div class="doormatNav">
+                <ul>
+    <li>
+    <h3><a href="https://payment-services.ingenico.com/fr/fr/a-propos-de-ingenico-epayments">À propos de nous<br>
+    </a></h3>
+    <ul>
+        <li><a href="https://payment-services.ingenico.com/fr/fr/news">Espace media</a></li>
+        <li><a href="https://payment-services.ingenico.com/fr/fr/events">Evénéments</a></li>
+        <li><a href="https://payment-services.ingenico.com/fr/fr/bureaux">Bureaux</a> </li>
+        <li><a href="http://ingenico.catsone.nl/careers/">Recrutement</a> </li>
+        <li><a href="https://payment-services.ingenico.com/fr/fr/download">Document center</a></li>
+    </ul>
+    </li>
+    <li>
+    <h3>En savoir plus</h3>
+    <ul>
+        <li><a href="https://payment-services.ingenico.com/fr/fr/solutions-paiement-en-ligne/paiement-multicanal-electronique">Plateforme de paiement multi-canal</a> </li>
+        <li><a href="https://payment-services.ingenico.com/fr/fr/solutions-paiement-en-ligne/solution-moyen-paiement-en-ligne-international">Paiements internationaux</a> </li>
+        <li><a href="https://payment-services.ingenico.com/fr/fr/solutions-paiement-en-ligne/paiement-securise-internet-prevention-des-fraudes">Prévention des fraudes</a></li>
+        <li><a href="https://payment-services.ingenico.com/fr/fr/solutions-paiement-en-ligne/e-commerce/online-payments">Paiements en ligne</a></li>
+        <li><a href="https://payment-services.ingenico.com/fr/fr/solutions-paiement-en-ligne/e-commerce/mobile-payments">Paiements Mobiles</a> </li>
+    </ul>
+    </li>
+</ul>
+            </div>
+
+            <div class="footerLinks">
+                <a href="https://payment-services.ingenico.com/fr/fr/bureaux">Mentions légales</a> | 
+<a href="https://payment-services.ingenico.com/fr/fr/politique-de-cookies">Politique en matière de cookies</a> | 
+<a href="#cookiecontainer" class="changebtn">Paramètres des cookies</a> | 
+Site by <a href="http://www.reference.be/en/">The Reference</a>
+            </div>
+        </div>
+    </footer>
+
+    <div style="display: none;" id="CookieWarningDiv" class="cookieWarning">
+    <div class="main">
+        <div class="cookieColumn">
+            <p>Ce site utilise les cookies pour être capable de vous 
+donner la meilleure expérience utilisateur. Si vous ne souhaitez pas 
+accepter ces cookies, nous vous permettons de modifier les paramètres 
+des cookies. Cliquez sur «Accepter» pour permettre tous les cookies de 
+ce site.</p>
+        </div>
+
+        <div class="moreInfo changeBtn">
+            <a href="#cookiecontainer" class="btnConfirm" id="changebtn">
+                Modifier les paramètres
+            </a>
+        </div>
+        <div class="moreInfo">
+            <a href="https://payment-services.ingenico.com/Controls/KDB/#" id="accept" class="btnConfirm" data-default-cookie="2">
+                Accepter
+            </a>
+        </div>
+        <a href="#" class="close">
+            
+        </a>
+    </div>
+</div>
+    
+
+<div style="display: none;" class="container" id="cookiecontainer">
+    <div class="txt">
+        <h2>
+            Paramètres des cookies
+        </h2>
+        <p class="intro">
+            Introduction
+        </p>
+
+        <div class="col01">
+            
+                    <div id="ctl15_CookieSettings_CookieSettingsRepeater_ctl00_settingDiv" class="subBlock subBlock01 " data-level="1">
+                        <div class="circle"></div>
+                        <div class="content">
+                            <h3>
+                                Fonctionnels
+                            </h3>
+
+                            <div class="txt">
+                                Les cookies fonctionnels assurent le bon
+ fonctionnement du site et ne peuvent pas être désactivés.
+                            </div>
+                            <div class="messageLabel">
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div id="ctl15_CookieSettings_CookieSettingsRepeater_ctl01_settingDiv" class="subBlock subBlock02 active original" data-level="2">
+                        <div class="circle"></div>
+                        <div class="content">
+                            <h3>
+                                Optimisés
+                            </h3>
+
+                            <div class="txt">
+                                Les cookies d'optimisation nous permettent d'analyser l'utilisation du site afin de l'améliorer.
+                            </div>
+                            <div class="messageLabel">
+                                C'est le niveau par défaut.
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div id="ctl15_CookieSettings_CookieSettingsRepeater_ctl02_settingDiv" class="subBlock subBlock03 non-active" data-level="3">
+                        <div class="circle"></div>
+                        <div class="content">
+                            <h3>
+                                Personnalisés
+                            </h3>
+
+                            <div class="txt">
+                                Les cookies de personnalisation, 
+utilisés pour les médias sociaux et la personnalisation avancée, nous 
+permettent d'afficher vos informations en lien avec votre société.
+                            </div>
+                            <div class="messageLabel">
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+
+            <div class="buttonRow">
+
+                <a href="#" class="button btnCancel">
+                    Annuler
+                </a>
+                <a href="#" class="button btnConfirm">
+                    Accepter
+                </a>
+
+            </div>
+
+            <p>
+                <br>
+                
+            </p>
+
+        </div>
+
+        <div class="col02">
+            
+                    <div id="ctl15_CookieSettings_ExampleRepeater_ctl00_exampleDiv" class="contentBlock contentBlock01">
+                        <div class="subBlock">
+<h3>Exemple de fonctionnalité autorisée</h3>
+<ul>
+    <li>Mémorisation du pays préféré</li>
+    <li>Mémorisation de la langue préférée</li>
+</ul>
+<h3>Exemple de fonctionnalité non autorisée</h3>
+<ul>
+    <li>Enregistrement des données personnelles des utilisateurs</li>
+    <li>Suivi anonyme via Google Analytics</li>
+    <li>Suivi à des fins de remarketing</li>
+</ul>
+</div>
+                    </div>
+                
+                    <div id="ctl15_CookieSettings_ExampleRepeater_ctl01_exampleDiv" class="contentBlock contentBlock02" style="display:block;">
+                        <div class="subBlock">
+<h3>Exemple de fonctionnalité autorisée </h3>
+<ul>
+    <li>Mémorisation du pays préféré</li>
+    <li>Mémorisation de la langue préférée</li>
+    <li>Suivi anonyme via Google Analytics</li>
+</ul>
+<h3>Exemple de fonctionnalité non autorisée</h3>
+<ul>
+    <li>Enregistrement des données personnelles des utilisateurs</li>
+    <li>Suivi à des fins de remarketing</li>
+</ul>
+</div>
+                    </div>
+                
+                    <div id="ctl15_CookieSettings_ExampleRepeater_ctl02_exampleDiv" class="contentBlock contentBlock03">
+                        <div class="subBlock">
+<h3>Exemple de fonctionnalité autorisée</h3>
+<ul>
+    <li>Mémorisation du pays préféré</li>
+    <li>Mémorisation de la langue préférée</li>
+    <li>Suivi anonyme via Google Analytics</li>
+    <li>Affichage de contenus en fonction de vos intérêts</li>
+    <li>Affichage de publicités en fonction de vos intérêts</li>
+    <li>Suivi à des fins de remarketing</li>
+</ul>
+<h3>Exemple de fonctionnalité non autorisée </h3>
+<ul>
+    <li>Enregistrement de données personnelles</li>
+</ul>
+</div>
+                    </div>
+                
+        </div>
+    </div>
+</div>
+
+        </div>
+        
+<script src="Int%C3%A9gration%20avec%20Ogone%20e-Commerce_fichiers/base" type="text/javascript"></script>
+
+    
+<!--BeginNoIndex-->
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMjA1MTI3ODk0M2Rkf4+7O21xmIoJA4Y82PL6hTUtAPfPqjo9kQflbL3ZUjA=" type="hidden">
+<!--EndNoIndex-->
+</form><script id="" type="text/javascript">console.log("GTM is active");</script><script id="" type="text/javascript">console.log("Remarketing is disabled");</script>
+
+
+
+</body></html>

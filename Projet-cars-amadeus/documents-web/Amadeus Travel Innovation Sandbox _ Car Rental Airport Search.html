@@ -1,0 +1,1309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<!-- saved from url=(0082)https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/cars/search-airport -->
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#" class="js"><head profile="http://www.w3.org/1999/xhtml/vocab"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><script type="text/javascript" src="./Amadeus Travel Innovation Sandbox _ Car Rental Airport Search_files/64d9b52843"></script><script src="./Amadeus Travel Innovation Sandbox _ Car Rental Airport Search_files/nr-943.min.js"></script><script async="" src="./Amadeus Travel Innovation Sandbox _ Car Rental Airport Search_files/analytics.js"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(e,t){return function(){o(e,[(new Date).getTime()].concat(a(arguments)),null,t)}}var o=e("handle"),i=e(2),a=e(3);"undefined"==typeof window.newrelic&&(newrelic=NREUM);var u=["setPageViewName","setCustomAttribute","finished","addToTrace","inlineHit"],c=["addPageAction"],f="api-";i(u,function(e,t){newrelic[t]=r(f+t,"api")}),i(c,function(e,t){newrelic[t]=r(f+t)}),t.exports=newrelic,newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),o("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(0>o?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?u(e,a,i):i()}function n(n,r,o){e&&e(n,r,o);for(var i=t(o),a=l(n),u=a.length,c=0;u>c;c++)a[c].apply(i,r);var s=f[g[n]];return s&&s.push([m,n,r,i]),i}function p(e,t){w[e]=l(e).concat(t)}function l(e){return w[e]||[]}function d(e){return s[e]=s[e]||o(n)}function v(e,t){c(e,function(e,n){t=t||"feature",g[n]=t,t in f||(f[t]=[])})}var w={},g={},m={on:p,emit:n,get:d,listeners:l,context:t,buffer:v};return m}function i(){return new r}var a="nr@context",u=e("gos"),c=e(2),f={},s={},p=t.exports=o();p.backlog=f},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!w++){var e=v.info=NREUM.info,t=s.getElementsByTagName("script")[0];if(e&&e.licenseKey&&e.applicationID&&t){c(l,function(t,n){e[t]||(e[t]=n)});var n="https"===p.split(":")[0]||e.sslForHttp;v.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=v.proto+e.agent,t.parentNode.insertBefore(r,t)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=window,s=f.document;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:f.XMLHttpRequest,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},e(1);var p=""+location,l={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-943.min.js"},d=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),v=t.exports={offset:a(),origin:p,features:{},xhrWrappable:d};s.addEventListener?(s.addEventListener("DOMContentLoaded",i,!1),f.addEventListener("load",r,!1)):(s.attachEvent("onreadystatechange",o),f.attachEvent("onload",r)),u("mark",["firstbyte",a()],null,"api");var w=0},{}]},{},["loader"]);</script>
+  
+<link rel="shortcut icon" href="https://sandbox.amadeus.com/sites/default/files/favicon_0_0.ico" type="image/vnd.microsoft.icon">
+<meta name="description" content="With this API you can find out the price and type of car, for all car rental providers, near a specified airport. You can quickly see the locations of car providers near a given airport, and what cars are available to rent, and at what prices. This API is based on our car pricing service that gets live availability from car providers, and is used to power a variety of airline and travel agency websites.">
+<meta name="generator" content="Drupal 7 (http://drupal.org)">
+<link rel="canonical" href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/cars/search-airport">
+<link rel="shortlink" href="https://sandbox.amadeus.com/node/1297">
+  <title>Amadeus Travel Innovation Sandbox | Car Rental Airport Search</title>
+  <link type="text/css" rel="stylesheet" href="./Amadeus Travel Innovation Sandbox _ Car Rental Airport Search_files/css_lQaZfjVpwP_oGNqdtWCSpJT1EMqXdMiU84ekLLxQnc4.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Amadeus Travel Innovation Sandbox _ Car Rental Airport Search_files/css_hdR5zEfaIAQ5SX9HNvSxUpbtrQx6D256kgZk8-wSuNk.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Amadeus Travel Innovation Sandbox _ Car Rental Airport Search_files/css_8x7nGKdvABEd4DRmIZ3zdJmzhjxnpnl1NGNfRktaKOM.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Amadeus Travel Innovation Sandbox _ Car Rental Airport Search_files/css_CxDRl6XPcv28HWLE9OBCYmhvFRKTAJ0qhqyUwb0JW8g.css" media="all">
+<style>div.a2bc7_field{display:none;visibility:hidden;}
+div.a1eca_field{display:none;visibility:hidden;}
+</style>
+<link type="text/css" rel="stylesheet" href="./Amadeus Travel Innovation Sandbox _ Car Rental Airport Search_files/css_h2IKq7S2-e40G8rCf6YkzI2bHbQxX4_54-A0T_k2ahs.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Amadeus Travel Innovation Sandbox _ Car Rental Airport Search_files/css_2dm8edluaqoIrw90AkFl8sMm7T5eVD7xyIM4A-L70ZA.css" media="all">
+<style>.navbar-nav > li > span > span.caret{border-bottom-color:#005EB8;border-top-color:#005EB8;color:#005EB8;}
+</style>
+<link type="text/css" rel="stylesheet" href="./Amadeus Travel Innovation Sandbox _ Car Rental Airport Search_files/css_zJvL_0SDMXEaTm80X7br-u-mh2jJldAoBTRYr8YfriY.css" media="all">
+<style>.faq .collapsed{display:block !important;}body header.navbar{background-color:#FFFFFF;}body header.navbar{border-color:#FFFFFF;}body .navbar-inverse .navbar-toggle,body .navbar-inverse .navbar-collapse:focus,body .navbar-inverse .navbar-toggle:hover,body .navbar-inverse .navbar-toggle:focus,body .navbar-inverse .navbar-nav > .open > a,body .navbar-inverse .navbar-nav > .open > a:hover,body .navbar-inverse .navbar-nav > .open > a:focus,body .navbar-default .navbar-toggle:hover,body .navbar-default .navbar-toggle:active,body .navbar-default .navbar-toggle:focus,body .navbar-default .navbar-collapse,body .navbar-default .navbar-collapse:hover,body .navbar-default .navbar-collapse:focus,body .navbar-default .navbar-nav > .open > a,body .navbar-default .navbar-nav > .open > a:hover,body .navbar-default .navbar-nav > .open > a:focus,body header.navbar.navbar-nav > .open > a,body header.navbar.navbar-nav > .open > a:hover,body header.navbar.navbar-nav > .open > a:focus{border-color:#FFFFFF;background-color:#FFFFFF;}body .navbar-inverse .navbar-nav > .open > a:hover{color:#005EB8;}body header.navbar .nav > li > a{color:#005EB8;}body header.navbar .nav > li > a:hover{background-color:#FFFFFF;}.navbar-inverse .navbar-collapse,.navbar-inverse .navbar-form,.navbar-inverse .navbar-toggle,.navbar-default .navbar-collapse,.navbar-default .navbar-form,.navbar-default .navbar-toggle,header.navbar.navbar-collapse,header.navbar.navbar-form,header.navbar.navbar-toggle{border-color:#FFFFFF;}.navbar-inverse .navbar-toggle,.navbar-inverse .navbar-toggle:hover,.navbar-inverse .navbar-toggle:focus,.navbar-inverse .navbar-nav > .open > a,.navbar-inverse .navbar-nav > .open > a:hover,.navbar-inverse .navbar-nav > .open > a:focus,.navbar-default .navbar-toggle:hover,.navbar-default .navbar-toggle:active,.navbar-default .navbar-toggle:focus,.navbar-default .navbar-nav > .open > a,.navbar-default .navbar-nav > .open > a:hover,.navbar-default .navbar-nav > .open > a:focus,header.navbar.navbar-nav > .open > a,header.navbar.navbar-nav > .open > a:hover,header.navbar.navbar-nav > .open > a:focus{background-color:#FFFFFF;}body header.navbar .nav .active > a,body .navbar .nav .active > a:hover,.navbar.navbar-fixed-top #main-menu li a:hover{background-color:#FFFFFF;}body header.navbar .nav > li > a:hover{color:#005EB8;}body a{color:#005EB8;}body a:hover{color:#005EB8;}body .footer{background-color:#005EB8;}body .footer .navbar ul.footer-links > li > a{color:#FFFFFF;}body .footer .navbar ul.footer-links > li > a:hover{color:#FFFFFF;}body .btn{background-color:#005EB8;}body .btn{color:#FFFFFF;}body .btn:hover,body .btn:focus,body .btn:active,body .open .dropdown-toggle.btn{background-color:#005EB8;color:#FFFFFF;}.navbar-nav > li > span{color:#005EB8;}.navbar-nav > li > span:hover{color:#005EB8;}.navbar-nav > li.expanded span:hover,.navbar-nav > li.expanded.active{background-color:#FFFFFF;}.navbar-nav > li > span > span.caret{border-bottom-color:#005EB8;border-top-color:#005EB8;color:#005EB8;}.footer.footer-fixed-bottom{position:static;}body #resource_URL input,#method_content [data-role='method_url_container'],#method_content .url_container > p > span,[data-role='method_url_container'] span span span.template_param{font-family:Courier,'Courier New',monospace;}
+</style>
+  <!-- HTML5 element support for IE6-8 -->
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="./Amadeus Travel Innovation Sandbox _ Car Rental Airport Search_files/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src='/profiles/apigee/modules/contrib/jquery_update/replace/jquery/1.7/jquery.min.js'>\x3C/script>")</script>
+<script src="./Amadeus Travel Innovation Sandbox _ Car Rental Airport Search_files/js_3TykeRWpejhD4-J3vdlaNXdULg9xhOZhbsppK0o2bUs.js"></script>
+<script>var Apigee=Apigee||{};Apigee.APIModel=Apigee.APIModel||{};</script>
+<script src="./Amadeus Travel Innovation Sandbox _ Car Rental Airport Search_files/js_VjkixrkRl_HPAsEQiuDUDLwLBuOhs_vINViWzE2Olv0.js"></script>
+<script src="./Amadeus Travel Innovation Sandbox _ Car Rental Airport Search_files/lightbox.js"></script>
+<script>(function ($) {
+  Drupal.behaviors.ae02be12f3909e0a637 = {
+    attach: function (context, settings) {
+      $("input.a2bc7_field").each(function() {
+        f=$(this)[0];
+        if (f.value.indexOf("a637c09e0a63")==0){f.value="74"+f.value.substring(5)+"7c053ca2da7da4273_form";}
+      });
+    }
+  };
+})(jQuery);</script>
+<script>(function ($) {
+  Drupal.behaviors.ae02be12f39569a27f3 = {
+    attach: function (context, settings) {
+      $("input.a1eca_field").each(function() {
+        f=$(this)[0];
+        tok2 = f.style.fontFamily;
+        if(tok2.charAt(0) == "'" || tok2.charAt(0) == '"') tok2=tok2.substring(1, tok2.length-1);
+        tok2=tok2.substring(1, tok2.length);
+        if (f.value.indexOf("27f3569a27")==0){f.value="a6"+f.value.substring(4)+tok2;}
+      });
+    }
+  };
+}(jQuery));</script>
+<script src="./Amadeus Travel Innovation Sandbox _ Car Rental Airport Search_files/js_yagDAzI4jnSbhDR0w7fQ3NJ2nilcw0pv7WPGGvUtOIU.js"></script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-57809421-2", {"cookieDomain":"auto"});ga("send", "pageview");</script>
+<script src="./Amadeus Travel Innovation Sandbox _ Car Rental Airport Search_files/js_6BP2gtszgQ3cDpxQEk_zTfzTouN_kHDSVgecEi5EOOI.js"></script>
+<script src="./Amadeus Travel Innovation Sandbox _ Car Rental Airport Search_files/js_9lHmPgmjZMIHU6N-8HhjlLwGpl3GdZHVEA9zQwvQnO4.js"></script>
+<script src="./Amadeus Travel Innovation Sandbox _ Car Rental Airport Search_files/js_ObaNUcJ-GJIM62phIZyx3SZhq9kYgiC9AQUPEzCAkbo.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"amadeus_apigee_responsive","theme_token":"vt4RI6LENg2YzvX2Tsuy8i0kYg2YjeFwrKvFK0mGHU0","js":{"\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.7.2\/jquery.min.js":1,"0":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"profiles\/apigee\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/contrib\/lightbox2\/js\/lightbox.js":1,"1":1,"2":1,"profiles\/apigee\/modules\/contrib\/captcha\/captcha.js":1,"sites\/all\/modules\/custom\/amadeus_smartdocs\/js\/amadeus_smartdocs.js":1,"profiles\/apigee\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"3":1,"profiles\/apigee\/themes\/apigee_responsive\/js\/global.js":1,"sites\/all\/themes\/amadeus_apigee_responsive\/js\/amadeus_apigee_responsive.js":1,"sites\/all\/themes\/amadeus_apigee_responsive\/js\/smartdocs_leftnavs.js":1,"profiles\/apigee\/themes\/bootstrap\/js\/bootstrap.js":1,"4":1,"5":1,"profiles\/apigee\/themes\/apigee_responsive\/js\/bootstrap.min.js":1,"6":1,"7":1,"8":1,"profiles\/apigee\/modules\/contrib\/bootstrap_modal_forms\/js\/bootstrap_modal_forms.forms.js":1,"profiles\/apigee\/modules\/custom\/devconnect\/smartdocs\/local\/js\/codemirror.js":1,"profiles\/apigee\/modules\/custom\/devconnect\/smartdocs\/local\/js\/codemirror_javascript.js":1,"profiles\/apigee\/modules\/custom\/devconnect\/smartdocs\/local\/js\/codemirror_xml.js":1,"profiles\/apigee\/modules\/custom\/devconnect\/smartdocs\/local\/js\/prism.js":1,"profiles\/apigee\/modules\/custom\/devconnect\/smartdocs\/local\/js\/base64_min.js":1,"profiles\/apigee\/modules\/custom\/devconnect\/smartdocs\/local\/js\/v6\/model.js":1,"profiles\/apigee\/modules\/custom\/devconnect\/smartdocs\/local\/js\/v6\/controller.js":1},"css":{"modules\/system\/system.base.css":1,"profiles\/apigee\/themes\/bootstrap\/css\/overrides.css":1,"profiles\/apigee\/themes\/apigee_responsive\/css\/bootstrap.min.css":1,"profiles\/apigee\/modules\/contrib\/views\/css\/views.css":1,"modules\/field\/theme\/field.css":1,"profiles\/apigee\/modules\/contrib\/logintoboggan\/logintoboggan.css":1,"sites\/all\/modules\/contrib\/menu_attach_block\/menu_attach_block.css":1,"modules\/node\/node.css":1,"profiles\/apigee\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"profiles\/apigee\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/lightbox2\/css\/lightbox.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"0":1,"1":1,"sites\/default\/files\/honeypot\/honeypot.css":1,"profiles\/apigee\/modules\/contrib\/field_group\/field_group.field_ui.css":1,"profiles\/apigee\/themes\/apigee_responsive\/css\/style.css":1,"sites\/all\/themes\/amadeus_apigee_responsive\/css\/amadeus_apigee_responsive.css":1,"sites\/all\/themes\/amadeus_apigee_responsive\/css\/smartdocs_leftnavs.css":1,"sites\/all\/themes\/amadeus_apigee_responsive\/css\/full-slider.css":1,"sites\/all\/themes\/amadeus_apigee_responsive\/css\/round-about.css":1,"sites\/all\/themes\/amadeus_apigee_responsive\/css\/ihover.css":1,"profiles\/apigee\/modules\/custom\/apigee_sso\/apigee_sso.css":1,"2":1,"profiles\/apigee\/modules\/custom\/devconnect\/smartdocs\/local\/css\/main.css":1,"profiles\/apigee\/modules\/custom\/devconnect\/smartdocs\/local\/css\/codemirror.css":1,"profiles\/apigee\/modules\/custom\/devconnect\/smartdocs\/local\/css\/prism.css":1,"profiles\/apigee\/modules\/custom\/devconnect\/smartdocs\/css\/smartdocs.css":1,"3":1}},"lightbox2":{"rtl":0,"file_path":"\/(\\w\\w\/)public:\/","default_image":"\/sites\/all\/modules\/contrib\/lightbox2\/images\/brokenimage.jpg","border_size":10,"font_color":"000","box_color":"fff","top_position":"","overlay_opacity":"0.8","overlay_color":"000","disable_close_click":true,"resize_sequence":0,"resize_speed":400,"fade_in_speed":400,"slide_down_speed":600,"use_alt_layout":false,"disable_resize":false,"disable_zoom":false,"force_show_nav":false,"show_caption":true,"loop_items":false,"node_link_text":"View Image Details","node_link_target":false,"image_count":"Image !current of !total","video_count":"Video !current of !total","page_count":"Page !current of !total","lite_press_x_close":"press \u003Ca href=\u0022#\u0022 onclick=\u0022hideLightbox(); return FALSE;\u0022\u003E\u003Ckbd\u003Ex\u003C\/kbd\u003E\u003C\/a\u003E to close","download_link_text":"","enable_login":false,"enable_contact":false,"keys_close":"c x 27","keys_previous":"p 37","keys_next":"n 39","keys_zoom":"z","keys_play_pause":"32","display_image_size":"original","image_node_sizes":"()","trigger_lightbox_classes":"","trigger_lightbox_group_classes":"","trigger_slideshow_classes":"","trigger_lightframe_classes":"","trigger_lightframe_group_classes":"","custom_class_handler":0,"custom_trigger_classes":"","disable_for_gallery_lists":true,"disable_for_acidfree_gallery_lists":true,"enable_acidfree_videos":true,"slideshow_interval":5000,"slideshow_automatic_start":true,"slideshow_automatic_exit":true,"show_play_pause":true,"pause_on_next_click":false,"pause_on_previous_click":true,"loop_slides":false,"iframe_width":600,"iframe_height":400,"iframe_border":1,"enable_video":false},"urlIsAjaxTrusted":{"\/travel-innovation-sandbox\/apis\/get\/cars\/search-airport":true},"app_api_key":"log in to retrieve API key","googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"smartdocs":{"oauth2AuthUrl":"\/\/smartdocs\/oauth\/callback","apiModelBaseUrl":"https:\/\/api.enterprise.apigee.com\/","useDefaultUrls":true},"bootstrap_modal_forms":{"login":{"identifier":"login","url":"user\/login","open_onload":false},"register":{"identifier":"register","url":"user\/register","open_onload":false},"password":{"identifier":"password","url":"user\/password","open_onload":false}},"bootstrap_modal_forms_current_path":"node\/1297","bootstrap":{"anchorsFix":1,"anchorsSmoothScrolling":1,"formHasError":1,"popoverEnabled":1,"popoverOptions":{"animation":1,"html":0,"placement":"right","selector":"","trigger":"click","triggerAutoclose":1,"title":"","content":"","delay":0,"container":"body"},"tooltipEnabled":1,"tooltipOptions":{"animation":1,"html":0,"placement":"top","selector":"","trigger":"hover focus","delay":0,"container":"body"}}});</script>
+</head>
+<body class="html not-front not-logged-in two-sidebars page-node page-node- page-node-1297 node-type-smart-method custom-docs-pages navbar-is-fixed-top logo_standard lightbox-processed bootstrap_modal_forms-processed">
+<div id="skip-link">
+  <a href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/cars/search-airport#main-content" class="element-invisible element-focusable">Skip to main content</a>
+</div>
+<header id="navbar" role="banner" class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container vertical-align">
+    <div class="navbar-header push-left">
+	  
+	  		  <div id="navbar-logo">
+			<a class="logo navbar-btn" href="https://sandbox.amadeus.com/" title="Home"><img id="logo-image" src="./Amadeus Travel Innovation Sandbox _ Car Rental Airport Search_files/amadeus_logo_US_registered_0_0.png" alt=""></a>
+		  </div>
+      
+		  <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			<span class="sr-only" data-original-title="" title="">Toggle navigation</span>
+			<span class="icon-bar" data-original-title="" title=""></span>
+			<span class="icon-bar" data-original-title="" title=""></span>
+			<span class="icon-bar" data-original-title="" title=""></span>
+		  </button>
+      </div>
+
+	  <div class="navbar-collapse collapse push-right" id="navbar-nav">
+		<nav role="navigation">
+		  		  <ul class="menu nav navbar-nav pull-right account-menu">
+			<li class="first leaf"><a href="https://sandbox.amadeus.com/" title="Home">Home</a></li>
+			<li class="leaf"><a href="https://sandbox.amadeus.com/api-catalog" title="APIs">APIs</a></li>
+			<li class="leaf"><a href="https://sandbox.amadeus.com/about" title="About">About</a></li>
+						  <li class=""><a href="https://sandbox.amadeus.com/user/register">Register</a></li>
+			  <li class=""><a href="https://sandbox.amadeus.com/user/login">Login</a></li>
+					  </ul>
+		  		</nav>
+	  </div>
+	
+	  <div id="navbar-title" class="rtecenter"><h1>Travel Innovation Sandbox</h1></div>
+  </div>
+</header>
+<!-- Breadcrumbs -->
+<!-- Breadcrumbs -->
+<div class="master-container">
+<!-- Alerts go right to the top of the page -->
+		      <section class="page-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- Title Prefix -->
+                        <!-- Title -->
+            <h1>Car Rental Airport Search</h1>
+            <!-- SubTitle -->
+                        <!-- Title Suffix -->
+                      </div>
+        </div>
+      </div>
+    </section>
+  
+      <header role="banner" id="page-header">
+              </header> <!-- /#page-header -->
+
+      <div class="row">
+
+                  <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-first well">
+    <section id="block-menu-block-amadeus-smartdocs-2" class="block block-menu-block clearfix">
+
+        <h2 class="block-title">Docs Left Side Menu</h2>
+    
+  <div class="menu-block-wrapper menu-block-amadeus_smartdocs-2 menu-name-menu-docs-left-side-menu parent-mlid-0 menu-level-1">
+  <ul class="menu nav"><li class="first last expanded active-trail menu-mlid-5036"><div id="sampleCodeCollapseDiv-top" nid="node/1204" class="panel-collapse  in">
+                        <a class="sampleCodeCollapse-top" nid="node/1204" id="--node/1204" data-parent="#accordion">
+                            <div class="panel-title">Travel Innovation Sandbox</div>
+                        </a>
+                        <div class="view-content"><div class="panel panel-default">
+                <div class="panel-heading ">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        </a><div class="panel-title" style="display: block;"><a class="sampleCodeCollapse in" data-parent="#accordion"></a><a href="https://sandbox.amadeus.com/getting-started" title="Getting Started">Getting Started</a></div>
+                    
+                </div>
+            </div><div class="panel panel-default">
+                <div class="panel-heading">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        <div class="panel-title level2" style="display: block;">Flight APIs</div>
+                    </a>
+                    <div id="sampleCodeCollapseDiv" class="panel-collapse collapse in">
+                        <div class="views-field views-field-nothing"><div class="panel panel-default">
+                <div class="panel-heading ">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        </a><div class="panel-title" style="display: block;"><a class="sampleCodeCollapse in" data-parent="#accordion"></a><a href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/flights/inspiration-search">Flight Inspiration Search</a></div>
+                    
+                </div>
+            </div><div class="panel panel-default">
+                <div class="panel-heading ">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        </a><div class="panel-title" style="display: block;"><a class="sampleCodeCollapse in" data-parent="#accordion"></a><a href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/flights/extensive-search">Flight Extensive Search</a></div>
+                    
+                </div>
+            </div><div class="panel panel-default">
+                <div class="panel-heading ">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        </a><div class="panel-title" style="display: block;"><a class="sampleCodeCollapse in" data-parent="#accordion"></a><a href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/flights/low-fare-search">Flight Low-Fare Search</a></div>
+                    
+                </div>
+            </div><div class="panel panel-default">
+                <div class="panel-heading ">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        </a><div class="panel-title" style="display: block;"><a class="sampleCodeCollapse in" data-parent="#accordion"></a><a href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/flights/affiliate-search">Flight Affiliate Search</a></div>
+                    
+                </div>
+            </div><div class="panel panel-default">
+                <div class="panel-heading ">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        </a><div class="panel-title" style="display: block;"><a class="sampleCodeCollapse in" data-parent="#accordion"></a><a href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/airports/autocomplete">Airport Autocomplete</a></div>
+                    
+                </div>
+            </div><div class="panel panel-default">
+                <div class="panel-heading ">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        </a><div class="panel-title" style="display: block;"><a class="sampleCodeCollapse in" data-parent="#accordion"></a><a href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/airports/nearest-relevant">Nearest Relevant Airport</a></div>
+                    
+                </div>
+            </div><div class="panel panel-default">
+                <div class="panel-heading ">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        </a><div class="panel-title" style="display: block;"><a class="sampleCodeCollapse in" data-parent="#accordion"></a><a href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/location/%7Bcode%7D">Location Information</a></div>
+                    
+                </div>
+            </div></div>
+                    </div>
+                </div>
+            </div><div class="panel panel-default">
+                <div class="panel-heading">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        <div class="panel-title level2" style="display: block;">Hotel Shopping APIs</div>
+                    </a>
+                    <div id="sampleCodeCollapseDiv" class="panel-collapse collapse in">
+                        <div class="views-field views-field-nothing"><div class="panel panel-default">
+                <div class="panel-heading ">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        </a><div class="panel-title" style="display: block;"><a class="sampleCodeCollapse in" data-parent="#accordion"></a><a href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/hotels/search-airport">Hotel Airport Search</a></div>
+                    
+                </div>
+            </div><div class="panel panel-default">
+                <div class="panel-heading ">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        </a><div class="panel-title" style="display: block;"><a class="sampleCodeCollapse in" data-parent="#accordion"></a><a href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/hotels/search-circle">Hotel Geosearch by circle</a></div>
+                    
+                </div>
+            </div><div class="panel panel-default">
+                <div class="panel-heading ">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        </a><div class="panel-title" style="display: block;"><a class="sampleCodeCollapse in" data-parent="#accordion"></a><a href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/hotels/search-box">Hotel Geosearch by box</a></div>
+                    
+                </div>
+            </div><div class="panel panel-default">
+                <div class="panel-heading ">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        </a><div class="panel-title" style="display: block;"><a class="sampleCodeCollapse in" data-parent="#accordion"></a><a href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/hotels/%7Bproperty_code%7D">Hotel Property Code Search</a></div>
+                    
+                </div>
+            </div></div>
+                    </div>
+                </div>
+            </div><div class="panel panel-default">
+                <div class="panel-heading">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        <div class="panel-title level2" style="display: block;">Car Shopping APIs</div>
+                    </a>
+                    <div id="sampleCodeCollapseDiv" class="panel-collapse collapse in">
+                        <div class="views-field views-field-nothing"><div class="panel panel-default">
+                <div class="panel-heading active">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        </a><div class="panel-title" style="display: block;"><a class="sampleCodeCollapse in" data-parent="#accordion"></a><a href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/cars/search-airport" class="active-trail active">Car Rental Airport Search</a></div>
+                    
+                </div>
+            </div><div class="panel panel-default">
+                <div class="panel-heading ">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        </a><div class="panel-title" style="display: block;"><a class="sampleCodeCollapse in" data-parent="#accordion"></a><a href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/cars/search-circle">Car Rental Geosearch</a></div>
+                    
+                </div>
+            </div></div>
+                    </div>
+                </div>
+            </div><div class="panel panel-default">
+                <div class="panel-heading">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        <div class="panel-title level2" style="display: block;">Rail &amp; Train APIs</div>
+                    </a>
+                    <div id="sampleCodeCollapseDiv" class="panel-collapse collapse in">
+                        <div class="views-field views-field-nothing"><div class="panel panel-default">
+                <div class="panel-heading ">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        </a><div class="panel-title" style="display: block;"><a class="sampleCodeCollapse in" data-parent="#accordion"></a><a href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/trains/schedule-search">Train Schedule Search</a></div>
+                    
+                </div>
+            </div><div class="panel panel-default">
+                <div class="panel-heading ">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        </a><div class="panel-title" style="display: block;"><a class="sampleCodeCollapse in" data-parent="#accordion"></a><a href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/trains/extensive-search">Train Extensive Search</a></div>
+                    
+                </div>
+            </div><div class="panel panel-default">
+                <div class="panel-heading ">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        </a><div class="panel-title" style="display: block;"><a class="sampleCodeCollapse in" data-parent="#accordion"></a><a href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/rail-stations/autocomplete">Rail-Station Autocomplete</a></div>
+                    
+                </div>
+            </div><div class="panel panel-default">
+                <div class="panel-heading ">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        </a><div class="panel-title" style="display: block;"><a class="sampleCodeCollapse in" data-parent="#accordion"></a><a href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/rail-station/%7Bid%7D">Rail-Station Information</a></div>
+                    
+                </div>
+            </div></div>
+                    </div>
+                </div>
+            </div><div class="panel panel-default">
+                <div class="panel-heading">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        <div class="panel-title level2" style="display: block;">Travel Record API</div>
+                    </a>
+                    <div id="sampleCodeCollapseDiv" class="panel-collapse collapse in">
+                        <div class="views-field views-field-nothing"><div class="panel panel-default">
+                <div class="panel-heading ">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        </a><div class="panel-title" style="display: block;"><a class="sampleCodeCollapse in" data-parent="#accordion"></a><a href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/travel-record/%7Brecord_locator%7D">Travel Record Retrieve</a></div>
+                    
+                </div>
+            </div></div>
+                    </div>
+                </div>
+            </div><div class="panel panel-default">
+                <div class="panel-heading">
+                    <a class="sampleCodeCollapse  in" data-parent="#accordion">
+                        <div class="panel-title level2" style="display: block;">Travel Intelligence APIs</div>
+                    </a>
+                    <div id="sampleCodeCollapseDiv" class="panel-collapse collapse  in">
+                        <div class="views-field views-field-nothing"><div class="panel panel-default">
+                <div class="panel-heading ">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        </a><div class="panel-title" style="display: block;"><a class="sampleCodeCollapse in" data-parent="#accordion"></a><a href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/travel-intelligence/top-destinations">Top Flight Destinations</a></div>
+                    
+                </div>
+            </div><div class="panel panel-default">
+                <div class="panel-heading ">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        </a><div class="panel-title" style="display: block;"><a class="sampleCodeCollapse in" data-parent="#accordion"></a><a href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/travel-intelligence/top-searches">Top Flight Searches</a></div>
+                    
+                </div>
+            </div><div class="panel panel-default">
+                <div class="panel-heading ">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        </a><div class="panel-title" style="display: block;"><a class="sampleCodeCollapse in" data-parent="#accordion"></a><a href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/travel-intelligence/flight-traffic">Flight Traffic API</a></div>
+                    
+                </div>
+            </div></div>
+                    </div>
+                </div>
+            </div><div class="panel panel-default">
+                <div class="panel-heading">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        <div class="panel-title level2" style="display: block;">Point of Interest APIs</div>
+                    </a>
+                    <div id="sampleCodeCollapseDiv" class="panel-collapse collapse in">
+                        <div class="views-field views-field-nothing"><div class="panel panel-default">
+                <div class="panel-heading ">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        </a><div class="panel-title" style="display: block;"><a class="sampleCodeCollapse in" data-parent="#accordion"></a><a href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/points-of-interest/yapq-search-text">YapQ City Name Search</a></div>
+                    
+                </div>
+            </div><div class="panel panel-default">
+                <div class="panel-heading ">
+                    <a class="sampleCodeCollapse in" data-parent="#accordion">
+                        </a><div class="panel-title" style="display: block;"><a class="sampleCodeCollapse in" data-parent="#accordion"></a><a href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/points-of-interest/yapq-search-circle">YapQ Geosearch</a></div>
+                    
+                </div>
+            </div></div>
+                    </div>
+                </div>
+            </div></div></div></li>
+</ul></div>
+
+</section> <!-- /.block -->
+  </div>
+          </aside>  <!-- /#sidebar-first -->
+        
+        <!-- make SmartDocs section wider, it defaults to col-sm-6 -->
+        
+        <section class="col-sm-7">
+                                                    
+            <div class="region region-content">
+    <section id="block-system-main" class="block block-system clearfix">
+
+      
+  <div id="node-1297" class="node node-smart-method clearfix" about="/travel-innovation-sandbox/apis/get/cars/search-airport" typeof="sioc:Item foaf:Document">
+
+  
+      <span property="dc:title" content="Car Rental Airport Search" class="rdf-meta element-hidden" data-original-title="" title=""></span>
+  <div class="content">
+    <div class="row">
+<style>
+    body section.page-header {
+        display:none;
+
+    }
+
+    .CodeMirror {
+        min-height:150px;
+    }
+
+    .CodeMirror-scroll {
+        padding:0;
+    }
+
+    /* Responsiveness */
+    @media(max-width:767px) {
+
+    }
+
+    @media(min-width:768px) {
+
+    }
+
+    @media(min-width:992px) {
+
+    }
+
+    @media(min-width:1200px) {
+
+    }
+
+    @media(min-width:1400px) {
+
+    }
+</style>
+<!-- Main content -->
+<div class="col-sm-9" id="method_content" style="display: block;">
+<div class="col-sm-12">
+<!-- Error container -->
+<div data-role="error_container" style="display: none;"></div>
+
+<!-- Inline edit Organization admin credential section -->
+<div class="admin_auth_section hide">
+    <a class="set_admin_credentials hide" href="javascript:void(0)" title="set admin credentials.">Set Admin Credentials...</a>
+    <a class="auth_admin_email" title="reset admin credentials." href="javascript:void(0)"></a>
+    <i title="Clear admin credentials." class="icon-remove"></i>
+</div>
+<div>
+    <!-- Resource summary - name, description and resource URL section -->
+    <div class="resource_details">
+        <span id="method_name" data-role="method-name" class="hide" data-original-title="" title="">Car Rental Airport Search</span>
+        <div class="title_container">
+            <div class="verb_container">
+                <p class="verb get" data-role="verb">get</p>
+                
+            </div>
+            <h2 data-role="method-title" data-allow-edit="true">Car Rental Airport Search</h2>
+        </div>
+        <div class="description_and_url_container">
+            <div class="description_container">
+                <div class="resource_description" data-allow-edit="true" data-role="method-description"><p>With this API you can find out the price and type of car, for all car rental providers, near a specified airport.</p>
+
+<p>You can quickly see the locations of car providers near a given airport, and what cars are available to rent, and at what prices. This API is based on our car pricing service that gets live availability from car providers, and is used to power a variety of airline and travel agency websites.</p>
+           
+<p>Results are validated from car providers, and thus response times may take up to 10 seconds (response times are typically about 5s), and the number of concurrent calls is throttled per user to avoid flooding our provider's systems. However, this means the final result is guaranteed to be live and accurate.</p>
+
+<p>The configuration of this API allows search for car rentals in the rental location where the car is picked up (at the start of the rental), is the same as the one where it will be dropped off.</p>
+</div>
+            </div>
+            <h3>Resource URL</h3>
+            <div class="url_container">
+                <p data-role="method_url_container"><span data-role="host" data-original-title="" title="">https://api.sandbox.amadeus.com/v1.2</span><span data-role="path" data-original-title="" title="">/cars/search-airport</span></p>
+            </div>
+        </div>
+    </div><!--/.resource_details -->
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <div>
+            
+            <h3>Query Parameters</h3>
+            <hr>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th class="col-sm-2">Name</th>
+                        <th class="col-sm-3">Values</th>
+                        <th class="col-sm-7">Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    
+                    <tr data-role="query-param-list" data-scope="method">
+                        <td>
+                            <span data-role="name" data-original-title="" title="">apikey</span>
+                            
+                            <br><span class="required" data-role="required" data-original-title="" title="">(required)</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <input type="text" class="form-control" data-role="value" value="" data-original-value="log in to retrieve API key">
+                            
+                        </td>
+                        <td>
+                            <p data-role="description" data-allow-edit="true">API Key provided for your account, to identify you for API access. Make sure to keep this API key secret.</p>
+                        </td>
+                    </tr>
+                    
+                    <tr data-role="query-param-list" data-scope="method">
+                        <td>
+                            <span data-role="name" data-original-title="" title="">location</span>
+                            
+                            <br><span class="required" data-role="required" data-original-title="" title="">(required)</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <input type="text" class="form-control" data-role="value" value="NCE" data-original-value="NCE">
+                            
+                        </td>
+                        <td>
+                            <p data-role="description" data-allow-edit="true">The <a href="https://en.wikipedia.org/wiki/International_Air_Transport_Association_airport_code">IATA code</a> of the airport at which the car will be rented.</p>
+                        </td>
+                    </tr>
+                    
+                    <tr data-role="query-param-list" data-scope="method">
+                        <td>
+                            <span data-role="name" data-original-title="" title="">pick_up</span>
+                            
+                            <br><span class="required" data-role="required" data-original-title="" title="">(required)</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <input type="text" class="form-control" data-role="value" value="2016-06-04" data-original-value="2016-06-04">
+                            
+                        </td>
+                        <td>
+                            <p data-role="description" data-allow-edit="true">Date on which the car rental will be collected from the car rental location. If no time is provided, a default value of 09:00 is used. Past availability is not displayed, future availability becomes less useful from about 6 months from the current date.</p>
+                        </td>
+                    </tr>
+                    
+                    <tr data-role="query-param-list" data-scope="method">
+                        <td>
+                            <span data-role="name" data-original-title="" title="">drop_off</span>
+                            
+                            <br><span class="required" data-role="required" data-original-title="" title="">(required)</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <input type="text" class="form-control" data-role="value" value="2016-06-08" data-original-value="2016-06-08">
+                            
+                        </td>
+                        <td>
+                            <p data-role="description" data-allow-edit="true">Date at which the car rental will end and the car will be returned to the rental location. If no time is provided, a default value of 17:00 is used.</p>
+                        </td>
+                    </tr>
+                    
+                    <tr data-role="query-param-list" data-scope="method">
+                        <td>
+                            <span data-role="name" data-original-title="" title="">lang</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <input type="text" class="form-control" data-role="value" placeholder="EN" value="" data-original-value="">
+                            
+                        </td>
+                        <td>
+                            <p data-role="description" data-allow-edit="true">The preferred language of the content related to each car rental. Content will be returned in this language if available.</p>
+                        </td>
+                    </tr>
+                    
+                    <tr data-role="query-param-list" data-scope="method">
+                        <td>
+                            <span data-role="name" data-original-title="" title="">currency</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <input type="text" class="form-control" data-role="value" placeholder="USD" value="" data-original-value="">
+                            
+                        </td>
+                        <td>
+                            <p data-role="description" data-allow-edit="true">The preferred <a href="https://en.wikipedia.org/wiki/ISO_4217">currency</a> to use when displaying prices and rates related to the car rental.</p>
+                        </td>
+                    </tr>
+                    
+                    <tr data-role="query-param-list" data-scope="method">
+                        <td>
+                            <span data-role="name" data-original-title="" title="">provider</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <input type="text" class="form-control" data-role="value" placeholder="ZI" value="" data-original-value="">
+                            
+                        </td>
+                        <td>
+                            <p data-role="description" data-allow-edit="true">2 character car rental provider code. You may provide this parameter more than once. </p>
+                        </td>
+                    </tr>
+                    
+                    <tr data-role="query-param-list" data-scope="method">
+                        <td>
+                            <span data-role="name" data-original-title="" title="">rate_class</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <input type="text" class="form-control" data-role="value" placeholder="ALL" value="" data-original-value="">
+                            
+                        </td>
+                        <td>
+                            <p data-role="description" data-allow-edit="true">Allows to request specific rate types.</p>
+                        </td>
+                    </tr>
+                    
+                    <tr data-role="query-param-list" data-scope="method">
+                        <td>
+                            <span data-role="name" data-original-title="" title="">rate_plan</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <input type="text" class="form-control" data-role="value" placeholder="DAILY" value="" data-original-value="">
+                            
+                        </td>
+                        <td>
+                            <p data-role="description" data-allow-edit="true">Qualifies the rate depending on the pickup date and the rental duration.</p>
+                        </td>
+                    </tr>
+                    
+                    <tr data-role="query-param-list" data-scope="method">
+                        <td>
+                            <span data-role="name" data-original-title="" title="">rate_filter</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <input type="text" class="form-control" data-role="value" placeholder="ESTIMATED" value="" data-original-value="">
+                            
+                        </td>
+                        <td>
+                            <p data-role="description" data-allow-edit="true">Defines the types of rates to be returned in the output</p>
+                        </td>
+                    </tr>
+                    
+                    <tr data-role="query-param-list" data-scope="method">
+                        <td>
+                            <span data-role="name" data-original-title="" title="">vehicle</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <input type="text" class="form-control" data-role="value" placeholder="" value="" data-original-value="">
+                            
+                        </td>
+                        <td>
+                            <p data-role="description" data-allow-edit="true">Specifies the type of vehicle to be rented. If selected, the results set will include only vehicles that match these type descriptions. The enumerations above correspond to ACRISS Pseudo Codes, and you may also provide an ACRISS pseudo code directly. If specifying a vehicle-specific ACRISS code, you may provide this parameter up to 3 times.</p>
+                        </td>
+                    </tr>
+                    
+                    </tbody>
+                </table>
+            </div>
+            <hr>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Request payload section -->
+
+
+
+<div class="operation_container">
+    <button id="send_request">Send this request<br><span data-original-title="" title="">using the values above</span>
+    </button>
+</div>
+<!-- Request and response tab section -->
+<div class="request_response_tabs">
+    <a href="javascript:void(0)" id="link_request_tab" data-role="request-link">Request</a>
+    <a href="javascript:void(0)" id="link_response_tab" data-role="response-link" class="selected">Response</a>
+    <a href="javascript:void(0)" id="link_curl_tab" data-role="curl-link">cURL</a>
+</div>
+<!-- Request and response container -->
+<div id="request_response_container">
+    <div class="response" data-role="response-container">
+        <p>Make a request and see the response.</p>
+    </div>
+    <div class="request" data-role="request-container">
+        <p>Make a request and see the response.</p>
+    </div>
+    <div class="curl" data-role="curl-container">
+        <p>Make a request and see the response.</p>
+    </div>
+</div>
+
+
+
+
+</div><!--/.col-sm-12 -->
+</div>
+<div id="working_alert" style="left: 735.5px;">
+    <p>Working...</p>
+</div>
+<!-- Confirm the changes modal -->
+<div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" id="modal_container" data-role="confirm_modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close button_close_modal" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 class="modal-title">Warning</h3>
+            </div>
+            <div class="modal-body">
+                <div class="content">
+                    <p>Your changes have not been saved.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-primary button_save_modal" href="javascript:void(0)">Save</a>
+                <a class="button_close_modal" href="javascript:void(0)">Discard</a>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<script type="text/javascript">
+    var Apigee = Apigee || {}; // Look for a namespace 'Apigee', if it is not there, creates an empty one.
+    Apigee.APIModel = Apigee.APIModel || {}; // Look for a namespace 'APIModel' under 'Apigee', if it is not there, creates an empty one.
+    Apigee.APIModel.apiName = "travel-innovation-sandbox";
+    Apigee.APIModel.revisionNumber = "16";
+    Apigee.APIModel.organizationName = "amadeus-sandbox";
+    Apigee.APIModel.resourceId = "a3a59814-d434-41d5-bbbd-47294a42f68b";
+    Apigee.APIModel.methodId = "daaeab2a-982a-4be3-bd96-3bd59066e3be";
+    Apigee.APIModel.methodType = "details";
+    Apigee.APIModel.apiKey = "";
+    Apigee.APIModel.location = ""; // will be 'header' or 'query'
+    Apigee.APIModel.templateAuthName = "";
+    var model = {"methods":[],"apiId":"e77757a0-386c-403e-8d8a-710cd94a4a22","body":{"schema":null,"accept":null,"doc":null,"attachments":[],"contentType":null,"parameters":[],"sample":null},"resources":[],"isLatest":null,"resourceSchema":null,"organizationName":"amadeus-sandbox","apiSchema":{"schemaUrl":null,"docUrl":null,"doc":null,"schemaNames":[],"expandedSchema":"{\"CarReservation\":{\n  \"required\" : [ \"car\", \"drop_off\", \"id\", \"origin\", \"pick_up\", \"provider\" ],\n  \"properties\" : {\n    \"id\" : {\n      \"type\" : \"string\",\n      \"description\" : \"Uniquely identifies this car rental reservation in this travel record. This ID is persistent, and remains the same for the lifetime of the travel record.\"\n    },\n    \"pick_up\" : {\n      \"type\" : \"string\",\n      \"description\" : \"Date on which the car rental will be collected from the car rental location. <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/ISO_8601\\\">ISO 8601<\/a> date format yyyy-MM-ddTHH.\"\n    },\n    \"drop_off\" : {\n      \"type\" : \"string\",\n      \"description\" : \"Date at which the car rental will end and the car will be returned to the rental location. <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/ISO_8601\\\">ISO 8601<\/a> date format yyyy-MM-ddTHH.\"\n    },\n    \"provider\" : {\n      \"description\" : \"Details of the car company offering this rental.\",\n      \"$ref\" : \"#\/definitions\/Company\"\n    },\n    \"origin\" : {\n      \"type\" : \"string\",\n      \"description\" : \"This car rental company office location ID. If this is an airport location, this will be the airport's <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/International_Air_Transport_Association_airport_code\\\">IATA code<\/a>. Otherwise, this is a custom value provided by the car rental provider.\"\n    },\n    \"car\" : {\n      \"description\" : \"A car information object giving further details about the vehicle provided for rental.\",\n      \"$ref\" : \"#\/definitions\/Vehicle\"\n    },\n    \"traveler_ids\" : {\n      \"type\" : \"array\",\n      \"description\" : \"Traveler identifiers to indicate the travelers to whom this car rental applies. Generally, only drivers of the vehicle will be marked in this array.\",\n      \"items\" : {\n        \"type\" : \"string\"\n      }\n    },\n    \"booking_info\" : {\n      \"description\" : \"Additional details the status of this car rental reservation.\",\n      \"$ref\" : \"#\/definitions\/CarReservationBookingInfo\"\n    }\n  }\n},\"TopSearchesSearchResponse\":{\n  \"required\" : [ \"destination\", \"market\", \"origin\", \"period\", \"results\" ],\n  \"properties\" : {\n    \"market\" : {\n      \"type\" : \"string\",\n      \"description\" : \"Country code\"\n    },\n    \"period\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The date period, in <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/ISO_8601\\\">ISO 8601<\/a> date format YYYY-MM or YYYY\"\n    },\n    \"origin\" : {\n      \"type\" : \"string\",\n      \"description\" : \"<a href=\\\"https:\/\/en.wikipedia.org\/wiki\/International_Air_Transport_Association_airport_code\\\">IATA code<\/a>\"\n    },\n    \"destination\" : {\n      \"type\" : \"string\",\n      \"description\" : \"<a href=\\\"https:\/\/en.wikipedia.org\/wiki\/International_Air_Transport_Association_airport_code\\\">IATA code<\/a>\"\n    },\n    \"results\" : {\n      \"type\" : \"array\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/TopSearchesSearchResult\"\n      }\n    }\n  }\n},\"FlightTicket\":{\n  \"required\" : [ \"flight_bounds\", \"id\", \"price\", \"traveler_ids\" ],\n  \"properties\" : {\n    \"id\" : {\n      \"type\" : \"string\",\n      \"description\" : \"Uniquely identifies this ticket in this travel record. This ID is persistent, and remains the same for the lifetime of the travel record.\"\n    },\n    \"price\" : {\n      \"description\" : \"The cost of this ticket.\",\n      \"$ref\" : \"#\/definitions\/Amount\"\n    },\n    \"traveler_ids\" : {\n      \"type\" : \"array\",\n      \"description\" : \"Traveler identifiers to indicate the travelers to whom this ticket applies.\",\n      \"items\" : {\n        \"type\" : \"string\"\n      }\n    },\n    \"flight_bounds\" : {\n      \"type\" : \"array\",\n      \"description\" : \"The flight itinerary for this ticket.\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/FlightReservationBound\"\n      }\n    }\n  },\n  \"description\" : \"The flight itineraries with a ticket or transitional stored ticket (TST) in this reservation, and their prices.\"\n},\"Amenity\":{\n  \"properties\" : {\n    \"amenity\" : {\n      \"type\" : \"string\",\n      \"description\" : \"<a href=\\\"hotels-api-supported-amenities-filter\\\">The amenity code<\/a>\"\n    },\n    \"ota_code\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The <a href=\\\"http:\/\/www.opentravel.org\/\\\">Open Travel Alliance<\/a> <a href=\\\"ota-hotel-amenity-code-table\\\">Hotel Amenities Code<\/a> for this amenity.\"\n    },\n    \"description\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The decoded text description for this amenity code, where available.\"\n    }\n  }\n},\"FlightTrafficSearchResult\":{\n  \"required\" : [ \"destination\", \"flights\", \"travelers\" ],\n  \"properties\" : {\n    \"destination\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/International_Air_Transport_Association_airport_code\\\">IATA code<\/a> of the city or airport to which the traveler may go, from the provided origin\"\n    },\n    \"flights\" : {\n      \"type\" : \"integer\",\n      \"format\" : \"int32\",\n      \"description\" : \"Number of flights from origin to destination during the search period provided\"\n    },\n    \"travelers\" : {\n      \"type\" : \"integer\",\n      \"format\" : \"int32\",\n      \"description\" : \"Number of passengers from origin to destination during the search period provided\"\n    }\n  }\n},\"FlightSearchSegment\":{\n  \"required\" : [ \"arrives_at\", \"booking_info\", \"departs_at\", \"destination\", \"flight_number\", \"marketing_airline\", \"operating_airline\", \"origin\" ],\n  \"properties\" : {\n    \"departs_at\" : {\n      \"type\" : \"string\",\n      \"description\" : \"Date and time of departure at the origin, in <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/ISO_8601\\\">ISO 8601<\/a>  date format yyyy-MM-ddTHH:mm in the local time at the origin airport\"\n    },\n    \"arrives_at\" : {\n      \"type\" : \"string\",\n      \"description\" : \"Date and time of departure at the destination, in <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/ISO_8601\\\">ISO 8601<\/a>  date format yyyy-MM-ddTHH:mm in the local time at the destination airport\"\n    },\n    \"origin\" : {\n      \"description\" : \"Information on the origin airport, from which this flight departs\",\n      \"$ref\" : \"#\/definitions\/Airport\"\n    },\n    \"destination\" : {\n      \"description\" : \"Information on the destination airport, at which this flight arrives\",\n      \"$ref\" : \"#\/definitions\/Airport\"\n    },\n    \"marketing_airline\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The 2 character alphanumeric <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/Airline_codes\\\">IATA airline code<\/a> of the airline that is responsible for the traveller this flight\"\n    },\n    \"operating_airline\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The 2 character alphanumeric <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/Airline_codes\\\">IATA airline code<\/a> of the airline that is providing the aircraft for this flight. Note that in the USA, if the marketing and operating carrier are different, you are legally required to display this in your application.\"\n    },\n    \"flight_number\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The identifier that the airline uses for this flight route. This is most commonly - but not always - a number. When combined with the airline and date, it identifies an individual aircraft's flight\"\n    },\n    \"aircraft\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The <a href=\\\"http:\/\/www.jacanaent.com\/JacTechLib\/07Aviation\/AircraftTypeCodes.txt\\\">IATA aircraft type designator<\/a> of aircraft that will be used for this flight\"\n    },\n    \"booking_info\" : {\n      \"description\" : \"A booking information object with additional details about how the quality of this flight at the given price.\",\n      \"$ref\" : \"#\/definitions\/FlightSearchBookingInfo\"\n    }\n  }\n},\"TopDestinationsSearchResponse\":{\n  \"required\" : [ \"origin\", \"period\", \"results\" ],\n  \"properties\" : {\n    \"period\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The date period, in <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/ISO_8601\\\">ISO 8601<\/a> date format YYYY-MM or YYYY\"\n    },\n    \"origin\" : {\n      \"type\" : \"string\",\n      \"description\" : \"<a href=\\\"https:\/\/en.wikipedia.org\/wiki\/International_Air_Transport_Association_airport_code\\\">IATA code<\/a>\"\n    },\n    \"results\" : {\n      \"type\" : \"array\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/TopDestinationsSearchResult\"\n      }\n    }\n  }\n},\"PeriodRate\":{\n  \"required\" : [ \"amount\", \"currency\", \"end_date\", \"start_date\" ],\n  \"properties\" : {\n    \"start_date\" : {\n      \"type\" : \"string\",\n      \"format\" : \"date\",\n      \"description\" : \"The start date of this rate, in <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/ISO_8601\\\">ISO 8601<\/a> date format yyyy-MM-dd.\"\n    },\n    \"end_date\" : {\n      \"type\" : \"string\",\n      \"format\" : \"date\",\n      \"description\" : \"The date on which this rate ends, in <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/ISO_8601\\\">ISO 8601<\/a> date format yyyy-MM-dd.\"\n    },\n    \"currency\" : {\n      \"type\" : \"string\",\n      \"description\" : \"<a href=\\\"http:\/\/en.wikipedia.org\/wiki\/ISO_4217\\\">ISO 4217<\/a> currency code of this rate.\"\n    },\n    \"amount\" : {\n      \"type\" : \"number\",\n      \"description\" : \"Total amount in the given currency per day of this rate, formatted appropriately. For example&colon; 194.99.\"\n    }\n  }\n},\"PointsOfInterestResponse\":{\n  \"required\" : [ \"current_city\" ],\n  \"properties\" : {\n    \"current_city\" : {\n      \"$ref\" : \"#\/definitions\/PointOfInterestCity\"\n    },\n    \"points_of_interest\" : {\n      \"type\" : \"array\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/PointOfInterestResult\"\n      }\n    }\n  }\n},\"RailStationResponse\":{\n  \"required\" : [ \"country\", \"id\", \"location\", \"name\", \"short_name\", \"traffic\", \"type\" ],\n  \"properties\" : {\n    \"id\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The ID of this station, as provided in the request\"\n    },\n    \"type\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The type of code to which this station refers. Some codes represent agglomeration of multiple stations, whereas others represent an individual station. Possible values are AGGLOMERATION and STATION.\"\n    },\n    \"name\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The name of this station.\"\n    },\n    \"short_name\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The shortened name of this station (20 characters max) which may be used in certain cases.\"\n    },\n    \"country\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The <a href=\\\"http:\/\/en.wikipedia.org\/wiki\/ISO_3166-1_alpha-2\\\">ISO 3166-1 alpha-2 country code<\/a> in which this station can be found.\"\n    },\n    \"location\" : {\n      \"description\" : \"This stations's approximate geolocation. \",\n      \"$ref\" : \"#\/definitions\/Geolocation\"\n    },\n    \"traffic\" : {\n      \"type\" : \"string\",\n      \"description\" : \"An indication of the level of Intercity traffic passing through this station.\"\n    }\n  }\n},\"TrainScheduleSearchResult\":{\n  \"required\" : [ \"date\", \"origin_station_id\", \"services\" ],\n  \"properties\" : {\n    \"origin_station_id\" : {\n      \"type\" : \"string\",\n      \"description\" : \"Station ID of the origin station for this search.\"\n    },\n    \"date\" : {\n      \"type\" : \"string\",\n      \"format\" : \"date\",\n      \"description\" : \"The search date provided in the input.\"\n    },\n    \"services\" : {\n      \"type\" : \"array\",\n      \"description\" : \"Array to describe service to the destinations.\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/RailService\"\n      }\n    }\n  }\n},\"LocationResponse\":{\n  \"properties\" : {\n    \"city\" : {\n      \"description\" : \"Information for any <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/International_Air_Transport_Association_airport_code\\\">IATA code<\/a> of the city which corresponds to the provided code\",\n      \"$ref\" : \"#\/definitions\/CityInformation\"\n    },\n    \"airports\" : {\n      \"type\" : \"array\",\n      \"description\" : \"Information for any IATA airport located in the provided <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/International_Air_Transport_Association_airport_code\\\">IATA code<\/a> of the city or which corresponds to the provided code\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/AirportInformation\"\n      }\n    }\n  }\n},\"TrainSearchSegment\":{\n  \"required\" : [ \"arrival_station\", \"arrives_at\", \"departs_at\", \"departure_station\", \"marketing_company\", \"operating_company\", \"prices\", \"train_number\" ],\n  \"properties\" : {\n    \"departs_at\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/ISO_8601\\\">ISO 8601<\/a> date-time of the train's departure in the local time zone of the departure station, in the format YYYY-MM-DDTHH:mm.\"\n    },\n    \"arrives_at\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/ISO_8601\\\">ISO 8601<\/a> date-time of the train's arrival in the local time zone of the arrival station, in the format YYYY-MM-DDTHH:mm.\"\n    },\n    \"departure_station\" : {\n      \"description\" : \"The station object representing the station at which the passenger should board this train in order to complete this part of the itinerary.\",\n      \"$ref\" : \"#\/definitions\/Station\"\n    },\n    \"arrival_station\" : {\n      \"description\" : \"The station object representing the station at which the passenger should disembark this train in order to complete this part of the itinerary.\",\n      \"$ref\" : \"#\/definitions\/Airport\"\n    },\n    \"marketing_company\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The name of the train company selling this train journey. This is the name you should see printed on your ticket.\"\n    },\n    \"operating_company\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The name of the train company operating this train journey. This is the name you should see written on the train.\"\n    },\n    \"train_number\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The identifying number of this train service. Usually the marketing company will only operate on train per day with this train number.\"\n    },\n    \"train_type\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The type of train that you may expect for this journey. For example&colon; InterCity, Regional...\"\n    },\n    \"prices\" : {\n      \"type\" : \"array\",\n      \"description\" : \"Possible pricing for this train journey.\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/TrainSearchPricing\"\n      }\n    }\n  }\n},\"ExtensiveTrainSearchResult\":{\n  \"required\" : [ \"destination\", \"itineraries\", \"origin\" ],\n  \"properties\" : {\n    \"origin\" : {\n      \"description\" : \"Station object with details about the origin station for this search.\",\n      \"$ref\" : \"#\/definitions\/Station\"\n    },\n    \"destination\" : {\n      \"description\" : \"Station object with details about the destination station for this search.\",\n      \"$ref\" : \"#\/definitions\/Station\"\n    },\n    \"itineraries\" : {\n      \"type\" : \"array\",\n      \"description\" : \"Routes from the origin to the destination.\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/TrainSearchItinerary\"\n      }\n    }\n  }\n},\"Logos\":{\n  \"properties\" : {\n    \"small\" : {\n      \"type\" : \"string\",\n      \"description\" : \"URL to logo of resolution 27x27px\"\n    },\n    \"medium\" : {\n      \"type\" : \"string\",\n      \"description\" : \"URL to logo of resolution 60x60px\"\n    }\n  }\n},\"RailService\":{\n  \"required\" : [ \"destination_station_id\", \"services\" ],\n  \"properties\" : {\n    \"destination_station_id\" : {\n      \"type\" : \"string\",\n      \"description\" : \"ID of the destination rail station.\"\n    },\n    \"services\" : {\n      \"type\" : \"array\",\n      \"description\" : \"An array of departure times at which trains depart from the origin station to this destination station. Times are in the ISO 8601 YYYY-MM-DDTHH:mm format.\",\n      \"items\" : {\n        \"type\" : \"string\"\n      }\n    }\n  }\n},\"CityInformation\":{\n  \"required\" : [ \"code\", \"country\", \"geonames_ID\", \"location\", \"name\", \"timezone\" ],\n  \"properties\" : {\n    \"code\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/International_Air_Transport_Association_airport_code\\\">IATA code<\/a> of this city. If you intend to make a flight search from the output of this call, I recommend using this as your input parameter as it generally gives the best results.\"\n    },\n    \"geonames_ID\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The ID of this city in the open-sourced Geonames DB\"\n    },\n    \"name\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The name of this city, in English\"\n    },\n    \"state\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The state code of this city, if applicable\"\n    },\n    \"country\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The <a href=\\\"http:\/\/en.wikipedia.org\/wiki\/ISO_3166-1_alpha-2\\\">ISO 3166-1 alpha-2 country code<\/a> in which this city can be found.\"\n    },\n    \"location\" : {\n      \"description\" : \"This city's approximate geolocation. The exact center of a city is often not an exact location, so be aware that this might not be exact.\",\n      \"$ref\" : \"#\/definitions\/Geolocation\"\n    },\n    \"timezone\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The <a href=\\\"http:\/\/en.wikipedia.org\/wiki\/List_of_tz_database_time_zones\\\">Olson format<\/a> name of the timezone in which this city is located\"\n    }\n  }\n},\"ExtensiveTrainSearchResponse\":{\n  \"properties\" : {\n    \"results\" : {\n      \"type\" : \"array\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/ExtensiveTrainSearchResult\"\n      }\n    }\n  }\n},\"OtherReservation\":{\n  \"required\" : [ \"booking_info\", \"date\", \"id\", \"location\", \"traveler_ids\" ],\n  \"properties\" : {\n    \"id\" : {\n      \"type\" : \"string\",\n      \"description\" : \"Uniquely identifies this other reservation in this travel record. This ID is persistent, and remains the same for the lifetime of the travel record.\"\n    },\n    \"date\" : {\n      \"type\" : \"string\",\n      \"format\" : \"date\",\n      \"description\" : \"Date on which this other reservation will begin, in the <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/ISO_8601\\\">ISO 8601<\/a> date format yyyy-MM-dd.\"\n    },\n    \"location\" : {\n      \"type\" : \"string\",\n      \"description\" : \"A 3 letter <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/International_Air_Transport_Association_airport_code\\\">IATA code<\/a> that identifies where this other reservation will occur.\"\n    },\n    \"description\" : {\n      \"type\" : \"string\",\n      \"description\" : \"A free-text description of this reservation, that will inform you of its functional meaning.\"\n    },\n    \"traveler_ids\" : {\n      \"type\" : \"array\",\n      \"description\" : \"Traveler identifiers to indicate the travelers to whom this reservation applies.\",\n      \"items\" : {\n        \"type\" : \"string\"\n      }\n    },\n    \"booking_info\" : {\n      \"description\" : \"The status of this reservation.\",\n      \"$ref\" : \"#\/definitions\/OtherReservationBookingInfo\"\n    }\n  }\n},\"AirportInformation\":{\n  \"required\" : [ \"city_code\", \"city_name\", \"code\", \"country\", \"location\", \"name\", \"timezone\" ],\n  \"properties\" : {\n    \"code\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The 3 letter IATA airport code of this given airport. You can use this as an input parameter for a low-fare flight search, to get more specific results than the city code, but inspiration search works best using the city code.\"\n    },\n    \"name\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The name of this airport, in UTF-8 format\"\n    },\n    \"city_code\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The three letter <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/International_Air_Transport_Association_airport_code\\\">IATA code<\/a> of the city of the city in which this airport is located.\"\n    },\n    \"city_name\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The English name of the city in which this airport is located\"\n    },\n    \"state\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The state code of this city, if applicable\"\n    },\n    \"country\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The <a href=\\\"http:\/\/en.wikipedia.org\/wiki\/ISO_3166-1_alpha-2\\\">ISO 3166-1 alpha-2 country code<\/a> in which this city can be found.\"\n    },\n    \"location\" : {\n      \"description\" : \"  An object containing the longitude and latitude of the given airport.\",\n      \"$ref\" : \"#\/definitions\/Geolocation\"\n    },\n    \"aircraft_movements\" : {\n      \"type\" : \"integer\",\n      \"format\" : \"int32\",\n      \"description\" : \"The annual number of aircraft movements at that airport.\"\n    },\n    \"timezone\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The <a href=\\\"http:\/\/en.wikipedia.org\/wiki\/List_of_tz_database_time_zones\\\">Olson format<\/a> name of the timezone in which this airport is located\"\n    }\n  }\n},\"Vehicle\":{\n  \"required\" : [ \"vehicle_info\" ],\n  \"properties\" : {\n    \"vehicle_info\" : {\n      \"description\" : \"More information about the type of vehicle on offer.\",\n      \"$ref\" : \"#\/definitions\/VehicleInfo\"\n    },\n    \"rates\" : {\n      \"description\" : \"Rates that will be applied during the duration of the car rental requested. These rates are generally not inclusive of tax and are used by the car rental company to compute the total cost at the end of the rental period.\",\n      \"$ref\" : \"#\/definitions\/Rate\"\n    },\n    \"estimated_total\" : {\n      \"description\" : \"The estimated total cost of the rental given the rental period and location provided, including all mandatory taxes and charges, and using a default set of rental options and restrictions defined by the car company.\",\n      \"$ref\" : \"#\/definitions\/Amount\"\n    },\n    \"image\" : {\n      \"description\" : \"An image to give an indication of what to expect when renting this vehicle.\",\n      \"$ref\" : \"#\/definitions\/Image\"\n    }\n  }\n},\"AffiliateFlightSearchPrice\":{\n  \"required\" : [ \"currency\", \"price_per_adult\", \"restrictions\", \"total_price\" ],\n  \"properties\" : {\n    \"currency\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/ISO_4217\\\">currency<\/a> code applicable to this fare\"\n    },\n    \"total_price\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The total price for all the requested passengers for this flight\"\n    },\n    \"price_per_adult\" : {\n      \"description\" : \"The per-passenger fare for each adult on this flight\",\n      \"$ref\" : \"#\/definitions\/Fare\"\n    },\n    \"price_per_child\" : {\n      \"description\" : \"The per-passenger fare for each child on this flight\",\n      \"$ref\" : \"#\/definitions\/Fare\"\n    },\n    \"price_per_infant\" : {\n      \"description\" : \"The per-passenger fare for each infant on this flight\",\n      \"$ref\" : \"#\/definitions\/Fare\"\n    },\n    \"restrictions\" : {\n      \"description\" : \"The restrictions associated with this fare\",\n      \"$ref\" : \"#\/definitions\/FareRestrictions\"\n    },\n    \"fees\" : {\n      \"description\" : \"The fees that apply in addition to the total price of this fare\",\n      \"$ref\" : \"#\/definitions\/Fees\"\n    }\n  }\n},\"Fare\":{\n  \"required\" : [ \"tax\", \"total_fare\" ],\n  \"properties\" : {\n    \"total_fare\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The total price, including taxes per-passenger, for this passenger type, for this itinerary. Always a string, formatted correctly for the given currency\"\n    },\n    \"tax\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The tax applied per-passenger, for this passenger type, for this itinerary. Some of this tax may be refundable in the event of cancellation.\"\n    }\n  }\n},\"Amount\":{\n  \"required\" : [ \"amount\", \"currency\" ],\n  \"properties\" : {\n    \"currency\" : {\n      \"type\" : \"string\",\n      \"description\" : \"<a href=\\\"http:\/\/en.wikipedia.org\/wiki\/ISO_4217\\\">ISO 4217<\/a> currency code.\"\n    },\n    \"amount\" : {\n      \"type\" : \"string\",\n      \"description\" : \"Total amount in the given currency, formatted appropriately. For example&colon; 194.99\"\n    }\n  }\n},\"VehicleInfo\":{\n  \"required\" : [ \"acriss_code\", \"category\" ],\n  \"properties\" : {\n    \"acriss_code\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The 4 letter <a href=\\\"http:\/\/en.wikipedia.org\/wiki\/ACRISS_Car_Classification_Code\\\">ACRISS code<\/a> that defines the properties of vehicle being rented.\"\n    },\n    \"category\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The decoded ACRISS vehicle category (For example&colon; Economy, Luxury, Standard).\"\n    },\n    \"type\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The decoded ACRISS vehicle type, to let you know what kind of vehicle this is (For example&colon; Van, SUV, Pickup).\"\n    },\n    \"transmission\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The decoded ACRISS transmission type, to let you know if this vehicle is Automatic or Manual Transmission (stick-shift).\"\n    },\n    \"air_conditioning\" : {\n      \"type\" : \"boolean\",\n      \"description\" : \"The decoded ACRISS air_conditioning information, to let you know if this vehicle has air conditioning\"\n    },\n    \"fuel\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The decoded ACRISS fuel type, to let you know if this vehicle is hybrid, electric, etc.\"\n    }\n  }\n},\"TrainScheduleSearchResponse\":{\n  \"properties\" : {\n    \"results\" : {\n      \"type\" : \"array\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/TrainScheduleSearchResult\"\n      }\n    }\n  }\n},\"CarSearchResponse\":{\n  \"properties\" : {\n    \"results\" : {\n      \"type\" : \"array\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/CarSearchResult\"\n      }\n    }\n  }\n},\"PointOfInterestResult\":{\n  \"required\" : [ \"categories\", \"grades\", \"location\", \"main_image\", \"title\" ],\n  \"properties\" : {\n    \"title\" : {\n      \"type\" : \"string\",\n      \"description\" : \"Display name of a given point of interest\"\n    },\n    \"main_image\" : {\n      \"type\" : \"string\",\n      \"description\" : \"A link to an image of the given location\"\n    },\n    \"location\" : {\n      \"$ref\" : \"#\/definitions\/Geolocation\"\n    },\n    \"grades\" : {\n      \"type\" : \"object\",\n      \"description\" : \"Result availble grades.\"\n    },\n    \"categories\" : {\n      \"type\" : \"array\",\n      \"description\" : \"Array of descriptions indicating what type of point of interest this is. You can filter the results to include only certain categories of point of interest using the category input parameter.\",\n      \"items\" : {\n        \"type\" : \"string\"\n      }\n    },\n    \"details\" : {\n      \"$ref\" : \"#\/definitions\/PointOfInterestDetails\"\n    },\n    \"contextual_images\" : {\n      \"type\" : \"array\",\n      \"description\" : \"Images taken at this point of interest. Note that these images might have nothing to do with the point itself, particularly if you have enabled the social_media parameter\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/ImageSize\"\n      }\n    },\n    \"geoname_id\" : {\n      \"type\" : \"integer\",\n      \"format\" : \"int32\",\n      \"description\" : \"The GeonamesID of this point of interest, if available\"\n    }\n  }\n},\"AffiliateSearchMeta\":{\n  \"required\" : [ \"carriers\" ],\n  \"properties\" : {\n    \"carriers\" : {\n      \"description\" : \"A map of meta information for each of the airlines involved in the response\",\n      \"$ref\" : \"#\/definitions\/CarrierMeta\"\n    }\n  }\n},\"Reservation\":{\n  \"properties\" : {\n    \"flight_tickets\" : {\n      \"$ref\" : \"#\/definitions\/FlightTicket\"\n    },\n    \"unticketed_flights\" : {\n      \"type\" : \"array\",\n      \"description\" : \"The flight itineraries in this reservation that have not yet been ticketed or priced.\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/FlightReservationBound\"\n      }\n    },\n    \"cars\" : {\n      \"type\" : \"array\",\n      \"description\" : \"The rental cars reserved.\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/CarReservation\"\n      }\n    },\n    \"hotels\" : {\n      \"type\" : \"array\",\n      \"description\" : \"The hotel room bookings in this reservation.\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/HotelReservation\"\n      }\n    },\n    \"others\" : {\n      \"type\" : \"array\",\n      \"description\" : \"Free text information to represent other travel items that may be considered part of the travel itinerary in this reservation.\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/OtherReservation\"\n      }\n    }\n  }\n},\"FlightSearchItinerary\":{\n  \"required\" : [ \"outbound\" ],\n  \"properties\" : {\n    \"outbound\" : {\n      \"description\" : \"The bound container for the flight information for bringing the traveler from the origin airport to the destination airport\",\n      \"$ref\" : \"#\/definitions\/FlightSearchBound\"\n    },\n    \"inbound\" : {\n      \"description\" : \"The bound container for the flight information for bringing the traveler from the destination airport to the origin airport\",\n      \"$ref\" : \"#\/definitions\/FlightSearchBound\"\n    }\n  }\n},\"TrainSearchItinerary\":{\n  \"required\" : [ \"trains\" ],\n  \"properties\" : {\n    \"trains\" : {\n      \"type\" : \"array\",\n      \"description\" : \"The array of trains that will be required to complete the given itinerary. Since the cache currently only contains direct itineraries, there will be only one object in this array.\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/TrainSearchSegment\"\n      }\n    }\n  }\n},\"TopSearchesSearchResult\":{\n  \"required\" : [ \"destination\", \"searches\", \"searches_prior_year\" ],\n  \"properties\" : {\n    \"destination\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/International_Air_Transport_Association_airport_code\\\">IATA code<\/a> of the city or airport to which the traveler may go, from the provided origin\"\n    },\n    \"searches\" : {\n      \"type\" : \"integer\",\n      \"format\" : \"int32\",\n      \"description\" : \"Average number of daily searches for the destination during the search period provided\"\n    },\n    \"searches_prior_year\" : {\n      \"type\" : \"integer\",\n      \"format\" : \"int32\",\n      \"description\" : \"Prior year average number of daily searches for the destination during the search period provided\"\n    }\n  }\n},\"TravelRecordResponse\":{\n  \"required\" : [ \"record_locator\" ],\n  \"properties\" : {\n    \"record_locator\" : {\n      \"type\" : \"string\",\n      \"description\" : \"6 character identifier of this travel record on the Amadeus system.\"\n    },\n    \"header\" : {\n      \"description\" : \"Summarized metadata on the record that has been retrieved.\",\n      \"$ref\" : \"#\/definitions\/TravelRecordHeader\"\n    },\n    \"messages\" : {\n      \"type\" : \"array\",\n      \"description\" : \"Functional or technical messages associated with the retrieval of this travel record.\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/Message\"\n      }\n    },\n    \"travelers\" : {\n      \"type\" : \"array\",\n      \"description\" : \"Information about each traveler who may be included as part of this travel record.\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/Traveler\"\n      }\n    },\n    \"reservation\" : {\n      \"description\" : \"Details about the itineraries that have been reserved as part of this travel record.\",\n      \"$ref\" : \"#\/definitions\/Reservation\"\n    }\n  }\n},\"RoomInfo\":{\n  \"required\" : [ \"bed_type\", \"number_of_beds\", \"room_type\" ],\n  \"properties\" : {\n    \"bed_type\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The type of bed or beds in the room, such as Double, or King.\"\n    },\n    \"number_of_beds\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The number of beds in the room. May be an integer or a free-text dessciption, as provided by the hotel\"\n    },\n    \"room_type\" : {\n      \"type\" : \"string\",\n      \"description\" : \"Free-text indicating the type of room - such Smoking, No Smoking, Suite, etc..\"\n    }\n  },\n  \"description\" : \"More detailed structured information about the room.\"\n},\"Award\":{\n  \"required\" : [ \"provider\", \"rating\" ],\n  \"properties\" : {\n    \"provider\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The organization that issued the award. For example&colon;. Local Star Rating, AAA.\"\n    },\n    \"rating\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The level of the award that was awarded on the provider's scale. For example&colon; 4 or RECOMMENDED.\"\n    }\n  }\n},\"PointOfInterestDetails\":{\n  \"required\" : [ \"description\", \"short_description\", \"wiki_page_link\" ],\n  \"properties\" : {\n    \"short_description\" : {\n      \"type\" : \"string\",\n      \"description\" : \"A summary of the given point\"\n    },\n    \"description\" : {\n      \"type\" : \"string\",\n      \"description\" : \"A paragraph describing this point of interest\"\n    },\n    \"wiki_page_link\" : {\n      \"type\" : \"string\",\n      \"description\" : \"A link to this point of interest&quot;s wikipedia page\"\n    }\n  }\n},\"HotelPropertyResponse\":{\n  \"required\" : [ \"location\", \"min_daily_rate\", \"property_code\", \"property_name\", \"total_price\" ],\n  \"properties\" : {\n    \"property_code\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The 8 character property code of this given hotel. The first 2 characters of this code are the chain code that can be specified in the input. The remaining elements are proprietary to each hotel chain.\"\n    },\n    \"property_name\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The name of this hotel.\"\n    },\n    \"location\" : {\n      \"description\" : \"This hotel's approximate geolocation.\",\n      \"$ref\" : \"#\/definitions\/Geolocation\"\n    },\n    \"address\" : {\n      \"description\" : \"This hotel's postal address.\",\n      \"$ref\" : \"#\/definitions\/Address\"\n    },\n    \"total_price\" : {\n      \"description\" : \"The lowest price of a stay, from the given check in date to the given check out date.\",\n      \"$ref\" : \"#\/definitions\/Amount\"\n    },\n    \"min_daily_rate\" : {\n      \"description\" : \"The lowest price per day that the hotel offers between the given check-in and check-out dates. Extra taxes may apply to this rate.\",\n      \"$ref\" : \"#\/definitions\/Amount\"\n    },\n    \"contacts\" : {\n      \"type\" : \"array\",\n      \"description\" : \"An array of contact objects to tell the user how to contact the hotel. Typically includes a phone and fax number\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/Contact\"\n      }\n    },\n    \"amenities\" : {\n      \"type\" : \"array\",\n      \"description\" : \"An array of amenity objects to the user what facilities this hotel might provide, such as a pool or parking. \\nIf this array is empty, it does not necessarily mean that there are no amenities available at this hotel, it could also mean that the hotel does not list their amenities in our search!\\n\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/Amenity\"\n      }\n    },\n    \"awards\" : {\n      \"type\" : \"array\",\n      \"description\" : \"An array of hotel award objects to give the user an expectation of the service quality at this hotel. This can be used to indicate, for example, the star rating of a hotel. If this array is empty, it does not necessarily mean that the hotel has no awards, it could simply mean that they didn't tell us about them!\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/Award\"\n      }\n    },\n    \"images\" : {\n      \"type\" : \"array\",\n      \"description\" : \"A selection of image objects, showing pictures of the hotel building, the entrance or some rooms, to give an indication of what to expect at this hotel.\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/Image\"\n      }\n    },\n    \"rooms\" : {\n      \"type\" : \"array\",\n      \"description\" : \"Information on currently available rooms at this hotel.\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/HotelRoom\"\n      }\n    },\n    \"more_rooms_at_this_hotel\" : {\n      \"description\" : \"Provides a ready-to-use link to make a follow up request to find more available rooms at this hotel\",\n      \"$ref\" : \"#\/definitions\/Link\"\n    }\n  }\n},\"CarReservationBookingInfo\":{\n  \"required\" : [ \"reservation_code\", \"status\" ],\n  \"properties\" : {\n    \"reservation_code\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The identifier of this reservation in the car rental provider's system. This should be provided at the rental office to identify your reservation.\"\n    },\n    \"status\" : {\n      \"type\" : \"string\",\n      \"description\" : \"An enumeration to represent the reservation status for this car rental. For example&colon; CONFIRMED, CANCELLED, REQUESTED, REJECTED, PENDING_CANCELLATION, PENDING_CONFIRMATION.\"\n    }\n  }\n},\"FareRestrictions\":{\n  \"required\" : [ \"change_penalties\", \"refundable\" ],\n  \"properties\" : {\n    \"refundable\" : {\n      \"type\" : \"boolean\",\n      \"description\" : \"Indicates whether this fare is refundable under some circumstances. Note that a refund charge or penalty may apply\"\n    },\n    \"change_penalties\" : {\n      \"type\" : \"boolean\",\n      \"description\" : \"Indicates whether this fare allows the itinerary to be changed under some circumstances. Note that a change fee or penalty may apply\"\n    }\n  }\n},\"OtherReservationBookingInfo\":{\n  \"required\" : [ \"status\" ],\n  \"properties\" : {\n    \"status\" : {\n      \"type\" : \"string\",\n      \"description\" : \"An enumeration to represent the reservation status for this hotel reservation. For example&colon; CONFIRMED, CANCELLED, REQUESTED, REJECTED, PENDING_CANCELLATION, PENDING_CONFIRMATION.\"\n    }\n  }\n},\"HotelSearchResponse\":{\n  \"properties\" : {\n    \"results\" : {\n      \"type\" : \"array\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/HotelPropertyResponse\"\n      }\n    }\n  }\n},\"LowFareSearchResponse\":{\n  \"required\" : [ \"currency\" ],\n  \"properties\" : {\n    \"currency\" : {\n      \"type\" : \"string\",\n      \"description\" : \"<a href=\\\"http:\/\/en.wikipedia.org\/wiki\/ISO_4217\\\">ISO 4217<\/a> currency code.\"\n    },\n    \"results\" : {\n      \"type\" : \"array\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/LowFareSearchResult\"\n      }\n    }\n  }\n},\"AffiliateSearchResult\":{\n  \"required\" : [ \"airline\", \"deep_link\", \"fare\", \"outbound\", \"payout\" ],\n  \"properties\" : {\n    \"outbound\" : {\n      \"description\" : \"The flight from the origin to the destination\",\n      \"$ref\" : \"#\/definitions\/FlightSearchBound\"\n    },\n    \"inbound\" : {\n      \"description\" : \"The return flight from the destination to the origin\",\n      \"$ref\" : \"#\/definitions\/FlightSearchBound\"\n    },\n    \"fare\" : {\n      \"description\" : \"The price and fare information which applies to all itineraries in this response\",\n      \"$ref\" : \"#\/definitions\/AffiliateFlightSearchPrice\"\n    },\n    \"payout\" : {\n      \"description\" : \"Details of the amount of payout that the affiliate will received per click or if this flight is sold\",\n      \"$ref\" : \"#\/definitions\/AffiliatePayout\"\n    },\n    \"airline\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The 2 character alphanumeric <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/Airline_codes\\\">IATA airline code<\/a> of the airline that is selling this result\"\n    },\n    \"deep_link\" : {\n      \"type\" : \"string\",\n      \"description\" : \"A link to the page from which this result can be purchased from the affiliate\"\n    }\n  }\n},\"ExtremeSearchResponse\":{\n  \"required\" : [ \"currency\", \"origin\", \"results\" ],\n  \"properties\" : {\n    \"origin\" : {\n      \"type\" : \"string\",\n      \"description\" : \"<a href=\\\"https:\/\/en.wikipedia.org\/wiki\/International_Air_Transport_Association_airport_code\\\">IATA code<\/a>\"\n    },\n    \"currency\" : {\n      \"type\" : \"string\",\n      \"description\" : \"<a href=\\\"http:\/\/en.wikipedia.org\/wiki\/ISO_4217\\\">ISO 4217<\/a> currency code.\"\n    },\n    \"results\" : {\n      \"type\" : \"array\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/ExtremeSearchResult\"\n      }\n    }\n  }\n},\"HotelRoom\":{\n  \"required\" : [ \"booking_code\" ],\n  \"properties\" : {\n    \"booking_code\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The booking code identifies a product at the hotel. It can be used to book a room.\"\n    },\n    \"room_type_code\" : {\n      \"type\" : \"string\",\n      \"description\" : \"A 3-letter code to identify a specific room type.\"\n    },\n    \"rate_plan_code\" : {\n      \"type\" : \"string\",\n      \"description\" : \"A 3 letter code to designate different rates base on traveler type.\"\n    },\n    \"total_price\" : {\n      \"description\" : \"The total price of staying in this room from the given check-in date to the given check-out date\",\n      \"$ref\" : \"#\/definitions\/Amount\"\n    },\n    \"rates\" : {\n      \"type\" : \"array\",\n      \"description\" : \"The total price of staying in this room from the given check-in date to the given check-out date\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/PeriodRate\"\n      }\n    },\n    \"descriptions\" : {\n      \"type\" : \"array\",\n      \"description\" : \"An array of description strings describing room and rate types features\",\n      \"items\" : {\n        \"type\" : \"string\"\n      }\n    },\n    \"room_type_info\" : {\n      \"$ref\" : \"#\/definitions\/RoomInfo\"\n    },\n    \"rate_type_code\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The unique rate code used by the hotel chain to price this room's rate\"\n    }\n  }\n},\"RailStationAutocompleteResponse\":{\n  \"required\" : [ \"label\", \"value\" ],\n  \"properties\" : {\n    \"value\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The unique identifier of the station. You can use this as an input parameter for a rail search.\"\n    },\n    \"label\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The full name of the station, in UTF-8 format.\"\n    }\n  }\n},\"Station\":{\n  \"required\" : [ \"station_code\", \"station_name\" ],\n  \"properties\" : {\n    \"station_code\" : {\n      \"type\" : \"string\",\n      \"description\" : \"ID of this rail station\"\n    },\n    \"station_name\" : {\n      \"type\" : \"string\",\n      \"description\" : \"Full name of this rail station.\"\n    }\n  }\n},\"Infant\":{\n  \"properties\" : {\n    \"last_name\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The last name of the infant, as entered by the agent, in upper-case. If no value is provided, the last name of the infant can generally be assumed to be the same as that of the traveler which whom they are associated.\"\n    },\n    \"first_name\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The first name of the infant, as entered by the agent, in upper-case. May include middle names, initials or prefixes.\"\n    },\n    \"date_of_birth\" : {\n      \"type\" : \"string\",\n      \"format\" : \"date\",\n      \"description\" : \"An optional <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/ISO_8601\\\">ISO 8601<\/a> date indicating the birth date of the infant, as provided by the agent. For example&colon; 1972-02-19.\"\n    }\n  }\n},\"Fees\":{\n  \"properties\" : {\n    \"service_fees\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The cost of any required service fees in addition to the total price\"\n    },\n    \"creditcard_fees\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The cost of any fees for common credit cards, such as Visa or Mastercard, in addition to the total price\"\n    }\n  }\n},\"FlightTrafficSearchResponse\":{\n  \"required\" : [ \"origin\", \"period\", \"results\" ],\n  \"properties\" : {\n    \"period\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The date period, in <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/ISO_8601\\\">ISO 8601<\/a> date format YYYY-MM or YYYY\"\n    },\n    \"origin\" : {\n      \"type\" : \"string\",\n      \"description\" : \"<a href=\\\"https:\/\/en.wikipedia.org\/wiki\/International_Air_Transport_Association_airport_code\\\">IATA code<\/a>\"\n    },\n    \"results\" : {\n      \"type\" : \"array\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/FlightTrafficSearchResult\"\n      }\n    }\n  }\n},\"ImageSize\":{\n  \"properties\" : {\n    \"small\" : {\n      \"$ref\" : \"#\/definitions\/Image\"\n    },\n    \"medium\" : {\n      \"$ref\" : \"#\/definitions\/Image\"\n    },\n    \"large\" : {\n      \"$ref\" : \"#\/definitions\/Image\"\n    },\n    \"hd\" : {\n      \"$ref\" : \"#\/definitions\/Image\"\n    }\n  },\n  \"description\" : \"An image size selector used in the YapQ API response. The size should correspond the the image_size parameter used during input\"\n},\"CarSearchResult\":{\n  \"required\" : [ \"provider\" ],\n  \"properties\" : {\n    \"provider\" : {\n      \"description\" : \"Details of the car company offering this rental.\",\n      \"$ref\" : \"#\/definitions\/Company\"\n    },\n    \"location\" : {\n      \"description\" : \"This car rental company's approximate geolocation. The exact quality of this parameter depends on the provider but it's usually quite accurate.\",\n      \"$ref\" : \"#\/definitions\/Geolocation\"\n    },\n    \"airport\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The exact quality of this parameter depends on the provider but it's usually quite accurate.\"\n    },\n    \"cars\" : {\n      \"type\" : \"array\",\n      \"description\" : \"Further details about each of the vehicles offered by this car rental provider.\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/Vehicle\"\n      }\n    }\n  }\n},\"ExtremeSearchResult\":{\n  \"required\" : [ \"destination\", \"price\" ],\n  \"properties\" : {\n    \"destination\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/International_Air_Transport_Association_airport_code\\\">IATA code<\/a> of the city or airport to which the traveler may go, from the provided origin\"\n    },\n    \"departure_date\" : {\n      \"type\" : \"string\",\n      \"format\" : \"date\",\n      \"description\" : \"The date departure at the origin, in <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/ISO_8601\\\">ISO 8601<\/a> date format yyyy-MM-dd, to go to the above destination\"\n    },\n    \"return_date\" : {\n      \"type\" : \"string\",\n      \"format\" : \"date\",\n      \"description\" : \"The date at which the flight from the destination to the origin will depart from the destination. The date is in <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/ISO_8601\\\">ISO 8601<\/a> date format yyyy-MM-dd, in the local date of the origin. This field will not be present in the response if the one-way request parameter is set to true.\"\n    },\n    \"price\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The minimum total price for one adult passenger for a round trip from the origin to the destination and back. Always a string, formatted correctly for the provided currency\"\n    },\n    \"airline\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The 2 character alphanumeric <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/Airline_codes\\\">IATA airline code<\/a> of the airline that is responsible for selling the traveler this flight - also known as the Validating Carrier. Airlines are specified using <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/Airline_codes\\\"><a href=\\\"https:\/\/en.wikipedia.org\/wiki\/Airline_codes\\\">IATA airline code<\/a>s<\/a>\"\n    }\n  }\n},\"Image\":{\n  \"required\" : [ \"url\" ],\n  \"properties\" : {\n    \"category\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The enumerated category of this image type. Common values include EXTERIOR, GUEST_ROOM, SUITE, LOBBY, RESTAURANT, LOUNGE, LOGO, MAP, MISC and UNKNOWN.\"\n    },\n    \"width\" : {\n      \"type\" : \"integer\",\n      \"format\" : \"int32\",\n      \"description\" : \"The pixel width of the image at the provided URL.\"\n    },\n    \"height\" : {\n      \"type\" : \"integer\",\n      \"format\" : \"int32\",\n      \"description\" : \"The pixel height of the image at the provided URL.\"\n    },\n    \"url\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The URL of the hotel image of this given category and size, for display.\"\n    }\n  }\n},\"Traveler\":{\n  \"required\" : [ \"first_name\", \"id\", \"last_name\", \"traveler_type\" ],\n  \"properties\" : {\n    \"id\" : {\n      \"type\" : \"string\",\n      \"description\" : \"Uniquely identifies this traveler in this travel record. This ID is persistent, and remains the same for the lifetime of the travel record.\"\n    },\n    \"last_name\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The last name of the passenger, as entered by the agent, in upper-case. May include suffixes. For example&colon; THACKSTON, KING III, LU.\"\n    },\n    \"first_name\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The first name of the passenger, as entered by the agent, in upper-case. May include middle names, initials or prefixes. The total combined length of the first name and last name must be between 2 and 57 characters. For example&colon; ALEXANDRA, JOSE-ANTONIO MR, ELAINE T DR.\"\n    },\n    \"traveler_type\" : {\n      \"type\" : \"string\",\n      \"description\" : \"Enumeration of the type of traveler. May be ADULT or CHILD.\"\n    },\n    \"infant\" : {\n      \"description\" : \"Details on any infant that may be sharing this seat with this traveler. Absence of this key indicates that no infant is traveling with this passenger. An empty object at this key indicated an anonymous infant is traveling with the passenger.\",\n      \"$ref\" : \"#\/definitions\/Infant\"\n    },\n    \"date_of_birth\" : {\n      \"type\" : \"string\",\n      \"format\" : \"date\",\n      \"description\" : \"An <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/ISO_8601\\\">ISO 8601<\/a> date indicating the birth date of the traveler, as provided by the agent. For example&colon; 1972-02-19.\"\n    },\n    \"contacts\" : {\n      \"type\" : \"array\",\n      \"description\" : \"Details on how to contact this traveler. At least one traveler in a travel-record will have a contact element.\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/Contact\"\n      }\n    },\n    \"frequent_traveler_cards\" : {\n      \"type\" : \"array\",\n      \"description\" : \"Information regarding loyalty cards that the traveler would like to use to accrue benefits as part of this travel record. Where possible, the system will attempt to validate that the frequent traveler card is eligible for use in the context of this travel record.\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/FrequentTravelerCard\"\n      }\n    }\n  }\n},\"FlightReservationBound\":{\n  \"required\" : [ \"flights\" ],\n  \"properties\" : {\n    \"flights\" : {\n      \"type\" : \"array\",\n      \"description\" : \"The individual flights that make up this itinerary. These flights are presented in the order required to fly from the origin to the destination, and the array of flights represents a connection.\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/FlightReservationSegment\"\n      }\n    }\n  }\n},\"PointOfInterestCity\":{\n  \"required\" : [ \"location\", \"name\", \"total_points_of_interest\" ],\n  \"properties\" : {\n    \"name\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The name of the location that was searched for\"\n    },\n    \"geoname_id\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The Geonames ID of the location that was searched for\"\n    },\n    \"location\" : {\n      \"$ref\" : \"#\/definitions\/Geolocation\"\n    },\n    \"total_points_of_interest\" : {\n      \"type\" : \"integer\",\n      \"format\" : \"int32\",\n      \"description\" : \"The total number of points_of_interest that YapQ has indexed for this city\"\n    }\n  }\n},\"Company\":{\n  \"required\" : [ \"company_code\", \"company_name\" ],\n  \"properties\" : {\n    \"company_code\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The Amadeus 2-character company code of this provider.\"\n    },\n    \"company_name\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The long name of the provider corresponding to the above code.\"\n    }\n  }\n},\"Rate\":{\n  \"required\" : [ \"price\", \"type\" ],\n  \"properties\" : {\n    \"type\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The type or applicability period of rate being applied. For example&colon; DAILY, WEEKLY, WEEKEND.\"\n    },\n    \"price\" : {\n      \"description\" : \"The long name of the provider corresponding to the above code.\",\n      \"$ref\" : \"#\/definitions\/Amount\"\n    }\n  }\n},\"FlightSearchBookingInfo\":{\n  \"required\" : [ \"booking_code\", \"seats_remaining\", \"travel_class\" ],\n  \"properties\" : {\n    \"travel_class\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The cabin class offered on this flight. An enumeration that will read either ECONOMY, PREMIUM_ECONOMY, BUSINESS or FIRST\"\n    },\n    \"cabin_code\" : {\n      \"type\" : \"string\",\n      \"description\" : \"A single character encoding of the travel_class, generally only available on responses from affiliates.\"\n    },\n    \"booking_code\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The Reservation Booking Designator code that determines the quality and terms of the flight offered for the given price. A single letter from A..Z\"\n    },\n    \"seats_remaining\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The minimum number of seats that are still available for this price at the time of search. If the value is a 4 or above, there are often more than this number of seats still available.\"\n    },\n    \"fare_family\" : {\n      \"type\" : \"string\",\n      \"description\" : \"Enumeration of the type of fare which this airline is providing, eg. VALUE. This is generally only available for affiliate responses.\"\n    },\n    \"fare_basis\" : {\n      \"type\" : \"string\",\n      \"description\" : \"See https:\/\/en.wikipedia.org\/wiki\/Fare_basis_code for the fare being offered.\"\n    }\n  }\n},\"FlightSearchBound\":{\n  \"required\" : [ \"flights\" ],\n  \"properties\" : {\n    \"flights\" : {\n      \"type\" : \"array\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/FlightSearchSegment\"\n      }\n    },\n    \"duration\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The duration of this bound, including layover time, expressed in the format hh:mm\"\n    }\n  }\n},\"HotelReservationBookingInfo\":{\n  \"required\" : [ \"reservation_code\", \"status\" ],\n  \"properties\" : {\n    \"reservation_code\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The identifier of this reservation in the hotel chain's system. This should be provided at the check-in desk to identify your reservation.\"\n    },\n    \"status\" : {\n      \"type\" : \"string\",\n      \"description\" : \"An enumeration to represent the reservation status for this hotel reservation. For example&colon; CONFIRMED, CANCELLED, REQUESTED.\"\n    }\n  }\n},\"TrainSearchPricing\":{\n  \"required\" : [ \"accomodation\", \"booking_code\", \"rate\", \"service_class\", \"total_price\" ],\n  \"properties\" : {\n    \"service_class\" : {\n      \"type\" : \"string\",\n      \"description\" : \"A standard enumeration of the type of seat, bed or service the passenger can expect.\"\n    },\n    \"booking_code\" : {\n      \"type\" : \"string\",\n      \"description\" : \"A code the identifies the type of booking class being used.\"\n    },\n    \"accomodation\" : {\n      \"type\" : \"string\",\n      \"description\" : \"A standard enumeration of the mode in which the passenger is accommodated. For example&colon; SEAT, BERTH, CABIN, CARGO, UNKNOWN.\"\n    },\n    \"total_price\" : {\n      \"description\" : \"The total cost of this service.\",\n      \"$ref\" : \"#\/definitions\/Amount\"\n    },\n    \"rate\" : {\n      \"description\" : \"A rate identifying type of charge being levied for this service, and the restrictions that apply.\",\n      \"$ref\" : \"#\/definitions\/RestrictedRate\"\n    }\n  }\n},\"TravelRecordHeader\":{\n  \"required\" : [ \"creation_office_id\", \"owner_office_id\" ],\n  \"properties\" : {\n    \"creation_office_id\" : {\n      \"type\" : \"string\",\n      \"description\" : \"9 character Amadeus office identifier of the travel agency that created this travel record. An office ID may be considered as equivalent to a <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/Pseudo_city_code\\\">PCC<\/a> in other reservation systems.\"\n    },\n    \"owner_office_id\" : {\n      \"type\" : \"string\",\n      \"description\" : \"9 character Amadeus office identifier of the travel agency that owns and manages this travel record.\"\n    }\n  }\n},\"Message\":{\n  \"required\" : [ \"message\", \"severity\", \"type\" ],\n  \"properties\" : {\n    \"severity\" : {\n      \"type\" : \"string\",\n      \"description\" : \"An indicator of the importance of this message as part of the flow. May be ERROR or INFO.\"\n    },\n    \"type\" : {\n      \"type\" : \"string\",\n      \"description\" : \"An indicator of the source or type of message that has been generated. May be USER or SYSTEM.\"\n    },\n    \"message\" : {\n      \"type\" : \"string\",\n      \"description\" : \"A free text message that provides more information.\"\n    }\n  }\n},\"Contact\":{\n  \"required\" : [ \"detail\", \"type\" ],\n  \"properties\" : {\n    \"type\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The method of contact, such as phone or fax.\"\n    },\n    \"purpose\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The reason or channel of that contact method. For example&colon; HOME, EMERGENCY, MOBILE.\"\n    },\n    \"detail\" : {\n      \"type\" : \"string\",\n      \"description\" : \"How that contact should be used, eg. a phone number\"\n    }\n  }\n},\"LowFareSearchResult\":{\n  \"required\" : [ \"fare\" ],\n  \"properties\" : {\n    \"itineraries\" : {\n      \"type\" : \"array\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/FlightSearchItinerary\"\n      }\n    },\n    \"fare\" : {\n      \"description\" : \"The price and fare information which applies to all itineraries in this response\",\n      \"$ref\" : \"#\/definitions\/FlightSearchPrice\"\n    }\n  }\n},\"FrequentTravelerCard\":{\n  \"required\" : [ \"card_number\", \"company_code\", \"issuer_type\" ],\n  \"properties\" : {\n    \"issuer_type\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The type of organization that issued the card. This is an enumeration, possible values are AIRLINE, HOTEL_CHAIN, RENTAL_CAR_PROVIDER, RAILWAY.\"\n    },\n    \"company_code\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The identifying code of the issuer, within the context of its type. For example&colon; BA (and if the issuer type is AIRLINE, this indicates BA=British Airways).\"\n    },\n    \"card_number\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The identifying number (or string) marked on the card. For example&colon; 12345678.\"\n    }\n  }\n},\"FlightReservationSegment\":{\n  \"required\" : [ \"arrives_at\", \"booking_info\", \"departs_at\", \"destination\", \"flight_number\", \"id\", \"marketing_airline\", \"operating_airline\", \"origin\", \"traveler_ids\" ],\n  \"properties\" : {\n    \"id\" : {\n      \"type\" : \"string\",\n      \"description\" : \"Uniquely identifies this flight in this travel record. This ID is persistent, and remains the same for the lifetime of the travel record.\"\n    },\n    \"departs_at\" : {\n      \"type\" : \"string\",\n      \"description\" : \"Date and time of departure at the origin, in <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/ISO_8601\\\">ISO 8601<\/a>  date format yyyy-MM-ddTHH:mm in the local time at the origin airport\"\n    },\n    \"arrives_at\" : {\n      \"type\" : \"string\",\n      \"description\" : \"Date and time of departure at the destination, in <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/ISO_8601\\\">ISO 8601<\/a>  date format yyyy-MM-ddTHH:mm in the local time at the destination airport\"\n    },\n    \"origin\" : {\n      \"description\" : \"Information on the origin airport, from which this flight departs\",\n      \"$ref\" : \"#\/definitions\/Airport\"\n    },\n    \"destination\" : {\n      \"description\" : \"Information on the destination airport, at which this flight arrives\",\n      \"$ref\" : \"#\/definitions\/Airport\"\n    },\n    \"marketing_airline\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The 2 character alphanumeric <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/Airline_codes\\\">IATA airline code<\/a> of the airline that is responsible for the traveller this flight\"\n    },\n    \"operating_airline\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The 2 character alphanumeric <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/Airline_codes\\\">IATA airline code<\/a> of the airline that is providing the aircraft for this flight. Note that in the USA, if the marketing and operating carrier are different, you are legally required to display this in your application.\"\n    },\n    \"flight_number\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The identifier that the airline uses for this flight route. This is most commonly - but not always - a number. When combined with the airline and date, it identifies an individual aircraft's flight\"\n    },\n    \"traveler_ids\" : {\n      \"type\" : \"array\",\n      \"description\" : \"Traveler identifiers to indicate the travelers to whom this ticket applies.\",\n      \"items\" : {\n        \"type\" : \"string\"\n      }\n    },\n    \"booking_info\" : {\n      \"description\" : \"A booking information object with additional details about how the quality of this flight at the given price.\",\n      \"$ref\" : \"#\/definitions\/FlightReservationBookingInfo\"\n    }\n  }\n},\"CarrierMeta\":{\n  \"type\" : \"object\",\n  \"additionalProperties\" : {\n    \"$ref\" : \"#\/definitions\/CarrierInfo\"\n  }\n},\"Error\":{\n  \"required\" : [ \"message\", \"status\" ],\n  \"properties\" : {\n    \"status\" : {\n      \"type\" : \"integer\",\n      \"format\" : \"int32\"\n    },\n    \"message\" : {\n      \"type\" : \"string\"\n    },\n    \"more_info\" : {\n      \"type\" : \"string\"\n    }\n  }\n},\"TopDestinationsSearchResult\":{\n  \"required\" : [ \"destination\", \"flights\", \"travelers\" ],\n  \"properties\" : {\n    \"destination\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/International_Air_Transport_Association_airport_code\\\">IATA code<\/a> of the city or airport to which the traveler may go, from the provided origin\"\n    },\n    \"flights\" : {\n      \"type\" : \"integer\",\n      \"format\" : \"int32\",\n      \"description\" : \"Number of flights from origin to destination during the search period provided\"\n    },\n    \"travelers\" : {\n      \"type\" : \"integer\",\n      \"format\" : \"int32\",\n      \"description\" : \"Number of passengers from origin to destination during the search period provided\"\n    }\n  }\n},\"FlightSearchPrice\":{\n  \"required\" : [ \"price_per_adult\", \"restrictions\", \"total_price\" ],\n  \"properties\" : {\n    \"total_price\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The total price for all the requested passengers for this flight\"\n    },\n    \"price_per_adult\" : {\n      \"description\" : \"The per-passenger fare for each adult on this flight\",\n      \"$ref\" : \"#\/definitions\/Fare\"\n    },\n    \"price_per_child\" : {\n      \"description\" : \"The per-passenger fare for each child on this flight\",\n      \"$ref\" : \"#\/definitions\/Fare\"\n    },\n    \"price_per_infant\" : {\n      \"description\" : \"The per-passenger fare for each infant on this flight\",\n      \"$ref\" : \"#\/definitions\/Fare\"\n    },\n    \"restrictions\" : {\n      \"description\" : \"The restrictions associated with this fare\",\n      \"$ref\" : \"#\/definitions\/FareRestrictions\"\n    }\n  }\n},\"Geolocation\":{\n  \"required\" : [ \"latitude\", \"longitude\" ],\n  \"properties\" : {\n    \"latitude\" : {\n      \"type\" : \"number\",\n      \"description\" : \"The north-south coordinate of this location, in decimal degrees, between -90 and 90\"\n    },\n    \"longitude\" : {\n      \"type\" : \"number\",\n      \"description\" : \"The east-west coordinate of this location, in decimal degrees, between -180 and 180\"\n    },\n    \"google_maps_link\" : {\n      \"type\" : \"string\",\n      \"description\" : \"For YapQ APIs only  - a link to a google map rendering of this location.\"\n    }\n  }\n},\"CarrierInfo\":{\n  \"required\" : [ \"logos\", \"name\" ],\n  \"properties\" : {\n    \"logos\" : {\n      \"description\" : \"Logos of the airline in a variety of sizes\",\n      \"$ref\" : \"#\/definitions\/Logos\"\n    },\n    \"name\" : {\n      \"type\" : \"string\",\n      \"description\" : \"Display name of the airline\"\n    }\n  }\n},\"AirportAutocompleteResponse\":{\n  \"required\" : [ \"label\", \"value\" ],\n  \"properties\" : {\n    \"value\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The 3 letter IATA location code of the given city or airport. You can use this as an input parameter for a flight low-fare or inspiration search.\"\n    },\n    \"label\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The name of this airport, in UTF-8 format, prefixed with the name of the city if it is not already incorporated in the name of the airport, and appended with the location's <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/International_Air_Transport_Association_airport_code\\\">IATA code<\/a> (as in value), enclosed in square brackets.\"\n    }\n  }\n},\"Link\":{\n  \"required\" : [ \"href\" ],\n  \"properties\" : {\n    \"href\" : {\n      \"type\" : \"string\",\n      \"description\" : \"Hyperlink reference URL to the target\"\n    }\n  }\n},\"RestrictedRate\":{\n  \"required\" : [ \"rate_code\", \"rate_name\", \"restrictions\" ],\n  \"properties\" : {\n    \"rate_code\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The unique identifier of this rate.\"\n    },\n    \"rate_name\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The name used by the company to describe this rate.\"\n    },\n    \"restrictions\" : {\n      \"type\" : \"string\",\n      \"description\" : \"An enumeration of the type of restrictions associated with this rate.\"\n    }\n  }\n},\"Airport\":{\n  \"required\" : [ \"airport\" ],\n  \"properties\" : {\n    \"airport\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The 3 character <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/International_Air_Transport_Association_airport_code\\\">IATA airport code<\/a> of the airport in question for this flight\"\n    },\n    \"terminal\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The terminal identifier at which this flight will arrive or depart in the given airport\"\n    }\n  }\n},\"HotelReservation\":{\n  \"required\" : [ \"booking_info\", \"check_in\", \"check_out\", \"id\", \"property_code\", \"property_name\", \"traveler_ids\" ],\n  \"properties\" : {\n    \"id\" : {\n      \"type\" : \"string\",\n      \"description\" : \"Uniquely identifies this hotel room reservation in this travel record. This ID is persistent, and remains the same for the lifetime of the travel record.\"\n    },\n    \"check_in\" : {\n      \"type\" : \"string\",\n      \"format\" : \"date\",\n      \"description\" : \"Date on which the guest will begin their stay in the hotel, in the <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/ISO_8601\\\">ISO 8601<\/a> date format yyyy-MM-dd.\"\n    },\n    \"check_out\" : {\n      \"type\" : \"string\",\n      \"format\" : \"date\",\n      \"description\" : \"Date on which the guest will end their stay in the hotel, in the <a href=\\\"https:\/\/en.wikipedia.org\/wiki\/ISO_8601\\\">ISO 8601<\/a> date format yyyy-MM-dd.\"\n    },\n    \"property_code\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The 8 character property code of this given hotel. The first 2 characters of this code are the chain code that can be specified in the input. The remaining elements are proprietary to each hotel chain.\"\n    },\n    \"property_name\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The name of this hotel.\"\n    },\n    \"total_price\" : {\n      \"description\" : \"The total price of this stay, from the given check in date to the given check out date.\",\n      \"$ref\" : \"#\/definitions\/Amount\"\n    },\n    \"traveler_ids\" : {\n      \"type\" : \"array\",\n      \"description\" : \"Traveler identifiers to indicate the travelers to whom this hotel room reservation applies. Generally all non-infant room occupants will be marked in this array.\",\n      \"items\" : {\n        \"type\" : \"string\"\n      }\n    },\n    \"booking_info\" : {\n      \"description\" : \"Additional details and status of this hotel room reservation.\",\n      \"$ref\" : \"#\/definitions\/HotelReservationBookingInfo\"\n    }\n  }\n},\"AffiliateSearchResponse\":{\n  \"required\" : [ \"meta\" ],\n  \"properties\" : {\n    \"meta\" : {\n      \"description\" : \"Meta data about the results\",\n      \"$ref\" : \"#\/definitions\/AffiliateSearchMeta\"\n    },\n    \"results\" : {\n      \"type\" : \"array\",\n      \"items\" : {\n        \"$ref\" : \"#\/definitions\/AffiliateSearchResult\"\n      }\n    }\n  }\n},\"AffiliatePayout\":{\n  \"properties\" : {\n    \"CPC\" : {\n      \"description\" : \"See https:\/\/en.wikipedia.org\/wiki\/Pay_per_click for commission earned when the provided deep link is clicked\",\n      \"$ref\" : \"#\/definitions\/Amount\"\n    },\n    \"CPA\" : {\n      \"description\" : \"See https:\/\/en.wikipedia.org\/wiki\/Cost_per_action for commission earned for a given action from the provided deep link\",\n      \"$ref\" : \"#\/definitions\/Amount\"\n    },\n    \"CPS\" : {\n      \"description\" : \"See https:\/\/en.wikipedia.org\/wiki\/Pay_per_sale for commission earned as a result of a booking made from the provided deep link\",\n      \"$ref\" : \"#\/definitions\/Amount\"\n    }\n  }\n},\"Address\":{\n  \"required\" : [ \"city\", \"country\", \"line1\" ],\n  \"properties\" : {\n    \"line1\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The first line of this place's address. Generally represents the basic street address.\"\n    },\n    \"city\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The town or city in which place is located.\"\n    },\n    \"region\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The state or region code in which the place is located.\"\n    },\n    \"postal_code\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The postal or zip code of this address.\"\n    },\n    \"country\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The <a href=\\\"http:\/\/en.wikipedia.org\/wiki\/ISO_3166-1_alpha-2\\\">ISO 3166-1 alpha-2 country code<\/a> country code of this address.\"\n    }\n  }\n},\"FlightReservationBookingInfo\":{\n  \"required\" : [ \"airline_record_locator\", \"booking_code\", \"status\", \"travel_class\" ],\n  \"properties\" : {\n    \"travel_class\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The cabin class offered on this flight. An enumeration that will read either ECONOMY, PREMIUM_ECONOMY, BUSINESS or FIRST\"\n    },\n    \"booking_code\" : {\n      \"type\" : \"string\",\n      \"description\" : \"The Reservation Booking Designator code that determines the quality and terms of the flight offered for the given price. A single letter from A..Z\"\n    },\n    \"airline_record_locator\" : {\n      \"type\" : \"string\",\n      \"description\" : \"6 character identifier of this travel record on the airline's system. May be the same as the global record locator.\"\n    },\n    \"status\" : {\n      \"type\" : \"string\",\n      \"description\" : \"An enumeration to represent the reservation status for this seat on this flight. For example&colon; CONFIRMED, CANCELLED, RESCHEDULED, FLIGHT_CANCELLED, WAITLISTED.\"\n    }\n  }\n}}","inlineSchema":null,"type":"json"},"modifiedBy":null,"security":null,"customAttributes":[{"name":"SWAGGER_METHOD_SUMMARY","value":"The Car Rental API uses Amadeus' classic car service to locate the best available car. Define a circular area with one coordinate and radius, or provide an airport code, as well as the pick-up and drop-off dates, and get a list of car rental providers with their locations and rates. Optional parameters such as currency and rental provider codes are also available and can be used to narrow down the results. This API is an ideal pairing with the flight and hotel search to provide ground transportation options at the destination.","attributeGroupName":null}],"response":{"schema":{"dataType":"{\n  \"$ref\" : \"#\/definitions\/CarSearchResponse\"\n}{\n  \"$ref\" : \"#\/definitions\/Error\"\n}","doc":null},"errors":[],"doc":null,"contentType":null,"parameters":[],"sample":null},"id":"daaeab2a-982a-4be3-bd96-3bd59066e3be","baseUrl":"https:\/\/api.sandbox.amadeus.com\/v1.2","resourceId":"a3a59814-d434-41d5-bbbd-47294a42f68b","apiName":"travel-innovation-sandbox","verb":"get","description":"<p>With this API you can find out the price and type of car, for all car rental providers, near a specified airport.<\/p>\n\n<p>You can quickly see the locations of car providers near a given airport, and what cars are available to rent, and at what prices. This API is based on our car pricing service that gets live availability from car providers, and is used to power a variety of airline and travel agency websites.<\/p>\n           \n<p>Results are validated from car providers, and thus response times may take up to 10 seconds (response times are typically about 5s), and the number of concurrent calls is throttled per user to avoid flooding our provider's systems. However, this means the final result is guaranteed to be live and accurate.<\/p>\n\n<p>The configuration of this API allows search for car rentals in the rental location where the car is picked up (at the start of the rental), is the same as the one where it will be dropped off.<\/p>\n","name":"Car Rental Airport Search","path":"\/cars\/search-airport","parameters":[{"schema":null,"dataType":"string","scope":"method","items":null,"description":"API Key provided for your account, to identify you for API access. Make sure to keep this API key secret.","name":"apikey","allowMultiple":false,"type":"query","required":true,"defaultValue":null,"options":null},{"schema":null,"dataType":"string","scope":"method","items":null,"description":"The <a href=\"https:\/\/en.wikipedia.org\/wiki\/International_Air_Transport_Association_airport_code\">IATA code<\/a> of the airport at which the car will be rented.","name":"location","allowMultiple":false,"type":"query","required":true,"defaultValue":"NCE","options":null},{"schema":null,"dataType":"string","scope":"method","items":null,"description":"Date on which the car rental will be collected from the car rental location. If no time is provided, a default value of 09:00 is used. Past availability is not displayed, future availability becomes less useful from about 6 months from the current date.","name":"pick_up","allowMultiple":false,"type":"query","required":true,"defaultValue":"2016-06-04","options":null},{"schema":null,"dataType":"string","scope":"method","items":null,"description":"Date at which the car rental will end and the car will be returned to the rental location. If no time is provided, a default value of 17:00 is used.","name":"drop_off","allowMultiple":false,"type":"query","required":true,"defaultValue":"2016-06-08","options":null},{"schema":null,"dataType":"string","scope":"method","items":null,"description":"The preferred language of the content related to each car rental. Content will be returned in this language if available.","name":"lang","allowMultiple":false,"type":"query","required":false,"defaultValue":"EN","options":null},{"schema":null,"dataType":"string","scope":"method","items":null,"description":"The preferred <a href=\"https:\/\/en.wikipedia.org\/wiki\/ISO_4217\">currency<\/a> to use when displaying prices and rates related to the car rental.","name":"currency","allowMultiple":false,"type":"query","required":false,"defaultValue":"USD","options":null},{"schema":null,"dataType":"string","scope":"method","items":null,"description":"2 character car rental provider code. You may provide this parameter more than once. ","name":"provider","allowMultiple":false,"type":"query","required":false,"defaultValue":"ZI","options":null},{"schema":null,"dataType":"string","scope":"method","items":null,"description":"Allows to request specific rate types.","name":"rate_class","allowMultiple":false,"type":"query","required":false,"defaultValue":"ALL","options":null},{"schema":null,"dataType":"string","scope":"method","items":null,"description":"Qualifies the rate depending on the pickup date and the rental duration.","name":"rate_plan","allowMultiple":false,"type":"query","required":false,"defaultValue":"DAILY","options":null},{"schema":null,"dataType":"string","scope":"method","items":null,"description":"Defines the types of rates to be returned in the output","name":"rate_filter","allowMultiple":false,"type":"query","required":false,"defaultValue":"ESTIMATED","options":["AVAILABLE","ESTIMATED","ALL"]},{"schema":null,"dataType":"array","scope":"method","items":"{\n  \"type\" : \"string\"\n}","description":"Specifies the type of vehicle to be rented. If selected, the results set will include only vehicles that match these type descriptions. The enumerations above correspond to ACRISS Pseudo Codes, and you may also provide an ACRISS pseudo code directly. If specifying a vehicle-specific ACRISS code, you may provide this parameter up to 3 times.","name":"vehicle","allowMultiple":false,"type":"query","required":false,"defaultValue":null,"options":null}],"activeRevisionNumber":null,"releaseVersion":null,"resourceName":"cars-search-airport","apiRevisionId":"60c9efdb-bbc2-4aa6-998f-94ea991a4646","key":"daaeab2a-982a-4be3-bd96-3bd59066e3be","changeLog":null,"revisionSchema":null,"parameterGroups":[],"tags":null,"latestRevisionNumber":null,"schemas":[],"revisionNumber":16,"createdTime":1463412846549,"modifiedTime":1463412855673,"defaultIndexTemplate":null,"samples":null,"isActive":null,"defaultMethodTemplate":null,"createdBy":null,"displayName":"","revisions":null,"activeRevisionInstance":null};
+    Apigee.APIModel.resourceName = "";
+    if(model.body && model.body.parameters) {
+        for(var i in model.body.parameters) {
+            if(model.body.parameters[i].schema) {
+                Apigee.APIModel.resourceName = JSON.parse(model.body.parameters[0].schema).$ref;
+                Apigee.APIModel.resourceName = Apigee.APIModel.resourceName.split("/");
+                Apigee.APIModel.resourceName = Apigee.APIModel.resourceName[Apigee.APIModel.resourceName.length-1];
+            }
+        }
+    }
+    var security = [];
+    if(model.security) {
+        for (i=0;i<model.security.length;i++){
+            security.push(JSON.parse(model.security[i]));
+        }
+    }
+
+    var newAuth = "";
+    jQuery("[data-role='auth-type']").text(newAuth);
+    for (var i in security){
+        for (var keys in security[i]) {
+            if(security[i][keys].type) {
+                if (security[i][keys].type === "OAUTH2") {
+                    newAuth = "OAuth 2.0";
+                    secName = keys;
+                    jQuery("[data-role='auth-type']").append(newAuth + ", ");
+                }
+                if (security[i][keys].type === "APIKEY") {
+                    newAuth = "API Key";
+                    secName = keys;
+                    jQuery("[data-role='auth-type']").append(newAuth + ", ");
+                    if(security[i][keys].templateauths) {
+                        for(var key in security[i][keys].templateauths) {
+                            Apigee.APIModel.apiKey = security[i][keys].templateauths[key];
+                            Apigee.APIModel.location = security[i][keys].location.toLowerCase();
+                            Apigee.APIModel.templateAuthName = key.toLowerCase();
+                        }
+                    }
+                }
+                if (security[i][keys].type === "BASIC") {
+                    newAuth = "HTTP Basic";
+                    secName = keys;
+                    jQuery("[data-role='auth-type']").append(newAuth + ", ");
+                }
+            }
+            else if (keys === "api_key") {
+                newAuth = "API Key";
+                jQuery("[data-role='auth-type']").append(newAuth + ", ");
+            }
+        }
+    }
+    if (jQuery("[data-role='auth-type']").text() === "") {
+        jQuery("[data-role='auth-type']").append("None");
+    }
+    var methodVerb = jQuery.trim(jQuery("[data-role='verb']:first").text().toLowerCase()); // Retrieve the verb from the first HTML element.
+    var payload = jQuery(".request_payload")
+    if (methodVerb != "post" && methodVerb != "put" && methodVerb != "patch") {
+        // remove request payload
+        payload.remove();
+    }
+    else {
+         // If a sample exists, use it to populate the body payload textarea, else create an example from the api schema to populate the body payload
+         if (model.body && model.body.sample) {
+             jQuery("textarea.payload_text").val(model.body.sample);
+         }
+         else if (model.apiSchema && model.apiSchema.expandedSchema) {
+             var expandedSchema = JSON.parse(model.apiSchema.expandedSchema);
+             var swaggerModel = new Apigee.APIModel.SwaggerModel( Apigee.APIModel.resourceName, expandedSchema[Apigee.APIModel.resourceName]);
+             var sampleFromAPISchema = swaggerModel.createJSONSample( false );
+             jQuery("textarea.payload_text").val(JSON.stringify(sampleFromAPISchema, null, 4));
+         }
+         else {
+             payload.remove();
+         }
+    }
+
+</script>
+</div>  </div>
+
+  
+  
+</div>
+
+</section> <!-- /.block -->
+<section id="block-amadeus-smartdocs-block-smartdocs-response" class="block block-amadeus-smartdocs clearfix">
+
+      
+  <div id="sm-respone-block">&nbsp;</div><h3>Response format - Cars Airport Search</h3>
+
+<p style="height: auto">The response is returned in JSON with the following elements:</p>
+
+<table class="table table-responsive table-hover">
+	<tbody>
+		<tr>
+			<th>Element</th>
+			<th>Meaning</th>
+			<th>Multiplicity</th>
+		</tr>
+		<tr>
+			<td colspan="3">Root object</td>
+		</tr>
+		<tr>
+			<td>results</td>
+			<td>The array of search result objects, sorted by price. The length of the array will correspond to the number_of_results parameter used in the input.</td>
+			<td>1..99</td>
+		</tr>
+		<tr>
+			<td colspan="3">Result object</td>
+		</tr>
+		<tr>
+			<td>provider</td>
+			<td>A company object detailing the car rental company offering this rental.</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>location</td>
+			<td>This car rental company's approximate geolocation as a location object. The exact quality of this parameter depends on the provider but it's usually quite accurate.</td>
+			<td>0..1</td>
+		</tr>
+		<tr>
+			<td>airport</td>
+			<td>This car rental company's airport IATA code, if it is located at an airport.</td>
+			<td>0..1</td>
+		</tr>
+		<tr>
+			<td>cars</td>
+			<td>An array of vehicle objects giving further details about each of the vehicles offered by this car rental provider.</td>
+			<td>0..n</td>
+		</tr>
+		<tr>
+			<td colspan="3">Company object</td>
+		</tr>
+		<tr>
+			<td>company_code</td>
+			<td>The Amadeus 2-character company code of this car rental provider.</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>company_name</td>
+			<td>The long name of this car rental provider corresponding to the above code.</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td colspan="3">Location object</td>
+		</tr>
+		<tr>
+			<td>latitude</td>
+			<td>The north-south location of this car rental location, in decimal degrees, between -90 and 90.</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>longitude</td>
+			<td>The east-west location of this car rental location, in decimal degrees, between -180 and 180.</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td colspan="3">Vehicle object</td>
+		</tr>
+		<tr>
+			<td>vehicle_info</td>
+			<td>Vehicle info object containing more information about the type of vehicle on offer.</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>rates</td>
+			<td>An array of rate objects to let you know what rates will be applied during the duration of the car rental requested. These rates are generally not inclusive of tax and are used by the car rental company to compute the total cost at the end of the rental period.</td>
+			<td>0..n</td>
+		</tr>
+		<tr>
+			<td>estimated_total</td>
+			<td>The estimated total cost of the rental given the rental period and location provided, including all mandatory taxes and charges, and using a default set of rental options and restrictions defined by the car company, as a Price object.</td>
+			<td>0..1</td>
+		</tr>
+		<tr>
+			<td>image</td>
+			<td>An image objects to give an indication of what to expect when renting this vehicle.</td>
+			<td>0..1</td>
+		</tr>
+		<tr>
+			<td colspan="3">Vehicle info object</td>
+		</tr>
+		<tr>
+			<td>acriss_code</td>
+			<td>The 4 letter <a href="http://en.wikipedia.org/wiki/ACRISS_Car_Classification_Code">ACRISS code</a> that defines the properties of vehicle being rented.</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>category</td>
+			<td>The decoded ACRISS vehicle category (For example: Economy, Luxury, Standard).</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>The decoded ACRISS vehicle type, to let you know what kind of vehicle this is (For example: Van, SUV, Pickup).</td>
+			<td>0..1</td>
+		</tr>
+		<tr>
+			<td>transmission</td>
+			<td>The decoded ACRISS transmission type, to let you know if this vehicle is Automatic or Manual Transmission (stick-shift).</td>
+			<td>0..1</td>
+		</tr>
+		<tr>
+			<td>air_conditioning</td>
+			<td>The decoded ACRISS air_conditioning information, to let you know if this vehicle has air conditioning, as a true/false boolean.</td>
+			<td>0..1</td>
+		</tr>
+		<tr>
+			<td>fuel</td>
+			<td>The decoded ACRISS fuel type, to let you know if this vehicle is hybrid, electric, etc.</td>
+			<td>0..1</td>
+		</tr>
+		<tr>
+			<td colspan="3">Rate object</td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>The type or applicability period of rate being applied. For example: DAILY, WEEKLY, WEEKEND.</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>price</td>
+			<td>The overall cost of the rate being applied as a price object.</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td colspan="3">Price object</td>
+		</tr>
+		<tr>
+			<td>amount</td>
+			<td>The monetary amount of this price in the given currency. For example: 219.99.</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>currency</td>
+			<td>The <a href="http://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a> currency code in which this amount applies. For example: USD.</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td colspan="3">Image object</td>
+		</tr>
+		<tr>
+			<td>width</td>
+			<td>The pixel width of the image at the provided URL.</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>height</td>
+			<td>The pixel height of the image at the provided URL.</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>url</td>
+			<td>The URL of the car image of this given category and size, for display.</td>
+			<td>1</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+<div id="sm-example-block">&nbsp;</div><h2>Example - Car Airport Search</h2>
+
+<p style="height: auto">Here's a simple search example. Just copy the following URLs in your browser. Don't forget to adjust the check-in and check-out dates as necessary, and use your own API key.</p>
+
+<h3>Simple airport search</h3>
+
+<h4>Request</h4>
+
+<pre>http://api.sandbox.amadeus.com/v1.2/cars/search-airport?location=SFO&amp;pick_up=2015-11-09&amp;drop_off=2015-11-18&amp;apikey=&lt;YOUR API KEY HERE&gt;</pre>
+
+<h4>Response (truncated)</h4>
+
+<pre>{
+	"results": [
+		{
+			"provider": {
+				"company_code": "ZT",
+				"company_name": "THRIFTY"
+			},
+			"location": {
+				"latitude": 37.61889,
+				"longitude": -12.23756
+			},
+			"airport": "SFO",
+			"address": {
+				"line1": "780 MCDONNELL ROAD",
+				"city": "SAN FRANCISCO",
+				"region": "CA",
+				"country": "US"
+			},
+			"cars": [
+				{
+					"vehicle_info": {
+						"acriss_code": "XX",
+						"transmission": "No information available",
+						"fuel": "No information available",
+						"category": "Special",
+						"type": "Special"
+					},
+					"rates": [
+						{
+							"type": "WEEKLY",
+							"price": {
+								"amount": "84.64",
+								"currency": "USD"
+							}
+						}
+					],
+					"images": [
+						{
+							"category": "VEHICLE",
+							"width": 90,
+							"height": 50,
+							"url": "http://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&amp;prov=ZT&amp;cnt=US&amp;sta=CA&amp;vehcat=XX&amp;item=0&amp;stamp=VEHICLE_0_0_1285865537042&amp;file=1.JPEG"
+						}
+					],
+					"estimated_total": {
+						"amount": "172.94",
+						"currency": "USD"
+					}
+				}, {
+					"vehicle_info": {
+						"acriss_code": "IFAR",
+						"transmission": "Automatic",
+						"fuel": "Unspecified",
+						"air_conditioning": true,
+						"category": "Intermediate",
+						"type": "SUV"
+					},
+					"rates": [
+						{
+							"type": "WEEKLY",
+							"price": {
+								"amount": "144.53",
+								"currency": "USD"
+							}
+						}
+					],
+					"images": [
+						{
+							"category": "VEHICLE",
+							"width": 90,
+							"height": 50,
+							"url": "http://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&amp;prov=ZT&amp;cnt=US&amp;sta=CA&amp;vehcat=IFAR&amp;item=0&amp;stamp=VEHICLE_0_0_1285865537042&amp;file=1.JPEG"
+						}
+					],
+					"estimated_total": {
+						"amount": "281.14",
+						"currency": "USD"
+					}
+				}, {
+					"vehicle_info": {
+						"acriss_code": "STAR",
+						"transmission": "Automatic",
+						"fuel": "Unspecified",
+						"air_conditioning": true,
+						"category": "Standard",
+						"type": "Convertible"
+					},
+					"rates": [
+						{
+							"type": "WEEKLY",
+							"price": {
+								"amount": "319.77",
+								"currency": "USD"
+							}
+						}
+					],
+					"images": [
+						{
+							"category": "VEHICLE",
+							"width": 90,
+							"height": 50,
+							"url": "http://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&amp;prov=ZT&amp;cnt=US&amp;sta=CA&amp;vehcat=STAR&amp;item=0&amp;stamp=VEHICLE_0_0_1285865537042&amp;file=1.JPEG"
+						}
+					],
+					"estimated_total": {
+						"amount": "593.64",
+						"currency": "USD"
+					}
+				}
+			]
+		}, {
+			"provider": {
+				"company_code": "ZD",
+				"company_name": "BUDGET"
+			},
+			"location": {
+				"latitude": 37.61889,
+				"longitude": -12.23756
+			},
+			"airport": "SFO",
+			"address": {
+				"line1": "SAN FRANCISCO INTL APO",
+				"city": "SAN FRANCISCO",
+				"region": "CA",
+				"country": "US"
+			},
+			"cars": [
+				{
+					"vehicle_info": {
+						"acriss_code": "PCAR",
+						"transmission": "Automatic",
+						"fuel": "Unspecified",
+						"air_conditioning": true,
+						"category": "Premium",
+						"type": "2/4 Door"
+					},
+					"rates": [
+						{
+							"type": "WEEKLY",
+							"price": {
+								"amount": "272.28",
+								"currency": "USD"
+							}
+						}, {
+							"type": "WEEKLY",
+							"price": {
+								"amount": "253.00",
+								"currency": "EUR"
+							}
+						}
+					],
+					"images": [
+						{
+							"category": "VEHICLE",
+							"width": 90,
+							"height": 50,
+							"url": "http://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&amp;prov=ZD&amp;cnt=US&amp;sta=CA&amp;vehcat=PCAR&amp;item=0&amp;stamp=VEHICLE_0__0__1384438228247&amp;file=1.JPEG"
+						}
+					],
+					"estimated_total": {
+						"amount": "435.65",
+						"currency": "USD"
+					}
+				}
+			]
+		}, {
+			"provider": {
+				"company_code": "ZL",
+				"company_name": "NATIONAL"
+			},
+			"location": {
+				"latitude": 37.6293,
+				"longitude": -122.40015
+			},
+			"airport": "SFO",
+			"address": {
+				"line1": "780 MCDONNELL ROAD",
+				"city": " SAN FRANCISCO",
+				"region": "CA",
+				"country": "US"
+			},
+			"cars": [
+				{
+					"vehicle_info": {
+						"acriss_code": "IGAR",
+						"transmission": "Automatic",
+						"fuel": "Unspecified",
+						"air_conditioning": true,
+						"category": "Intermediate",
+						"type": "Crossover"
+					},
+					"rates": [
+						{
+							"type": "WEEKLY",
+							"price": {
+								"amount": "1299.99",
+								"currency": "USD"
+							}
+						}
+					],
+					"estimated_total": {
+						"amount": "2481.10",
+						"currency": "USD"
+					}
+				}
+			]
+		}
+	]
+}</pre>
+
+</section> <!-- /.block -->
+  </div>
+        </section>
+
+                  <aside class="col-sm-1" role="complementary">
+              <div class="region region-sidebar-second well">
+    <section id="block-amadeus-smartdocs-block-smartdocs-top-right" class="block block-amadeus-smartdocs clearfix">
+
+      
+  <a href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/cars/search-airport#method_content">Try a request</a><br><a href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/cars/search-airport#sm-respone-block">Response format</a><br><a href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/cars/search-airport#sm-example-block">Example</a><br>
+</section> <!-- /.block -->
+  </div>
+          </aside>  <!-- /#sidebar-second -->
+        
+      </div>
+        <div id="push"></div>
+  <footer class="footer footer-fixed-bottom">
+      <div class="region region-footer">
+    <section id="block-block-29" class="block block-block pull-right clearfix">
+
+      
+  <div class="pull-right" id="social-icons">
+<ul><li><a href="https://twitter.com/amadeusinnov"><img alt="Twitter" rel="lightbox" src="./Amadeus Travel Innovation Sandbox _ Car Rental Airport Search_files/twitter.png"></a></li>
+<li><a href="http://www.facebook.com/AmadeusITGroup"><img alt="Facebook" rel="lightbox" src="./Amadeus Travel Innovation Sandbox _ Car Rental Airport Search_files/facebook.png"></a></li>
+<li><a href="http://www.linkedin.com/company/amadeus"><img alt="Linked In" rel="lightbox" src="./Amadeus Travel Innovation Sandbox _ Car Rental Airport Search_files/linked-in.png"></a></li>
+</ul></div>
+
+</section> <!-- /.block -->
+<section id="block-block-5" class="block block-block clearfix">
+
+      
+  <div class="pull-left">
+<ul id="footer-links"><li>©2015 Amadeus IT Group SA</li>
+<li><a href="https://sandbox.amadeus.com/basic-page/terms-use" target="_blank">Terms of Use</a></li>
+<li><a href="http://www.amadeus.com/amadeus/x122429.html" target="_blank">Privacy Policy</a></li>
+<li><a href="http://www.amadeus.com/" target="_blank">Amadeus.com</a></li>
+<li class="last"><a href="mailto:sandbox@amadeus.com">Contact Us</a></li>
+</ul></div>
+
+</section> <!-- /.block -->
+  </div>
+  </footer>
+</div>
+  <div class="region region-page-bottom">
+    <div class="modal fade hidden-bs-modal-processed" id="login" tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog" style="">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="loginLabel">Log in</h4>
+      </div>
+      <div class="modal-body">
+        <form action="https://sandbox.amadeus.com/user/login?destination=node/1297" method="post" id="user-login" accept-charset="UTF-8"><div><div class="form-item form-item-name form-type-textfield form-group"> <label class="control-label" for="edit-name">Username or e-mail address <span class="form-required" title="" data-original-title="This field is required.">*</span></label>
+<input autocomplete="off" class="form-control form-text required" title="" data-toggle="tooltip" type="text" id="edit-name" name="name" value="" size="60" maxlength="60" data-original-title="You may login with either your assigned username or your e-mail address."></div><div class="form-item form-item-pass form-type-password form-group"> <label class="control-label" for="edit-pass">Password <span class="form-required" title="" data-original-title="This field is required.">*</span></label>
+<input autocomplete="off" class="form-control form-text required" title="" data-toggle="tooltip" type="password" id="edit-pass" name="pass" size="60" maxlength="128" data-original-title="The password field is case sensitive."></div><input type="hidden" name="form_build_id" value="form-5XfIlNGC5Ps3A4G9UDu8qq8UrUIhZlljEyZYfHdcr8c">
+<input type="hidden" name="form_id" value="user_login">
+<br><br><a href="https://sandbox.amadeus.com/user/password">Forgot your password?</a><br><br><div class="form-actions form-wrapper form-group" id="edit-actions"><button type="submit" id="edit-submit" name="op" value="Log in" class="btn btn-default form-submit">Log in</button>
+</div></div></form>      </div>
+      <div class="modal-footer">
+        <div id="apigee-sso-signin-block" class="clearfix">
+  <ul class="federated-buttons">
+              </ul>
+</div>
+      </div>
+    </div>
+  </div>
+</div><div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="registerLabel" aria-hidden="true">
+  <div class="modal-dialog" style="">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="registerLabel">Register a new user</h4>
+      </div>
+      <div class="modal-body">
+        <form class="user-info-from-cookie" enctype="multipart/form-data" action="https://sandbox.amadeus.com/user/register?destination=node/1297" method="post" id="user-register-form" accept-charset="UTF-8"><div><div class="a2bc7_field"><span class="description" data-original-title="" title=""> (If you're a human, don't change the following field)</span><div class="form-item form-item-e2b-name form-type-textfield form-group"> <label class="control-label" for="edit-e2b-name">Enter your name </label>
+<input class="a2bc7_field form-control form-text" autocomplete="off" title="" data-toggle="tooltip" type="text" id="edit-e2b-name" name="e2b_name" value="a637c09e0a63" size="60" maxlength="128" data-original-title="Your first name."></div></div><noscript>Please enable Javascript to use this form.</noscript><div class="a1eca_field"><span class="description" data-original-title="" title=""> (If you're a human, don't change the following field)</span><div class="form-item form-item-f1e-name form-type-textfield form-group"> <label class="control-label" for="edit-f1e-name">Enter your name </label>
+<input class="a1eca_field form-control form-text" autocomplete="off" style="font-family: &quot;a384e803e70e594c61_form&quot;" title="" data-toggle="tooltip" type="text" id="edit-f1e-name" name="f1e_name" value="27f3569a27f" size="60" maxlength="128" data-original-title="Your first name."></div></div><noscript>Please enable Javascript to use this form.</noscript><div class="field-type-text field-name-field-first-name field-widget-text-textfield form-wrapper form-group" id="edit-field-first-name"><div id="field-first-name-add-more-wrapper"><div class="form-item form-item-field-first-name-und-0-value form-type-textfield form-group"> <label class="control-label" for="edit-field-first-name-und-0-value">First Name <span class="form-required" title="" data-original-title="This field is required.">*</span></label>
+<input class="text-full form-control form-text required" type="text" id="edit-field-first-name-und-0-value" name="field_first_name[und][0][value]" value="" size="60" maxlength="255"></div></div></div><div class="field-type-text field-name-field-last-name field-widget-text-textfield form-wrapper form-group" id="edit-field-last-name"><div id="field-last-name-add-more-wrapper"><div class="form-item form-item-field-last-name-und-0-value form-type-textfield form-group"> <label class="control-label" for="edit-field-last-name-und-0-value">Last Name <span class="form-required" title="" data-original-title="This field is required.">*</span></label>
+<input class="text-full form-control form-text required" type="text" id="edit-field-last-name-und-0-value" name="field_last_name[und][0][value]" value="" size="60" maxlength="255"></div></div></div><input type="hidden" name="form_build_id" value="form-aRklFPyoug33Z8L1-vWvsEm6sWKDOSByypBkAMEGT20">
+<input type="hidden" name="form_id" value="user_register_form">
+<input type="hidden" name="honeypot_time" value="1465460986|Xr7FnFMT2q8FBo7AjeEjb7UJTU9nxDiBcoXcV8vlOPg">
+<div class="field-type-text field-name-field-company-organization-name field-widget-text-textfield form-wrapper form-group" id="edit-field-company-organization-name"><div id="field-company-organization-name-add-more-wrapper"><div class="form-item form-item-field-company-organization-name-und-0-value form-type-textfield form-group"> <label class="control-label" for="edit-field-company-organization-name-und-0-value">Company/University/Organization <span class="form-required" title="" data-original-title="This field is required.">*</span></label>
+<input class="text-full form-control form-text required" type="text" id="edit-field-company-organization-name-und-0-value" name="field_company_organization_name[und][0][value]" value="" size="60" maxlength="255"><div class="help-block"><br>Please enter here the name of your company, university/School, organization name<br></div></div></div></div><input type="hidden" name="timegate" value="1465460986">
+<div id="edit-account" class="form-wrapper form-group"><input class="username" title="" data-toggle="tooltip" type="hidden" name="name" value="unset_username" data-original-title="Spaces are allowed; punctuation is not allowed except for periods, hyphens, apostrophes, and underscores.">
+<div class="form-item form-item-mail form-type-textfield form-group"> <label class="control-label" for="edit-mail">E-mail address <span class="form-required" title="" data-original-title="This field is required.">*</span></label>
+<input class="form-control form-text required" title="" data-toggle="tooltip" type="text" id="edit-mail" name="mail" value="" size="60" maxlength="254" data-original-title="A valid e-mail address. All e-mails from the system will be sent to this address. The e-mail address is not made public and will only be used if you wish to receive a new password or wish to receive certain news or notifications by e-mail."></div><input type="hidden" name="timezone" value="Europe/Berlin">
+</div><div id="terms-field"><div class="field-type-list-boolean field-name-field-terms-and-conditions field-widget-options-onoff form-wrapper form-group" id="edit-field-terms-and-conditions"><div class="form-item form-item-field-terms-and-conditions-und form-type-checkbox checkbox"> <label class="control-label" for="edit-field-terms-and-conditions-und"><input type="checkbox" id="edit-field-terms-and-conditions-und" name="field_terms_and_conditions[und]" value="1" class="form-checkbox required">I agree to the <a href="https://sandbox.amadeus.com/basic-page/terms-use" target="_blank">Terms of Use</a> <span class="form-required" title="" data-original-title="This field is required.">*</span></label>
+</div></div></div><div class="captcha"><input type="hidden" name="captcha_sid" value="2226846">
+<input type="hidden" name="captcha_token" value="da1cc2cb094b1747c8329d7df685583c">
+<img typeof="foaf:Image" class="img-responsive" src="./Amadeus Travel Innovation Sandbox _ Car Rental Airport Search_files/image_captcha" width="180" height="60" alt="Image CAPTCHA" title="Image CAPTCHA"><div class="form-item form-item-captcha-response form-type-textfield form-group"> <label class="control-label" for="edit-captcha-response">What code is in the image? <span class="form-required" title="" data-original-title="This field is required.">*</span></label>
+<input class="form-control form-text required" title="" data-toggle="tooltip" type="text" id="edit-captcha-response" name="captcha_response" value="" size="15" maxlength="128" autocomplete="off" data-original-title="Enter the characters shown in the image."></div></div><div class="form-actions form-wrapper form-group" id="edit-actions--2"><button type="submit" id="edit-submit--2" name="op" value="Create new account" class="btn btn-success form-submit">Create new account</button>
+</div><div class="gender-textfield"><div class="form-item form-item-gender form-type-textfield form-group"> <label class="control-label" for="edit-gender">Leave this field blank </label>
+<input autocomplete="off" class="form-control form-text" type="text" id="edit-gender" name="gender" value="" size="20" maxlength="128"></div></div></div></form>      </div>
+      <div class="modal-footer">
+              </div>
+    </div>
+  </div>
+</div><div id="password" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="passwordLabel" aria-hidden="true">
+  <div class="modal-dialog"><div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 id="passwordLabel" class="modal-title">Request new password</h4>
+  </div>
+  <div class="modal-body">
+    <form action="https://sandbox.amadeus.com/user/password?destination=node/1297" method="post" id="user-pass" accept-charset="UTF-8"><div><div class="form-item form-item-name form-type-textfield form-group"> <label class="control-label" for="edit-name--3">Username or e-mail address <span class="form-required" title="" data-original-title="This field is required.">*</span></label>
+<input class="form-control form-text required" type="text" id="edit-name--3" name="name" value="" size="60" maxlength="254"></div><input type="hidden" name="form_build_id" value="form-f36IvP-iD7UZdE5Hef7gdckmgK5aQsVzF-pze32LZOo">
+<input type="hidden" name="form_id" value="user_pass">
+<div class="form-actions form-wrapper form-group" id="edit-actions--3"><button type="submit" id="edit-submit--3" name="op" value="E-mail new password" class="btn btn-default form-submit">E-mail new password</button>
+</div></div></form>  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn" data-dismiss="modal">Close</button>
+  </div>
+  </div></div>
+</div>  </div>
+<script src="./Amadeus Travel Innovation Sandbox _ Car Rental Airport Search_files/js_L50O_PWoAuMOxVjnzZCkNSSmI0kFwhZsO1_KS8WnGKw.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"64d9b52843","applicationID":"7099308","transactionName":"MwRaZ0ZZDUJWVEJaWApOeVBAUQxfGFlZV1I7EVlUUWcVWFJA","queueTime":0,"applicationTime":384,"atts":"H0NZEQ5DHkw=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<div id="lightbox2-overlay" style="display: none;"></div>      <div id="lightbox" style="display: none;" class="lightbox2-orig-layout">        <div id="outerImageContainer" style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><div id="modalContainer" style="display: none; padding: 10px;"></div><div id="frameContainer" style="display: none; padding: 10px;"></div><div id="imageContainer" style="display: none; padding: 10px;"><img id="lightboxImage" alt=""><div id="hoverNav"><a id="prevLink" title="Previous" href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/cars/search-airport#" style="padding-top: 10px;"></a><a id="nextLink" title="Next" href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/cars/search-airport#" style="padding-top: 10px;"></a></div></div><div id="loading"><a href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/cars/search-airport#" id="loadingLink"></a></div></div>        <div id="imageDataContainer" class="clearfix" style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">          <div id="imageData"><div id="imageDetails"><span id="caption" data-original-title="" title=""></span><span id="numberDisplay" data-original-title="" title=""></span></div><div id="bottomNav"><div id="frameHoverNav"><a id="framePrevLink" title="Previous" href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/cars/search-airport#" style="padding-top: 10px;"></a><a id="frameNextLink" title="Next" href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/cars/search-airport#" style="padding-top: 10px;"></a></div><a id="bottomNavClose" title="Close" href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/cars/search-airport#" style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"></a><a id="bottomNavZoom" href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/cars/search-airport#"></a><a id="bottomNavZoomOut" href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/cars/search-airport#"></a><a id="lightshowPause" title="Pause Slideshow" href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/cars/search-airport#" style="display: none;"></a><a id="lightshowPlay" title="Play Slideshow" href="https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/cars/search-airport#" style="display: none;"></a></div></div>        </div>      </div></body></html>

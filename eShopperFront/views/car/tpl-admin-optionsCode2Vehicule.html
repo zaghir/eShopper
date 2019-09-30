@@ -1,0 +1,100 @@
+<div   id="categorie" ng-controller="optionsCode2VehiculeController as opvCtrl">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2 class="section-heading">Acriss Car Code 2</h2>
+				<hr class="primary">
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4 col-sm-6 col-xs-12">
+		<div class="panel panel-info ">
+			<div class="panel-heading">Acriss Car Code 2</div>
+
+			<div class="panel-body">
+				<form >
+					<div class="form-group">
+						<label class="control-label">Code </label>
+						<input type="text" ng-model="opvCtrl.code2.element.code" class="form-control" />
+						<span ng-if="opvCtrl.code2.errors.code" class="label label-danger">{{opvCtrl.code2.errors.code}}</span>
+					</div>
+					<div class="form-group">
+						<label class="control-label">Type Véhicule </label>
+						<input type="text" ng-model="opvCtrl.code2.element.typeVehicule" class="form-control" />
+						<span ng-if="opvCtrl.code2.errors.typeVehicule" class="label label-danger">{{opvCtrl.code2.errors.typeVehicule}}</span>
+					</div>
+					<div>
+						<button ng-click="opvCtrl.code2.add()" class="btn btn-primary">Ajouter</button>
+
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-2 col-sm-4 col-xs-12"></div>
+
+	<div class="col-md-4 col-sm-4 col-xs-12">
+		<div class="panel panel-info">
+			<div class="panel panel-heading ">Info Acriss Car Code 2</div>
+			<div class="panel panel-body">
+				<form class="form-group" id="listtypeVehicule">
+
+					<div class="form-group">
+						<label class="control-label">Type Vehicule </label>
+						<input type="text" class="input-group" ng-model="opvCtrl.code2.recherche" />
+						<button ng-click="opvCtrl.code2.viewAll()" class="btn btn-primary btn-sm">Afficher Tous</button> <br/>
+						<div ng-show="opvCtrl.code2.messageInfo" ><p class="bg-success">{{opvCtrl.code2.messageInfo}}</p></div>
+
+					</div>
+					<table class="table-responsive table table-striped table-bordered  table-hover table-condensed">
+						<thead>
+						<tr>
+							<th> Id </th>
+							<th class="text-center"> Type Vehicule</th>
+							<th colspan="2" class="text-center"> action</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr ng-repeat="tp in opvCtrl.code2.data.page | orderBy: 'typeVehicule' | filter: opvCtrl.code2.recherche " >
+
+							<td class="text-right">
+								<div >{{tp.element.code}}</div>
+							</td>
+							<td class="text-center">
+								<div ng-hide="opvCtrl.code2.editingData[tp.element.code]">{{tp.element.typeVehicule}}</div>
+								<div ng-show="opvCtrl.code2.editingData[tp.element.code]">
+									<input type="text" ng-model="tp.element.typeVehicule" />
+									<span ng-if="tp.element.errors.typeVehicule" class="label label-danger">{{tp.element.errors.typeVehicule}}</span>
+								</div>
+							</td>
+
+							<td>
+								<button ng-click="opvCtrl.code2.remove(tp)"class="btn btn-sm btn-danger">
+									Suprimer</button>
+							</td>
+							<td>
+								<button ng-hide="opvCtrl.code2.editingData[tp.element.code]" ng-click="opvCtrl.code2.modify(tp)" class="btn btn-sm btn-warning">Modify</button>
+								<button ng-show="opvCtrl.code2.editingData[tp.element.code]" ng-click="opvCtrl.code2.update(tp)" class="btn btn-sm btn-success">Update</button>
+							</td>
+						</tr>
+						</tbody>
+
+					</table>
+				</form>
+				<div class ="panel">
+					<ul class="nav nav-pills">
+						<li class="clikabble" ng-class="{active:p==opvCtrl.code2.pageCourante}" ng-repeat="p in opvCtrl.code2.data.pageIndex  ">
+							<a ng-click="opvCtrl.code2.goToPage(p)" >{{p}}</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+</div>

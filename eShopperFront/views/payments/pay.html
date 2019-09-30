@@ -1,0 +1,86 @@
+  <!-- Mode opératoire
+  
+	   Ce formulaire recueille les informations de paiements et les renvoit à la plate-forme Ogon*. 
+	   L'envoi est sécurisé par un cryptage SHA-IN. En effet le champ "SHASIGN" reçoit dynamiquement une clé de cryptage calculé en fonction des champs saisis. 
+	   Pour plus d'informations : https://payment-services.ingenico.com/fr/fr/ogone/support/guides/integration%20guides/e-commerce/security-pre-payment-check
+	   
+	   Ogon n'accepte que les paiements en euro : EUR => le champ CURRENCY = "EUR"
+       Le champ PSPID indique l'identifiant d'accès au service de paiement Ogon* pour notre site c'est "eshopperpay"
+	   Le restant des champs sont variables. Mais il est conseillé de charger les informations concernants l'identité du payeur afin de sécuriser encore plus la transaction.
+	   Lorsqu'une erreur est détectée sur la signature on a cette erreur-ci: « unknown order/1/s » dans le journal d'erreur accessible sur le site d'Ogon
+	   
+	   Il est obligatoire d'indiquer l'adresse du site marchand dans la configuration sur Ogon : 
+	   Concrètement il s'agit de modifier l'emplacement du formulaire d'envoi qui était (http://localhost/assurance/views/pay.html) pour les tests à le remplacer par l'emplacement adéquat
+	   
+	   Suivre ce lien pour le remplacement:  https://secure.ogone.com/Ncol/Test/BackOffice/technicalinformation/dataandoriginverification?CSRFSP=%2fncol%2ftest%2fbackoffice%2ftechnicalinformation%2findex&CSRFKEY=98DD20780118060F81F145ACBB92E29CCC7F0390&CSRFTS=20160713140431&branding=OGONE&MenuId=40
+	   Lorsque vous avez cette erreur "unknown order/1/r/ " cela veut dire que l'url d'où est placé le formulaire n'est pas identique à celle référencé sur le site d'Ogon 
+	   
+	  *Pour se connecter à l'espace de test Ogon : 
+		-Identifiant: eshopperpay 
+		-Mot de passe: test2016
+		-Lien:  https://secure.ogone.com/Ncol/Test/BackOffice/login/index?branding=OGONE&CSRFSP=%2fncol%2ftest%2fbackoffice%2flogout%2findex&CSRFKEY=7266B1DA41497D23144B4AA5D153A15916950F69&CSRFTS=20160712111455
+  -->
+
+		<div ng-controller="payCtrl">
+
+				<p><h1>General parameter</h1></p>
+			<form method="post" action="https://secure.ogone.com/ncol/test/orderstandard.asp" id=form1 name=form1> 
+					<p>NOMS: 		<INPUT type="text" ng-model="pay.CN"  NAME="CN" value="{{pay.CN}}">
+					<p>EMAIL: 		<INPUT type="text" ng-model="pay.EMAIL" name="EMAIL" value="{{pay.EMAIL}}">
+					<p>ADRESSE: 	<INPUT type="text" ng-model="pay.OWNERADDRESS" NAME="OWNERADDRESS" VALUE="{{pay.OWNERADDRESS}}">
+					<p>VILLE:		<INPUT type="text" ng-model="pay.OWNERCTY" NAME="OWNERCTY" VALUE="{{pay.OWNERCTY}}">
+					<p>CODE POSTAL: <INPUT type="text" ng-model="pay.OWNERZIP" NAME="OWNERZIP" VALUE="{{pay.OWNERZIP}}">
+					<p>PSPID: 	    <INPUT type="text" ng-model="pay.PSPID"  NAME="PSPID" value="{{pay.PSPID}}">
+					<p>ORDERID:     <INPUT type="text" ng-model="pay.ORDERID"  NAME="ORDERID" value="{{pay.ORDERID}}">(merchant's unique reference)
+					<p>AMOUNT: (x 100)<INPUT ng-model="pay.AMOUNT" type="text" NAME="AMOUNT" value="{{pay.AMOUNT}}">(amount x 100 ==&gt;100 = 1.00) {{amount}}
+					<p>CURRENCY:    <INPUT type="text" ng-model="pay.CURRENCY"  NAME="CURRENCY" value="{{pay.CURRENCY}}"> (ALPHA ISO code of the currency)
+					<p>LANGUAGE: 
+					 <select ng-model="pay.LANGUAGE" name="LANGUAGE" value="{{pay.LANGUAGE}}">
+						<option value="en_US">en_US</option>
+						<option value="fr_FR">fr_FR</option>
+					 </select>
+
+					<!-- <INPUT type="hidden" NAME="LANGUAGE" value="fill here your Client language">-->
+					<!-- lay out information -->
+					<INPUT type="hidden" ng-model="pay.TITLE" NAME="TITLE" value="{{pay.TITLE}}">
+					<INPUT type="hidden" ng-model="pay.BGCOLOR" NAME="BGCOLOR" value="{{pay.BGCOLOR}}">
+					<INPUT type="hidden" ng-model="pay.TXTCOLOR" NAME="TXTCOLOR" value="{{pay.TXTCOLOR}}">
+					<INPUT type="hidden" ng-model="pay.TBLBGCOLOR" NAME="TBLBGCOLOR" value="{{pay.TBLBGCOLOR}}">
+					<INPUT type="hidden" ng-model="pay.TBLTXTCOLOR" NAME="TBLTXTCOLOR" value="{{pay.TBLTXTCOLO}}">
+					<INPUT type="hidden" ng-model="pay.BUTTONBGCOLOR" NAME="BUTTONBGCOLOR" value="{{pay.BUTTONBGCOLOR}}">
+					<INPUT type="hidden" ng-model="pay.BUTTONTXTCOLOR" NAME="BUTTONTXTCOLOR" value="{{pay.BUTTONTXTCOLOR}}">
+					<INPUT type="hidden" ng-model="pay.FONTTYPE" NAME="FONTTYPE" value="{{pay.FONTTYPE}}">
+					<INPUT type="hidden" ng-model="pay.LOGO" NAME="LOGO" value="{{pay.LOGO}}">
+					<INPUT type="hidden" ng-model="pay.OWNERTOWN" NAME="OWNERTOWN" value="{{pay.OWNERTOWN}}">
+					<INPUT type="hidden" ng-model="pay.OWNERTELNO" NAME="OWNERTELNO" value="{{pay.OWNERTELNO}}">
+					<!-- or dynamic template page -->
+					<INPUT type="hidden" ng-model="pay.TP" NAME="TP" value="{{pay.TP}}">
+					<!-- post-payment redirection -->
+					<INPUT type="hidden" ng-model="pay.ACCEPTURL" NAME="ACCEPTURL" VALUE="{{pay.ACCEPTURL}}">
+					<INPUT type="hidden" ng-model="pay.DECLINEURL" NAME="DECLINEURL" VALUE="{{pay.DECLINEURL}}">
+					<INPUT type="hidden" ng-model="pay.EXCEPTIONURL" NAME="EXCEPTIONURL" VALUE="{{pay.EXCEPTIONURL}}">
+					<INPUT type="hidden" ng-model="pay.CANCELURL" NAME="CANCELURL" VALUE="{{pay.CANCELURL}}">
+					<INPUT type="hidden" ng-model="pay.BACKURL" NAME="BACKURL" VALUE="{{pay.BACKURL}}">
+					<!-- miscellanous -->
+					<INPUT type="hidden" ng-model="pay.HOMEURL" NAME="HOMEURL" VALUE="{{pay.HOMEURL}}">
+					<INPUT type="hidden" ng-model="pay.CATALOGURL" NAME="CATALOGURL" VALUE="{{pay.CATALOGURL}}">
+					<INPUT type="hidden" ng-model="pay.PM" NAME="PM" VALUE="{{pay.PM}}">
+					<INPUT type="hidden" ng-model="pay.BRAND" NAME="BRAND" VALUE="{{pay.BRAND}}">
+					<INPUT type="hidden" ng-model="pay.OWNERADDRESS2" NAME="OWNERADDRESS2" VALUE="{{pay.OWNERADDRESS2}}">
+					<INPUT type="hidden" ng-model="pay.OWNERADDRESS3" NAME="OWNERADDRESS3" VALUE="{{pay.OWNERADDRESS3}}">
+		 			<INPUT type="hidden" ng-model="pay.SHASIGN" NAME="SHASIGN" size="50" value="{{pay.SHASIGN}} "> 
+					<INPUT type="hidden" ng-model="pay.ALIAS" NAME="ALIAS" VALUE="{{pay.ALIAS}}">
+					<INPUT type="hidden" ng-model="pay.ALIASUSAGE" NAME="ALIASUSAGE" VALUE="{{pay.ALIASUSAGE}}">
+					<INPUT type="hidden" ng-model="pay.ALIASOPERATION" NAME="ALIASOPERATION" VALUE="{{pay.ALIASOPERATION}}">
+					<INPUT type="hidden" ng-model="pay.COM" NAME="COM" VALUE="{{pay.COM}}">
+					<INPUT type="hidden" ng-model="pay.COMPLUS" NAME="COMPLUS" VALUE="{{pay.COMPLUS}}">
+					<INPUT type="hidden" ng-model="pay.PARAMPLUS" NAME="PARAMPLUS" VALUE="{{pay.PARAMPLUS}}">
+					<INPUT type="hidden" ng-model="pay.USERID" NAME="USERID" VALUE="{{pay.USERID}}">
+					<INPUT type="hidden" ng-model="pay.CREDITCODE" NAME="CREDITCODE" VALUE="{{pay.CREDITCODE}}">
+
+
+		<br><label>Cliquer pour valider l'achat</label><input type="submit" value="Paiement" id=submit2 name=submit2>
+
+</form>
+	
+	</div>

@@ -1,0 +1,108 @@
+<div   id="categorie" ng-controller="devisController as opvCtrl">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Devis</h2>
+                <hr class="primary">
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="panel panel-info ">
+            <div class="panel-heading">Devis</div>
+
+            <div class="panel-body">
+                <form >
+                    <div class="form-group">
+                        <label class="control-label">Nom </label>
+                        <input type="text" ng-model="opvCtrl.devis.element.nom" class="form-control" />
+                        <span ng-if="opvCtrl.devis.errors.nom" class="label label-danger">{{opvCtrl.devis.errors.nom}}</span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Code </label>
+                        <input type="text" ng-model="opvCtrl.devis.element.code" class="form-control" />
+                        <span ng-if="opvCtrl.devis.errors.code" class="label label-danger">{{opvCtrl.devis.errors.code}}</span>
+                    </div>
+                    <div>
+                        <button ng-click="opvCtrl.devis.add()" class="btn btn-primary">Ajouter</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-12"></div>
+
+    <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="panel panel-info">
+            <div class="panel panel-heading ">Info Devis</div>
+            <div class="panel panel-body">
+                <form class="form-group" id="list">
+
+                    <div class="form-group">
+                        <label class="control-label">Devis </label>
+                        <input type="text" class="input-group" ng-model="opvCtrl.devis.recherche" />
+                        <button ng-click="opvCtrl.devis.viewAll()" class="btn btn-primary btn-sm">Afficher Tous</button> <br/>
+                        <div ng-show="opvCtrl.devis.messageInfo" ><p class="bg-success">{{opvCtrl.devis.messageInfo}}</p></div>
+
+                    </div>
+                    <table class="table-responsive table table-striped table-bordered  table-hover table-condensed">
+                        <thead>
+                        <tr>
+                            <th> Id </th>
+                            <th class="text-center"> Code</th>
+                            <th class="text-center"> Nom</th>
+                            <th colspan="2" class="text-center"> action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="tp in opvCtrl.devis.data.page | orderBy: 'code' | filter: opvCtrl.devis.recherche " >
+
+                            <td class="text-right">
+                                <div >{{tp.element.id}}</div>
+                            </td>
+                            <td class="text-center">
+                                <div ng-hide="opvCtrl.devis.editingData[tp.element.id]">{{tp.element.code}}</div>
+                                <div ng-show="opvCtrl.devis.editingData[tp.element.id]">
+                                    <input type="text" ng-model="tp.element.code" />
+                                    <span ng-if="tp.element.errors.code" class="label label-danger">{{tp.element.errors.code}}</span>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <div ng-hide="opvCtrl.devis.editingData[tp.element.id]">{{tp.element.nom}}</div>
+                                <div ng-show="opvCtrl.devis.editingData[tp.element.id]">
+                                    <input type="text" ng-model="tp.element.nom" />
+                                    <span ng-if="tp.element.errors.nom" class="label label-danger">{{tp.element.errors.nom}}</span>
+                                </div>
+                            </td>
+
+                            <td>
+                                <button ng-click="opvCtrl.devis.remove(tp)"class="btn btn-sm btn-danger">
+                                    Suprimer</button>
+                            </td>
+                            <td>
+                                <button ng-hide="opvCtrl.devis.editingData[tp.element.id]" ng-click="opvCtrl.devis.modify(tp)" class="btn btn-sm btn-warning">Modify</button>
+                                <button ng-show="opvCtrl.devis.editingData[tp.element.id]" ng-click="opvCtrl.devis.update(tp)" class="btn btn-sm btn-success">Update</button>
+                            </td>
+                        </tr>
+                        </tbody>
+
+                    </table>
+                </form>
+                <div class ="panel">
+                    <ul class="nav nav-pills">
+                        <li class="clikabble" ng-class="{active:p==opvCtrl.devis.pageCourante}" ng-repeat="p in opvCtrl.devis.data.pageIndex  ">
+                            <a ng-click="opvCtrl.devis.goToPage(p)" >{{p}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
