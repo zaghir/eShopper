@@ -1,0 +1,10 @@
+- Pour les ressources ils sont dans le dossier /confi
+
+Le dossier conf il doit être déployé avec l'application dans le serveur tomcat 
+
+Les ressource sont utilisés à distant par spring , car il y le plugin tomcat dans le pom.xml de l'application
+
+On a externalisé toutes les configurations pour un paramétrage facile de l'application 
+
+Dans le dossier font il faut faire la commande -> npm install et ->bower intall , 
+pour lancer le front il faut executer la commande grunt serve dans le dossier de front 
